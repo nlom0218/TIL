@@ -241,14 +241,14 @@ _single underscores_
 ![Alt text](image url)
 ```
 
-![노마드 코더 인터뷰](/image/interview.png)
+![노마드 코더 인터뷰](/image/food.png)
 
 사이즈 조절 기능이 없기 때문에 `<img width="" height=""></img>`를 이용한다.
 
 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="450px" height="300px"  alt="food"></img><br/>
 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="40%" height="30%"  alt="food"></img><br/>
 
-<img src="./image/interview.png" width="450px" height="300px"></img>
+<img src="./image/food.png" width="450px" height="300px"></img>
 
 ---
 
