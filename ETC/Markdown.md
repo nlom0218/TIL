@@ -1,5 +1,21 @@
 # Markdown
 
+# 0. 바로가기
+
+- [1. 개요](#1-개요)
+- [2. 마크다운 문법](#2-마크다운-문법)
+  - [2-1. 문단 제목](#2-1-문단-제목)
+  - [2-2. 목록](#2-2-목록)
+  - [2-3. 인용문](#2-3-인용문)
+  - [2-3. 코드](#2-4-코드)
+    - [2-3. 들여쓰기](#2-4-1-들여쓰기)
+    - [2-3. 코드블럭](#2-4-2-코드블럭)
+  - [2-3. 수평선](#2-5-수평선)
+  - [2-3. 링크](#2-6-링크)
+  - [2-3. 강조](#2-7-강조)
+  - [2-3. 이미지](#2-8-이미지)
+- [3. 참고](#참고)
+
 # 1. 개요
 
 마크다운(Markdown)은 마크업 언어의 일종으로, 존 그루버(John Gruber)와 아론 스워츠(Aaron Swartz)가 만들었다. 온갖 태그로 범벅된 HTML 문서 등과 달리, 읽기도 쓰기도 쉬운 문서 양식을 지향한다. 그루버는 마크다운으로 작성한 문서를 HTML로 변환하는 Perl스크립트도 만들었다. 확장자는 .md또는 .markdown을 쓰지만, 전자가 압도적으로 많이 쓰인다.
@@ -248,11 +264,11 @@ _single underscores_
 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="450px" height="300px"  alt="food"></img><br/>
 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="40%" height="30%"  alt="food"></img><br/>
 
-<img src="./image/food.png" width="450px" height="300px"></img>
+<img src="../image/food.png" width="450px" height="300px"></img>
 
 ---
 
-## 출저
+## 참고
 
 [나무위키-마크다운](https://namu.wiki/w/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)  
 [[공통] 마크다운 markdown 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)  
