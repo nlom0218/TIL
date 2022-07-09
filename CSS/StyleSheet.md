@@ -1,6 +1,6 @@
 # Style Sheet
 
-# 0. 바로가기
+## 👉 바로가기
 
 - [1. Inline Style](#1-inline-style인라인-스타일)
 - [2. Internal Style Sheet](#2-internal-style-sheet내부-스타일-시트-embedding-style)
@@ -83,6 +83,14 @@ h1 {
 
 - 장점
   - 여러 HTML문서에 사용할 수 있음
+
+---
+
+## 참고
+
+[poiemaweb 1 CSS 기본문법](https://poiemaweb.com/css3-syntax)  
+[CSS를 HTML에 적용시키는 방법](https://www.codingfactory.net/10529)  
+도서 - HTML + CSS + 자바스크립트 웹 표준의 정석
 
 ---
 
