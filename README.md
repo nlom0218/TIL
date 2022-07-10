@@ -13,7 +13,14 @@
 - CSS
 
   - [Style Sheet](/CSS/StyleSheet.md)
+  - [Selector](/CSS/Selector.md)
 
 - Javascript
 
 - React
+
+---
+
+```
+오타 및 잘못된 내용 지적은 환영입니다. 언제든지 말씀해주세요!😀
+```
