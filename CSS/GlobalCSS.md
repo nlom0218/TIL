@@ -362,4 +362,4 @@ body {
 
 ---
 
-[👆](#seletor)
+[👆](#globalcss)
