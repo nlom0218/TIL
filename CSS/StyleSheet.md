@@ -95,5 +95,4 @@ h1 {
 
 ---
 
-[👆](#style-sheet)  
-[Next - Selector](/CSS/Selector.md)
+[👆](#style-sheet)

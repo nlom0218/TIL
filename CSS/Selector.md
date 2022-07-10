@@ -783,6 +783,4 @@ paragraph 1, 2만 스타일이 적용됨.
 
 ---
 
-[👆](#style-sheet)  
-[Previous - StyleSheet](/CSS/StyleSheet.md)  
-[Next - ]()
+[👆](#seletor)
