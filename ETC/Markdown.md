@@ -265,14 +265,14 @@ _single underscores_
 
 사이즈 조절 기능이 없기 때문에 `<img width="" height=""></img>`를 이용한다.
 
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="450px" height="300px"  alt="food"></img><br/>
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="40%" height="30%"  alt="food"></img><br/>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="450px" height="300px"  alt="food" /><br/>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="40%" height="30%"  alt="food" /><br/>
 
-<img src="../image/food.png" width="450px" height="300px"></img>
+<img src="../image/food.png" width="450px" height="300px" />
 
 ---
 
-### 참고
+## 참고
 
 [나무위키-마크다운](https://namu.wiki/w/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)  
 [[공통] 마크다운 markdown 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)  

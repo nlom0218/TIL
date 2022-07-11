@@ -15,15 +15,15 @@
 
 > 나는 스타일 코드의 중복을 피하기 위해 ReactJS로 개발을 하는 경우 [styled-components](https://styled-components.com/)를 사용하여 필요한 스타일을 컴포넌트를 만들고 만든 스타일 컴포넌트를 필요한 곳에 import하여 사용하였다.
 
-ReactJS, VueJS가 아닌 Html, Css, Javasrcipt로만 웹 개발을 하게 되는 경우 스타일링을 위해 `*.css`을 만들고 [Link style](https://github.com/nlom0218/TIL/blob/main/CSS/StyleSheet.md#3-linking-style-sheet%EC%99%B8%EB%B6%80-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%8B%9C%ED%8A%B8-link-style)방법을 통해 `*.html`과 `*.css`를 연결한다.
+ReactJS, VueJS가 아닌 Html, Css, Javasrcipt로만 웹 개발을 하게 되는 경우 스타일링을 위해 `*.css(스타일시트)`을 만들고 [Link style](https://nlom0218.github.io/TIL/CSS/StyleSheet.html#3-linking-style-sheet%EC%99%B8%EB%B6%80-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%8B%9C%ED%8A%B8-link-style)방법을 통해 `*.html`과 `*.css(스타일시트)`를 연결한다.
 
-내가 꼽은 위와 같은 방법의 단점은 아래와 같다.
+내가 생각하는 위와 같은 방법의 단점은 아래와 같다.
 
 - 단점
 
-  1. 각`*.html`파일에 모두 다른 `*.css`을 연결하는 경우 같은 스타일의 코드를 중복하여 작성해야 한다.  
+  1. 각`*.html`파일에 모두 다른 `*.css(스타일시트)`을 연결하는 경우 같은 스타일의 코드를 중복하여 작성해야 하는 경우가 생길 수 있다.  
       예를들어 같은 스타일의 버튼이 있고 이를 `index.html`과 `profile.html`에서 필요하다면 `index.css`와 `profile.css`에 같은 스타일의 코드를 작성해야 한다.  
-      이러한 방법은 버튼 스타일을 수정을 해야하는 경우 해당 스타일의 코드가 사용된 모든 `*.css`를 찾아 하나하나 수정해야 한다.
+      이러한 방법은 버튼 스타일을 수정을 해야하는 경우 해당 스타일의 코드가 사용된 모든 `*.css(스타일시트)`를 찾아 하나하나 수정해야 한다.
 
      ```html
      <!-- index.html -->
@@ -57,7 +57,7 @@ ReactJS, VueJS가 아닌 Html, Css, Javasrcipt로만 웹 개발을 하게 되는
      }
      ```
 
-  2. `button.css`, `container.css`, `navbar.css` 등 각자 맡고 있는 역할의 `*.css`을 만들면 위의 단점은 해소가 되나 각`*.html`에서 작성해야 하는 `<link />`태그가 많이진다.  
+  2. `button.css`, `container.css`, `navbar.css` 등 각자 맡고 있는 역할의 `*.css(스타일시트)`을 만들면 위의 단점은 해소가 되나 각`*.html`에서 작성해야 하는 `<link />`태그가 많이진다.  
       또한 새로운 스타일의 무언가를 추가하게 된다면 해당 스타일을 사용하는 `*.html`을 모두 찾아 새로운 `<link />`태그를 작성해야 한다.
 
      ```css
@@ -106,7 +106,7 @@ ReactJS, VueJS가 아닌 Html, Css, Javasrcipt로만 웹 개발을 하게 되는
      ...
      ```
 
-> 이러한 단점을 해결하고자 모든 `*.html`에 연결하는 예를들면 `global.css` 만들고 여기에 모든 `*.css`을 `@import`하는 방법에 대해 소개한다.
+> 이러한 단점을 해결하고자 모든 `*.html`에 연결하는 예를들면 `global.css` 만들고 여기에 모든 `*.css(스타일시트)`을 `@import`하는 방법에 대해 소개한다.
 
 ---
 
@@ -125,6 +125,8 @@ body {
 ...
 ```
 
+---
+
 ## 3 @import
 
 `@import` CSS 규칙은 다른 스타일 시트에서 스타일 규칙을 가져올 때 쓰임
@@ -135,7 +137,7 @@ body {
 
 `url`: import할 자원의 위치를 나타내는 문자열 또는 url
 
-> 필요한 `*.css`를 만들고 `global.css`에 import한다.
+> 필요한 `*.css(스타일시트)`를 만들고 `global.css`에 import한다.
 
 ```css
 /* button.css */
