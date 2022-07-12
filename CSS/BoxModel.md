@@ -20,6 +20,7 @@
 ## 1 개요
 
 웹 문서의 블록 레벨 요소는 모두 Box 형태의 영역을 가지고 있음. 스타일 시트에서 이렇게 BOx 형태인 요소를 박스 모델 요소라고 함. 이 Box는 콘텐츠(Content), 패팅(Padding), 테두리(Border), 마진(Margin)로 구성됨.
+
 ![Box Model](../image/CSS/BoxModel.png)
 
 > Box Model의 이해는 아래의 4가지 명칭을 이해하는데서 부터 시작한다.
