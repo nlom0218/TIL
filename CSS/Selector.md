@@ -776,6 +776,8 @@ paragraph 1, 2만 스타일이 적용됨.
 
 ## ![PseudoElementSelector](../image/CSS/PseudoElementSelector.png)
 
+---
+
 ## 참고
 
 [poiemaweb 2-2 셀렉터](https://poiemaweb.com/css3-selector)  
