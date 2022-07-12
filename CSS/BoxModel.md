@@ -75,17 +75,17 @@
 
 박스 모델에서 콘텐츠 영역의 크기를 지정할 때 너비는 width, 높이는 height 프로퍼티를 사용함, 콘텐츠의 영역을 대상을 하는 이유는 `box-sizing 프로퍼티`에 기본값인 **content-box**가 적용되었기 때문, `box-sizing 프로퍼티`에 **border-box**를 적용하면 콘텐츠 영역, padding, border가 포함된 영역을 width / height 프로퍼티의 대상으로 지정할 수 있음.
 
-> width와 height의 속성값
+> width와 height의 속성값  
 > | 종류 | 설명 |
 > |:-----|:------|
 > |<크기>| 너비가 높이의 값을 px이나 em 단위로 지정|
 > |<백분율>| 박스 모델을 포함하는 부모 요소를 기준으로 너빗값이나 높잇값을 백분율(%)로 지정|
 > |auto| 박스 모델의 너빗값과 높잇값이 콘텐츠의 양에 따라 자동으로 결정, 기본값|
 
-> 만일 width와 height로 지정한 콘텐츠 영역보다 실제 콘텐츠가 크면 콘텐츠 영역을 넘치게 된다.
-> `overflow:hidden;`을 지정하면 넘친 콘텐츠를 감출 수 있다.
+만일 width와 height로 지정한 콘텐츠 영역보다 실제 콘텐츠가 크면 콘텐츠 영역을 넘치게 된다.
+`overflow:hidden;`을 지정하면 넘친 콘텐츠를 감출 수 있다.
 
-> width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼티(margin, padding, border, box-sizing 등)는 상속되지 않는다.
+width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼티(margin, padding, border, box-sizing 등)는 상속되지 않는다.
 
 ---
 
@@ -321,10 +321,11 @@
 
 ![border-radius](../image/CSS/borderRadius.png)
 
-> 두개의 반지름을 지정하여 타원형 둥근 모서리 설정하기  
-> border-radius 프로퍼티를 사용해서 꼭짓점을 타원 형태로 만들 수 있다. 하나의 값(반지름) 대신 타원의 가로 반지름값과 세로 반지름값을 /를 통해 구분하여 넣는다.  
-> 기본형 `border-radius: <가로 반지름> / <세로 반지름>`  
-> 기본형 `border-위치-radius: <가로 반지름> / <세로 반지름>`
+> 두개의 반지름을 지정하여 타원형 둥근 모서리 설정하기
+
+border-radius 프로퍼티를 사용해서 꼭짓점을 타원 형태로 만들 수 있다. 하나의 값(반지름) 대신 타원의 가로 반지름값과 세로 반지름값을 /를 통해 구분하여 넣는다.  
+기본형 `border-radius: <가로 반지름> / <세로 반지름>`  
+기본형 `border-위치-radius: <가로 반지름> / <세로 반지름>`
 
 ```html
 <!DOCTYPE html>
