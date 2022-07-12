@@ -12,7 +12,7 @@
   - [4-4 border-radius](#4-4-border-radius)
   - [4-5 border](#4-5-border)
 - [5 box-sizing 프로퍼티](#5-box-sizing-프로퍼티)
-- [6 Conclusion❗️](#6-conclusion❗️)
+- [6 Conclusion](#6-conclusion)
 - [참고](#참고)
 
 ---
@@ -435,7 +435,7 @@ html {
 
 ---
 
-## 6 Conclusion❗️
+## 6 Conclusion
 
 > margin, padding, border는 정말 웹디자인을 할 때 flex, grid보다 더 많이 사용을 하는 프로퍼티라고 생각한다. 그 만큼 많이 사용했으니 해당 내용에 대해 익숙해졌지만 이번 챕터를 정리하면서 몰랐던 부분도 많이 알게 되었다.  
 > 지금까지 `border-radius: top-left top-right bottom-right bottom-left`를 사용하지 않고 일일히 하나하나 값들을 지정했다. 앞으로는 한 줄로 표현하는 방법으로 사용을 해야겠다. 또한 타원형으로 만드는 방법에 대해서도 이번에 새롭게 알게 되었다. x좌표, y좌표에 각각 다른 반지름을 주어 타원형으로 만드는 방법으로 더 멋진 웹디자인을 할 수 있도록 하자.  

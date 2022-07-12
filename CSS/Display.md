@@ -6,7 +6,7 @@
 - [2 Block 레벨 요소](#2-block-레벨-요소)
 - [3 inline 레벨 요소](#3-inline-레벨-요소)
 - [4 inline-block 레벨 요소](#4-inline-block-레벨-요소)
-- [5 Conclusion❗️](#5-conclusion❗️)
+- [5 Conclusion](#5-conclusion)
 - [참고](#참고)
 
 ---
@@ -180,7 +180,7 @@ block과 inline 레벨 요소의 특징을 모두 갖는다. inline 레벨 요�
 
 ---
 
-## 5 Conclusion❗️
+## 5 Conclusion
 
 > 지금까지 block, inline, inline-block이 있다는 사실만 알고 정확한 쓰임에 대해서는 생각하지 않고 사용을 하였다. 이로 인해 겪었던 고통은 `input`은 기본으로 inline이여서 width가 적용되지 않았던 것이다. block 바꾸었더라면... 쉽게 해결을 할 수 있지 않았을까? 그리고 inline-block은 현제까지 여러 프로젝트를 진행하는 동안 사용하지 않았다.  
 > 정확한 개념을 몰라서 사용을 하지 않았던 것인지? 굳이 inline-block으로 사용하지 않아도 flex나 grid으로 해결할 수 있는 문제 였는지는 모르겠지만 특별한 경우가 아니라면 계속해서 flex 또는 grid로 화면 디자인을 할 거 같다. 하지만 태그들이 가지고 있는 기본 display level을 알고 필요할 때 바꾸어 쓰도록 하자!
