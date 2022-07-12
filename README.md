@@ -6,7 +6,8 @@
 > - 내 것으로 만들기
 > - 천천히 하지만 확실히
 
-웹에서 보기 👉 [github.io](https://nlom0218.github.io/TIL/)
+웹에서 보기 👉 [github.io TIL](https://nlom0218.github.io/TIL/)  
+깃허브에서 보기 👉 [github TIL](https://github.com/nlom0218/TIL)
 
 ---
 
