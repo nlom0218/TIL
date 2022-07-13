@@ -19,7 +19,7 @@
 
 ## 1 개요
 
-웹 문서의 블록 레벨 요소는 모두 Box 형태의 영역을 가지고 있음. 스타일 시트에서 이렇게 BOx 형태인 요소를 박스 모델 요소라고 함. 이 Box는 콘텐츠(Content), 패팅(Padding), 테두리(Border), 마진(Margin)로 구성됨.
+웹 문서의 블록 레벨 요소는 모두 Box 형태의 영역을 가지고 있음. 스타일 시트에서 이렇게 Box 형태인 요소를 박스 모델 요소라고 함. 이 Box는 콘텐츠(Content), 패팅(Padding), 테두리(Border), 마진(Margin)로 구성됨.
 
 ![Box Model](../image/CSS/BoxModel.png)
 
@@ -75,7 +75,7 @@
 
 박스 모델에서 콘텐츠 영역의 크기를 지정할 때 너비는 width, 높이는 height 프로퍼티를 사용함, 콘텐츠의 영역을 대상을 하는 이유는 `box-sizing 프로퍼티`에 기본값인 **content-box**가 적용되었기 때문, `box-sizing 프로퍼티`에 **border-box**를 적용하면 콘텐츠 영역, padding, border가 포함된 영역을 width / height 프로퍼티의 대상으로 지정할 수 있음.
 
-width와 height의 속성값
+> width와 height의 속성값
 
 | 종류     | 설명                                                                           |
 | :------- | :----------------------------------------------------------------------------- |
