@@ -2,16 +2,16 @@
 
 ## 👉 바로가기
 
-- [1 개요](#1-개요)
-- [2 Block 레벨 요소](#2-block-레벨-요소)
-- [3 inline 레벨 요소](#3-inline-레벨-요소)
-- [4 inline-block 레벨 요소](#4-inline-block-레벨-요소)
-- [5 Conclusion](#5-conclusion)
+- [1. 개요](#1-개요)
+- [2. Block 레벨 요소](#2-block-레벨-요소)
+- [3. inline 레벨 요소](#3-inline-레벨-요소)
+- [4. inline-block 레벨 요소](#4-inline-block-레벨-요소)
+- [5. Conclusion](#5-conclusion)
 - [참고](#참고)
 
 ---
 
-## 1 개요
+## 1. 개요
 
 display 프로퍼티는 layout 정의에 자주 사용되는 중요한 프로퍼티  
 [박스 모델](./BoxModel.md)은 block 레벨 요소인지 inline 레벨 요소인지에 따라 나열 방법이 달라짐
@@ -27,7 +27,7 @@ display 프로퍼티는 layout 정의에 자주 사용되는 중요한 프로퍼
 
 ---
 
-## 2 Block 레벨 요소
+## 2. Block 레벨 요소
 
 - 항상 새로운 라인에서 시작한다.
 - 화면 크기 전체의 가로폭을 차지한다.(width:100%)
@@ -81,7 +81,7 @@ display 프로퍼티는 layout 정의에 자주 사용되는 중요한 프로퍼
 
 ---
 
-## 3 inline 레벨 요소
+## 3. inline 레벨 요소
 
 - 새로운 라인에서 시작하지 않으며 문장의 중간에 들어갈 수 있다. 즉, 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치힌다.
 - content의 너비만큼 가로폭을 차지한다.
@@ -129,7 +129,7 @@ display 프로퍼티는 layout 정의에 자주 사용되는 중요한 프로퍼
 
 ---
 
-## 4 inline-block 레벨 요소
+## 4. inline-block 레벨 요소
 
 block과 inline 레벨 요소의 특징을 모두 갖는다. inline 레벨 요소와 같이 한 줄에 표현되면서 width, height, margin 프로퍼티를 모두 지정할 수 있다.
 
@@ -180,7 +180,7 @@ block과 inline 레벨 요소의 특징을 모두 갖는다. inline 레벨 요�
 
 ---
 
-## 5 Conclusion
+## 5. Conclusion
 
 > 지금까지 block, inline, inline-block이 있다는 사실만 알고 정확한 쓰임에 대해서는 생각하지 않고 사용을 하였다. 이로 인해 겪었던 고통은 `input`은 기본으로 inline이여서 width가 적용되지 않았던 것이다. block 바꾸었더라면... 쉽게 해결을 할 수 있지 않았을까? 그리고 inline-block은 현제까지 여러 프로젝트를 진행하는 동안 사용하지 않았다.  
 > 정확한 개념을 몰라서 사용을 하지 않았던 것인지? 굳이 inline-block으로 사용하지 않아도 flex나 grid으로 해결할 수 있는 문제 였는지는 모르겠지만 특별한 경우가 아니라면 계속해서 flex 또는 grid로 화면 디자인을 할 거 같다. 하지만 태그들이 가지고 있는 기본 display level을 알고 필요할 때 바꾸어 쓰도록 하자!

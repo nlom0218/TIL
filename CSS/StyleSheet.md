@@ -2,14 +2,14 @@
 
 ## 👉 바로가기
 
-- [1 Inline Style](#1-inline-style인라인-스타일)
-- [2 Internal Style Sheet](#2-internal-style-sheet내부-스타일-시트-embedding-style)
-- [3 Linking Style Sheet](#3-linking-style-sheet외부-스타일-시트-link-style)
+- [1. Inline Style](#1-inline-style인라인-스타일일)
+- [2. Internal Style Sheet](#2-internal-style-sheet내부-스타일-시트-embedding-style)
+- [3. Linking Style Sheet](#3-linking-style-sheet외부-스타일-시트-link-style)
 - [참고](#참고)
 
 ---
 
-## 1 Inline Style(인라인 스타일)
+## 1. Inline Style(인라인 스타일)
 
 간단한 스타일 정보를 스타일 시트를 사용하지 않고 스타일을 적용할 대상에 직접 표시하는 방법  
 style="속성: 속성값;"형태로 스타일을 바꿈
@@ -24,7 +24,7 @@ style="속성: 속성값;"형태로 스타일을 바꿈
 
 ---
 
-## 2 Internal Style Sheet(내부 스타일 시트), Embedding style
+## 2. Internal Style Sheet(내부 스타일 시트), Embedding style
 
 웹 문서 안에서 사용할 스타일을 같은 문서 안에 정리한 것  
 `<head>`태그 안에서 정의하고 `<style>과 <style>`태그 사이에 작성
@@ -56,7 +56,7 @@ style="속성: 속성값;"형태로 스타일을 바꿈
 
 ---
 
-## 3 Linking Style Sheet(외부 스타일 시트), Link style
+## 3. Linking Style Sheet(외부 스타일 시트), Link style
 
 여러 웹 문서에서 사용할 스타일을 별도 파일로 저장해 놓고 필요할 때 마다 가져와서 사용  
 `*.css`라는 파일 확장자를 사용

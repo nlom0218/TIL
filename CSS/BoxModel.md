@@ -2,22 +2,22 @@
 
 ## 👉 바로가기
 
-- [1 개요](#1-개요)
-- [2 width / height 프로퍼티](#2-width--height-프로퍼티)
-- [3 margin / padding 프로퍼티](#3-margin--padding-프로퍼티)
-- [4 border 프로퍼티](#4-border-프로퍼티)
-  - [4-1 border-style](#4-1-border-style)
-  - [4-2 border-width](#4-2-border-width)
-  - [4-3 border-color](#4-3-border-color)
-  - [4-4 border-radius](#4-4-border-radius)
-  - [4-5 border](#4-5-border)
-- [5 box-sizing 프로퍼티](#5-box-sizing-프로퍼티)
-- [6 Conclusion](#6-conclusion)
+- [1. 개요](#1-개요)
+- [2. width / height 프로퍼티](#2-width--height-프로퍼티)
+- [3. margin / padding 프로퍼티](#3-margin--padding-프로퍼티)
+- [4. border 프로퍼티](#4-border-프로퍼티)
+  - [4-1. border-style](#4-1-border-style)
+  - [4-2. border-width](#4-2-border-width)
+  - [4-3. border-color](#4-3-border-color)
+  - [4-4. border-radius](#4-4-border-radius)
+  - [4-5. border](#4-5-border)
+- [5. box-sizing 프로퍼티](#5-box-sizing-프로퍼티)
+- [6. Conclusion](#6-conclusion)
 - [참고](#참고)
 
 ---
 
-## 1 개요
+## 1. 개요
 
 웹 문서의 블록 레벨 요소는 모두 Box 형태의 영역을 가지고 있음. 스타일 시트에서 이렇게 Box 형태인 요소를 박스 모델 요소라고 함. 이 Box는 콘텐츠(Content), 패팅(Padding), 테두리(Border), 마진(Margin)로 구성됨.
 
@@ -71,7 +71,7 @@
 
 ---
 
-## 2 width / height 프로퍼티
+## 2. width / height 프로퍼티
 
 박스 모델에서 콘텐츠 영역의 크기를 지정할 때 너비는 width, 높이는 height 프로퍼티를 사용함, 콘텐츠의 영역을 대상을 하는 이유는 `box-sizing 프로퍼티`에 기본값인 **content-box**가 적용되었기 때문, `box-sizing 프로퍼티`에 **border-box**를 적용하면 콘텐츠 영역, padding, border가 포함된 영역을 width / height 프로퍼티의 대상으로 지정할 수 있음.
 
@@ -90,7 +90,7 @@ width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼�
 
 ---
 
-## 3 margin / padding 프로퍼티
+## 3. margin / padding 프로퍼티
 
 박스 모델은 상하좌우 4개의 방향이 있어서 테두리나 마진, 패딩 등을 지정할 때 한꺼번에 똑같이 지정하거나, 모두 다르게 지정할 수 있음.
 
@@ -107,11 +107,11 @@ width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼�
 - 1개의 값을 지정할 때 - `margin: 25px;`
   - top/bottom/right/left를 모두 같은 값으로 지정
 
-## 4 border 프로퍼티
+## 4. border 프로퍼티
 
 ---
 
-### 4-1 border-style
+### 4-1. border-style
 
 `border-style` 프로퍼티는 테두리의 선의 스타일을 지정, `border-style`4-1 border-style 프로퍼티의 기본값은 none이므로 속성값을 따로 지정하지 않으면 테두리 색상이나 두께를 지정하더도 화면에 표시되지 않음.
 
@@ -185,7 +185,7 @@ width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼�
 
 ---
 
-### 4-2 border-width
+### 4-2. border-width
 
 `border-width` 프로퍼티는 테두리의 두께를 지정, 프로퍼티 값의 갯수에 따라 4개 방향(top, right, left, bottom)에 대하여 지정이 가능(margin, padding과 같음)
 
@@ -230,7 +230,7 @@ width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼�
 
 ---
 
-### 4-3 border-color
+### 4-3. border-color
 
 `border-color` 프로퍼티는 테두리의 색상을 지정, 프로퍼티 값의 갯수에 따라 4개 방향(top, right, left, bottom)에 대하여 지정이 가능(margin, padding과 같음)
 
@@ -276,7 +276,7 @@ width와 height 프로퍼티를 비롯한 모든 박스모델 관련 프로퍼�
 
 ---
 
-### 4-4 border-radius
+### 4-4. border-radius
 
 `border-radius` 프로퍼티는 테두리 모서리를 둥글게 표현하도록 지정, 프로퍼티 값은 길이를 나타내느 단위(px, em등)과 %를 사용, 각각의 모서리에 border-radius 프로퍼티를 개별적으로 지정할 수도 있고 4개의 모서리를 short-hand로 한번에 지정 할 수도 있음
 
@@ -361,7 +361,7 @@ border-radius 프로퍼티를 사용해서 꼭짓점을 타원 형태로 만들 
 
 ---
 
-### 4-5 border
+### 4-5. border
 
 `border` 프로퍼티는 `border-width`, `border-style`, `border-color`를 한번에 설정하기 위한 shorthand 프로퍼티이다.
 
@@ -389,7 +389,7 @@ border-radius 프로퍼티를 사용해서 꼭짓점을 타원 형태로 만들 
 
 ---
 
-## 5 box-sizing 프로퍼티
+## 5. box-sizing 프로퍼티
 
 `box-sizing` 프로퍼티는 width, height 프로퍼티의 대상 영역을 변경한다.
 
@@ -438,7 +438,7 @@ html {
 
 ---
 
-## 6 Conclusion
+## 6. Conclusion
 
 > margin, padding, border는 정말 웹디자인을 할 때 flex, grid보다 더 많이 사용을 하는 프로퍼티라고 생각한다. 그 만큼 많이 사용했으니 해당 내용에 대해 익숙해졌지만 이번 챕터를 정리하면서 몰랐던 부분도 많이 알게 되었다.  
 > 지금까지 `border-radius: top-left top-right bottom-right bottom-left`를 사용하지 않고 일일히 하나하나 값들을 지정했다. 앞으로는 한 줄로 표현하는 방법으로 사용을 해야겠다. 또한 타원형으로 만드는 방법에 대해서도 이번에 새롭게 알게 되었다. x좌표, y좌표에 각각 다른 반지름을 주어 타원형으로 만드는 방법으로 더 멋진 웹디자인을 할 수 있도록 하자.  

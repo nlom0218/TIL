@@ -2,16 +2,16 @@
 
 ## 👉 바로가기
 
-- [1 개요](#1-개요)
-- [2 global.css](#2-globalcss)
-- [3 @import](#3-import)
-- [4 Reset css](#4-reset-css)
-- [5 번거로운 점](#5-번거로운-점)
+- [1. 개요](#1-개요)
+- [2. global.css](#2-globalcss)
+- [3. @import](#3-import)
+- [4. Reset css](#4-reset-css)
+- [5. 번거로운 점](#5-번거로운-점)
 - [참고](#참고)
 
 ---
 
-## 1 개요
+## 1. 개요
 
 > 나는 스타일 코드의 중복을 피하기 위해 ReactJS로 개발을 하는 경우 [styled-components](https://styled-components.com/)를 사용하여 필요한 스타일을 컴포넌트를 만들고 만든 스타일 컴포넌트를 필요한 곳에 import하여 사용하였다.
 
@@ -110,7 +110,7 @@ ReactJS, VueJS가 아닌 Html, Css, Javasrcipt로만 웹 개발을 하게 되는
 
 ---
 
-## 2 global.css
+## 2. global.css
 
 `.css`파일 이름은 styles, global 등 원하는 이름으로 작성해도 되지만 나는 모든 `*.html`에서 사용하기 때문에 전역이라는 의미로 **global**를 사용한다.
 
@@ -127,7 +127,7 @@ body {
 
 ---
 
-## 3 @import
+## 3. @import
 
 `@import` CSS 규칙은 다른 스타일 시트에서 스타일 규칙을 가져올 때 쓰임
 
@@ -190,7 +190,7 @@ body {
 
 ---
 
-## 4 Reset css
+## 4. Reset css
 
 모든 웹 브라우저는 디폴트 스타일을 가지고 있어 CSS가 없어도 작동함. 하지만 웹 브라우저에 따라 디폴트 스타일이 다르고 지원하는 tag나 style도 제각각이서 주의가 필요
 
@@ -346,7 +346,7 @@ body {
 
 ---
 
-## 5 번거로운 점
+## 5. 번거로운 점
 
 `global.css`를 사용해서 번거로운 점이라기 보다는 html, css, javascript로만 이용해서 웹을 만들 때의 번거로운 점은 만약 제대로 된 기획, 디자인 없이 바로 코드를 작성하면서 웹을 만들다 보면 중간중간에 class, id를 수정, 추가하여 작성하는 경우가 간혹 생긴다.  
 기획, 디자인이 없더라도 `*.html`을 작성할 때 미리 디자인 까지 생각하며 class, id를 부여한다면 어느정도는 괜찮을지 몰라도 class, id를 나중에 디자인을 할 때 만들게 된다면 모든 `*.html`를 다시 열어서 일일히 class, id를 부여해야하는 번거로움이 생긴다.

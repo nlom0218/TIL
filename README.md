@@ -17,20 +17,32 @@
 
   - [Markdown](/ETC/Markdown.md)
   - [SPA (Single Page Application)](/ETC/SPA.md)
+  - [SSR vs CSR](/ETC/CSRSSR.md) 🧑‍💻
 
 - CSS
 
   - [Style Sheet](/CSS/StyleSheet.md)
+  - [Inheritance & Cascading](/CSS/InheritanceCascading.md) 🧑‍💻
   - [Global CSS](/CSS/GlobalCSS.md)
   - [Selector](/CSS/Selector.md)
   - [display 프로퍼티 (block, inline, inline-block)](/CSS/Display.md)
   - [Box Model](/CSS/BoxModel.md)
+  - [Background](/CSS/Background.md) 🧑‍💻
+  - [Text](/CSS/Text.md) 🧑‍💻
+  - [Position](/CSS/Position.md) 🧑‍💻
+  - [Shadow](/CSS/Shadow.md) 🧑‍💻
 
 - Javascript
 
+- Typescript
+
 - React
 
-- Node Package Module
+  - [React란?](/REACT/WhatIsReact.md) 🧑‍💻
+  - [JSX](/REACT/JSX.md) 🧑‍💻
+  - [Virtual DOM](/REACT/VirtualDOM.md) 🧑‍💻
+
+- Node Package Module(NPM)
 
 ---
 
