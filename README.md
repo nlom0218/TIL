@@ -17,7 +17,7 @@
 
   - [Markdown](/ETC/Markdown.md)
   - [SPA (Single Page Application)](/ETC/SPA.md)
-  - [SSR vs CSR](/ETC/CSRSSR.md) 🧑‍💻
+  - [SSR & CSR](/ETC/CSRSSR.md)
 
 - CSS
 
