@@ -108,13 +108,13 @@ CSR과 SSR의 근본적인 차이는 렌더링의 방식에 있다. 화면에 �
 
 도움이 많이 되었던 유튜브 🎬
 
-- 완전 새로운 리액트가 온다? 핵심정리 10분컷.
+- 완전 새로운 리액트가 온다? 핵심정리 10분컷.  
   [![완전 새로운 리액트가 온다? 핵심정리 10분컷.](https://img.youtube.com/vi/7mkQi0TlJQo/0.jpg)](https://www.youtube.com/watch?v=7mkQi0TlJQo)
 
-- 서버사이드 렌더링 (개발자라면 상식으로 알고 있어야 하는 개념 정리 ⭐️)
+- 서버사이드 렌더링 (개발자라면 상식으로 알고 있어야 하는 개념 정리 ⭐️)  
   [![서버사이드 렌더링 (개발자라면 상식으로 알고 있어야 하는 개념 정리 ⭐️)](https://img.youtube.com/vi/iZ9csAfU5Os/0.jpg)](https://www.youtube.com/watch?v=iZ9csAfU5Os)
 
-- 10분 데코톡
+- 10분 데코톡  
   [![[10분 테코톡] 🎨 신세한탄의 CSR&SSR](https://img.youtube.com/vi/YuqB8D6eCKE/0.jpg)](https://www.youtube.com/watch?v=YuqB8D6eCKE)
 
 ---
