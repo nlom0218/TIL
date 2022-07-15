@@ -2,7 +2,7 @@
 
 ## 👉 바로가기
 
-- [1. Inline Style](#1-inline-style인라인-스타일일)
+- [1. Inline Style](#1-inline-style인라인-스타일)
 - [2. Internal Style Sheet](#2-internal-style-sheet내부-스타일-시트-embedding-style)
 - [3. Linking Style Sheet](#3-linking-style-sheet외부-스타일-시트-link-style)
 - [참고](#참고)
