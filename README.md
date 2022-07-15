@@ -38,7 +38,7 @@
 
 - React
 
-  - [React란?](/REACT/WhatIsReact.md) 🧑‍💻
+  - [React란?](/REACT/WhatIsReact.md)
   - [JSX](/REACT/JSX.md) 🧑‍💻
   - [Virtual DOM](/REACT/VirtualDOM.md) 🧑‍💻
 
