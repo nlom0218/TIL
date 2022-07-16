@@ -12,7 +12,7 @@
   - [6-2. DOM Elements Of The Same Type](#6-2-dom-elements-of-the-same-type)
   - [6-3. Recursing On Children](#6-3-recursing-on-children)
   - [6-4. keys](#6-4-keys)
-- [7. Conclusion](#7-conclusion)
+- [8. Conclusion](#8-conclusion)
 
 ---
 
@@ -139,7 +139,7 @@ liTags[2].textContents = "앵무새";
 
 ## 5. VirtualDOM
 
-VirtualDOM은 여러 수정 사항이 있더라도 한 번만 렌더링을 실행한다.
+VirtualDOM은 여러 수정 사항이 있더라도 한 번만 렌더링을 실행한다. 또한 DOM를 새롭게 생성하고 렌더링 하지 않고 바뀐 부분만 찾아서 해당 부분만 수정할 수 있도록 도와준다.
 
 ![VirtualDOM1](../image/React/VirtualDOM/VirtualDOM1.png)
 
@@ -340,11 +340,21 @@ function App() {
 
 ---
 
-## 7. Conclusion
+## 7. React Fiber
+
+Fiber은 React16의 새로운 reconciliation엔진이다. Fiber의 주요 목표는 VirtualDOM의 incremental rendering를 활성화하는 것이다.  
+[React Fiber Architecture](https://github.com/acdlite/react-fiber-architecture)
+
+> React Fiber에 대해서는 한 챕터로 따로 정리를 하도록 하자.
+
+---
+
+## 8. Conclusion
 
 > 자바스크립트를 배울 때 공부했던 DOM의 내용이 어렴풋이 기억이 났다. 나는 DOM을 사용해서 HTML을 조작했을 때 코드가 길어지고 복잡해진다라는 느낌이 들었지만 DOM을 사용해서 HTML의 요소를 바뀌는 것에 재미를 느꼈었다. 그리고 나서 리액트를 배우니 배웠던 DOM를 사용하지 않아 기억 속에 잠시 묻어두었다.(아주 간혹 사용하였다. NextJS 배울때)  
 > 리액트에서의 VirtualDOM이 DOM의 비효율적인(그렇다고 엄청 비효율적이진 않은 거 같다.) 렌더링 방식을 보완해주는 것이라는 것을 이번 공부를 통해 알게 되었고 내가 아무런 생각없이 짰던 코드들이 VirtualDOM를 활용한 방식이라는 것에 놀라웠다. 역시 공부를 하고 사용하는 것과 공부하지 않고 사용하는 것은 큰 차이가 있는 듯 하다.🧐  
-> 그리고 이전에 팀원과 코드를 함께 보며 공부를 하다가 한 팀원이 `key attribute`를 사용하지 않아 warning 메세지가 나타나는 것을 보았다. 나는 `key attribute`를 사용해야 한다고 이야기 했고 어떠한 이유인지까지는 설명을 못했다. 하지만 지금은 자신있게 설명할 수 있을 거 같다.😀
+> 그리고 이전에 팀원과 코드를 함께 보며 공부를 하다가 한 팀원이 `key attribute`를 사용하지 않아 warning 메세지가 나타나는 것을 보았다. 나는 `key attribute`를 사용해야 한다고 이야기 했고 어떠한 이유인지까지는 설명을 못했다. 하지만 지금은 자신있게 설명할 수 있을 거 같다.😀  
+> 끝으로 공부를 하면서 정리를 하고 있는데 내가 용어를 잘 사용하고 있는지 잘못된 정보가 없는지 걱정이 된다. 이를 보신 분들 중 잘못된 정보가 있다면 꼭 깃허브이슈를 통해 알려주시길 바란다.
 
 ---
 
