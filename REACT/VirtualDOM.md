@@ -139,7 +139,7 @@ liTags[2].textContents = "앵무새";
 
 ## 5. VirtualDOM
 
-VirtualDOM은 여러 수정 사항이 있더라도 한 번만 렌더링을 실행한다. 또한 DOM를 새롭게 생성하고 렌더링 하지 않고 바뀐 부분만 찾아서 해당 부분만 수정할 수 있도록 도와준다.
+VirtualDOM은 여러 수정 사항이 있더라도 한 번만 렌더링을 실행한다. 또한 DOM를 새롭게 생성한 후 렌더링 하지 않고 바뀐 부분만 찾아서 해당 부분만 수정할 수 있도록 도와준다.
 
 ![VirtualDOM1](../image/React/VirtualDOM/VirtualDOM1.png)
 
