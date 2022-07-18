@@ -389,7 +389,7 @@ paragraph 1, 2만 스타일이 적용됨.
   <head>
     <style>
       /* p 요소의 형제 요소 중에 p 요소 뒤에 위치하는 ul 요소를 모두 선택한다. */
-      p + ul {
+      p ~ ul {
         color: red;
       }
     </style>

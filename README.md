@@ -27,7 +27,7 @@
   - [Selector](/CSS/Selector.md)
   - [display 프로퍼티 (block, inline, inline-block)](/CSS/Display.md)
   - [Box Model](/CSS/BoxModel.md)
-  - [Background](/CSS/Background.md) 🧑‍💻
+  - [Background](/CSS/Background.md)
   - [Text](/CSS/Text.md) 🧑‍💻
   - [Position](/CSS/Position.md) 🧑‍💻
   - [Shadow](/CSS/Shadow.md) 🧑‍💻
