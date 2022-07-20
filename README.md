@@ -29,7 +29,7 @@
   - [Box Model](/CSS/BoxModel.md)
   - [Background](/CSS/Background.md)
   - [Text](/CSS/Text.md)
-  - [Position](/CSS/Position.md) 🧑‍💻
+  - [Position](/CSS/Position.md)
   - [Shadow](/CSS/Shadow.md) 🧑‍💻
 
 - Javascript
