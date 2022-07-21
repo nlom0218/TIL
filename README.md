@@ -30,7 +30,7 @@
   - [Background](/CSS/Background.md)
   - [Text](/CSS/Text.md)
   - [Position](/CSS/Position.md)
-  - [Shadow](/CSS/Shadow.md) 🧑‍💻
+  - [Shadow](/CSS/Shadow.md)
 
 - Javascript
 

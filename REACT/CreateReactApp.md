@@ -24,11 +24,11 @@ create react app를 사용하기 위해서는 아래와 같은 준비사항이 �
 
 1. 14.0.0 혹은 상위 버전의 node
 
-   > `$ node -v` 명령어를 통해 node의 버전을 알 수 있다.
+   > `$ node -v` 명령어를 통해 node의 버전을 알 수 있다.  
    > ![node -v](../image/React/CreateReactApp/setup1.png)
 
 2. 5.6 혹은 상위 버전의 npm
-   > `$ npm -v` 명령어를 통해 npm의 버전을 알 수 있다.
+   > `$ npm -v` 명령어를 통해 npm의 버전을 알 수 있다.  
    > ![npm -v](../image/React/CreateReactApp/setup2.png)
 
 아직 node를 설치하지 않았다면 아래의 링크를 통해 설치할 수 있다. npm은 node를 설치하면 함께 설치된다.  
