@@ -4,6 +4,7 @@
 
 - [1. 개요](#1-개요)
 - [2. text-shadow](#2-text-shadow)
+- [3. box-shadow](#3-box-shadow)
 - [참고](#참고)
 
 ---
