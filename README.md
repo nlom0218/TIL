@@ -59,7 +59,7 @@
   - [Virtual DOM](/REACT/VirtualDOM.md)
   - [Create React app](/REACT/CreateReactApp.md)
   - [클래스형 Component vs 함수형 Component](/REACT/Component.md)
-  - [Props](/REACT/Props.md) 🧑‍💻
+  - [Props](/REACT/Props.md)
   - [State](/REACT/State.md) 🧑‍💻
   - [이벤트 처리](/REACT/Event.md) 🧑‍💻
   - [배열 랜더링]() 🧑‍💻
