@@ -139,7 +139,7 @@
 
 ## 참고
 
-[CSS / text-shadow / 글자에 그림자 효과를 주는 속성](https://www.codingfactory.net/10650)
+[CSS / text-shadow / 글자에 그림자 효과를 주는 속성](https://www.codingfactory.net/10650)  
 [CSS / box-shadow / 박스에 그림자 효과 만드는 속성](https://www.codingfactory.net/10628)  
 [poiemaweb 2-12 그림자](https://poiemaweb.com/css3-shadow)
 
