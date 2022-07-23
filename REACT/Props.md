@@ -218,11 +218,11 @@ export default Content;
 //  Wrapper.js
 import React from "react";
 
-const Wrapper = ({chlidren}) => {
+const Wrapper = ({children}) => {
   return (
     <div style={{ backgroundColor: "red", color: "white" }}>
       <h1>Wrapper 컴포넌트 입니다.</h1>
-      {chlidren}
+      {children}
     </div>
   );
 };
@@ -247,7 +247,7 @@ export default Content;
 
 이번에는 성공적으로 `<h2>Content 컴포넌트 입니다.</h2>`의 내용이 출력되었다. 다른점은 찾아보자.
 
-Wrapper 컴포넌트의 props를 구조분해 할당을 하여 `chlidren`값을 가져왔다. 그리고 ` <h1>Wrapper 컴포넌트 입니다.</h1>`아래에 `chlidren`를 넣어주었다. 그래서 Content 컴포넌트의 `<h2>Content 컴포넌트 입니다.</h2>`이 바로 아래에 위치하게 된다.
+Wrapper 컴포넌트의 props를 구조분해 할당을 하여 `children`값을 가져왔다. 그리고 ` <h1>Wrapper 컴포넌트 입니다.</h1>`아래에 `children`를 넣어주었다. 그래서 Content 컴포넌트의 `<h2>Content 컴포넌트 입니다.</h2>`이 바로 아래에 위치하게 된다.
 
 Wrapper.js에서 콘솔로 `children`를 찍어보자 그러면 아래와 같은 객체을 볼 수 있다.
 
@@ -255,7 +255,7 @@ Wrapper.js에서 콘솔로 `children`를 찍어보자 그러면 아래와 같은
 
 `children`에는 Content 컴포넌트에서 작성된 리액트 앨리먼트가 객체 형태로 존재하고 있음을 확인할 수 있다.
 
-주의할 점은 `props.chlidren`이 아닌 다른 임의의 이름으로 선언하면 원하는 결과물을 얻을 수 없다.
+주의할 점은 `props.children`이 아닌 다른 임의의 이름으로 선언하면 원하는 결과물을 얻을 수 없다.
 
 ---
 
