@@ -33,7 +33,7 @@
   - [Text](/CSS/Text.md)
   - [Position](/CSS/Position.md)
   - [Shadow](/CSS/Shadow.md)
-  - [Transition](/CSS/Transition.md) 🧑‍💻
+  - [Transition](/CSS/Transition.md)
   - [Animation](/CSS/Animation.md) 🧑‍💻
   - [Transform](/CSS/Transform.md) 🧑‍💻
   - [Flex](/CSS/Flex.md) 🧑‍💻
