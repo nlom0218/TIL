@@ -37,7 +37,7 @@
   - [Animation](/CSS/Animation.md) 🧑‍💻
   - [Transform](/CSS/Transform.md) 🧑‍💻
   - [Flexbox Layout](/CSS/Flex.md)
-  - [Grid](/CSS/Grid.md)
+  - [Grid Layout](/CSS/Grid.md)
 
   ***
 
@@ -47,7 +47,7 @@
 
 - Typescript
 
-  - [Typescript란?]() 🧑‍💻
+  - [Typescript란?](/Typescript/Typescript.md)
   - [React App에 Typescript 적용하기]() 🧑‍💻
 
   ***
