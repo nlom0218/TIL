@@ -81,7 +81,7 @@ function App() {
 
 ![JSX Error1](../image/React/JSX/JSXError1.png)
 
-`<Header />`컴포터는 아래 줄에 있는 `<div>`태그가 닫혀있지 않기 때문이다.
+`<Header />`컴포넌트 아래 줄에 있는 `<div>`태그가 닫혀있지 않기 때문이다.
 
 HTML에서는 `input` 또는 `br`태그를 할 때 닫지 않고 사용하기도 하는데 리액트에서는 닫아야 한다. 태그와 태그 사이에 내용(요소)이 들어가지 않을 때, Self Closing태그 라는 것을 사용해야 한다. 위의 `Header`컴포넌트를 사용 할 때에도 Self Closing태그를 사용했다.
 

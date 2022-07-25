@@ -1,4 +1,4 @@
-# Today I Learned(TIL)
+# HD's Today I Learned(TIL)
 
 > 기록하기를 좋아하라, 쉬지말고 기록해라, 생각이 떠오르면 수시로 기록하라, 기억은 흐려지고 생각은 사라진다. 머리를 믿지 말고 손을 믿어라. - 다산 정약용
 
@@ -60,10 +60,20 @@
   - [Create React app](/REACT/CreateReactApp.md)
   - [클래스형 Component vs 함수형 Component](/REACT/Component.md)
   - [Props](/REACT/Props.md)
-  - [State](/REACT/State.md) 🧑‍💻
+  - [State](/REACT/State.md)
   - [이벤트 처리](/REACT/Event.md) 🧑‍💻
   - [배열 랜더링]() 🧑‍💻
   - [조건부 랜더링]() 🧑‍💻
+  - [Lifecycle]() 🧑‍💻
+  - [Styled Components]() 🧑‍💻
+  - Hooks
+    - [useState]() 🧑‍💻
+    - [useEffect]() 🧑‍💻
+    - [useRef]() 🧑‍💻
+    - [useMemo]() 🧑‍💻
+    - [useCallback]() 🧑‍💻
+    - [useReducer]() 🧑‍💻
+    - [useContext]() 🧑‍💻
 
   ***
 
