@@ -37,7 +37,7 @@
   - [Animation](/CSS/Animation.md) 🧑‍💻
   - [Transform](/CSS/Transform.md) 🧑‍💻
   - [Flexbox Layout](/CSS/Flex.md)
-  - [Grid](/CSS/Grid.md) 🧑‍💻
+  - [Grid](/CSS/Grid.md)
 
   ***
 
