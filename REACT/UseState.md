@@ -129,7 +129,9 @@ export default Counter;
 
 아래는 `setState()`의 타입을 나타낸 코드이다.
 
-![setState](../image/REACT/UseState/setState.png)
+```js
+type SetStateAction<S> = S | ((prevState: S) => S);
+```
 
 위의 내용을 정리하자면 `setState()`의 전달인자는 두 종류가 들어갈 수 있다.
 
