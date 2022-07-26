@@ -50,7 +50,7 @@
 ## 5. Conclusion
 
 > 리액트에서 정말 많이 사용하는 state이다. 클래스형 컴포넌트에서는 사용하지 않아 정확한 방법은 모르지만 함수형 컴포넌트에서의 사용법은 얼추 알고 있다. 하지만 정확히 state가 어떤 개념인지에 대해 설명하라고 했을 땐 못하였다. 오늘 이후엔 짧게 나마 누구에게 설명을 할 수 있을 거 같은 느낌이 든다.  
-> 그리고 PureComponent는 찾아보니까 클래스형 컴포넌트에서 사용했던 개념이었던 거 같다. 해당 개념에 대한 깊은 공부보다는 간단하게 어떤 개념인지만 알고 넘어가자.
+> 그리고 PureComponent는 찾아보니까 클래스형 컴포넌트에서 사용했던 개념이었던 거 같다. 해당 개념에 대한 깊은 공부보다는 간단하게 어떤 개념인지만 알고 넘어가고 자세한 개념 공부는 React.memo로 하자.😃
 
 ---
 
@@ -58,4 +58,9 @@
 
 도서 - 소플의 처음 만난 리액트  
 [[React] 4. React 컴포넌트(3) - State 알아보기(React Hooks 사용)](https://goddaehee.tistory.com/301)  
-[state를 직접 변경하지 않고 setState를 사용하는 이유에 대해서 설명하세요.](https://mari-mo.tistory.com/214)
+[state를 직접 변경하지 않고 setState를 사용하는 이유에 대해서 설명하세요.](https://mari-mo.tistory.com/214)  
+[React - PureComponent 제대로 사용하기](https://godsenal.com/posts/React-PureComponent-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/)
+
+---
+
+[👆](#state)
