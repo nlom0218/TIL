@@ -67,8 +67,8 @@
   - [Lifecycle]() 🧑‍💻
   - [Styled Components]() 🧑‍💻
   - Hooks
-    - [useState](/REACT/UseState.md)
-    - [useEffect]() 🧑‍💻
+    - [useState()](/REACT/UseState.md)
+    - [useEffect()](/REACT/UseEffect.md)
     - [useRef]() 🧑‍💻
     - [useMemo]() 🧑‍💻
     - [useCallback]() 🧑‍💻

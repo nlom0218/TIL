@@ -1,4 +1,4 @@
-# useState
+# useState()
 
 ## 👉 바로가기
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 2. useState를 사용하지 않는다?!
+## 2. useState()를 사용하지 않는다?!
 
 ```js
 import React, { useState } from "react";
@@ -61,7 +61,7 @@ export default Counter;
 
 ---
 
-## 3. useState 사용하기
+## 3. useState() 사용하기
 
 `useState()` 아래와 같이 사용한다.
 
