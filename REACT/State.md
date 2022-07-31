@@ -42,7 +42,7 @@
 2. setState는 비동기적으로 동작한다. 때문에 state가 직접 수정되어 여러번 상태를 업데이트 하는 경우 이전 업데이트 내용이 다음 업데이트 내용에 덮어 쓰여질 수 있다.
 3. 클래스형 컴포넌트의 PureComponent에서 동작하지 않는다. PureComponent는 this.state과 setState를 비교해 업데이트가 필요한 경우에만 render 함수를 호출한다. 이때, state를 직접 수정하게 되면 기존의 this.state과 setState가 동일하므로 리액트는 render 함수를 호출하지 않는다.
 
-> PureComponent: 기본 Component와의 단순한 성능적인 차이로 PureComponent는 `shoulComponentUpdate`를 통해 props와 state의 얕은 비교를 하여 불필요한 re-render를 막아준다.
+> PureComponent: 기본 Component와의 단순한 성능적인 차이로 PureComponent는 `shouldComponentUpdate`를 통해 props와 state의 얕은 비교를 하여 불필요한 re-render를 막아준다.
 > 함수형 컴포넌트일 경우에는 PureComponent의 역할을 React.memo가 하게 된다.
 
 ---

@@ -162,42 +162,42 @@ return (
 
 > **데이터 바인딩**이란? 두 데이터 혹은 정보의 소스를 모두 일치시키는 기법이다. 즉 화면에 보이는 데이터와 브라우저 메모리에 있는 데이터를 일치시키는 기법이다.
 
-1. 단방향 데이터 바인딩
+- 단방향 데이터 바인딩
 
-   ![1 way data binding](../image/React/WhatIsReact/1wayDataBinding.png)
+  ![1 way data binding](../image/React/WhatIsReact/1wayDataBinding.png)
 
-   - 한쪽 방향으로만 제어가 가능한 것
-   - js에서는 사용자의 화면을 변경할 수 있지만 사용자는 js에 있는 데이터를 자동적으로 변경시키지 못하기 때문에 변화된 값을 갑지하여 데이터 바인딩을 시켜줘야 함
-   - JS -> HTML 만 가능
-   - 데이터 변화에 따른 성능 저하 없이 DOM 객체 갱신 가능하지만 변화를 감지하고 화면을 업데이트 하는 코드를 매번 작성해야 함
+  - 한쪽 방향으로만 제어가 가능한 것
+  - js에서는 사용자의 화면을 변경할 수 있지만 사용자는 js에 있는 데이터를 자동적으로 변경시키지 못하기 때문에 변화된 값을 갑지하여 데이터 바인딩을 시켜줘야 함
+  - JS -> HTML 만 가능
+  - 데이터 변화에 따른 성능 저하 없이 DOM 객체 갱신 가능하지만 변화를 감지하고 화면을 업데이트 하는 코드를 매번 작성해야 함
 
-   ```js
-   const [value, setValue] = useState("");
+  ```js
+  const [value, setValue] = useState("");
 
-   return <input value={value} onChange={(e) => setValue(e.target.value)} />;
-   ```
+  return <input value={value} onChange={(e) => setValue(e.target.value)} />;
+  ```
 
-   - 위의 코드는 리액트에서 input값을 변화시키기 위해 작성하는 코드이다. `input`태그의 value어트리뷰트값으로 state의 초기값이 ""이 할당이 된다.  
-     사용자가 input의 값을 변경하게 될 때 onChange함수가 실행되어 state값을 변경하게 된다. 이로써 사용자는 변경된 input값을 볼 수 있다.  
-     만약 onChange함수가 없다면 사용자는 변경된 input값을 볼 수 없다.  
-     즉, 사용자가 변수를 직접적으로 변경하는 것이 아니라 작성된 JS 함수를 통해 변경을 감지하여 변수의 값을 바꾼다.
-   - 나는 리액트에서 `Form`태그와 `input`태그를 다룰 때 위의 방법으로 작성하지 않고 `useForm`이라는 아주 좋은 패지지 모델을 사용한다.
+  - 위의 코드는 리액트에서 input값을 변화시키기 위해 작성하는 코드이다. `input`태그의 value어트리뷰트값으로 state의 초기값이 ""이 할당이 된다.  
+    사용자가 input의 값을 변경하게 될 때 onChange함수가 실행되어 state값을 변경하게 된다. 이로써 사용자는 변경된 input값을 볼 수 있다.  
+    만약 onChange함수가 없다면 사용자는 변경된 input값을 볼 수 없다.  
+    즉, 사용자가 변수를 직접적으로 변경하는 것이 아니라 작성된 JS 함수를 통해 변경을 감지하여 변수의 값을 바꾼다.
+  - 나는 리액트에서 `Form`태그와 `input`태그를 다룰 때 위의 방법으로 작성하지 않고 `useForm`이라는 아주 좋은 패지지 모델을 사용한다.
 
 ---
 
-2. 양방향 데이터 바인딩
+- 양방향 데이터 바인딩
 
-   ![2 ways data binding](../image/React/WhatIsReact/2waysDataBinding.png)
+  ![2 ways data binding](../image/React/WhatIsReact/2waysDataBinding.png)
 
-   - MVC 패턴에서 뷰와 모델의 데이터를 동기화하는 것
-   - 사용자의 입력값에 따라 js의 데이터가 변경되고, js의 데이터가 변경되면 사용자의 화면도 변경
-   - HTML -> JS, JS -> HTML 양쪽 모두 가능
-   - 입력된 값이나 변경된 값에 따라 내용이 바로 바뀌기 때문에 따로 체크해주지 않음
-   - 수많은 코드의 양을 줄여주고 유지보수나 코드를 관리하기 매우 쉽게 해줌
-   - vue.js의 예시
-     - V-model과 V-on을 통해 양방향 데이터 바인딩을 한다.
-     - V-model이 DOM 연관된 내용을 잡아내고, vue가 바라보는 대상의 속성과 연결된다.
-     - V-on은 이벤트를 잡아내는 데 사용한다.
+  - MVC 패턴에서 뷰와 모델의 데이터를 동기화하는 것
+  - 사용자의 입력값에 따라 js의 데이터가 변경되고, js의 데이터가 변경되면 사용자의 화면도 변경
+  - HTML -> JS, JS -> HTML 양쪽 모두 가능
+  - 입력된 값이나 변경된 값에 따라 내용이 바로 바뀌기 때문에 따로 체크해주지 않음
+  - 수많은 코드의 양을 줄여주고 유지보수나 코드를 관리하기 매우 쉽게 해줌
+  - vue.js의 예시
+    - V-model과 V-on을 통해 양방향 데이터 바인딩을 한다.
+    - V-model이 DOM 연관된 내용을 잡아내고, vue가 바라보는 대상의 속성과 연결된다.
+    - V-on은 이벤트를 잡아내는 데 사용한다.
 
 ---
 
