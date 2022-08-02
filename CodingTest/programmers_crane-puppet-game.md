@@ -29,7 +29,7 @@
 - 프로그래머스
 - Lv.1
 - 2019 카카로 개발자 겨울 인턴십
-- [문제풀러가기](https://school.programmers.co.kr/learn/courses/30/lessons/64061?language=javascript)
+- [문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/64061?language=javascript)
 
 ---
 
@@ -263,7 +263,7 @@ break;
 
 즉, `basket`이 빈배열인 경우 `basket[basket.length - 1] === board[k][yIndex]`의 값은 `false`가 된다. 그러므로 굳이 `basket`이 빈 배열일 때와 아닐 때를 나눌 필요가 없다.
 
-아래의 사진을 참고
+아래의 사진을 참고  
 ![programmers_crane-puppet-game_emptyArr](../image/CodingTest/programmers_crane-puppet-game/programmers_crane-puppet-game_emptyArr.png)
 
 또한 `pushItem`함수를 정의한 이유는 같은 코드가 두 번 사용되기 때문이다. `basket`이 빈배열일 때의 조건문을 제거하면 굳이 `pushItem`함수를 정의하지 않아도 된다. 그래서 아래와 같이 코드를 좀 더 간결하게 작성할 수 있다.
