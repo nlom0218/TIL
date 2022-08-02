@@ -72,7 +72,7 @@
     - [useState()](/REACT/UseState.md)
     - [useEffect()](/REACT/UseEffect.md)
     - [useRef()](/REACT/UseRef.md)
-    - [useMemo]() 🧑‍💻
+    - [useMemo()](/REACT/UseMemo.md)
     - [useCallback]() 🧑‍💻
     - [useReducer]() 🧑‍💻
     - [useContext]() 🧑‍💻
