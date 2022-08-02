@@ -29,6 +29,7 @@
 - 프로그래머스
 - Lv.1
 - 2019 카카로 개발자 겨울 인턴십
+- [문제풀러가기](https://school.programmers.co.kr/learn/courses/30/lessons/64061?language=javascript)
 
 ---
 
@@ -260,7 +261,7 @@ break;
 
 나는 `basket`이 비어있을 때와 비어있지 않을 때를 따로 나누어서 코드를 작성했다. 하지만 `basket`이 빈 배열이 때의 첫 번째 값은 정의되어 있지 않기 때문에 새롭게 뽑힌 인형과 비교하면 두 개는 서로 같지 않다.
 
-즉, `basket`이 빈배열인 경우 `basket[basket.length - 1] === board[k][yIndex]`의 값은 `false`가 된다. 그러므로 굳이 `basket`이 빈배열일 때아 아닐 때를 나눌 필요가 없다.
+즉, `basket`이 빈배열인 경우 `basket[basket.length - 1] === board[k][yIndex]`의 값은 `false`가 된다. 그러므로 굳이 `basket`이 빈 배열일 때와 아닐 때를 나눌 필요가 없다.
 
 아래의 사진을 참고
 ![programmers_crane-puppet-game_emptyArr](../image/CodingTest/programmers_crane-puppet-game/programmers_crane-puppet-game_emptyArr.png)
@@ -368,7 +369,7 @@ const stacks = transpose(board).map((row) =>
 
 ```js
 const stacks = [
-  [3, 4], // 1얄
+  [3, 4], // 1열
   [5, 2, 2], // 2열
   [1, 4, 5, 1], // 3열
   [3, 4], // 4열
