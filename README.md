@@ -43,6 +43,8 @@
 
 - Javascript
 
+  - Array
+
   ***
 
 - Typescript
@@ -78,6 +80,11 @@
   ***
 
 - Node Package Module(NPM)
+
+---
+
+- Coding Test
+  - [크레인 인형뽑기 게임](/CodingTest/programmers_crane-puppet-game.md)
 
 ---
 
