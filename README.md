@@ -89,6 +89,11 @@
 
 ---
 
+- Github
+  - [Branch Protection Rule 적용하기](/Github/ProtectionBranch.md)
+
+---
+
 ### 오타 및 잘못된 내용 지적은 환영입니다. 언제든지 말씀해주세요!😀
 
 [Issues 생성하러 가기](https://github.com/nlom0218/TIL/issues)

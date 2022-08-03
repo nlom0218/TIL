@@ -244,7 +244,7 @@ return isPrimeNums.length;
 
 ## 4. Refactoring
 
-나는 `isPrimeNums`배열의 원소를 `boolean`값으로 가지고 있다. 하지만 변수의 이름과 통일성을 가지기 위해 `boolean`값이 아닌 `number`값으로 가지려 한다.
+나는 `isPrimeNums`배열의 원소를 `boolean`값으로 가지고 있다. 하지만 변수의 이름과 통일성을 가지기 위해 `boolean`값이 아닌 `number`값으로 가지려 한다. 또한 변수명을 `primeNums`로 바꾸려 한다.
 
 이를 위해 수정해야 할 부분은 `2) 소수인지 판별하기`에서의 `isPrime()`함수이다. 소수가 아닌 수는 `false`로 리턴을 하지만 소수인 값은 받은 `num`을 그대로 리턴을 하도록 바꾸었다. (아래 코드 참고)
 
@@ -256,6 +256,13 @@ function isPrime(num) {
   }
   return num;
 }
+```
+
+```js
+// 4) 구한 원소들의 합이 소수인지 판별하기
+const primeNums = sumNums.map((num) => isPrime(num)).filter((item) => item);
+
+return primeNums.length;
 ```
 
 ---
