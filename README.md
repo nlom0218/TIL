@@ -85,6 +85,7 @@
 
 - Coding Test
   - [크레인 인형뽑기 게임](/CodingTest/programmers_crane-puppet-game.md)
+  - [소수 만들기](/CodingTest/programmers_make-prime-number.md)
 
 ---
 
