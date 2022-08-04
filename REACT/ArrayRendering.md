@@ -76,7 +76,7 @@ const Test = () => {
 export default Test;
 ```
 
-![array rendering 1](../image/REACT/ArrayRendering/arrayRendering1.png)
+![array rendering 1](../image/React/ArrayRendering/arrayRendering1.png)
 
 `giftItem`배열의 원소를 하나씩 일일히 가져와서 렌더링을 하고 있다. 물론 이것도 배열을 렌더링하는 하나의 방법이다. 하지만 `giftItem`의 원소가 엄청 많다면 어떨까? 일일히 하나씩 작성을 하는 것이 가능할까? 가능하겠지만 시간은 많이 소요가 될 것이다. 즉, 비효율적인 방법이다.
 
