@@ -63,7 +63,7 @@
   - [클래스형 Component vs 함수형 Component](/REACT/Component.md)
   - [Props](/REACT/Props.md)
   - [State](/REACT/State.md)
-  - [이벤트 처리](/REACT/Event.md) 🧑‍💻
+  - [이벤트 처리](/REACT/Event.md)
   - [배열 랜더링]() 🧑‍💻
   - [조건부 랜더링]() 🧑‍💻
   - [Lifecycle]() 🧑‍💻
@@ -73,7 +73,7 @@
     - [useEffect()](/REACT/UseEffect.md)
     - [useRef()](/REACT/UseRef.md)
     - [useMemo()](/REACT/UseMemo.md)
-    - [useCallback()]()
+    - [useCallback()](/REACT/UseCallback.md)
     - [useReducer]() 🧑‍💻
     - [useContext]() 🧑‍💻
 
