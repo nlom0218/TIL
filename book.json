@@ -1,13 +1,20 @@
 {
   "gitbook": "2.0.1",
-  "plugins": ["edit-link"],
+  "plugins": [
+    "collapsible-chapters",
+    "comment",
+    "hide-published-with",
+    "github",
+    "edit-link"
+  ],
   "pluginsConfig": {
+    "collapsible-chapters": {},
+    "github": {
+      "url": "https://github.com/nlom0218/TIL"
+    },
     "edit-link": {
-      "base": "https://github.com/USER/REPO/edit/BRANCH/path/to/book",
-      "label": {
-        "en": "Edit This Page",
-        "de": "Seite bearbeiten"
-      }
+      "base": "https://github.com/nlom0218/TIL/issues",
+      "label": "수정 요청하기"
     }
   }
 }
