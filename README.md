@@ -6,9 +6,9 @@
 > - 내 것으로 만들기
 > - 천천히 하지만 확실히
 
+깃북에서 보기 👉 [gitbook TIL](https://kim-hong-dong.gitbook.io/hd/)  
 웹에서 보기 👉 [github.io TIL](https://nlom0218.github.io/TIL/)  
 깃허브에서 보기 👉 [github TIL](https://github.com/nlom0218/TIL)
-깃북에서 보기 👉 [gitbook TIL](https://kim-hong-dong.gitbook.io/hd/)
 
 ---
 
@@ -25,7 +25,7 @@
 - CSS
 
   - [Style Sheet](/CSS/StyleSheet.md)
-  - [Inheritance & Cascading](/CSS/InheritanceCascading.md) 🧑‍💻
+  - [Inheritance & Cascading](CSS/InheritanceCascading.md)
   - [Global CSS](/CSS/GlobalCSS.md)
   - [Selector](/CSS/Selector.md)
   - [display 프로퍼티 (block, inline, inline-block)](/CSS/Display.md)
@@ -35,8 +35,8 @@
   - [Position](/CSS/Position.md)
   - [Shadow](/CSS/Shadow.md)
   - [Transition](/CSS/Transition.md)
-  - [Animation](/CSS/Animation.md) 🧑‍💻
-  - [Transform](/CSS/Transform.md) 🧑‍💻
+  - [Animation](CSS/Animation.md)
+  - [Transform](CSS/Transform.md)
   - [Flexbox Layout](/CSS/Flex.md)
   - [Grid Layout](/CSS/Grid.md)
 
@@ -51,7 +51,7 @@
 - Typescript
 
   - [Typescript란?](/Typescript/Typescript.md)
-  - [React App에 Typescript 적용하기]() 🧑‍💻
+  - [React App에 Typescript 적용하기](Typescript/SettingTypescript.md)
 
   ***
 
@@ -66,17 +66,18 @@
   - [State](/REACT/State.md)
   - [이벤트 처리](/REACT/Event.md)
   - [배열 랜더링](/REACT/ArrayRendering.md)
-  - [조건부 랜더링]() 🧑‍💻
-  - [Lifecycle]() 🧑‍💻
-  - [Styled Components]() 🧑‍💻
+  - [조건부 랜더링](REACT/ConditionalRendering.md)
+  - [Lifecycle](REACT/Lifecycle.md)
+  - CSS
+    - [Styled Components](REACT/CSS/StyledComponents.md)
   - Hooks
-    - [useState()](/REACT/UseState.md)
-    - [useEffect()](/REACT/UseEffect.md)
-    - [useRef()](/REACT/UseRef.md)
-    - [useMemo()](/REACT/UseMemo.md)
-    - [useCallback()](/REACT/UseCallback.md)
-    - [useReducer]() 🧑‍💻
-    - [useContext]() 🧑‍💻
+    - [useState()](REACT/Hooks/UseState.md)
+    - [useEffect()](REACT/Hooks/UseEffect.md)
+    - [useRef()](REACT/Hooks/UseRef.md)
+    - [useMemo()](REACT/Hooks/UseMemo.md)
+    - [useCallback()](REACT/Hooks/UseCallback.md)
+    - [useReducer](REACT/Hooks/UseReducer.md)
+    - [useContext](REACT/Hooks/UseContext.md)
 
   ***
 

@@ -1,0 +1,22 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "description": "HD's TIL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlom0218/TIL.git"
+  },
+  "author": "KHD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nlom0218/TIL/issues"
+  },
+  "homepage": "https://github.com/nlom0218/TIL#readme",
+  "dependencies": {
+    "gitbook-plugin-edit-link": "^2.0.2"
+  }
+}

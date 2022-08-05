@@ -33,7 +33,7 @@
 - [Typescript](Typescript/README.md)
 
   - [Typescript란?](Typescript/Typescript.md)
-  - [React App에 Typescript 적용하기](#) 🧑‍💻
+  - [React App에 Typescript 적용하기](Typescript/SettingTypescript.md)
 
 - [React](REACT/README.md)
 
