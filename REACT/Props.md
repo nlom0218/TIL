@@ -1,18 +1,5 @@
 # Props
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. props는 읽기 전용](#2-props는-읽기-전용)
-- [3. props의 기본 사용법](#3-props의-기본-사용법)
-- [4. 여려개의 props와 구조분해 할당](#4-여려개의-props와-구조분해-할당)
-- [5. defaultProps로 기본값 설정](#5-defaultprops로-기본값-설정)
-- [6. props.children](#6-propschildren)
-- [7. Conclusion](#7-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 리액트 App를 개발하는 것을 붕어빵을 만드는 것과 비교했을 때 붕어빵 틀은 컴포넌트, 붕어빵 속 재료는 props, 완성된 붕어빵은 리액트 앨리먼트가 된다.

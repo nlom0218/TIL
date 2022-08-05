@@ -1,37 +1,5 @@
 # Grid Layout
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. 용어 정리](#2-용어-정리)
-- [3. Usage](#3-usage)
-- [4. 그리드 형태 정의](#4-그리드-형태-정의)
-  - [4-1. grid-template-columns](#4-1-grid-template-columns)
-  - [4-2. grid-template-rows](#4-2-grid-template-rows)
-  - [4-3. repeat 함수](#4-3-repeat-함수)
-  - [4-4. minmax 함수](#4-4-minmax-함수)
-  - [4-5. auto-fill, auto-fit](#4-5-auto-fill-auto-fit)
-- [5. 간격만들기](#5-간격만들기)
-- [6. 그리드 형태를 자동으로 정의](#6-그리드-형태를-자동으로-정의)
-- [7. grid-column, grid-row](#7-grid-column-grid-row)
-- [8. 세로 방향 정렬](#8-세로-방향-정렬)
-  - [8-1. align-items](#8-1-align-items)
-  - [8-2. align-content](#8-2-align-content)
-  - [8-3. align-self](#8-3-align-self)
-- [9. 가로 방향 정렬](#9-가로-방향-정렬)
-  - [9-1. justify-items](#9-1-justify-items)
-  - [9-2. justify-content](#9-2-justify-content)
-  - [9-3. justify-self](#9-3-justify-self)
-- [10. 정렬 shorthand](#10-정렬-shorthand)
-  - [10-1. place-content](#10-1-place-content)
-  - [10-2. place-slef](#10-2-place-slef)
-- [11. order](#11-order)
-- [12. z-index](#12-z-index)
-- [13. Conclusion](#13-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 현대 웹 레이아웃을 담당하고 있는 가장 큰 프로퍼티가 바로 Grid이다. 나의 경우 전체적인 틀을 Grid로 잡고 작은 부분 부분을 Flex를 사용하고 있다. 사실 지금은 작은 부분도 Flex보다는 Grid를 사용하는 편이다.

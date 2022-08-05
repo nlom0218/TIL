@@ -1,29 +1,5 @@
 # Flexbox Layout
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. 용어 정리](#2-용어-정리)
-- [3. Usage](#3-usage)
-- [4. Flexbox container 속성](#4-flexbox-container-속성)
-  - [4.1 flex-direction](#41-flex-direction)
-  - [4-2 flex-wrap](#4-2-flex-wrap)
-  - [4-3. flex-flow](#4-3-flex-flow)
-  - [4-4 justify-content](#4-4-justify-content)
-  - [4-5 align-items](#4-5-align-items)
-  - [4-6. align-content](#4-6-align-content)
-- [5. Flexbox item 속성](#5-flexbox-item-속성)
-  - [5-1. order](#5-1-order)
-  - [5-2. flex-grow](#5-2-flex-grow)
-  - [5-3. flex-shrink](#5-3-flex-shrink)
-  - [5-4. flex-basis](#5-4-flex-basis)
-  - [5-5. flex](#5-5-flex)
-  - [5-6. align-self](#5-6-align-self)
-- [6. Conclusion](#6-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 Flexbox Layout은 모던 웹을 위하여 제안된 기존 layout보다 더 세련된 방식의 니즈에 부합하기 위한 CSS3의 새로운 layout방식이다. 플랙스 박스 레이아웃은 비교적 최근에 등장한 개념이므로 기존의 CSS 속성 외에 새로 공부해야 할 속성이 있다.

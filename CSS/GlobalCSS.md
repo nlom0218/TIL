@@ -1,16 +1,5 @@
 # GlobalCSS
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. global.css](#2-globalcss)
-- [3. @import](#3-import)
-- [4. Reset css](#4-reset-css)
-- [5. 번거로운 점](#5-번거로운-점)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 > 나는 스타일 코드의 중복을 피하기 위해 ReactJS로 개발을 하는 경우 [styled-components](https://styled-components.com/)를 사용하여 필요한 스타일을 컴포넌트를 만들고 만든 스타일 컴포넌트를 필요한 곳에 import하여 사용하였다.

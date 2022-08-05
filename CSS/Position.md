@@ -1,18 +1,5 @@
 # Position
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. static (기본위치)](#2-static-기본위치)
-- [3. relative (상대위치)](#3-relative-상대위치)
-- [4. absolute (절대위치)](#4-absolute-절대위치)
-- [5. fixed (고정위치)](#5-fixed-고정위치)
-- [6. overflow 프로퍼티](#6-overflow-프로퍼티)
-- [7. Conclusion](#7-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 `position` 프로퍼티는 요소의 위치를 정의한다. 해당 프로퍼티를 사용하면 웹 문서에서 요소의 위치를 자유롭게 정할 수 있다. `top`, `bottom`, `left`, `right` 프로퍼티와 함께 사용하여 위치를 지정한다.

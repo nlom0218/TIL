@@ -1,21 +1,5 @@
 # VirtualDOM
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. DOM의 개념](#2-dom의-개념)
-- [3. DOM의 트리 구조](#3-dom의-트리-구조)
-- [4. DOM의 문제와 브라우저의 랜더링 방법](#4-dom의-문제와-브라우저의-랜더링-방법)
-- [5. VirtualDOM](#5-virtualdom)
-- [6. Diffing Algorithm](#6-diffing-algorithm)
-  - [6-1. Elements Of Different Types](#6-1-elements-of-different-types)
-  - [6-2. DOM Elements Of The Same Type](#6-2-dom-elements-of-the-same-type)
-  - [6-3. Recursing On Children](#6-3-recursing-on-children)
-  - [6-4. keys](#6-4-keys)
-- [8. Conclusion](#8-conclusion)
-
----
-
 ## 1. 개요
 
 리액트의 특징 중 하나는 VirtualDOM(가상돔)이다. VirtrualDOM를 살펴보기 앞서 DOM의 개념에 대해 먼저 알아보고 VirtualDOM의 특징에 대해 살펴보자.

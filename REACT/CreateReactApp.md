@@ -1,17 +1,5 @@
 # Create React App
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. 준비사항](#2-준비사항)
-- [3. Create React App이란?](#3-create-react-app이란)
-- [4. create react app](#4-create-react-app)
-- [5. create react app with typescript](#5-create-react-app-with-typescript)
-- [6. error](#6-error)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 React 프로젝트를 쉽고 빠르게 만들 수 있도록 도와주는 Create React App에 대해 알아보자.

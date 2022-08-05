@@ -1,16 +1,5 @@
 # useMemo()
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. useMemo()를 사용하지 않는 컴포넌트의 랜더링](#2-usememo를-사용하지-않는-컴포넌트의-랜더링)
-- [3. useMemo()를 사용한 컴포넌트의 랜더링](#3-usememo를-사용한-컴포넌트의-랜더링)
-- [4. useMemo()를 항상 사용하여 랜더링 최적하면 좋은걸끼?](#4-usememo를-항상-사용하여-랜더링-최적하면-좋은걸끼)
-- [5. Conclusion](#5-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 `useMemo()`는 컴포넌트의 최적화를 시키기 위해 사용되는 hook 중 하나이다. `useMemo()`에서 Memo는 Memoization을 뜻하는데 이는 기존에 수행한 연산의 결과값을 어딘가에 저장해 두고 동일한 입력이 들어오면 재활용하는 프로그래밍 기법을 말한다.
@@ -76,7 +65,7 @@ export default Test;
 
 이제 리랜더링 버튼을 누를 때 마다 `state`값이 변하게 되어 컴포넌트가 리랜더링 된다. 아래의 콘솔을 보자.
 
-![useMemo_rerender1](../image/React/UseMemo/useMemo_rereder1.png)
+![useMemo_rerender1](/image/React/UseMemo/useMemo_rereder1.png)
 
 컴포넌트가 리랜더링 될 때마다 `calculate()`함수가 다시 호출되는 것을 볼 수 있다. 눈에 보이는 `result`값은 같지만 리랜더링 될 때마다 변수가 초기화 되기 때문에 `calculate()`함수가 반복적으로 호출이 된다. 만약 `calculate()`함수가 무거운 일을 하게 된다면 비효율적인 과정을 계속해서 거치게 되는 것이다. 이를 해결할 수 있는 것이 바로 `useMemo()`이다.
 
@@ -147,7 +136,7 @@ export default Test;
 
 아래는 각각의 버튼을 눌렀을 때 나타나는 콘솔의 모습이다.
 
-![useMemo_rerender2](../image/React/UseMemo/useMemo_rerender2.png)
+![useMemo_rerender2](/image/React/UseMemo/useMemo_rerender2.png)
 
 ---
 

@@ -1,25 +1,5 @@
 # Branch Protection Rule 적용하기
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. Branch protection rules로 이동하기](#2-branch-protection-rules로-이동하기)
-- [3. Branch name pattern 만들기](#3-branch-name-pattern-만들기)
-- [4. Protect matching branches](#4-protect-matching-branches)
-  - [4-1. Require a pull request before merging](#4-1-require-a-pull-request-before-merging)
-  - [4-2. Require status checks to pass before merging](#4-2-require-status-checks-to-pass-before-merging)
-  - [4-3. Require conversation resolution before merging](#4-3-require-conversation-resolution-before-merging)
-  - [4-4. Require signed commits](#4-4-require-signed-commits)
-  - [4-5. Require linear history](#4-5-require-linear-history)
-  - [4-6. Require deployments to succeed before merging](#4-6-require-deployments-to-succeed-before-merging)
-  - [4-7. Include administrators](#4-7-include-administrators)
-- [5. Rules applied to everyone including administrators](#5-rules-applied-to-everyone-including-administrators)
-  - [5-1. Allow force pushes](#5-1-allow-force-pushes)
-  - [5-2. Allow deletions](#5-2-allow-deletions)
-- [6. Conclusion](#6-conclusion)
-
----
-
 ## 1. 개요
 
 티처캔 프로젝트를 진행하는 깃허브의 메인 브랜치에서 아래와 같은 내용의 메시지가 보였다.

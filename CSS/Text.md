@@ -1,22 +1,5 @@
 # Text
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. line-height 프로퍼티](#2-line-height-프로퍼티)
-- [3. letter-spacing 프로퍼티](#3-letter-spacing-프로퍼티)
-- [4. text-align 프로퍼티](#4-text-align-프로퍼티)
-- [5. text-decoration 프로퍼티](#5-text-decoration-프로퍼티)
-- [6. white-space 프로퍼티](#6-white-space-프로퍼티)
-- [7. text-overflow 프로퍼티](#7-text-overflow-프로퍼티)
-- [8. word-wrap 프로퍼티](#8-word-wrap-프로퍼티)
-- [9. word-break 프로퍼티](#9-word-break-프로퍼티)
-- [10. text-transform 프로퍼티](#10-text-transform-프로퍼티)
-- [11. Conclusion](#11-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 텍스트 스타일은 사용하는 글자의 모양새를 지정하는 글꼴 스타일과 웹 문서에 표시되는 텍스트를 지정하는 문단 스타일이 있다.

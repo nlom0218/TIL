@@ -1,22 +1,5 @@
 # Background
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. background-image 프로퍼티](#2-background-image-프로퍼티)
-- [3. background-repeat 프로퍼티](#3-background-repeat-프로퍼티)
-- [4. background-size 프로퍼티](#4-background-size-프로퍼티)
-- [5. background-attachment 프로퍼티](#5-background-attachment-프로퍼티)
-- [6. background-position 프로퍼티](#6-background-position-프로퍼티)
-- [7. background-origin 프로퍼티](#7-background-origin-프로퍼티)
-- [8. background-color 프로퍼티](#8-background-color-프로퍼티)
-- [9. background-clip 프로퍼티](#9-background-clip-프로퍼티)
-- [10. background Shorthand](#10-background-shorthand)
-- [11. Conclusion](#11-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 Background 관련 프로퍼티는 해당 요소의 배경으로 이미지 또는 색상을 정의한다. 웹 문서의 전체 배경뿐만 아니라 텍스트, 목록 등 특정한 요소에도 배경을 지정할 수 있다.

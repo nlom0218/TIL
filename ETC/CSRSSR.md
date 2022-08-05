@@ -1,18 +1,5 @@
 # CSR & SSR
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. CSR (Client Side Rendering)](#2-csr-client-side-rendering)
-- [3. SSR (Server Side Randering)](#3-ssr-server-side-randering)
-- [4. CSR vs SSR](#4-csr-vs-ssr)
-- [5. TTV & TTL](#5-ttv--ttl)
-- [6. React에서의 SSR](#6-react에서의-ssr)
-- [7. Conclusion](#7-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 웹 개발자라고 하면 필수적으로 알아야 하는 두가지의 주제가 바로 **CSR**과 **SSR**이다. 이는 [MPA, SPA](./SPA.md)과 밀접한 연관을 가지고 있다.

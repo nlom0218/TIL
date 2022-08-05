@@ -1,14 +1,5 @@
 # Style Sheet
 
-## 👉 바로가기
-
-- [1. Inline Style](#1-inline-style인라인-스타일)
-- [2. Internal Style Sheet](#2-internal-style-sheet내부-스타일-시트-embedding-style)
-- [3. Linking Style Sheet](#3-linking-style-sheet외부-스타일-시트-link-style)
-- [참고](#참고)
-
----
-
 ## 1. Inline Style(인라인 스타일)
 
 간단한 스타일 정보를 스타일 시트를 사용하지 않고 스타일을 적용할 대상에 직접 표시하는 방법  

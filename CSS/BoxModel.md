@@ -1,22 +1,5 @@
 # Box Model (박스 모델)
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. width / height 프로퍼티](#2-width--height-프로퍼티)
-- [3. margin / padding 프로퍼티](#3-margin--padding-프로퍼티)
-- [4. border 프로퍼티](#4-border-프로퍼티)
-  - [4-1. border-style](#4-1-border-style)
-  - [4-2. border-width](#4-2-border-width)
-  - [4-3. border-color](#4-3-border-color)
-  - [4-4. border-radius](#4-4-border-radius)
-  - [4-5. border](#4-5-border)
-- [5. box-sizing 프로퍼티](#5-box-sizing-프로퍼티)
-- [6. Conclusion](#6-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 웹 문서의 블록 레벨 요소는 모두 Box 형태의 영역을 가지고 있음. 스타일 시트에서 이렇게 Box 형태인 요소를 박스 모델 요소라고 함. 이 Box는 콘텐츠(Content), 패팅(Padding), 테두리(Border), 마진(Margin)로 구성됨.

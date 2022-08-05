@@ -1,20 +1,5 @@
 # SPA (Single Page Application)
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. SPA이전의 MPA (Multi Page Application)](#2-spa이전의-mpa-multi-page-application)
-- [3. SPA의 등장 배경](#3-spa의-등장-배경)
-- [4. SPA](#4-spa)
-- [5. SPA의 장점과 단점](#5-spa의-장점과-단점)
-  - [5-1. SPA의 장점](#5-1-spa의-장점)
-  - [5-2. SPA의 단점](#5-2-spa의-단점)
-- [6. MPA vs SPA](#6-mpa-vs-spa)
-- [7. Conclusion](#7-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 웹 프론트앤드 개발자가 주로 사용하는 React, Vue, Angular는 SPA(Single Page Application)이다. 그렇다면 SPA는 무엇일까? SPA를 과거의 웹 페이지 형태(MPA, Multi Page Application)와 비교하며 SPA의 특징과 장점 및 단점을 살펴보자.

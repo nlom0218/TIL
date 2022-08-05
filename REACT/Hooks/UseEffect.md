@@ -1,18 +1,5 @@
 # useEffect()
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. useEffect() 사용하기](#2-useeffect-사용하기)
-- [3. 마운트](#3-마운트)
-- [4. 언마운트](#4-언마운트)
-- [5. deps 에 특정 값 넣기](#5-deps-에-특정-값-넣기)
-- [6. deps 파라미터를 생략하기](#6-deps-파라미터를-생략하기)
-- [7. Conclusion](#7-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 리액트에서 `useState()`과 함께 가장 많이 사용하는 Hook은 `useEffect()`이다. `useEffect()`는 리액트 컴포넌트가 랜더링 될 때마다 특정 작업을 실행할 수 있도록 도움을 준다. 이러한 기능은 클래스형 컴포넌트의 생명주기 메서드(componentDidMount, componentDidUpdate, compoenntWillUnMount)와 같은 기능이다.
@@ -85,8 +72,8 @@ const Number = ({ number }) => {
 
 Number컴포넌트에서는 컴포넌트가 생성(마운트)될 때 `useEffect()`로 인해 콘솔이 찍히게 된다. 아래는 숫자가 생성될 때 보여지는 화면과 콘솔이다.
 
-![useEffect mount](../image/React/UseEffect/useEffectMount1.png)
-![useEffect mount2](../image/React/UseEffect/useEffectMount2.png)
+![useEffect mount](/image/React/UseEffect/useEffectMount1.png)
+![useEffect mount2](/image/React/UseEffect/useEffectMount2.png)
 
 ---
 
@@ -151,8 +138,8 @@ const Number = ({ number, numberArr, setNumberArr }) => {
 };
 ```
 
-![useEffect unMount](../image/React/UseEffect/useEffectUnMount1.png)
-![useEffect unMount](../image/React/UseEffect/useEffectUnMount2.png)
+![useEffect unMount](/image/React/UseEffect/useEffectUnMount1.png)
+![useEffect unMount](/image/React/UseEffect/useEffectUnMount2.png)
 
 ---
 
@@ -198,7 +185,7 @@ export default Test;
 
 아래는 **숫자 바꾸기 버튼**을 눌를 때 마다 호출되는 `useEffect()`의 결과 사진이다.
 
-![useEffect() update](../image/React/UseEffect/useEffectUpdate.png)
+![useEffect() update](/image/React/UseEffect/useEffectUpdate.png)
 
 ---
 
@@ -241,7 +228,7 @@ export default Test;
 
 아래는 **숫자 바꾸기 버튼**를 누를 때 마다 `useEffect()`가 호출되어 계속 찍히는 콘솔의 사진이다.
 
-![useEffect not deps](../image/React/UseEffect/useEffectRerender.png)
+![useEffect not deps](/image/React/UseEffect/useEffectRerender.png)
 
 ---
 
