@@ -57,7 +57,7 @@
 
 > When enabled, all commits must be made to a non-protected branch and submitted via a pull request before they can be merged into a branch that matches this rule.
 
-해당 브랜치에 커밋을 추가하기 위해서는 별도 브랜치를 만들어 Pull Request를 해야되는 옵션이다. 협업 시 드랜치를 Local에서의 Direct Push로부터 보호하고 코드리뷰를 강제하기 위해 사용한다.
+해당 브랜치에 커밋을 추가하기 위해서는 별도 브랜치를 만들어 Pull Request를 해야되는 옵션이다. 협업 시 브랜치를 Local에서의 Direct Push로부터 보호하고 코드리뷰를 강제하기 위해 사용한다.
 
 예를 들어 develop 브랜치에 팀원이 작업하는 경우 develop 브랜치에 해당 옵션을 걸어주고 각자 자기 개발 브랜치(feature 브랜치)에 작업을 한 다음 PR을 통해서 develop 브랜치로 코드를 반영하도록 하는 것이다.
 
