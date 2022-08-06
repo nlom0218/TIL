@@ -109,7 +109,7 @@ const opposite = sizes
 
 ### 3) 결과
 
-![programmers_minimum_rectangle_result](../image/CodingTest/programmers_minimum_rectangle/programmers_minimum_rectangle_result.png)
+![programmers_minimum_rectangle_result](/image/CodingTest/programmers_minimum_rectangle/programmers_minimum_rectangle_result.png)
 
 ---
 

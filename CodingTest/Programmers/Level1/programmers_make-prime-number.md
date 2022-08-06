@@ -165,7 +165,7 @@ p(t, i + 1);
 
 `getCombinations()`함수의 예시를 그림으로 나타내봤다.
 
-![make-prime-number1](../image/CodingTest/programmers_make-prime-number/make-preime-number1.jpg)
+![make-prime-number1](/image/CodingTest/programmers_make-prime-number/make-preime-number1.jpg)
 
 ---
 
@@ -218,7 +218,7 @@ return isPrimeNums.length;
 
 ### 6) 결과
 
-![make-prime-number 2](../image/CodingTest/programmers_make-prime-number/make-prime-unmber2.png)
+![make-prime-number 2](/image/CodingTest/programmers_make-prime-number/make-prime-unmber2.png)
 
 ---
 
@@ -282,7 +282,7 @@ function solution(nums) {
 
 다른 내용은 같은데 각각의 `for문`에서 변수가 언제까지 반복문을 실행하지를 정하는 조건에서 나에게는 실수가 있었던 거 같다. 처음에 나도 첫 번째로 뽑힌 숫자는 배열의 길이의 - 2 만큼만 반복문을 돌려야 겠다고 생각을 했지만 두 번째, 세 번째 숫자에 대한 논리적인 사고가 부족했다. 그림으로 표현하면 아래와 같다.
 
-![make-preime-number3](../image/CodingTest/programmers_make-prime-number/make-preime-number3.jpg)
+![make-preime-number3](/image/CodingTest/programmers_make-prime-number/make-preime-number3.jpg)
 
 ---
 

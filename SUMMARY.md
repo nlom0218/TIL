@@ -63,9 +63,12 @@
 
 - [Coding Test](CodingTest/README.md)
 
-  - [크레인 인형뽑기 게임](CodingTest/programmers_crane-puppet-game.md)
-  - [소수 만들기](CodingTest/programmers_make-prime-number.md)
-  - [최소직사각형](CodingTest/programmers_minimum_rectangle.md)
+  - [Programmers](CodingTest/Programmers/README.md)
+    - [Level 1](CodingTest/Programmers/Level1/README.md)
+      - [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
+      - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
+      - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
+      - [[카카오 인턴]캐패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
 
 - [Github](Github/README.md)
 
