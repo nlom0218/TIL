@@ -35,8 +35,8 @@
   - [Position](/CSS/Position.md)
   - [Shadow](/CSS/Shadow.md)
   - [Transition](/CSS/Transition.md)
-  - [Animation](CSS/Animation.md)
-  - [Transform](CSS/Transform.md)
+  - [Animation](CSS/Animation.md) 💻
+  - [Transform](CSS/Transform.md) 💻
   - [Flexbox Layout](/CSS/Flex.md)
   - [Grid Layout](/CSS/Grid.md)
 
@@ -51,7 +51,7 @@
 - Typescript
 
   - [Typescript란?](/Typescript/Typescript.md)
-  - [React App에 Typescript 적용하기](Typescript/SettingTypescript.md)
+  - [React App에 Typescript 적용하기](Typescript/SettingTypescript.md) 💻
 
   ***
 
@@ -65,19 +65,19 @@
   - [Props](/REACT/Props.md)
   - [State](/REACT/State.md)
   - [이벤트 처리](/REACT/Event.md)
-  - [배열 랜더링](/REACT/ArrayRendering.md)
-  - [조건부 랜더링](REACT/ConditionalRendering.md)
-  - [Lifecycle](REACT/Lifecycle.md)
+  - [배열 렌더링](/REACT/ArrayRendering.md)
+  - [조건부 렌더링](REACT/ConditionalRendering.md)
+  - [Lifecycle](REACT/Lifecycle.md) 💻
   - CSS
-    - [Styled Components](REACT/CSS/StyledComponents.md)
+    - [Styled Components](REACT/CSS/StyledComponents.md) 💻
   - Hooks
     - [useState()](REACT/Hooks/UseState.md)
     - [useEffect()](REACT/Hooks/UseEffect.md)
     - [useRef()](REACT/Hooks/UseRef.md)
     - [useMemo()](REACT/Hooks/UseMemo.md)
-    - [useCallback()](REACT/Hooks/UseCallback.md)
-    - [useReducer](REACT/Hooks/UseReducer.md)
-    - [useContext](REACT/Hooks/UseContext.md)
+    - [useCallback()](REACT/Hooks/UseCallback.md) 💻
+    - [useReducer()](REACT/Hooks/UseReducer.md) 💻
+    - [useContext()](REACT/Hooks/UseContext.md) 💻
 
   ***
 
