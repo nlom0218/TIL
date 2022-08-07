@@ -28,7 +28,7 @@
 
 - [Javascript](JAVASCRIPT/README.md)
 
-  - [Array method](#)
+  - [Array method](JAVASCRIPT/ArrayMethod/README.md)
 
 - [Typescript](Typescript/README.md)
 
