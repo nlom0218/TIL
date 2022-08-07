@@ -171,3 +171,9 @@ push access를 가진 유저들이 브랜치를 지울 수 있도록 한다. 푸
 [[GitHub] Branch Protection Rule 적용해 브랜치 보호하기](https://kotlinworld.com/292)  
 [[Gihub] 브랜치 보호 규칙 설정 - PR 리뷰 및 테스트 강제](https://hbase.tistory.com/215)  
 [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
+
+---
+
+[👆](#branch-protection-rule-적용하기)
+
+📅 2022-08-03

@@ -355,3 +355,5 @@ Fiber은 React16의 새로운 reconciliation엔진이다. Fiber의 주요 목표
 ---
 
 [👆](#virtualdom)
+
+📅 2022-07-16

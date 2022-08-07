@@ -89,7 +89,7 @@
   - [크레인 인형뽑기 게임](/CodingTest/programmers_crane-puppet-game.md)
   - [소수 만들기](/CodingTest/programmers_make-prime-number.md)
   - [최소직사각형](/CodingTest/programmers_minimum_rectangle.md)
-  - [[카카오 인턴]캐패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+  - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
 
 ---
 

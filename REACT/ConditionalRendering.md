@@ -100,7 +100,7 @@ export default Hello;
 
 ## 4. Conclusion
 
-> 컴포넌트를 렌더링을 할 때 조건에 따라 값을 달리 경우가 생각보다 많다. 나는 대부분을 간단한 값을 다룰 때에는 삼항 연산자를 사용을 하지만 긴 JSX를 묶어야 하는 경우가 있을 땐 if문을 사용하는 편이다. 예를 들어 아래와 같은 경우다.
+> 컴포넌트를 렌더링을 할 때 조건에 따라 값을 달리 하는 경우가 생각보다 많다. 나는 대부분 삼항 연산자를 사용을 하지만 긴 JSX를 묶어야 하는 경우가 있을 땐 if문을 사용하는 편이다. 예를 들어 아래와 같은 경우다.
 >
 > ```js
 > if (loading) {
@@ -117,7 +117,7 @@ export default Hello;
 > }
 > ```
 >
-> `loading`은 DB의 데이터를 불러오고 있는 중인지, 불러왔는지를 알려주는 값이고 이에 따라 `<Loading />`컴포넌트를 렌더링 할지 아니면 아래의 JSX를 렌더링할지를 결정하는 편이다. 물론 위도 삼항 연산자로 충분히 바꾸어 사용할 수 있다. 하지만 개인적으로는 코드가 길어지면 위와 같은 코드가 가독성이 좋아보인다:)
+> `loading`은 DB의 데이터를 불러오고 있는 중인지, 불러왔는지를 알려주는 값이고 이에 따라 `<Loading />`컴포넌트를 렌더링 할지 아니면 아래의 JSX를 렌더링 할지를 결정하는 역할을 한다. 물론 위의 코드도 삼항 연산자로 충분히 바꾸어 사용할 수 있다. 하지만 개인적으로는 코드가 길어지면 위와 같은 코드가 가독성이 좋아보인다:)
 
 ---
 
@@ -125,3 +125,9 @@ export default Hello;
 
 [6. 조건부 렌더링](https://react.vlpt.us/basic/06-conditional-rendering.html)  
 [삼항 조건 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
+---
+
+[👆](#conditional-rendering)
+
+📅 2022-08-07

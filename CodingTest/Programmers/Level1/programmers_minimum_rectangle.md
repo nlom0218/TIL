@@ -192,3 +192,5 @@ function solution(sizes) {
 ---
 
 [👆](#최소직사각형)
+
+📅 2022-08-05

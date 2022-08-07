@@ -45,8 +45,8 @@
   - [Props](REACT/Props.md)
   - [State](REACT/State.md)
   - [이벤트 처리](REACT/Event.md)
-  - [배열 랜더링](REACT/ArrayRendering.md)
-  - [조건부 랜더링](REACT/ConditionalRendering.md)
+  - [배열 렌더링](REACT/ArrayRendering.md)
+  - [조건부 렌더링](REACT/ConditionalRendering.md)
   - [Lifecycle](REACT/Lifecycle.md)
   - [CSS](REACT/CSS/README.md)
     - [Styled Components](REACT/CSS/StyledComponents.md)
@@ -56,8 +56,8 @@
     - [useRef()](REACT/Hooks/UseRef.md)
     - [useMemo()](REACT/Hooks/UseMemo.md)
     - [useCallback()](REACT/Hooks/UseCallback.md)
-    - [useReducer](REACT/Hooks/UseReducer.md)
-    - [useContext](REACT/Hooks/UseContext.md)
+    - [useReducer()](REACT/Hooks/UseReducer.md)
+    - [useContext()](REACT/Hooks/UseContext.md)
 
 - [Node Package Module(NPM)](NPM/README.md)
 
@@ -68,7 +68,7 @@
       - [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
       - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
       - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
-      - [[카카오 인턴]캐패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+      - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
 
 - [Github](Github/README.md)
 

@@ -147,3 +147,5 @@ type SetStateAction<S> = S | ((prevState: S) => S);
 ---
 
 [👆](#usestate)
+
+📅 2022-07-26
