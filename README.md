@@ -44,7 +44,7 @@
 
 - Javascript
 
-  - Array
+  - Array method
 
   ***
 
@@ -75,7 +75,7 @@
     - [useEffect()](REACT/Hooks/UseEffect.md)
     - [useRef()](REACT/Hooks/UseRef.md)
     - [useMemo()](REACT/Hooks/UseMemo.md)
-    - [useCallback()](REACT/Hooks/UseCallback.md) 💻
+    - [useCallback()](REACT/Hooks/UseCallback.md)
     - [useReducer()](REACT/Hooks/UseReducer.md) 💻
     - [useContext()](REACT/Hooks/UseContext.md) 💻
 
@@ -85,11 +85,16 @@
 
 ---
 
+- [Algorithm](Algorithm/README.md)
+
+---
+
 - Coding Test
-  - [크레인 인형뽑기 게임](/CodingTest/programmers_crane-puppet-game.md)
-  - [소수 만들기](/CodingTest/programmers_make-prime-number.md)
-  - [최소직사각형](/CodingTest/programmers_minimum_rectangle.md)
-  - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+- [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
+- [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
+- [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
+- [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+- [완주하지 못한 선수](CodingTest/Programmers/Level1/programmers_did_not_complete_players.md)
 
 ---
 

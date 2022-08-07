@@ -216,7 +216,7 @@ return isPrimeNums.length;
 
 ---
 
-### 6) 결과
+### 결과
 
 ![make-prime-number 2](/image/CodingTest/programmers_make-prime-number/make-prime-unmber2.png)
 

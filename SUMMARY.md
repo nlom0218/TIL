@@ -28,7 +28,7 @@
 
 - [Javascript](JAVASCRIPT/README.md)
 
-  - [Array](#)
+  - [Array method](#)
 
 - [Typescript](Typescript/README.md)
 
@@ -61,6 +61,8 @@
 
 - [Node Package Module(NPM)](NPM/README.md)
 
+- [Algorithm](Algorithm/README.md)
+
 - [Coding Test](CodingTest/README.md)
 
   - [Programmers](CodingTest/Programmers/README.md)
@@ -69,6 +71,7 @@
       - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
       - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
       - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+      - [완주하지 못한 선수](CodingTest/Programmers/Level1/programmers_did_not_complete_players.md)
 
 - [Github](Github/README.md)
 
