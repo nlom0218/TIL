@@ -1,16 +1,5 @@
 # Typescript란?
 
-## 👉 바로가기
-
-- [1. 개요](#1-개요)
-- [2. 타입스크립트(typescript)란?](#2-타입스크립트typescript란)
-- [3. 타입스크립트의 특징](#3-타입스크립트의-특징)
-- [4. Javascript vs Typescript](#4-javascript-vs-typescript)
-- [5. Conclusion](#5-conclusion)
-- [참고](#참고)
-
----
-
 ## 1. 개요
 
 많은 기업들에서 typescirpt에 대한 역량을 가진 개발자들을 필요로하고 있다. javascript과 이름이 비슷한 typescript는 무엇이며? javascript와는 어떤 차이점이 있는지 알아보자. 또한 typescript가 가지고 있는 특징도 함께 살펴보자.

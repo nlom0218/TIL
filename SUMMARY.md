@@ -28,6 +28,7 @@
 
 - [Javascript](JAVASCRIPT/README.md)
 
+  - [Map](JAVASCRIPT/Map.md)
   - [Array method](JAVASCRIPT/ArrayMethod/README.md)
 
 - [Typescript](Typescript/README.md)
