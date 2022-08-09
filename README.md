@@ -91,11 +91,19 @@
 ---
 
 - Coding Test
-  - [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
-  - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
-  - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
-  - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
-  - [완주하지 못한 선수](CodingTest/Programmers/Level1/programmers_did_not_complete_players.md)
+
+  - Programmers
+
+    - Level 1
+
+      - [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
+      - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
+      - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
+      - [[카카오 인턴]키패드 누르기](CodingTest/Programmers/Level1/programmers_keypad_press.md)
+      - [완주하지 못한 선수](CodingTest/Programmers/Level1/programmers_did_not_complete_players.md)
+
+    - Level 2
+      - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
 
 ---
 
