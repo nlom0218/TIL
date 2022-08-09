@@ -2,9 +2,9 @@
 
 ## 1. 개요
 
-리액트에서는 보통 상태를 업데이트 하기 위해 `useState()`훅을 사용한다. 하지만 `useReducer()`훅을 사용하여 상태를 관리할 수 있다.
+리액트에서는 보통 상태를 업데이트 하기 위해 `useState()`훅을 사용한다. 하지만 `useReducer()`훅을 사용하여 상태를 관리할 수도 있다.
 
-하지만 `useReducer()`훅이 가지고 있는 특별한 특징은 한 컴포넌트 내에서 `state`를 업데이트하는 로직 부분을 그 컴포넌트로부터 분리시키는 것이 가능하다. 상태 업데이트 로직을 컴포넌트 바깥에 작성 할 수도 있고, 심지어 다른 파일에 작성 후 불러와서 사용 할 수도 있다.
+`useReducer()`훅이 가지고 있는 특별한 특징은 한 컴포넌트 내에서 `state`를 업데이트하는 로직 부분을 그 컴포넌트로부터 분리시키는 것이 가능하다는 것이다. 상태 업데이트 로직을 컴포넌트 바깥에 작성 할 수도 있고, 심지어 다른 파일에 작성 후 불러와서 사용 할 수도 있다.
 
 이러한 `useReducer()`훅에 대해 `useState()`훅과 비교하는 것을 시작하여 살펴보자.
 
@@ -21,7 +21,7 @@
 
   ***
 
-- `useReducer`훅을 사용할 경우
+- `useReducer()`훅을 사용할 경우
   1. 관리해야 할 `state`가 1개 이상, 복수일 경우
   2. 혹은 현재는 단일 `state`값만 관리하지만, 추후 유동적일 가능성이 있는 경우
   3. 스케일이 큰 프로젝트의 경우
@@ -192,8 +192,8 @@ export default App;
 
 `button`태그와 `form`태그에 각각 `onClick`과 `onSubmit`이벤트를 연결하였고 `onClickChangeBtn()`함수와 `onSubmitFrom()`함수를 통해 이벤트가 실행된다. 하나하나 살펴보자.
 
-- onClickChangeBtn(): `dispatch`함수가 실행되고 인자로 `{type: "changeWeather"}`이 전달되었다.
-- onSubmitFrom(): 여기서는 `dispatch`함수의 인자로 `{ type: "submitGift", gift, }`이 전달 되었다.
+- onClickChangeBtn(): `dispatch`함수가 실행되고 인자로 객체`{type: "changeWeather"}`가 전달되었다.
+- onSubmitFrom(): 여기서는 `dispatch`함수의 인자로 객체`{ type: "submitGift", gift }`가 전달 되었다.
 
 ---
 
@@ -256,7 +256,7 @@ const reducer = (state, action) => {
 ```
 
 1. 구조분해 할당으로 `state`값의 내부에 존재하는 `isSuuny`와 `gift`을 가져온다.
-2. `action`객체에는 `type`이 존재하며 이는 이벤트에 따라 달라지만 또한 `onSubmitForm`이벤트인 경우 `type`뿐 아니라 선물의 이름을 값으로 가지는 `gift`도 존재한다.
+2. `action`객체에는 `type`이 존재하며 이는 이벤트에 따라 달라진다. `onSubmitForm`이벤트인 경우 `type`뿐 아니라 선물의 이름을 값으로 가지는 `gift`도 존재한다.
 3. `switch`문으로 사용하여 `action.type`과 일치하는 case를 찾아 변경된 `state`를 반환한다.
 4. 각각의 `case`에서 리턴되는 객체를 보면 기존 `state`를 spread 연산자를 사용하였다. 이는 `reducer`함수에서 새로운 상태를 만들 때에는 불변성을 지켜주어야 하기 때문이다.
 5. 추가로 `default`를 설정하여 `case`에 존재하지 않는 `aciton.type`이 들어왔을 때 에러를 발생시키고 있다.
