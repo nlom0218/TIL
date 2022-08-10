@@ -385,4 +385,11 @@ return len > 2 ? answer : answer + answer.charAt(len - 1).repeat(3 - len);
 [String.prototype.replace()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)  
 [String.prototype.slice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice)  
 [String.prototype.charAt()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)  
+[String.prototype.repeat()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)  
 [정규표현식 (Regex) 정리](https://hamait.tistory.com/342)
+
+---
+
+[👆](#신규-아이디-추천)
+
+📅 2022-08-10

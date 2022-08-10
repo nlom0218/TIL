@@ -78,7 +78,7 @@
     - [useMemo()](REACT/Hooks/UseMemo.md)
     - [useCallback()](REACT/Hooks/UseCallback.md)
     - [useReducer()](REACT/Hooks/UseReducer.md)
-    - [useContext()](REACT/Hooks/UseContext.md) 💻
+    - [useContext()](REACT/Hooks/UseContext.md)
 
   ***
 
