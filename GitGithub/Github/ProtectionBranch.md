@@ -4,7 +4,7 @@
 
 티처캔 프로젝트를 진행하는 깃허브의 메인 브랜치에서 아래와 같은 내용의 메시지가 보였다.
 
-![protected-branch-msg](../image/Github/ProtectionBranch/github-protection-brans-msg.png)
+![protected-branch-msg](/image/Github/ProtectionBranch/github-protection-brans-msg.png)
 
 위의 내용은 main branch가 보호되어 있지 않다고 한다. 그러면 어떠한 경우에서 main branch를 보호하고자 하는 것일까?
 
@@ -20,7 +20,7 @@
 
 `Branch protection rules`의 추가는 레포지토리의 setting - branch에서 할 수 있다.
 
-![Branch protection rules](../image/Github/ProtectionBranch/branch-protection-rules.png)
+![Branch protection rules](/image/Github/ProtectionBranch/branch-protection-rules.png)
 
 `Add branch protection rules`를 클릭하자.
 
@@ -28,7 +28,7 @@
 
 ## 3. Branch name pattern 만들기
 
-![Branch name pattern](../image/Github/ProtectionBranch/branch-name-pattern.png)
+![Branch name pattern](/image/Github/ProtectionBranch/branch-name-pattern.png)
 
 `Branch protection rules`를 만들기 위해 첫 번재로 해야 할 일은 `Branch name pattern`을 만드는 것이다. 하나의 브랜치에 적용할 경우 해당 브랜치의 이름을 작성하고 특정 단어가 들어간 브랜치에 적용할 경우에는 해당 단어앞뒤에 \*를 붙이면 된다.
 
@@ -45,7 +45,7 @@
 
 ## 4. Protect matching branches
 
-![Protect matching branches](../image/Github/ProtectionBranch/protect-matching-branches.png)
+![Protect matching branches](/image/Github/ProtectionBranch/protect-matching-branches.png)
 
 `Branch name pattern`에 해당되는 모든 브랜치를 보호할 수 있는 규칙을 설정할 수 있다. 현재 7가지의 옵션이 있으며 중복하여 선택해 규칙을 설정할 수 있다.
 
@@ -63,7 +63,7 @@
 
 해당 옵션에는 서브 옵션이 있다. 서브 옵션은 아래와 같다.
 
-![Require a pull request before merging - suboptions](../image/Github/ProtectionBranch/protect-matching-branches-1-suboptions.png)
+![Require a pull request before merging - suboptions](/image/Github/ProtectionBranch/protect-matching-branches-1-suboptions.png)
 
 - `Require approvals`: 몇 명의 동료가 리뷰 승인을 해줘야하는지 설정
 - `Dismiss stale pull request approvals when new commits are pushed`: 리뷰 승인 이후 새로운 코드가 추가로 들어왔을 때, 기존 리뷰 승인을 무효화 할 것인지 설정
@@ -127,7 +127,7 @@ PR를 날리게 되면 코드리뷰를 통해 Conversation이 생기게 된다. 
 
 관리자를 포함해 모든 사람들에게 적용되는 규칙을 설정하는 곳이다.
 
-![Rules applied to everyone including administrators](../image/Github/ProtectionBranch/rules-applied-to-everyone.png)
+![Rules applied to everyone including administrators](/image/Github/ProtectionBranch/rules-applied-to-everyone.png)
 
 ---
 
