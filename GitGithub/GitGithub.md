@@ -60,7 +60,7 @@
 ## 참고
 
 [버전 관리 시스템 (Version Control System)](https://heekangpark.github.io/git/vcs)  
-[Git vs GitHub 차이점](https://escapefromcoding.tistory.com/281)
+[Git vs GitHub 차이점](https://escapefromcoding.tistory.com/281)  
 [[Git] 깃(Git)과 깃허브(Github) 차이](https://cocoon1787.tistory.com/723)
 
 ---
