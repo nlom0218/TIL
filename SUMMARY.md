@@ -80,6 +80,8 @@
     - [Level 2](CodingTest/Programmers/Level2/README.md)
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
 
-- [Github](Github/README.md)
-
-  - [Branch Protection Rule 적용하기](Github/ProtectionBranch.md)
+- [Git & Github](GitGithub/README.md)
+  - [Git vs Github](GitGithub/GitGithub.md)
+  - [Git](GitGithub/Git/README.md)
+  - [Github](GitGithub/Github/README.md)
+    - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)

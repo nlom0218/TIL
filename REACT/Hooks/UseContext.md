@@ -212,7 +212,7 @@ const Children = () => {
 export default Children;
 ```
 
-` <AppContext.Consumer>`컴포넌트가 없어진 것을 확인할 수 있다. 대신에 `useContext()`훅을 통해 `gift`와 `addGift`를 불러와 `AppContext`의 값을 사용하고 있다.
+`<AppContext.Consumer>`컴포넌트가 없어진 것을 확인할 수 있다. 대신에 `useContext()`훅을 통해 `gift`와 `addGift`를 불러와 `AppContext`의 값을 사용하고 있다.
 
 `useContext()`훅을 사용함으로써 이전 보다 간결한 코드 작성이 가능해졌다.
 

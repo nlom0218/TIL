@@ -108,8 +108,11 @@
 
 ---
 
-- Github
-  - [Branch Protection Rule 적용하기](/Github/ProtectionBranch.md)
+- Git & Github
+  - [Git vs Github](GitGithub/GitGithub.md)
+  - Git
+  - Github
+    - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
 
 ---
 
