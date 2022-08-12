@@ -45,6 +45,7 @@
 - Javascript
 
   - [Map](JAVASCRIPT/Map.md)
+  - [Set](JAVASCRIPT/Set.md)
   - Array method
 
   ***

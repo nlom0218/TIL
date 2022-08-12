@@ -220,3 +220,9 @@ return set.size > max ? max : set.size;
 ## 참고
 
 [[JavaScript] 37. Set 과 Map](https://velog.io/@dolarge/Java-Script-Set-%EA%B3%BC-Map)
+
+---
+
+[👆](#폰켓몬)
+
+📅 2022-08-11
