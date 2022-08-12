@@ -69,7 +69,7 @@
   - [이벤트 처리](/REACT/Event.md)
   - [배열 렌더링](/REACT/ArrayRendering.md)
   - [조건부 렌더링](REACT/ConditionalRendering.md)
-  - [Lifecycle](REACT/Lifecycle.md) 💻
+  - [Lifecycle](REACT/Lifecycle.md)
   - CSS
     - [Styled Components](REACT/CSS/StyledComponents.md) 💻
   - Hooks
