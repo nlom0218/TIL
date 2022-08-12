@@ -104,7 +104,7 @@
       - [완주하지 못한 선수](CodingTest/Programmers/Level1/programmers_did_not_complete_players.md)
       - [신규 아이디 추천](CodingTest/Programmers/Level1/programmers_new_id_recommend.md)
       - [폰켓몬](CodingTest/Programmers/Level1/programmers_ponketmon.md)
-      - [두 개 뽑아서 더하기](CodingTest/Programmers/Level1/programmers_take_two_and_add.md) 💻
+      - [두 개 뽑아서 더하기](CodingTest/Programmers/Level1/programmers_take_two_and_add.md)
       - [예산](CodingTest/Programmers/Level1/programmers_budget.md) 💻
 
     - Level 2
