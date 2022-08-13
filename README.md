@@ -113,7 +113,7 @@
       - [신규 아이디 추천](CodingTest/Programmers/Level1/programmers_new_id_recommend.md)
       - [폰켓몬](CodingTest/Programmers/Level1/programmers_ponketmon.md)
       - [두 개 뽑아서 더하기](CodingTest/Programmers/Level1/programmers_take_two_and_add.md)
-      - [예산](CodingTest/Programmers/Level1/programmers_budget.md) 💻
+      - [예산](CodingTest/Programmers/Level1/programmers_budget.md)
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
