@@ -117,7 +117,7 @@
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
-      - [뉴스 클러스터링](CodingTest/Programmers/Level2/programmers_news_clustering.md) 💻
+      - [뉴스 클러스터링](CodingTest/Programmers/Level2/programmers_news_clustering.md)
 
 ---
 
