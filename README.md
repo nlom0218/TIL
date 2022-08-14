@@ -47,7 +47,7 @@
   - [Map](JAVASCRIPT/Map.md)
   - [Set](JAVASCRIPT/Set.md)
   - Array Method
-    - [배열의 요소 추가 삭제(push, pop, unshift, splice, slice)](JAVASCRIPT/ArrayMethod/AddRemove.md) 💻
+    - [배열의 요소 추가 삭제(push, pop, unshift, splice, slice)](JAVASCRIPT/ArrayMethod/AddRemove.md)
     - [원하는 인덱스 찾기(indexOf, lastIndexOf, findIndex)](JAVASCRIPT/ArrayMethod/FindIndex.md) 💻
     - [배열의 요소 반복하기(forEach, map, filter, reduce, some, every, find)](JAVASCRIPT/ArrayMethod/Repeat.md) 💻
     - [중첩된 배열 구조 평탄화하기(flat, flatMap)](JAVASCRIPT/ArrayMethod/FlatArray.md) 💻
