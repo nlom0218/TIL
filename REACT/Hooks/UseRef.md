@@ -4,7 +4,7 @@
 
 자바스크립트을 사용할 때 특정 DOM에 접근하기 위해서는 `getElementById`, `querySelector`와 같은 DOM Selector 함수를 사용한다. 그렇다면 리액트에서는 어떤 방법으로 DOM에 접근할 수 있을까? 바로 `useRef()`훅을 이용하면 된다.
 
-***
+---
 
 ## 2. useRef() 로 특정 DOM 선택하기
 
@@ -83,7 +83,7 @@ export default Test;
 
 ![focus](../../image/React/UseRef/focus.png)
 
-***
+---
 
 ## 3. useRef() 로 변수 관리하기
 
@@ -171,15 +171,15 @@ export default Test;
 
 여기서 알 수 있는 하나의 사실은 `useRef()`로 선언된 변수의 값이 변하더라고 컴포넌트가 리랜더링되지 않는다는 것이다. 즉, 위의 사진에서는 `Number: 8`이라고 되어있지만 이는 랜더링 버튼으로 인해 컴포넌트가 리랜더링이 되었기 때문이고 그 전까지는 수정된 `number`의 값을 화면에서는 볼 수 없다. 아래의 사진을 참고하라!
 
-![useRef - useState 3](../image/React/UseRef/useRef-useState3.png)
+![useRef - useState 3](/image/React/UseRef/useRef-useState3.png)
 
-***
+---
 
 ## 4. Conclusion
 
 > `useRef()`를 통해 DOM에 직접 접근하고 작업하는 과정은 특히 `input`를 다룰 때 몇 번 사용했었다. 하지만 `useRef()`를 통해 변수를 관리하는 것은 한 번도 해보지 못하였다. `var`로 변수를 선언하고 관리하는 것과의 차이는 이해가 되지만 어떤 기능에서 `useRef()`를 사용해야 하는지에 대해서는 아직 의문이다. 구체적인 예시와 `useRef()`를 사용하여 변수를 관리하는 장점에 대해 알아보고 싶다.(이후 공부하다가 해당 내용이 나오면 `useRef()`챕터에 정리를 해야겠다.)
 
-***
+---
 
 ## 참고
 
@@ -187,7 +187,7 @@ export default Test;
 [10. useRef 로 특정 DOM 선택하기](https://react.vlpt.us/basic/10-useRef.html)\
 [\[React\] useRef 사용법 및 예제](https://itprogramming119.tistory.com/entry/React-useRef-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C)
 
-***
+---
 
 [👆](UseRef.md#useref)
 
