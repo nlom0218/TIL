@@ -436,6 +436,12 @@ intersection += Math.min(has1, has2);
 
 ---
 
+### 결과
+
+![programmers_news_clustering_result3](/image/CodingTest/programmers_news_clustering/programmers_news_clustering_result3.png)
+
+---
+
 ## 6. Conclusion
 
 > 두 번째 Level2 문제였다. 시간은 많이 걸렸지만 어쨋든 내 스스로의 힘으로 풀게 되어서 뿌듯했다. 자카드 유사도라는 것도 처음으로 알게되었는데 만약 문제에 세세한 설명이 없었더라면 개념에 대해 검색하고 이해하느라 시간이 더욱 걸렸을 것이다. 문제에서 원하는 것은 자카드 유사도에 대한 개념이 아니라 자카드 유사도를 구하기 까지의 과정이 아니었나 싶다.  
