@@ -4,7 +4,7 @@
 
 `useMemo()`는 컴포넌트의 최적화를 시키기 위해 사용되는 hook 중 하나이다. `useMemo()`에서 Memo는 Memoization을 뜻하는데 이는 기존에 수행한 연산의 결과값을 어딘가에 저장해 두고 동일한 입력이 들어오면 재활용하는 프로그래밍 기법을 말한다.
 
----
+***
 
 ## 2. useMemo()를 사용하지 않는 컴포넌트의 랜더링
 
@@ -12,7 +12,7 @@
 
 아래와 같은 컴포넌트가 있다고 가정하자.
 
-```js
+```jsx
 import React from "react";
 
 const Test = () => {
@@ -36,7 +36,7 @@ export default Test;
 
 아래와 같이 코드를 추가 작성한다.
 
-```js
+```jsx
 import React, { useState } from "react";
 
 const Test = () => {
@@ -65,25 +65,25 @@ export default Test;
 
 이제 리랜더링 버튼을 누를 때 마다 `state`값이 변하게 되어 컴포넌트가 리랜더링 된다. 아래의 콘솔을 보자.
 
-![useMemo_rerender1](/image/React/UseMemo/useMemo_rereder1.png)
+![useMemo\_rerender1](../../image/React/UseMemo/useMemo\_rereder1.png)
 
 컴포넌트가 리랜더링 될 때마다 `calculate()`함수가 다시 호출되는 것을 볼 수 있다. 눈에 보이는 `result`값은 같지만 리랜더링 될 때마다 변수가 초기화 되기 때문에 `calculate()`함수가 반복적으로 호출이 된다. 만약 `calculate()`함수가 무거운 일을 하게 된다면 비효율적인 과정을 계속해서 거치게 되는 것이다. 이를 해결할 수 있는 것이 바로 `useMemo()`이다.
 
----
+***
 
 ## 3. useMemo()를 사용한 컴포넌트의 랜더링
 
 이번에는 `useMemo()`를 사용하여 컴포넌트를 랜더링 해보자.
 
-먼저 `useMemo()`의 기본 사용법은 아래와 같다.  
+먼저 `useMemo()`의 기본 사용법은 아래와 같다.\
 사용법 `const value = useMemo(function, deps)`
 
-- function: Memoization을 할 값을 계산해서 리턴해 줄 콜백함수
-- deps: 의존성 배열로 `useEffect()`의 deps와 같다.
+* function: Memoization을 할 값을 계산해서 리턴해 줄 콜백함수
+* deps: 의존성 배열로 `useEffect()`의 deps와 같다.
 
-`2. useMemo()를 사용하지 않는 컴포넌트의 랜더링`에서 작성한 코드 중 ` const result = calculate();`를 아래와 같이 수정하자.
+`2. useMemo()를 사용하지 않는 컴포넌트의 랜더링`에서 작성한 코드 중 `const result = calculate();`를 아래와 같이 수정하자.
 
-```js
+```jsx
 const result = useMemo(() => {
   return calculate();
 }, []);
@@ -95,7 +95,7 @@ const result = useMemo(() => {
 
 만약 의존성 배열에 어떠한 값이 있다면 그 값이 변할 때 마다 콜백함수를 다시 호출한다. 해당 경우를 코드와 함께 살펴보자. 아래와 같이 코드를 추가 및 수정한다.
 
-```js
+```jsx
 import React, { useState, useMemo, useEffect } from "react";
 
 const Test = () => {
@@ -136,34 +136,34 @@ export default Test;
 
 아래는 각각의 버튼을 눌렀을 때 나타나는 콘솔의 모습이다.
 
-![useMemo_rerender2](/image/React/UseMemo/useMemo_rerender2.png)
+![useMemo\_rerender2](../../image/React/UseMemo/useMemo\_rerender2.png)
 
----
+***
 
 ## 4. useMemo()를 항상 사용하여 랜더링 최적하면 좋은걸끼?
 
 정답은 그렇지 않다. 값을 재활용하기 위해 따로 메모리를 소비하여 저장을 하기 때문에 불필요한 값까지 모두 `useMemo()`를 사용하여 Memoization을 하게 된다면 오히려 성능은 더 안 좋아질 수 있다. 그렇기 때문에 꼭 필요할 때에만 적절하게 `useMemo()`를 사용해야 한다.
 
----
+***
 
 ## 5. Conclusion
 
 > 리액트로 여러 프로젝트를 진행했지만 `useMemo()`를 사용한 적은 한 번도 없었다. 그 이유는 첫 번째 `useMemo()`에 대해 몰랐고, 두 번째 랜더링 최적화에 대한 고민을 해 본 적이 없기 때문이다. 그래서 지금까지 진행했던 그리고 진행하고 있는 리액트 프로잭트를 리팩토링 할 때 랜더링 최적화가 필요하다면 적극적으로 `useMemo()`를 사용할 계획이다. 그렇다고 무분별하게 사용은 하지 않을거다.😃
 
----
+***
 
 ## 참고
 
-[17. useMemo 를 사용하여 연산한 값 재사용하기](https://react.vlpt.us/basic/17-useMemo.html)  
-[[React] useMemo 사용법 및 예제](https://itprogramming119.tistory.com/entry/React-useMemo-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C)
+[17. useMemo 를 사용하여 연산한 값 재사용하기](https://react.vlpt.us/basic/17-useMemo.html)\
+[\[React\] useMemo 사용법 및 예제](https://itprogramming119.tistory.com/entry/React-useMemo-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C)
 
 도움이 많이 되었던 유튜브 🎬
 
-- React Hooks에 취한다 - useMemo 제대로 사용하기 | 리액트 훅스 시리즈  
+* React Hooks에 취한다 - useMemo 제대로 사용하기 | 리액트 훅스 시리즈\
   [![React Hooks에 취한다 - useMemo 제대로 사용하기 | 리액트 훅스 시리즈](https://img.youtube.com/vi/e-CnI8Q5RY4/0.jpg)](https://www.youtube.com/watch?v=e-CnI8Q5RY4)
 
----
+***
 
-[👆](#usememo)
+[👆](UseMemo.md#usememo)
 
 📅 2022-08-02

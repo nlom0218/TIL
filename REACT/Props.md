@@ -8,7 +8,7 @@
 
 이처럼 props는 같은 리액트 컴포넌트에서 눈에 보이는 글자나 색깔 등의 속성을 바꾸고 싶을 때 사용하는 컴포넌트의 속 재료라고 생각하면 된다.
 
----
+***
 
 ## 2. props는 읽기 전용
 
@@ -18,7 +18,7 @@
 
 아래의 함수를 보자
 
-```js
+```javascript
 function sum(a, b) {
   return a + b;
 }
@@ -28,7 +28,7 @@ function sum(a, b) {
 
 반대로 Pure의 반대인 Impure한 함수의 예를 살펴보자
 
-```js
+```javascript
 function widthdraw(account, amount) {
   account.total -= amount;
 }
@@ -40,13 +40,13 @@ function widthdraw(account, amount) {
 
 > 모든 리액트 컴포넌트는 props를 직접 바꿀 수 없고(읽기 전용), 같은 props에 대해서는 항상 같은 결과(리액트 앨리먼트)를 보여준다.
 
----
+***
 
 ## 3. props의 기본 사용법
 
 Parents 컴포넌트에서 Child 컴포넌트로 `name`이라는 값을 전달하고자 하는 상황을 가정하자. 그렇다면 아래와 같이 코드를 작성해야 한다.
 
-```js
+```jsx
 //  Parents.js;
 import React from "react";
 import Child from "./Child";
@@ -69,18 +69,17 @@ const Child = (props) => {
 };
 
 export default Child;
-
 ```
 
 Child.js 같이 Child 컴포넌트에게 전달되는 props는 파라미터를 통하여 조회할 수 있다. props는 객체 형태로 전될다며, 만약 `name`값을 조회하고 싶다면 `props.name`을 조회하면 된다.
 
----
+***
 
 ## 4. 여려개의 props와 구조분해 할당
 
 Parents 컴포넌트에서 `name`값 뿐 아니라 `age`, `region`을 Child 컴포넌트에 넘겨주는 상황을 가정해보자. 뿐만 아니라 객체 형태로 전달되는 props를 ES6에 등장한 구조분해(비구조화) 할당 표현식을 사용해보자.
 
-```js
+```jsx
 //  Parents.js;
 import React from "react";
 import Child from "./Child";
@@ -108,12 +107,11 @@ const Child = ({ name, age, region }) => {
 };
 
 export default Child;
-
 ```
 
 `props의 기본 사용법`와 다르게 Child 컴포넌트의 파라미터에서 구조분해 할당 문법을 통해 props값들을 불러왔다. 이전에는 `props.`를 사용해 각각의 값을 불러왔지만 구조분해 할당을 통해 조금 더 간결하게 코드를 작성할 수 있다.
 
----
+***
 
 ## 5. defaultProps로 기본값 설정
 
@@ -121,7 +119,7 @@ export default Child;
 
 아래의 코드를 살펴보자.
 
-```js
+```jsx
 //  Parents.js;
 import React from "react";
 import Child from "./Child";
@@ -157,7 +155,7 @@ Parents.js에서 두개의 Child 컴포넌트를 호출하고 있다. 하지만 
 
 ![defaultProps](../image/React/Props/defaultProps.png)
 
----
+***
 
 ## 6. props.children
 
@@ -165,7 +163,7 @@ Parents.js에서 두개의 Child 컴포넌트를 호출하고 있다. 하지만 
 
 컨탠츠의 내용이 담긴 Content 컴포넌트가 Wrapper 컴포넌트로 감싸져 있다고 가정해보자. 그렇다면 코드는 아래와 같을 것이다.
 
-```js
+```jsx
 //  Wrapper.js
 import React from "react";
 
@@ -190,7 +188,6 @@ const Content = () => {
 };
 
 export default Content;
-
 ```
 
 ![children](../image/React/Props/children.png)
@@ -201,7 +198,7 @@ export default Content;
 
 다음과 같이 코드를 수정하자.
 
-```js
+```jsx
 //  Wrapper.js
 import React from "react";
 
@@ -227,14 +224,13 @@ const Content = () => {
 };
 
 export default Content;
-
 ```
 
 ![children2](../image/React/Props/children2.png)
 
 이번에는 성공적으로 `<h2>Content 컴포넌트 입니다.</h2>`의 내용이 출력되었다. 다른점은 찾아보자.
 
-Wrapper 컴포넌트의 props를 구조분해 할당을 하여 `children`값을 가져왔다. 그리고 ` <h1>Wrapper 컴포넌트 입니다.</h1>`아래에 `children`를 넣어주었다. 그래서 Content 컴포넌트의 `<h2>Content 컴포넌트 입니다.</h2>`이 바로 아래에 위치하게 된다.
+Wrapper 컴포넌트의 props를 구조분해 할당을 하여 `children`값을 가져왔다. 그리고 `<h1>Wrapper 컴포넌트 입니다.</h1>`아래에 `children`를 넣어주었다. 그래서 Content 컴포넌트의 `<h2>Content 컴포넌트 입니다.</h2>`이 바로 아래에 위치하게 된다.
 
 Wrapper.js에서 콘솔로 `children`를 찍어보자 그러면 아래와 같은 객체을 볼 수 있다.
 
@@ -244,25 +240,25 @@ Wrapper.js에서 콘솔로 `children`를 찍어보자 그러면 아래와 같은
 
 주의할 점은 `props.children`이 아닌 다른 임의의 이름으로 선언하면 원하는 결과물을 얻을 수 없다.
 
----
+***
 
 ## 7. Conclusion
 
-> `props`에 대해 공부하면서 순수함수라는 개념도 함께 배웠다. `props`값이 변화하지 않는 다는 것을 여러 프로젝트를 진행하면서 알고 있었지만 이런 개념이 순수함수와 연관이 있다는 것을 알게 되었다.  
-> 그리고 넘겨받는 `props`의 값이 없다면 나는 지금까지 조건부 랜더링을 통해 코드를 작성했다. 하지만 다른 방법인 `defaultProps`에 대해 알게 되었고 한 번쯤 사용해서 리액트에 대한 지식을 넓혀야 겠다. 사실 `typescript`를 리액트에 도입한다면 훨씬 좋은 방법이 있지만... 역시나 `typescript`를 배운지 얼마 안되었고 그 또한 기록을 남기지 않아 기억은 나지 않는다...ㅎㅎ  
-> `props.children`를 콘솔로 처음 찍어보는 것도 재미있었다! 그 안에 내용인 리액트 앨리먼트라 신기하다~  
+> `props`에 대해 공부하면서 순수함수라는 개념도 함께 배웠다. `props`값이 변화하지 않는 다는 것을 여러 프로젝트를 진행하면서 알고 있었지만 이런 개념이 순수함수와 연관이 있다는 것을 알게 되었다.\
+> 그리고 넘겨받는 `props`의 값이 없다면 나는 지금까지 조건부 랜더링을 통해 코드를 작성했다. 하지만 다른 방법인 `defaultProps`에 대해 알게 되었고 한 번쯤 사용해서 리액트에 대한 지식을 넓혀야 겠다. 사실 `typescript`를 리액트에 도입한다면 훨씬 좋은 방법이 있지만... 역시나 `typescript`를 배운지 얼마 안되었고 그 또한 기록을 남기지 않아 기억은 나지 않는다...ㅎㅎ\
+> `props.children`를 콘솔로 처음 찍어보는 것도 재미있었다! 그 안에 내용인 리액트 앨리먼트라 신기하다\~\
 > typescript도 정리를 잘하자😀
 
----
+***
 
 ## 참고
 
-도서 - 소플의 처음 만난 리액트  
-[리액트 공식문서 Components와 Props](https://ko.reactjs.org/docs/components-and-props.html)  
+도서 - 소플의 처음 만난 리액트\
+[리액트 공식문서 Components와 Props](https://ko.reactjs.org/docs/components-and-props.html)\
 [5. props 를 통해 컴포넌트에게 값 전달하기](https://react.vlpt.us/basic/05-props.html)
 
----
+***
 
-[👆](#props)
+[👆](Props.md#props)
 
 📅 2022-07-22

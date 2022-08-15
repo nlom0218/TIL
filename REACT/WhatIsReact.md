@@ -65,7 +65,7 @@
     * 어떤 방법(How)으로 할 것인지를 정의하는 것을 의미
     * 무엇을 하지 세세하게 지정한다.
 
-    ```js
+    ```javascript
     function double(arr) {
       let result = [];
       for (let i = 0; i < arr.length; i++) {
@@ -80,7 +80,7 @@
     * 결과만 기술할 뿐 어떻게는 기술하지 않는 프로그래밍 방법
     * 의도에 집중한 프로그래밍 방법
 
-    ```js
+    ```javascript
     function double(arr) {
       return arr.map((x) => x * 2);
     }
@@ -111,7 +111,7 @@
 
 이러한 코드를 리액트에서는 아래와 같이 JSX를 통해 유사 HTML 코드안에서 map 함수를 이용하여 선언적으로 프로그래밍을 할 수 있다.
 
-```js
+```javascript
 const arr = [1, 2, 3, 4, 5];
 return (
   <ul>
@@ -126,7 +126,7 @@ return (
 >
 > 리액트의 JSX 자체가 선언형은 아니다. 하지만 JSX의 캡슐화를 통해 선언형 코드 작성이 가능해진다. 우리는 리액트로 개발을 하면 여러 컴포넌트를 만들고 필요한 곳에 쓰게 된다. 예를 들어 아래의 코드를 보자.
 >
-> ```js
+> ```javascript
 > const Profile = () => {
 >   return (
 >     <div>

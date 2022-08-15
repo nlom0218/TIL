@@ -4,7 +4,7 @@
 
 자바스크립트을 사용할 때 특정 DOM에 접근하기 위해서는 `getElementById`, `querySelector`와 같은 DOM Selector 함수를 사용한다. 그렇다면 리액트에서는 어떤 방법으로 DOM에 접근할 수 있을까? 바로 `useRef()`훅을 이용하면 된다.
 
----
+***
 
 ## 2. useRef() 로 특정 DOM 선택하기
 
@@ -12,7 +12,7 @@
 
 아래의 예시를 함께 보자.
 
-```js
+```jsx
 import React, { useRef } from "react";
 
 const Test = () => {
@@ -40,14 +40,13 @@ export default Test;
 
 `useRef()`를 통해 두개의 Ref 객체를 만들었다. 하나는 `nameRef`이고 다른 하나는 `emailRef`이다. 그 후 각각 input의 `ref` 값으로 설정했다. 콘솔로 어떤 내용이 찍히는지 보자.
 
-![useRef()](/image/React/UseRef/useRef1.png)
-![useRef()](/image/React/UseRef/useRef2.png)
+![useRef()](../../image/React/UseRef/useRef1.png) ![useRef()](../../image/React/UseRef/useRef2.png)
 
 Ref 객체의 `.current` 값은 우리가 원하는 DOM를 가리키게 된다.
 
 좀 더 나아가 input옆에 위치한 버튼을 누를 때 각각의 input에 focus를 주도록 해보자. 그렇다면 아래의 추가적인 코드(버튼의 onClick) 작성이 필요하다.
 
-```js
+```jsx
 import React, { useRef } from "react";
 
 const Test = () => {
@@ -82,9 +81,9 @@ export default Test;
 
 `.current.focus()`을 통해 input에 focus를 줄 수 있다. 클릭을 통해 확인해 보면 아래의 사진과 같다. 아래는 `email focus` 버튼을 눌렀을 때의 모습이다.
 
-![focus](/image/React/UseRef/focus.png)
+![focus](../../image/React/UseRef/focus.png)
 
----
+***
 
 ## 3. useRef() 로 변수 관리하기
 
@@ -92,7 +91,7 @@ export default Test;
 
 리액트 컴포넌트는 `useState()`로 선언된 변수(데이터)가 변할 때 마다 리랜더링을 하게 되면서 컴포넌트 내부 변수들이 초기화된다. 아래의 예시 코드를 보면서 어떻게 동작하는지 이해해보자.
 
-```js
+```jsx
 import React, { useState } from "react";
 
 const Test = () => {
@@ -124,13 +123,13 @@ const Test = () => {
 export default Test;
 ```
 
-![useRef - useState](/image/React/UseRef/useRef-useState.png)
+![useRef - useState](../../image/React/UseRef/useRef-useState.png)
 
 변수 `number`는 `var`를 통해 선언이 되었고 아무리 +버튼을 누른다 해도 화면이 다시 랜더링이 되지는 않는다. 하지만 콘솔을 찍었을 때 코드 내부에서는 숫자가 하나씩 오르는 것을 확인할 수 있다. 그렇다면 그 아래의 랜더링 버튼을 눌렀을 땐 어떨까? `number`의 값이 초기화 되어 다시 0이 된다.
 
 이번에는 `var`가 아닌 `useRef()`를 통해 변수를 관리해보자. 아래와 같이 코드를 수정하자.
 
-```js
+```jsx
 import React, { useState, useRef } from "react";
 
 const Test = () => {
@@ -164,10 +163,9 @@ const Test = () => {
 export default Test;
 ```
 
-위와 같이 `var`로 선언한 `number`를 `useRef()`로 바꾸었고 `useRef()`의 ()안에 파라미터로 0을 넣어 초기값을 설정하였다. 그리고 `number.current`를 통해 값을 조회한다. 또한 +버튼을 누를 때 마다 `number.current`의 값을 수정하여 1씩 값을 증가시키게 하였다.
-그 결과는 아래의 사진과 같다.
+위와 같이 `var`로 선언한 `number`를 `useRef()`로 바꾸었고 `useRef()`의 ()안에 파라미터로 0을 넣어 초기값을 설정하였다. 그리고 `number.current`를 통해 값을 조회한다. 또한 +버튼을 누를 때 마다 `number.current`의 값을 수정하여 1씩 값을 증가시키게 하였다. 그 결과는 아래의 사진과 같다.
 
-![useRef - useState 2](/image/React/UseRef/useRef-useState2.png)
+![useRef - useState 2](../../image/React/UseRef/useRef-useState2.png)
 
 이전 `var`로 선언했을 때 처럼 +버튼을 누를 땐 `number`값이 1씩 증가하지만 컴포넌트가 리랜더링 되었을 땐 이전과 다르게 `number`값이 0으로 초기화가 되지 않는 것을 확인할 수 있다.
 
@@ -175,22 +173,22 @@ export default Test;
 
 ![useRef - useState 3](../image/React/UseRef/useRef-useState3.png)
 
----
+***
 
 ## 4. Conclusion
 
 > `useRef()`를 통해 DOM에 직접 접근하고 작업하는 과정은 특히 `input`를 다룰 때 몇 번 사용했었다. 하지만 `useRef()`를 통해 변수를 관리하는 것은 한 번도 해보지 못하였다. `var`로 변수를 선언하고 관리하는 것과의 차이는 이해가 되지만 어떤 기능에서 `useRef()`를 사용해야 하는지에 대해서는 아직 의문이다. 구체적인 예시와 `useRef()`를 사용하여 변수를 관리하는 장점에 대해 알아보고 싶다.(이후 공부하다가 해당 내용이 나오면 `useRef()`챕터에 정리를 해야겠다.)
 
----
+***
 
 ## 참고
 
-[ko.reactjs.org - useRef](https://ko.reactjs.org/docs/hooks-reference.html#useref)  
-[10. useRef 로 특정 DOM 선택하기](https://react.vlpt.us/basic/10-useRef.html)  
-[[React] useRef 사용법 및 예제](https://itprogramming119.tistory.com/entry/React-useRef-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C)
+[ko.reactjs.org - useRef](https://ko.reactjs.org/docs/hooks-reference.html#useref)\
+[10. useRef 로 특정 DOM 선택하기](https://react.vlpt.us/basic/10-useRef.html)\
+[\[React\] useRef 사용법 및 예제](https://itprogramming119.tistory.com/entry/React-useRef-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C)
 
----
+***
 
-[👆](#useref)
+[👆](UseRef.md#useref)
 
 📅 2022-08-01

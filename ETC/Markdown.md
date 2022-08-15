@@ -14,7 +14,7 @@
 
 #### 2-1. 문단 제목
 
-```
+```markdown
 # H1
 ## H2
 ### H3
@@ -38,7 +38,7 @@
 
 또는 다음과같이 쓸 수 있다.
 
-```
+```markdown
 H1
 ======
 H2
@@ -56,7 +56,7 @@ H2
 
 순서있는 목록은 숫자와 점을 사용한다.
 
-```
+```markdown
  1. 첫번째
  2. 두번째
  3. 세번째
@@ -70,7 +70,7 @@ H2
 
 * 순서없는 목록(글머리 기호: `*`, `+`, `-`지원)
 
-```
+```markdown
 * 빨강
     * 녹색
         * 파랑
@@ -100,7 +100,7 @@ H2
 
 #### 2-3. 인용문
 
-```
+```markdown
 > 첫 번째 인용문입니다.
 > > 두 번째 인용문입니다.
 > > > 세 번째 인용문입니다.
@@ -117,7 +117,7 @@ H2
 
 인용문 안에는 다른 마크다운 요소를 포함할 수 있다.
 
-````
+````markdown
 > ### h3
 > > - List
         - Item
@@ -143,7 +143,7 @@ H2
 
 **2-4-1. 들여쓰기**
 
-```
+```markdown
 this is a code block.
 ```
 
@@ -152,11 +152,10 @@ this is a code block.
 *   `<pre><code>{code}</code></pre>` 방식
 
     ```
-      
-          const name = "HD"
-          console.log(name)
-      
-      
+        
+        const name = "HD"
+        console.log(name)
+        ma
     ```
 *   코드블럭코드("\`\`")을 이용하는 방법
 
@@ -176,7 +175,7 @@ this is a code block.
 
 #### 2-5. 수평선
 
-```
+```markdown
  * * *
  ***
  *****
@@ -202,7 +201,7 @@ this is a code block.
 
 *   외부링크
 
-    ```
+    ```markdown
     사용문법: [Title](link)
     적용예: [Teachercan](https://teachercan.com)
     ```
@@ -223,7 +222,7 @@ this is a code block.
 
 #### 2-7. 강조
 
-```
+```markdown
 *single asterisks*
 _single underscores_
 **double asterisks**
@@ -241,7 +240,7 @@ _single underscores_\
 
 #### 2-8. 이미지
 
-```
+```markdown
 ![Alt text](image url)
 ```
 

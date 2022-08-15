@@ -4,13 +4,13 @@
 
 리액트에서 배열에 담긴 정보를 렌더링하기 위해선 어떻게 해야하는지 그리고 배열의 정보가 업데이트가 될 때 렌더링을 최적화하는 방법에 대해 알아보자.
 
----
+***
 
 ## 2. 일일히 하나씩!
 
 아래와 같이 객체를 원소로 가진 배열을 일일히 하나씩 가져와서 렌더링을 해보자.
 
-```js
+```javascript
 const giftItems = [
   {
     name: "초콜릿",
@@ -27,7 +27,7 @@ const giftItems = [
 ];
 ```
 
-```js
+```jsx
 import React, { useState } from "react";
 
 const Test = () => {
@@ -71,7 +71,7 @@ export default Test;
 
 `giftItem`배열의 원소를 하나씩 일일히 가져와서 렌더링을 하고 있다. 물론 이것도 배열을 렌더링하는 하나의 방법이다. 하지만 `giftItem`의 원소가 엄청 많다면 어떨까? 일일히 하나씩 작성을 하는 것이 가능할까? 가능하겠지만 시간은 많이 소요가 될 것이다. 즉, 비효율적인 방법이다.
 
----
+***
 
 ## 3. Array.map()을 사용한 배열 렌더링
 
@@ -79,7 +79,7 @@ export default Test;
 
 `Array.map()`메서드를 사용하여 배열 렌더링을 해보자. 위의 긴 코드를 아래와 같이 수정하자.
 
-```js
+```jsx
 import React, { useState } from "react";
 
 const Test = () => {
@@ -119,13 +119,13 @@ export default Test;
 
 하지만 콘솔에 `Warning`메시지가 보인다. 리스트의 각각의 자식에는 `key` props가 필요하다는 것이다. 해당 경고 메시지가 바로 렌더링 최적화와 관련이 있다.
 
----
+***
 
 ## 4. key props
 
 `Array.map()`메서드를 사용했던 부분을 아래와 같이 수정하자.
 
-```js
+```jsx
 {
   giftItems.map((gift, index) => (
     <li key={index}>
@@ -144,16 +144,16 @@ export default Test;
 
 여기서 `key props`의 값은 고유의 값이여야 한다.
 
-더 자세한 내용은 [VirtualDOM](./VirtualDOM.md) 챕터의 `6-3. Recursing On Children`과 `6-4. key`를 참고하면 된다.
+더 자세한 내용은 [VirtualDOM](VirtualDOM.md) 챕터의 `6-3. Recursing On Children`과 `6-4. key`를 참고하면 된다.
 
----
+***
 
 ## 5. Conclusion
 
 > `Array.map()`메서드를 사용하여 배열을 렌더링하는 방법은 리액트 프로젝트에서 정말로 많이 사용된다. 그래서 그만큼 많이 다루어 봤기 때문에 기억을 되살리며 나름 정리를 해보았다. 하지만 아직 렌더링, Virtual DOM에 대한 개념은 미약하니 혹시 잘못된 정보가 있으면 github issus로 꼭 알려주었으면 좋겠다:)
 
----
+***
 
-[👆](#배열-렌더링)
+[👆](ArrayRendering.md#배열-렌더링)
 
 📅 2022-08-05

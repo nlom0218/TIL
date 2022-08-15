@@ -6,7 +6,7 @@
 
 `Context`에 대해 간단히 살펴보고 `useContext()`의 사용과 특징에 대해 알아보자.
 
----
+***
 
 ## 2. Context
 
@@ -16,21 +16,21 @@
 
 즉, 같은 `props`를 자식 컴포넌트에게 많이 전달하여 많은 컴포넌트가 공유하고 있단면 `Context`를 사용하여 전달하는 과정을 생략하고 부모 컴포넌트에서 한 번 전역으로 전달하여 데이터를 공유할 수 있다.
 
----
+***
 
 ### 2-1. Context API - React.createContext
 
-```js
+```jsx
 const MyContext = React.createContext(defaultValue);
 ```
 
 Context 객체를 만드는 API이다. Context 객체를 구독하고 있는 컴포넌트를 렌더링할 때 React는 트리 상위에서 가장 가까이 있는 짝이 맞는 `Provider`로부터 현재값을 읽는다.
 
----
+***
 
 ### 2-2. Context API - Context.Provider
 
-```js
+```jsx
 <MyContext.Provider value={/* 어떤 값 */}>
 ```
 
@@ -40,11 +40,11 @@ Context 객체를 만드는 API이다. Context 객체를 구독하고 있는 컴
 
 `Provider` 컴포넌트의 `value props`가 바뀔 때 마다 해당 `Provider`컴포넌트를 구독하고 있는 컴포넌트는 리렌더링 된다.
 
----
+***
 
 ### 2-3. Context API - Context.Consumer
 
-```js
+```jsx
 <MyContext.Consumer>
     {value => /* context 값을 이용한 렌더링 */}
 </MyContext.Consumer>
@@ -54,13 +54,13 @@ Context 객체를 만드는 API이다. Context 객체를 구독하고 있는 컴
 
 `Context.Consumer` 컴포넌트의 자식은 함수여야 한다. 이 함수는 `context`의 현재값을 받고 React노드를 반환한다. 이 함수가 받는 `value` 매개변수 값은 해당 `context`의 `Provider` 컴포넌트 중 상위 트리에서 가장 가까운 `Provider` 컴포넌트의 `value props`과 동일하다.
 
----
+***
 
 ## 3. Context를 사용한 제주도 기념품 컴포넌트
 
 제주도 여행 기념품 목록을 만드는 컴포넌트를 `Context`를 활용하여 새롭게 작성해보자.
 
-```js
+```jsx
 //App.js
 import { useState, createContext } from "react";
 import Children from "./Children";
@@ -122,13 +122,13 @@ const Children = () => {
 export default Children;
 ```
 
-![Context result](/image/React/UseContext/context_result.png)
+![Context result](../../image/React/UseContext/context\_result.png)
 
----
+***
 
 ### 1) createContext를 사용하여 Context 객체 만들기
 
-```js
+```jsx
 export const AppContext = createContext({
   gift: ["한라봉", "초콜릿"],
   addGift: () => {},
@@ -137,11 +137,11 @@ export const AppContext = createContext({
 
 `createcontext API`를 사용하여 Context 객체를 만들다. `defaultValue`로는 하위 컴포넌트가 받고 있는 매개변수(`Provider API`의 `value`) 모양과 동일하게 만들었다.
 
----
+***
 
 ### 2) AppContext.Provider 생성하여 Context의 변화 알리기
 
-```js
+```jsx
 <AppContext.Provider value={{ gift, addGift }}>
   <div>안녕, 제주!</div>
   <Children />
@@ -152,11 +152,11 @@ export const AppContext = createContext({
 
 > 처음에 오류가 났던 부분이다. `value props`의 값이 Object이면 `AppContext.Consumer`컴포넌트에서 Object로 받고 Array이면 `AppContext.Consumer`컴포넌트에서 Array로 받자
 
----
+***
 
 ### 3) AppContext.Consumer를 통해 Context를 구독하기
 
-```js
+```jsx
 <AppContext.Consumer>
     {({ gift, addGift }) => ()}
 </AppContext.Consumer>
@@ -166,13 +166,13 @@ export const AppContext = createContext({
 
 > 확실히 `props`가 필요없는 컴포넌트들에게 까지 `props`를 전달하는 것 보다 `Context`를 사용하여 딱 필요한 자식 컴포넌트에게만 전달하는 것이 깔끔해 보인다. 이제 아래에서 `Context`를 더 편하게 사용할 수 있게 해주는 `useContext()`훅에 대해 살펴보자.
 
----
+***
 
 ## 4. useContext()훅 사용하기
 
 `useContext()`의 기본 사용법은 아래와 같다.
 
-```js
+```jsx
 const value = useContext(MyContext);
 ```
 
@@ -182,7 +182,7 @@ const value = useContext(MyContext);
 
 이제 `useContext()`훅을 사용하여 위의 `Children.js` 컴포넌트를 아래와 같이 수정하자.
 
-```js
+```jsx
 // Children.js
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
@@ -216,16 +216,16 @@ export default Children;
 
 `useContext()`훅을 사용함으로써 이전 보다 간결한 코드 작성이 가능해졌다.
 
----
+***
 
 ## 5. Conclusion
 
-> `useContext()`훅도 `useReducer()`훅과 마찬가지로 한 번도 사용해본 적이 없는 React Hook이었다. 그래서 처음에는 생소하였지만 생각보다 그리? 어렵고 복잡한 개념이 아니었기 때문에 금방 이해가 가능했다.  
+> `useContext()`훅도 `useReducer()`훅과 마찬가지로 한 번도 사용해본 적이 없는 React Hook이었다. 그래서 처음에는 생소하였지만 생각보다 그리? 어렵고 복잡한 개념이 아니었기 때문에 금방 이해가 가능했다.\
 > 궁금한 점은 `useContext()`훅과 `useReducer()`훅이 `porps`를 필요하지 않는 자식 컴포넌트를 건너 뛰고 필요한 자식 컴포넌트에게만 `props`를 전달을 가능하게 하는 훅으로 보인다. 그렇다면 이 두가지의 훅을 모두 사용하는 것이 좋은지 아니면 상황에 따라 한 가지를 선택하여 사용하는 것이 좋은지가 궁금하다.
 
 마무리로 `useContext()`훅과 `useReducer()`훅을 모두 사용하여 위의 컴포넌트를 작성하였다. 확실히 컴포넌트의 구조가 복잡해진다면 이 훅들은 유용해질 것 같다😃 그리고 같은 내용이지만 코드에 사용된 훅이 다르다는 것도 재밌는 부분이다.(사실 이건 그냥 useState만 사용하는 것이 좋은거 같다😂)
 
-```js
+```jsx
 // App.js
 import { createContext, useReducer } from "react";
 import Children from "./Children";
@@ -289,18 +289,16 @@ const Children = () => {
 };
 
 export default Children;
-
 ```
 
----
+***
 
 ## 참고
 
-[[TIL #6] React (Hooks) - useContext 란?](https://velog.io/@jminkyoung/TIL-6-React-Hooks-useContext-%EB%9E%80)
-[Context](https://ko.reactjs.org/docs/context.html)
+[\[TIL #6\] React (Hooks) - useContext 란?](https://velog.io/@jminkyoung/TIL-6-React-Hooks-useContext-%EB%9E%80) [Context](https://ko.reactjs.org/docs/context.html)
 
----
+***
 
-[👆](#usecontext)
+[👆](UseContext.md#usecontext)
 
 📅 2022-08-10
