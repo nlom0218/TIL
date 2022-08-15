@@ -114,6 +114,7 @@
       - [폰켓몬](CodingTest/Programmers/Level1/programmers_ponketmon.md)
       - [두 개 뽑아서 더하기](CodingTest/Programmers/Level1/programmers_take_two_and_add.md)
       - [예산](CodingTest/Programmers/Level1/programmers_budget.md)
+      - [신고 결과 받기](CodingTest/Programmers/Level1/programmers_get_report_results.md)
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)

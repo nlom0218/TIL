@@ -100,7 +100,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```JavaScript
 function solution(id_list, report, k) {
   // 1) report 배열의 요소 중 중복되는 요소 제거한 후 문자열인 각각의 요소를 배열로 만들기
   const set = [...new Set([...report])].map((item) => item.split(" "));
@@ -147,7 +147,7 @@ function solution(id_list, report, k) {
 
 ### 1) report 배열의 요소 중 중복되는 요소 제거한 후 문자열인 각각의 요소를 배열로 만들기
 
-```js
+```JavaScript
 const set = [...new Set([...report])].map((item) => item.split(" "));
 ```
 
@@ -160,7 +160,7 @@ const set = [...new Set([...report])].map((item) => item.split(" "));
 
 ### 2) 맵(Map) 객체를 사용하여 "신고당한 횟수"와 "유저가 신고한 아이디" 저장하기
 
-```js
+```JavaScript
 const reportedNumMap = new Map();
 const reportIdListMap = new Map();
 ```
@@ -171,7 +171,7 @@ const reportIdListMap = new Map();
 
 ### 3) 특정 아이디(유저)가 신고당한 횟수 저장하기
 
-```js
+```JavaScript
 reportedNumMap.set(reportId, (reportedNumMap.get(reportId) | 0) + 1);
 ```
 
@@ -186,7 +186,7 @@ reportedNumMap.set(reportId, (reportedNumMap.get(reportId) | 0) + 1);
 
 ### 4) 특정 아이디(유저)가 신고한 아이디 저장하기
 
-```js
+```JavaScript
 reportIdListMap.set(
   userId,
   reportIdListMap.get(userId)
@@ -206,7 +206,7 @@ reportIdListMap.set(
 
 ### 5) 정지 기준이 되는 신고 횟수 이상인 아이디만 저장하기
 
-```js
+```JavaScript
 const reportedId = [];
 reportedNumMap.forEach((item, index) => {
   if (item >= k) reportedId.push(index);
@@ -221,7 +221,7 @@ reportedNumMap.forEach((item, index) => {
 
 ### 6) id_list 배열의 순서에 맞게 각각의 요소(유저)가 신고한 ID를 넣기
 
-```js
+```JavaScript
 const reportIdList = id_list.map((item) => {
   return reportIdListMap.get(item) ? reportIdListMap.get(item) : 0;
 });
@@ -237,7 +237,7 @@ const reportIdList = id_list.map((item) => {
 
 ### 7) 유저가 신고한 아이디들이 정지 기준에 충족하는 아이디인지 확인하기
 
-```js
+```JavaScript
 const resultEmailNum = reportIdList.map((item) => {
   if (item === 0) return 0;
   const suspendedIdArr = item.filter((id) => reportedId.includes(id));
@@ -266,13 +266,13 @@ const resultEmailNum = reportIdList.map((item) => {
 
 코드의 흐름은 같다. 하지만 `7) 유저가 신고한 아이디들이 정지 기준에 충족하는 아이디인지 확인하기`에서의 아래 부분을 굳이 조건문을 쓰면서 따로 생각을 해야 하나 싶었다.
 
-```js
+```JavaScript
 if (item === 0) return 0;
 ```
 
 위의 조건문을 제거하기 위해서는 `item`으로 0으로 미리 두는 것이 아니라 빈 배열로 만들어야 한다. 이는 ` 6) id_list 배열의 순서에 맞게 각각의 요소(유저)가 신고한 ID를 넣기`에서 수정해야 한다.(아래 코드 참고)
 
-```js
+```JavaScript
 return reportIdListMap.get(item) ? reportIdListMap.get(item) : [];
 ```
 
@@ -284,7 +284,7 @@ return reportIdListMap.get(item) ? reportIdListMap.get(item) : [];
 
 가장 많은 좋아요와 댓글이 달린 풀이를 가져왔다.
 
-```js
+```JavaScript
 function solution(id_list, report, k) {
   let reports = [...new Set(report)].map((a) => {
     return a.split(" ");
@@ -314,7 +314,7 @@ function solution(id_list, report, k) {
 
 ### 1) 누적 신고 횟수 구하기
 
-```js
+```JavaScript
 let counts = new Map();
 for (const report of reports) {
   counts.set(report[1], counts.get(report[1]) + 1 || 1);
@@ -327,7 +327,7 @@ for (const report of reports) {
 
 ### 2) 정지 기준이 되는 신고 횟수를 비교하여 받게 될 결과 메일의 수 구하기
 
-```js
+```JavaScript
 let good = new Map();
 for (const report of reports) {
   if (counts.get(report[1]) >= k) {
@@ -350,7 +350,7 @@ for (const report of reports) {
 
 ### 3) 받게 될 결과 메일의 수를 id_list 요소의 순서에 맞게 정렬하기
 
-```js
+```JavaScript
 let answer = id_list.map((a) => good.get(a) || 0);
 ```
 
