@@ -58,7 +58,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function getCombinations(array, size) {
   function p(t, i) {
     if (t.length === size) {
@@ -95,7 +95,7 @@ function solution(numbers) {
 
 아주 잘 활용하고 있는 `getCombinations()`함수이다. 해당 함수를 통해 `numbers`의 요소를 가지는 길이 2의 2차원 배열을 만든다.
 
-```js
+```javascript
 const combi = getCombinations(numbers, 2);
 ```
 
@@ -107,7 +107,7 @@ const combi = getCombinations(numbers, 2);
 
 ### 2) 각각의 요소를 더해 모든 합의 경우의 수가 있는 배열 만들기
 
-```js
+```javascript
 const sum = combi.map((item) => item[0] + item[1]);
 ```
 
@@ -121,7 +121,7 @@ const sum = combi.map((item) => item[0] + item[1]);
 
 그 후 `Array.sort()`메서드를 이용해 숫자를 오름차순으로 정렬하였다.
 
-```js
+```javascript
 return [...new Set(sum)].sort((a, b) => a - b);
 ```
 
@@ -137,7 +137,7 @@ return [...new Set(sum)].sort((a, b) => a - b);
 
 요소의 개수가 2인 조합이다. 그렇기 때문에 굳이 `getCombinations()`를 사용하지 않고 코드를 다시 구현하고 싶었다.
 
-```js
+```javascript
 function solution(numbers) {
   // 1) Set 객체 생성
   const sumSet = new Set();
@@ -158,7 +158,7 @@ function solution(numbers) {
 
 ### 1) Set 객체 생성
 
-```js
+```javascript
 const sumSet = new Set();
 ```
 
@@ -168,7 +168,7 @@ const sumSet = new Set();
 
 ### 2) 인덱스가 겹치지 않는 값을 더한후 sumSet에 추가하기
 
-```js
+```javascript
 sumSet.add(numbers[i] + numbers[j]);
 ```
 
@@ -178,7 +178,7 @@ sumSet.add(numbers[i] + numbers[j]);
 
 ### 3) 배열로 바꾼 후 오름차순으로 정렬한 후 리턴하기
 
-```js
+```javascript
 return [...sumSet].sort((a, b) => a - b);
 ```
 
@@ -198,7 +198,7 @@ return [...sumSet].sort((a, b) => a - b);
 
 가장 많은 좋아요와 유사한 풀이가 많은 문제를 가져왔다. 내가 리팩토링한 풀이와 중복되는 합을 언제 제거할지만 다를 뿐 전체적인 로직은 같다.
 
-```js
+```javascript
 function solution(numbers) {
   const temp = [];
 

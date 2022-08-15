@@ -63,7 +63,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function solution(sizes) {
   // 1) 명함의 가로, 세로의 길이 중 가장 큰 값을 가져오기
   const longest = sizes
@@ -83,7 +83,7 @@ function solution(sizes) {
 
 ### 1) 명함의 가로, 세로의 길이 중 가장 큰 값을 가져오기
 
-```js
+```javascript
 const longest = sizes
   .map((item) => (item[0] >= item[1] ? item[0] : item[1]))
   .sort((a, b) => b - a)[0];
@@ -95,7 +95,7 @@ const longest = sizes
 
 ### 2) 각 명함의 짧은 길이 중 가장 큰 값을 가져오기
 
-```js
+```javascript
 const opposite = sizes
   .map((item) => (item[0] >= item[1] ? item[1] : item[0]))
   .sort((a, b) => b - a)[0];
@@ -119,7 +119,7 @@ const opposite = sizes
 
 그래서 아래와 같이 코드를 수정하였다.
 
-```js
+```javascript
 function solution(sizes) {
   const resizes = sizes.map(([w, h]) => (w >= h ? [w, h] : [h, w]));
   const maxLengths = resizes.reduce(
@@ -134,7 +134,7 @@ function solution(sizes) {
 
 그 후 가로와 세로의 각각의 부분에서 가장 큰 길이만 찾는 과정을 `Array.reduce()`메서드를 사용하여 구했다. 해당 메서드가 실행되는 과정을 표로 나타내봤다.
 
-```js
+```javascript
 const sizes = [
   [14, 4],
   [19, 6],
@@ -167,7 +167,7 @@ const resizes = [
 
 다른 사람의 풀이 중 어느정도 좋아요가 많고 유사한 코드가 많은 것을 가져왔다.
 
-```js
+```javascript
 function solution(sizes) {
   const rotated = sizes.map(([w, h]) => (w < h ? [h, w] : [w, h]));
 

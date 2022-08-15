@@ -63,7 +63,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function solution(str1, str2) {
   // 1) 문자열을 모두 소문자로 바꾼 후 각각의 문자를 요소로 하는 배열 만들기
   arrStr1 = [...str1.toLowerCase()];
@@ -115,7 +115,7 @@ function solution(str1, str2) {
 
 ### 1) 문자열을 모두 소문자로 바꾼 후 각각의 문자를 요소로 하는 배열 만들기
 
-```js
+```javascript
 arrStr1 = [...str1.toLowerCase()];
 arrStr2 = [...str2.toLowerCase()];
 ```
@@ -130,7 +130,7 @@ arrStr2 = [...str2.toLowerCase()];
 
 ### 2) 영문자로 된 글자 쌍이 아닐 경우엔 다중 집합의 원소로 만들기 않기
 
-```js
+```javascript
 const regex = /[^a-z]/;
 if (regex.test(arrStr1[i]) || regex.test(arrStr1[i + 1])) continue;
 ```
@@ -141,7 +141,7 @@ if (regex.test(arrStr1[i]) || regex.test(arrStr1[i + 1])) continue;
 
 ### 3) 영문자로 된 글자 쌍일 경우에만 다중 집합의 원소로 만들기
 
-```js
+```javascript
 combiStr1.push(arrStr1[i] + arrStr1[i + 1]);
 ```
 
@@ -155,7 +155,7 @@ combiStr1.push(arrStr1[i] + arrStr1[i + 1]);
 
 ### 4) 두 배열의 교집합 만들기
 
-```js
+```javascript
 const intersection = combiStr1.filter((item) => {
   if (combiStr2.includes(item)) {
     const index = combiStr2.indexOf(item);
@@ -173,7 +173,7 @@ const intersection = combiStr1.filter((item) => {
 
 1. 두 배열 모두 같은 특정 요소가 있는 경우
 
-   ```js
+   ```javascript
    const index = combiStr2.indexOf(item);
    combiStr2.splice(index, 1);
    return true;
@@ -187,7 +187,7 @@ const intersection = combiStr1.filter((item) => {
    ***
 
 2. `combiStr1` 배열에만 특정 요소가 있는 경우
-   ```js
+   ```javascript
    newCombiStr1.push(item);
    return false;
    ```
@@ -198,13 +198,13 @@ const intersection = combiStr1.filter((item) => {
 
 ### 5) 두 배열의 합집합 만들기
 
-```js
+```javascript
 const union = [...intersection, ...newCombiStr1, ...combiStr2];
 ```
 
 `4) 두 배열의 교집합 만들기` 과정을 통해 만들어진 교집합과 두 차집합을 이용하여 합집합을 만든다. 이때 `스프레드 연산자`를 사용했지만 `Array.concat()` 메서드를 사용하여 만들 수도 있다.
 
-```js
+```javascript
 const union = intersection.concat(newCombiStr1, combiStr2);
 ```
 
@@ -212,7 +212,7 @@ const union = intersection.concat(newCombiStr1, combiStr2);
 
 ### 6) 교집합과 합집합이 모두 0인 경우와 교집합만 0인 경우
 
-```js
+```javascript
 if (intersection.length === 0) {
   if (union.length === 0) return 65536;
   return 0;
@@ -227,7 +227,7 @@ if (intersection.length === 0) {
 
 ### 7) 두 배열의 자카드 유사도 구하기
 
-```js
+```javascript
 return Math.floor((intersection.length / union.length) * 65536);
 ```
 
@@ -253,7 +253,7 @@ return Math.floor((intersection.length / union.length) * 65536);
 
 ### 1) 중복된 부분을 하나의 함수로 만들어 관리하기
 
-```js
+```javascript
 arrStr1 = [...str1.toLowerCase()];
 arrStr2 = [...str2.toLowerCase()];
 
@@ -274,7 +274,7 @@ for (let i = 0; i < arrStr2.length - 1; i++) {
 
 위의 코드는 `str1` 문자열과 `str2` 문자열을 바탕으로 다중집합 배열을 만드는 과정이다. `str1`과 `str2`만 다를 뿐 모든 내용이 같다. 그래서 이를 함수로 만들어 관리하고자 한다. 함수는 아래와 같이 만들었다.
 
-```js
+```javascript
 const makeCombiStr = (str) => {
   const arr = [...str.toLowerCase()];
 
@@ -291,7 +291,7 @@ const makeCombiStr = (str) => {
 
 그리고 다중집합 배열은 아래와 같은 방법으로 만든다.
 
-```js
+```javascript
 const combiStr1 = makeCombiStr(str1);
 const combiStr2 = makeCombiStr(str2);
 ```
@@ -304,7 +304,7 @@ const combiStr2 = makeCombiStr(str2);
 
 그래서 아래와 같이 리턴하는 부분을 수정하였다.
 
-```js
+```javascript
 if (intersection.length === 0 && union.length === 0) return 65536;
 return Math.floor((intersection.length / union.length) * 65536);
 ```
@@ -323,7 +323,7 @@ return Math.floor((intersection.length / union.length) * 65536);
 
 가장 많은 좋아요를 받은 풀이이다.
 
-```js
+```javascript
 function solution(str1, str2) {
   function explode(text) {
     const result = [];
@@ -360,7 +360,7 @@ function solution(str1, str2) {
 
 ### 1) String.substr() 메서드를 사용하여 문자열 자르기
 
-```js
+```javascript
 const node = text.substr(i, 2);
 ```
 
@@ -374,13 +374,13 @@ const node = text.substr(i, 2);
 
 1. String.substring(): `string` 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환한다.
 
-   ```js
+   ```javascript
    const node = text.substring(i, i + 2);
    ```
 
 2. String.slice(): 문자열의 일부를 추출하면서 새로운 문자열을 반환한다.
 
-   ```js
+   ```javascript
    const node = text.slice(i, i + 2);
    ```
 
@@ -388,7 +388,7 @@ const node = text.substr(i, 2);
 
 ### 2) 정규식과 매치되는지 확인하기
 
-```js
+```javascript
 if (node.match(/[A-Za-z]{2}/)) {
   result.push(node.toLowerCase());
 }
@@ -405,7 +405,7 @@ if (node.match(/[A-Za-z]{2}/)) {
 
 ### 3) arr1 배열과 arr2 배열 셋(Set)을 이용하여 합치기
 
-```js
+```javascript
 const set = new Set([...arr1, ...arr2]);
 ```
 
@@ -421,7 +421,7 @@ const set = new Set([...arr1, ...arr2]);
 
 ### 4) 합집합과 교집합의 수 구하기
 
-```js
+```javascript
 const has1 = arr1.filter((x) => x === item).length;
 const has2 = arr2.filter((x) => x === item).length;
 union += Math.max(has1, has2);

@@ -46,7 +46,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 // 1) 서로 다른 n개의 원소를 가지는 어떤 배열에서 r개의 원소를 선택하기(조합)
 function getCombinations(array, size) {
   function p(t, i) {
@@ -98,7 +98,7 @@ function solution(nums) {
 
 아래의 코드를 분석하여 어떤 과정을 거쳐 조합을 만드는지 살펴보자.
 
-```js
+```javascript
 function getCombinations(array, size) {
   function p(t, i) {
     if (t.length === size) {
@@ -124,13 +124,13 @@ function getCombinations(array, size) {
 
 `p()`함수가 실행되는 과정을 알아보자.
 
-```js
+```javascript
 p([], 0);
 ```
 
 위와 같이 함수가 호출이 되었고 빈 배열과 0을 파라미터로 전달하고 있다. 이제 `p()`함수가 실행되는 과정을 살펴보자.
 
-```js
+```javascript
 if (t.length === size) {
   result.push(t);
   return;
@@ -141,7 +141,7 @@ if (t.length === size) {
 
 아래는 다음으로 보이는 `if문`이다.
 
-```js
+```javascript
 if (i + 1 > array.length) {
   return;
 }
@@ -151,7 +151,7 @@ if (i + 1 > array.length) {
 
 그 다음 코드를 살펴보자.
 
-```js
+```javascript
 p(t.concat(array[i]), i + 1);
 ```
 
@@ -159,7 +159,7 @@ p(t.concat(array[i]), i + 1);
 
 마지막 코드도 `p()`함수를 내부에서 다시 호출하고 있는데 이때는 기존의 배열을 첫 번재 파라미터, 그리고 i + 1를 두 번째 파라미터로 전달하고 있다. (아래 코드 참고)
 
-```js
+```javascript
 p(t, i + 1);
 ```
 
@@ -173,7 +173,7 @@ p(t, i + 1);
 
 소수는 나눌 수 있는 수가 1과 자신인 수이다. 예를들어 4인 경우 1, 2, 4로 나눌 수 있기 때문에 소수가 아니다. 13은 1, 13으로만 나눌 수 있으므로 소수이다. 즉, 소인수분해를 했을 때 1과 자기자신인 수가 소수이다.
 
-```js
+```javascript
 function isPrime(num) {
   for (i = 2; i * i <= num; i++) {
     if (num % i === 0) return false;
@@ -190,7 +190,7 @@ function isPrime(num) {
 
 `getCombinations()`함수 덕분에 3개의 이상의 숫자로를 원소로 가지고 있는 배열을 조합의 형태로 만들었다. 그 후 각각의 배열을 돌면서(`Array.map()`) 3개의 숫자를 더하는 코드이다.
 
-```js
+```javascript
 const sumNums = getCombinations(nums, 3).map((num) => num[0] + num[1] + num[2]);
 ```
 
@@ -200,7 +200,7 @@ const sumNums = getCombinations(nums, 3).map((num) => num[0] + num[1] + num[2]);
 
 위의 과정에서 `sumNums`배열에는 각각의 조합의 숫자들을 더한 값이 저장되어 있다. 그 다음으로 해야 할 일들은 숫자들이 소수인지 아닌지 판별하는 과정이다. 그리고 판별이 끝나면 소수는 `true`, 소수가 아닌 수는 `false`로 리턴된다. 내가 필요한 것은 소수이므로 마지막으로 `Array.filter()`메서드를 사용하여 `true`값만 가져왔다.
 
-```js
+```javascript
 const isPrimeNums = sumNums.map((num) => isPrime(num)).filter((item) => item);
 ```
 
@@ -210,7 +210,7 @@ const isPrimeNums = sumNums.map((num) => isPrime(num)).filter((item) => item);
 
 이제 `isPrimeNums`배열에는 소수의 개수 만큼 `ture`가 원소로 있고 `isPrimeNums`배열의 길이를 리턴하면 문제는 마무리된다!
 
-```js
+```javascript
 return isPrimeNums.length;
 ```
 
@@ -228,7 +228,7 @@ return isPrimeNums.length;
 
 이를 위해 수정해야 할 부분은 `2) 소수인지 판별하기`에서의 `isPrime()`함수이다. 소수가 아닌 수는 `false`로 리턴을 하지만 소수인 값은 받은 `num`을 그대로 리턴을 하도록 바꾸었다. (아래 코드 참고)
 
-```js
+```javascript
 // 2) 소수인지 판별하기
 function isPrime(num) {
   for (i = 2; i * i <= num; i++) {
@@ -238,7 +238,7 @@ function isPrime(num) {
 }
 ```
 
-```js
+```javascript
 // 4) 구한 원소들의 합이 소수인지 판별하기
 const primeNums = sumNums.map((num) => isPrime(num)).filter((item) => item);
 
@@ -251,7 +251,7 @@ return primeNums.length;
 
 ### Seulki Lee님의 풀이
 
-```js
+```javascript
 function primecheck(n) {
   for (var i = 2; i <= Math.sqrt(n); i++) {
     if (n % i == 0) {

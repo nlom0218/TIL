@@ -62,7 +62,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function solution(nums) {
   // 1) Map(맵) 생성
   const map = new Map();
@@ -81,7 +81,7 @@ function solution(nums) {
 
 ### 1) Map(맵) 생성
 
-```js
+```javascript
 const map = new Map();
 ```
 
@@ -93,7 +93,7 @@ const map = new Map();
 
 ### 2) key가 종류 번호, value가 true인 요소를 map에 저장하기
 
-```js
+```javascript
 nums.forEach((item) => {
   map.set(item, true);
 });
@@ -107,7 +107,7 @@ nums.forEach((item) => {
 
 ### 3) map의 크기와 nums길이의 절반을 비교하여 값 리턴하기
 
-```js
+```javascript
 return map.size <= nums.length / 2 ? map.size : nums.length / 2;
 ```
 
@@ -115,7 +115,7 @@ return map.size <= nums.length / 2 ? map.size : nums.length / 2;
 
 가장 많은 종류의 폰켓몬이 아니라 가장 많이 선택할 수 있는 폰켓몬 이라면 모든 답은 아래와 같을 것이다. 참고로 `nums`의 짝수라고 제한사항에 명시되어 있다.
 
-```js
+```javascript
 return nums / 2;
 ```
 
@@ -146,7 +146,7 @@ return nums / 2;
 
 가장 좋아요를 받은 풀이를 가져왔다.
 
-```js
+```javascript
 function solution(nums) {
   // 1) nums 배열 길이의 절반
   const max = nums.length / 2;
@@ -165,7 +165,7 @@ function solution(nums) {
 
 ### 1) nums 배열 길이의 절반
 
-```js
+```javascript
 const max = nums.length / 2;
 ```
 
@@ -175,7 +175,7 @@ const max = nums.length / 2;
 
 ### 2) Set(셋)을 통한 중복된 번호 제거
 
-```js
+```javascript
 const arr = [...new Set(nums)];
 ```
 
@@ -187,7 +187,7 @@ const arr = [...new Set(nums)];
 
 ### 3) arr.length와 max의 값을 비교하기
 
-```js
+```javascript
 return arr.length > max ? max : arr.length;
 ```
 
@@ -199,7 +199,7 @@ return arr.length > max ? max : arr.length;
 
 `2) Set(셋)을 통한 중복된 번호 제거`는 `Set(셋)`객체를 만들고 다시 이를 가지고 배열을 만들었다. 하지만 단지 길이를 가져오는 것이기 때문에 2), 3)과정을 아래와 같이 바꾸었다.
 
-```js
+```javascript
 const set = new Set(nums);
 return set.size > max ? max : set.size;
 ```

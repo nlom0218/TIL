@@ -88,7 +88,7 @@ WX가 두 번, XY가 두 번 주문됐습니다.
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 // 1) 코스요리 메뉴 구성을 위한 함수
 function getCombinations(array, size) {
   function p(t, i) {
@@ -179,19 +179,19 @@ function solution(orders, course) {
 
 1. 먼저 다양한 조합의 코스요리 메뉴가 들어갈 배열을 만든다.
 
-   ```js
+   ```javascript
    const allCombi = [];
    ```
 
 2. 그 이후 `orders`배열을 `Array.forEach`메서드를 통해 반복문을 실행한다. `orders`배열에는 각각의 손님이 시킨 메뉴들을 문자열인 원소로 가지고 있다. 예를 들어 "ABCE"는 해당 손님이 메뉴A, 메뉴B, 메뉴C, 메뉴E를 주문한 것이다.
 
-   ```js
+   ```javascript
    orders.forEach((order) => {});
    ```
 
 3. 반복문 안에서 가장 먼저 할 것은 문자열을 배열로 만드는 것이다. 문자열을 배열로 만들기 위해서 `String.split()`메서드를 사용했다. 메서드의 인자로 들어가는 규칙에 따라 배열이 문자열이 쪼개서 생성된다. 빈 문자열을 인자로 넘기게 되면 문자 하나하나가 모두 분리된다.
 
-   ```js
+   ```javascript
    const allMenu = order.split("");
    ```
 
@@ -199,7 +199,7 @@ function solution(orders, course) {
 
 4. `course`배열에는 몇 개의 요리로 코스요리 메뉴를 구성할 지를 알려주는 `number`값이 인지로 들어있다. 이를 `Array.forEach()`메서드를 사용해 반복문을 실행한다.
 
-   ```js
+   ```javascript
    course.forEach((num) => {});
    ```
 
@@ -213,13 +213,13 @@ function solution(orders, course) {
 
    최종 결과물은 ["ABC", "ABE", "ACE", "BCE"]가 된다.
 
-   ```js
+   ```javascript
    const combiMenu = getCombination(allMenu, num).map((i) => i.sort().join(""));
    ```
 
 6. 완성된 조합의 모든 코스요리 메뉴를 `allCombi` 배열에 저장한다.
 
-   ```js
+   ```javascript
    combiMenu.forEach((menu) => {
      allCombi.push(menu);
    });
@@ -233,13 +233,13 @@ function solution(orders, course) {
 
 코스요리 메뉴가 얼마만큼 중복되는지 파악하기 위해 맵(Map)을 사용한다. 먼저 새로운 맵(Map)을 만든다.
 
-```js
+```javascript
 const map = new Map();
 ```
 
 이후 `allCombi`배열을 `Array.forEach()`메서드를 사용하여 반복문들 돌면서 `Map.set(key, value)`메서드를 통해 map에 요소를 저장한다.
 
-```js
+```javascript
 allCombi.forEach((item, index) => {
   map.set(item, (map.get(item) || 0) + 1);
 });
@@ -257,7 +257,7 @@ allCombi.forEach((item, index) => {
 
 참고로 아래의 코드에서 `value`는 코스요리 메뉴가 얼마만큼 중복되었는지를 나타나는 `number`값이고 `key`는 `string`으로 코스요리 메뉴의 이름이다.
 
-```js
+```javascript
 const combiMenu = [];
 map.forEach((value, key) => {
   combiMenu.push([key, value]);
@@ -274,7 +274,7 @@ map.forEach((value, key) => {
 
 반복문을 시작하고 가장 먼저 할 것인 `combiMenu`중 코스요리 메뉴의 길이가 `num`과 같은 것들을 가져오는 것이다. 이를위해 `Array.filter()`메서드를 사용했고 해당 값을 `pickNum`변수에 저장하였다.
 
-```js
+```javascript
 const pickMenu = combiMenu.filter(([menu, pick]) => menu.length === num);
 ```
 
@@ -284,7 +284,7 @@ const pickMenu = combiMenu.filter(([menu, pick]) => menu.length === num);
 
 만약 `pickNum`배열이 비어있을 경우에는 `num`값의 길이 만큼 구성된 코스요리 메뉴가 없다는 것이기 때문에 그대로 반복문을 종료하고 다음 반복문으로 넘어간다.
 
-```js
+```javascript
 if (pickMenu.length === 0) return;
 ```
 
@@ -294,7 +294,7 @@ if (pickMenu.length === 0) return;
 
 `pickMenu`배열에는 같은 수 만큼 구성된 코스요리 메뉴의 정보가 들어있다. 그 중에서 가장 많이 중복되었던, 다른 말로는 가장 많이 추천을 받은 코스요리 메뉴를 찾아야 한다. 코스요리 메뉴를 찾기 전 가장 높은 추천 수가 얼마인지 `Array.reduce()`메서드를 통해 구한다.
 
-```js
+```javascript
 const bestPick = pickMenu.reduce((acc, [_, pick]) => {
   if (acc >= pick) return acc;
   else return pick;
@@ -309,7 +309,7 @@ const bestPick = pickMenu.reduce((acc, [_, pick]) => {
 
 주의해야 할 점은 어떤 코스요리 메뉴가 중복이 되지 않는다면 최종 코스요리 메뉴에 포함될 수 없다는 것이다. 아래의 코드에서는 `pick`이 1일 경우이다. 한 명만 해당 구성의 요리를 시킨 것이다. 이는 상품으로 가치가 없다.
 
-```js
+```javascript
 pickMenu.forEach(([menu, pick]) => {
   if (pick === 1) return;
   if (pick === bestPick) {
@@ -324,7 +324,7 @@ pickMenu.forEach(([menu, pick]) => {
 
 인기 있는 코스요리 메뉴가 담긴 `reuslt`배열을 제출하기 전 다시 알파벳 순으로 정렬한다.
 
-```js
+```javascript
 return result.sort();
 ```
 
@@ -348,7 +348,7 @@ return result.sort();
 
 첫 번째 리팩토링은 `2) 각각의 손님이 주문한 메뉴의 구성을 보고 코스요리 메뉴 만들기`에서 아래의 부분에 해당한다.
 
-```js
+```javascript
 course.forEach((num) => {
   const combiMenu = getCombinations(allMenu, num).map((i) => {
     return i.sort().join("");
@@ -363,7 +363,7 @@ course.forEach((num) => {
 
 그리하여 위의 코드를 아래의 코드로 리팩토링하였다!! `i`를 `menu`로 바꾼건 덤🔥
 
-```js
+```javascript
 course.forEach((num) => {
   getCombinations(allMenu, num).forEach((menu) =>
     allCombi.push(menu.sort().join(""))
@@ -375,7 +375,7 @@ course.forEach((num) => {
 
 ### 2) 맵(Map)을 배열로 바꾸는 과정이 굳이 필요할까?
 
-```js
+```javascript
 // 4) 맵(map)에 담긴 value와 mene를 각각 요소로 가지는 2차원 배열 만들기
 const combiMenu = [];
 map.forEach((value, key) => {
@@ -389,14 +389,14 @@ map.forEach((value, key) => {
 
 1. 수정 전
 
-   ```js
+   ```javascript
    // 5) 추천 수 코스요리 메뉴의 길이가 num과 같은 요소만 추출하기
    const pickMenu = combiMenu.filter(([menu, pick]) => menu.length === num);
    ```
 
 2. 수정 후
 
-   ```js
+   ```javascript
    const pickMenu = [];
    map.forEach((pick, menu) => {
      if (menu.length === num) {
@@ -408,7 +408,7 @@ map.forEach((value, key) => {
 
 위의 내용은 `pickMenu`배열을 선언하고 `map`을 `Array.forEach()`메서드를 사용해 반복문을 돌며 `pickMenu`에 조건에 맞는 값을 저장하고 있는 과정을 나타낸 코드이다. 기존과 같은 같의 `pickMenu`배열이 생길 것이다.
 
-```js
+```javascript
 pickMenu.push([menu, pick]);
 map.delete(menu);
 ```
@@ -429,7 +429,7 @@ map.delete(menu);
 
 가장 많은 좋아요를 받은 풀이를 가져왔다.
 
-```js
+```javascript
 function solution(orders, course) {
   const ordered = {};
   const candidates = {};

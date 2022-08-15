@@ -82,7 +82,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function solution(numbers, hand) {
   // 1) 사용한 손가락을 의미하는 문자열 "R" 또는 "L"을 담을 배열
   var answer = [];
@@ -157,7 +157,7 @@ function solution(numbers, hand) {
 
 ### 1) 사용한 손가락을 의미하는 문자열 "R" 또는 "L"을 담을 배열
 
-```js
+```javascript
 var answer = [];
 ```
 
@@ -167,7 +167,7 @@ var answer = [];
 
 ### 2) 왼속 엄지손가락과 오른손 엄지손가락의 처음 위치
 
-```js
+```javascript
 var lefthands = 10;
 var righthands = 12;
 ```
@@ -178,7 +178,7 @@ var righthands = 12;
 
 ### 3) 눌러야 키패드가 0이라면 number의 값을 11로 바꾸기
 
-```js
+```javascript
 if (number === 0) {
   number = 11;
 }
@@ -190,7 +190,7 @@ if (number === 0) {
 
 ### 4) number의 값이 1또는 4또는 7인 경우
 
-```js
+```javascript
 if (number === 1 || number === 4 || number === 7) {
   answer.push("L");
   lefthands = number;
@@ -203,7 +203,7 @@ if (number === 1 || number === 4 || number === 7) {
 
 ### 5) number의 값이 3또는 6또는 9일 경우
 
-```js
+```javascript
 else if (number === 3 || number === 6 || number === 9) {
       answer.push("R");
       righthands = number;
@@ -220,7 +220,7 @@ else if (number === 3 || number === 6 || number === 9) {
 
 > 엄지손가락은 상하좌우 4가지 방향으로만 이동할 수 있으며 키패드 이동 한 칸은 거리로 1에 해당합니다.
 
-```js
+```javascript
 const leftDistance =
   lefthands === 2 || lefthands === 5 || lefthands === 8 || lefthands === 11
     ? Math.abs(lefthands - number) / 3
@@ -242,7 +242,7 @@ const rightDistance =
 
 왼손 엄지손가락, 오른손 엄지손가락의 위치가 2, 5, 8, 0(11)일 때 거리를 구하는 방법은 같다. 현재의 위치의 숫자에서 다음에 눌러야 할 숫자를 뺀 값의 절대값에 3을 나누면 된다.
 
-```js
+```javascript
 Math.abs(lefthands - number) / 3;
 ```
 
@@ -269,7 +269,7 @@ Math.abs(lefthands - number) / 3;
 
 거리를 계산하였으니 어느 엄지손가락이 더 까운지 계산하여 `anwser`배열에 적절한 값을 넣어야 한다.
 
-```js
+```javascript
 if (leftDistance > rightDistance) {
   answer.push("R");
   righthands = number;
@@ -297,7 +297,7 @@ rightDistance가 더 짧을 때 문자열 "R"을 `answer`배열에 넣고 leftDi
 
 `answer`은 배열이고 그 안에 "R", "L"이 들어있다. 이를 문자열로 바꿔주기 위해 `Array.join()`메서드를 이용한다.
 
-```js
+```javascript
 return answer.join("");
 ```
 
@@ -315,7 +315,7 @@ return answer.join("");
 
 기본적인 로직을 같지만 이전보다 가독성은 조금 더 괜찮아지지 않았을까? 싶다.
 
-```js
+```javascript
 function getDistance(lefthands, righthands, number) {
   var leftDistance;
   var rightDistance;
@@ -412,7 +412,7 @@ function solution(numbers, hand) {
 
 다른 사람의 풀이 중 2차원 배열을 통해 현재의 위치와 다음의 위치까지의 거리를 구하는 방법을 사용한 풀이를 가져왔다.
 
-```js
+```javascript
 const solution = (numbers, hand) => {
   const answer = [];
 

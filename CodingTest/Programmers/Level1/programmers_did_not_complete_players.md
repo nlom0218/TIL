@@ -53,7 +53,7 @@
 
 이번 코딩 테스트에서는 효율성 테스트가 있었다. 즉, 시간이 초과되면 실패된다. 먼저 살펴볼 문제 풀이는 효율성 테스트를 통과하지 못한 문제 풀이이다.
 
-```js
+```javascript
 function solution(participant, completion) {
     // 1) 완주하지 못한 선수를 담을 변수
     var failPlayer;
@@ -78,7 +78,7 @@ function solution(participant, completion) {
 
 완주하지 못한 선수를 담을 변수를 만든다.
 
-```js
+```javascript
 var failPlayer;
 ```
 
@@ -88,7 +88,7 @@ var failPlayer;
 
 `completion`배열에 참가한 선수의 이름이 없다면 완주하지 못한 선수이기 때문에 `Array.includes()`메서드를 이용하여 `player`가 `completion`배열에 포함되어 있는지 포함되어 있지 않는지 확인한다. 그래서 만약 포함되어 있지 않다면 `failPlayer`값을 `player`로 바꾼다.
 
-```js
+```javascript
 if (!completion.includes(player)) {
   failPlayer = player;
 }
@@ -102,7 +102,7 @@ if (!completion.includes(player)) {
 
 `Array.findIndex()`는 인자로 들어오는 값에 해당하는 첫 번째 요소의 인덱스를 반환한다. 그리고 해당 인덱스를 가진 요소를 제외하고 새로운 완주자 명단을 만든다.
 
-```js
+```javascript
 const comPlayerIndex = completion.findIndex(
   (comPlayer) => comPlayer === player
 );
@@ -124,7 +124,7 @@ completion = newCompletion;
 
 이번엔 효율성 테스트를 통과한 문제 풀이를 살펴보자. 위의 풀이에서 중복된 풀이는 생략한다.
 
-```js
+```javascript
 function solution(participant, completion) {
   var failPlayer;
 
@@ -151,7 +151,7 @@ function solution(participant, completion) {
 
 ### 1) 참가자 명단과 완주자 명단을 알파벳 순으로 정렬한다.
 
-```js
+```javascript
 participant.sort();
 completion.sort();
 ```
@@ -168,7 +168,7 @@ completion.sort();
 
 ### 3) 같은 인덱스에 위치한 선수의 이름이 다를 경우 해당 선수를 완주하지 못한 선수로 정하고 for문을 종료한다.
 
-```js
+```javascript
 if (participant[index] !== completion[index]) {
     failPlayer = participant[index];
     break;
@@ -201,7 +201,7 @@ if (participant[index] !== completion[index]) {
 
 그러면 위의 `for...in` 구문을 아래와 같이 바꾸어보자.
 
-```js
+```javascript
 participant.some((player, index) => {
   if (player !== completion[index]) {
     failPlayer = participant[index];
@@ -220,7 +220,7 @@ participant.some((player, index) => {
 
 다른 사람의 문제 풀이 중 해시 알고리즘을 활용하여 문제를 푼 코드를 가져왔다. 좋아요 수도 많았고 댓글에 해당 코드에 대한 칭찬도 많았다.
 
-```js
+```javascript
 function solution(participant, completion) {
   const map = new Map();
 
@@ -242,7 +242,7 @@ function solution(participant, completion) {
 
 위의 코드를 딱 보고 처음의 반응은 "잉? 어떤 의미지"였다. 두 번째 줄에 등장한 코드부터 처음보는 코드였다.(아래 코드 참고)
 
-```js
+```javascript
 const map = new Map();
 ```
 
@@ -258,7 +258,7 @@ const map = new Map();
 
 새로운 맵(Map)을 만들고 이곳에 참가자들의 완주 여부를 [키 - 값]의 형식으로 저장한다.
 
-```js
+```javascript
 const map = new Map();
 ```
 
@@ -266,7 +266,7 @@ const map = new Map();
 
 ### 2) `participant`배열의 길이 만큼 반복문을 실행
 
-```js
+```javascript
 for (let i = 0; i < participant.length; i++) {}
 ```
 
@@ -276,7 +276,7 @@ for (let i = 0; i < participant.length; i++) {}
 
 ### 3) i번째 위치한 `participant`배열의 요소와 `completion`배열의 요소
 
-```js
+```javascript
 let a = participant[i],
   b = completion[i];
 ```
@@ -287,7 +287,7 @@ let a = participant[i],
 
 ### 4) 맵(Map)에 요소 추가하기
 
-```js
+```javascript
 map.set(a, (map.get(a) || 0) + 1);
 map.set(b, (map.get(b) || 0) - 1);
 ```
@@ -318,7 +318,7 @@ map.set(b, (map.get(b) || 0) - 1);
 
 ### 5) 반복문을 돌며 `value`값이 0보다 큰 `key`찾기
 
-```js
+```javascript
 for (let [k, v] of map) {
   if (v > 0) return k;
 }

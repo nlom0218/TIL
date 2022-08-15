@@ -61,7 +61,7 @@
 
 ## 3. 문제 풀이
 
-```js
+```javascript
 function solution(board, moves) {
   const basket = []; // 1) 뽑힌 인형을 넣을 바구니
   var answer = 0; // 2) 사라진 인형의 수
@@ -112,7 +112,7 @@ function solution(board, moves) {
 
 새롭게 뽑힌 인형과 이미 뽑힌 인형을 비교하기 위해서는 뽑힌 인형이 들어있는 배열이 필요하다. 이를 위해 아래와 같이 뽑힌 인형을 넣을 수 있는 빈 배열을 `basket`이라는 변수로 선언한다. 이후 `basket`에 `Array.push()` 메서드를 사용하여 뽑힌 인형을 저장한다.
 
-```js
+```javascript
 const basket = [];
 ```
 
@@ -122,7 +122,7 @@ const basket = [];
 
 인형이 뽑혔지만 `basket`에 마지막에 담긴 인형과 같을 경우 새로 뽑힌 인형과 마지막에 담긴 인형이 사라지게 된다. 그리고 사라진 인형의 수를 `anwser`에 카운트 된다. 이를 위해 아래와 같이 `anwser`을 선언한다.
 
-```js
+```javascript
 var answer = 0;
 ```
 
@@ -139,7 +139,7 @@ var answer = 0;
 
 이때 `board`의 각각의 원소들이 또한 배열인데 이 배열에서 몇 번째의 값을 비교하여 저장할지를 알기 위해 아래와 같이 변수를 선언한다.
 
-```js
+```javascript
 const yIndex = moves[i] - 1;
 ```
 
@@ -151,7 +151,7 @@ const yIndex = moves[i] - 1;
 
 `pushItem`함수는 조건에 맞는 인형(뽑힌 인형)이 있을 경우 `basket`에 저장하기 위해 사용된다. 뽑힌 인형은 값이 0이 되어야 한다. 아래와 같이 `pushItem`함수를 정의한다.
 
-```js
+```javascript
 const pushItem = () => {
   basket.push(board[k][yIndex]);
   board[k][yIndex] = 0;
@@ -167,7 +167,7 @@ const pushItem = () => {
 
 인형이 없을 경우 즉, `board[k][yIndex]`의 값이 0인 경우는 제외한다.
 
-```js
+```javascript
 if (board[k][yIndex] !== 0) {
 }
 ```
@@ -178,7 +178,7 @@ if (board[k][yIndex] !== 0) {
 
 빈 바구니인 경우 즉, `basket`배열에 아무런 값이 없는 경우(길이가 0인 경우)는 이전값과 비교할 필요 없이 바로 뽑힌 인형을 `basket`에 저장하면 된다.
 
-```js
+```javascript
 if (basket.length === 0) {
     pushItem();
     break;
@@ -199,7 +199,7 @@ if (basket.length === 0) {
 
 먼저 첫 번째 경우이다. 이때에는 뽑힌 인형이 `basket`에 저장되지 않고 `basket`의 마지막에 담긴 인형과 새로 뽑힌 인형이 모두 사라지면서 `answer`의 값이 2증가해야 한다. 이를 위해 아래와 같이 코드를 작성한다.
 
-```js
+```javascript
 if (basket[basket.length - 1] === board[k][yIndex]) {
     basket.pop();
     board[k][yIndex] = 0;
@@ -220,7 +220,7 @@ if (basket[basket.length - 1] === board[k][yIndex]) {
 
 두 번째 경우는 `6) 빈 바구니일 경우`와 같은 로직이 실행된다.
 
-```js
+```javascript
 pushItem();
 break;
 ```
@@ -244,7 +244,7 @@ break;
 
 또한 `pushItem`함수를 정의한 이유는 같은 코드가 두 번 사용되기 때문이다. `basket`이 빈배열일 때의 조건문을 제거하면 굳이 `pushItem`함수를 정의하지 않아도 된다. 그래서 아래와 같이 코드를 좀 더 간결하게 작성할 수 있다.
 
-```js
+```javascript
 function solution(board, moves) {
   const basket = [];
   var answer = 0;
@@ -274,7 +274,7 @@ function solution(board, moves) {
 
 ### 박민수님의 풀이
 
-```js
+```javascript
 const transpose = (matrix) =>
   matrix.reduce(
     (result, row) => row.map((_, i) => [...(result[i] || []), row[i]]),
@@ -327,7 +327,7 @@ const solution = (board, moves) => {
 
 그 다음으로 아래의 코드를 분석해보자.
 
-```js
+```javascript
 const stacks = transpose(board).map((row) =>
   row.reverse().filter((el) => el !== 0)
 );
@@ -343,7 +343,7 @@ const stacks = transpose(board).map((row) =>
 
 해당 로직을 거친 2차원 배열인 `stacks`의 모습은 아래와 같다.
 
-```js
+```javascript
 const stacks = [
   [3, 4], // 1열
   [5, 2, 2], // 2열
@@ -355,7 +355,7 @@ const stacks = [
 
 마지막으로 for문을 통해 `moves`배열의 값들에 해당되는 인형을 뽑아본다.
 
-```js
+```javascript
 for (const move of moves) {
   const pop = stacks[move - 1].pop();
   if (!pop) continue;
@@ -370,25 +370,25 @@ for (const move of moves) {
 
 여기서 먼저 짚고 넘어가야 할 부분은 나는 지금까지 for문을 사용할 때 아래와 같이 사용했다.
 
-```js
+```javascript
 for (i = 0; i < array.lenfth; i++) {}
 ```
 
 박민수님이 사용한 방법이 더 깔끔해 보인다. 참고하여 나중에 코드를 작성할 때 사용해보자.
 
-```js
+```javascript
 const pop = stacks[move - 1].pop();
 ```
 
 다시 본론으로 들어가서 위의 코드부터 해석하자. `moves`배열의 원소을 바탕으로 반복문을 실행하고 있다. 각각의 반복문에서는 `pop`이 선언되어 있고 이 `pop`은 `moves`배열의 원소에 해당되는 열(이것또한 배열인것을 잊지말자)의 마지막 원소를 `Array.pop() `메서드를 사용하여 가져오고 있다. `Array.pop()`은 기존 배열을 바꾸고 빼낸 원소를 return한다.
 
-```js
+```javascript
 if (!pop) continue;
 ```
 
 그 후 만약 `pop`이 없다면 다음 반복문을 실행한다.(위의 코드 참고)
 
-```js
+```javascript
 if (pop === basket[basket.length - 1]) {
     basket.pop();
     result += 2;
@@ -398,7 +398,7 @@ if (pop === basket[basket.length - 1]) {
 
 하지만 만약 `pop`과 `basket`에 담긴 마지막 원소가 같다면 위와 같은 코드가 실행된다. 위의 코드는 내가 풀이를 했던 방법과 같은 방법이다. 하지만 다른점은 나는 반복문 자체를 `break`했지만 여기서는 `continue`를 하여 다음 반목분을 이어가게 된다.
 
-```js
+```javascript
 basket.push(pop);
 ```
 
