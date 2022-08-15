@@ -328,7 +328,9 @@ function solution(str1, str2) {
   function explode(text) {
     const result = [];
     for (let i = 0; i < text.length - 1; i++) {
+      // 1) String.substr() 메서드를 사용하여 문자열 자르기
       const node = text.substr(i, 2);
+      // 2) 정규식과 매치되는지 확인하기
       if (node.match(/[A-Za-z]{2}/)) {
         result.push(node.toLowerCase());
       }
@@ -338,11 +340,13 @@ function solution(str1, str2) {
 
   const arr1 = explode(str1);
   const arr2 = explode(str2);
+  // 3) arr1 배열과 arr2 배열 셋(Set)을 이용하여 합치기
   const set = new Set([...arr1, ...arr2]);
   let union = 0;
   let intersection = 0;
 
   set.forEach((item) => {
+    // 4) 합집합과 교집합의 수 구하기
     const has1 = arr1.filter((x) => x === item).length;
     const has2 = arr2.filter((x) => x === item).length;
     union += Math.max(has1, has2);
@@ -352,7 +356,83 @@ function solution(str1, str2) {
 }
 ```
 
-일단 `셋(Set)`을 활용하여 `Math.max()` 메서드와 `Math.min()` 메서드를 이용하여 합집합과 교집합의 원소의 수를 구하는 방법이 멋졌다. 진짜 감탄밖에 나오지 않는다.. 교집합과 합집합을 만드는 좋은 방법에 대해 배웠다고 생각한다
+---
+
+### 1) String.substr() 메서드를 사용하여 문자열 자르기
+
+```js
+const node = text.substr(i, 2);
+```
+
+나는 배열로 바꾼 다음 요소를 더해 길이가 2인 문자열을 만들었다. 하지만 여기서는 굳이 배열로 만들지 않고 문자열 관련 메서드를 사용하여 길이가 2인 문자열을 만든다.
+
+`String.substr()` 메서드는 문자열에서 특정 위치에서 시작하여 특정 문자 수 만큼의 문자들을 반환한다. `MDN`에서는 해당 메서드에 대해 아래와 같은 경고를 주고있다.
+
+> 프로그래머는 새로운 ECMAScript 코드를 작성할 때 본 부록이 포함한 기능을 사용하거나 존재함을 가정해선 안됩니다.
+
+즉, 해당 메서드가 아닌 다른 메서드로 위의 코드를 대체하고자 한다.
+
+1. String.substring(): `string` 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환한다.
+
+   ```js
+   const node = text.substring(i, i + 2);
+   ```
+
+2. String.slice(): 문자열의 일부를 추출하면서 새로운 문자열을 반환한다.
+
+   ```js
+   const node = text.slice(i, i + 2);
+   ```
+
+---
+
+### 2) 정규식과 매치되는지 확인하기
+
+```js
+if (node.match(/[A-Za-z]{2}/)) {
+  result.push(node.toLowerCase());
+}
+```
+
+1. String.match(reqexp): 문자열이 정규식과 매치되는 부분을 검색한다.
+2. 정규식 `/[A-Za-z]{2}/`
+   - [A-Za-z]: 각각의 문자가 알파벳 대문자, 소문자인지 검사
+   - {2}: 앞의 패턴을 가지는 문자가 2개인지 검사
+3. String.toLowerCase(): 정규식 테스트에 통과한 문자열인 경우 소문자로 바꾼다.
+4. Array.push(): `result` 배열에 추가한다.
+
+---
+
+### 3) arr1 배열과 arr2 배열 셋(Set)을 이용하여 합치기
+
+```js
+const set = new Set([...arr1, ...arr2]);
+```
+
+`arr1` 배열과 `arr2` 배열을 합친다. 다만 중복되는 요소는 제거한다.(하나만 남긴다.)
+
+해당 과정을 통해 `set` 객체에는 아래의 값을 포함한다.
+
+1. `arr1` 배열에만 있는 요소
+2. `arr2` 배열에만 있는 요소
+3. `arr1` 배열, `arr2` 배열 모두에 있는 요소
+
+---
+
+### 4) 합집합과 교집합의 수 구하기
+
+```js
+const has1 = arr1.filter((x) => x === item).length;
+const has2 = arr2.filter((x) => x === item).length;
+union += Math.max(has1, has2);
+intersection += Math.min(has1, has2);
+```
+
+`Math.max()` 메서드를 통해 합집합의 수를 구하고 `Math.min()` 메서드를 통해 교집합의 수를 구한다.
+
+---
+
+다른 사람 풀이를 공부하면서 `셋(Set)`의 활용과 `Math.max()` 메서드와 `Math.min()` 메서드를 이용하여 합집합과 교집합의 원소의 수를 구하는 방법이 멋졌다. 진짜 감탄밖에 나오지 않는다.. 교집합과 합집합을 만드는 좋은 방법에 대해 배웠다고 생각한다.
 
 ---
 
@@ -360,6 +440,15 @@ function solution(str1, str2) {
 
 > 두 번째 Level2 문제였다. 시간은 많이 걸렸지만 어쨋든 내 스스로의 힘으로 풀게 되어서 뿌듯했다. 자카드 유사도라는 것도 처음으로 알게되었는데 만약 문제에 세세한 설명이 없었더라면 개념에 대해 검색하고 이해하느라 시간이 더욱 걸렸을 것이다. 문제에서 원하는 것은 자카드 유사도에 대한 개념이 아니라 자카드 유사도를 구하기 까지의 과정이 아니었나 싶다.  
 > 매 문제의 `다른 사람 풀이`에서 항상 감탄을 받는데 특히 이번 문제의 `다른 사람 풀이`에서는 입이 쫙 벌어지면서 감탄을 할 수 밖에 없었다. 나도 `Set`에 대해 알고 있었지만 `Set`를 통해 합집합과 교집합을 각각 구하는 코드를 보니 정말 멋지다는 생각밖에 들지 않았다. 또한 내가 아직 효율적으로 코드 짜는 것이 부족하다고 느끼는 이유가 합집합과 교집합을 구하는 과정을 보면 내가 다 알고 있는 메서드로만 이루어져 있기 때문이다. 많은 문제를 풀어보고 많은 풀이 과정에 대해 생각하고 다른 사람의 풀이도 많이 참고해야겠다✍️
+
+---
+
+## 참고
+
+[MDN - String.prototype.substr()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr)  
+[MDN - String.prototype.substring()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring)  
+[MDN - String.prototype.slice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice)  
+[MDN - String.prototype.match()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 
 ---
 
