@@ -50,9 +50,9 @@
     - [배열의 요소 추가 삭제(push, pop, unshift, splice, slice)](JAVASCRIPT/ArrayMethod/AddRemove.md)
     - [원하는 인덱스 찾기(indexOf, lastIndexOf, findIndex)](JAVASCRIPT/ArrayMethod/FindIndex.md)
     - [배열의 요소 순회하기(forEach, map, some, every)](JAVASCRIPT/ArrayMethod/Repeat.md)
-    - [특정 조건을 통과한 요소로만 구성된 배열 만들기(filter)](JAVASCRIPT/ArrayMethod/Filter.md)
-    - [배열의 요소를 가지고 하나의 결과값을 만들어 반환하기(reduce)](JAVASCRIPT/ArrayMethod/Reduce.md)
-    - [원하는 요소 찾기(find)](JAVASCRIPT/ArrayMethod/Find.md)
+    - [조건을 만족하는 요소로만 구성된 배열 만들기(filter)](JAVASCRIPT/ArrayMethod/Filter.md) 💻
+    - [배열의 요소를 가지고 하나의 결과값을 만들어 반환하기(reduce)](JAVASCRIPT/ArrayMethod/Reduce.md) 💻
+    - [원하는 요소 찾기(find)](JAVASCRIPT/ArrayMethod/Find.md) 💻
     - [중첩된 배열 구조 평탄화하기(flat, flatMap)](JAVASCRIPT/ArrayMethod/FlatArray.md) 💻
     - [배열의 순서를 반전시키고 문자로 바꾸기(reverse, join)](JAVASCRIPT/ArrayMethod/ReverseJoin.md) 💻
     - [배열에 특정 요소가 있는지 확인하기(includes)](JAVASCRIPT/ArrayMethod/Includes.md) 💻
@@ -119,6 +119,8 @@
       - [예산](CodingTest/Programmers/Level1/programmers_budget.md)
       - [신고 결과 받기](CodingTest/Programmers/Level1/programmers_get_report_results.md)
       - [같은 숫자는 싫어](CodingTest/Programmers/Level1/programmers_hate_same_number.md)
+      - [로또의 최고 순위와 최저 순위](CodingTest/Programmers/Level1/programmers_lottos_lanks.md) 💻
+      - [숫자 문자열과 영단어](CodingTest/Programmers/Level1/programmers_numeric_strings_en_words.md) 💻
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
