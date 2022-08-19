@@ -119,7 +119,7 @@
       - [예산](CodingTest/Programmers/Level1/programmers_budget.md)
       - [신고 결과 받기](CodingTest/Programmers/Level1/programmers_get_report_results.md)
       - [같은 숫자는 싫어](CodingTest/Programmers/Level1/programmers_hate_same_number.md)
-      - [로또의 최고 순위와 최저 순위](CodingTest/Programmers/Level1/programmers_lottos_lanks.md) 💻
+      - [로또의 최고 순위와 최저 순위](CodingTest/Programmers/Level1/programmers_lottos_lanks.md)
       - [숫자 문자열과 영단어](CodingTest/Programmers/Level1/programmers_numeric_strings_en_words.md) 💻
 
     - Level 2
