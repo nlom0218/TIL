@@ -74,7 +74,7 @@
 
 - [Node Package Module(NPM)](NPM/README.md)
 
-- [Algorithm](Algorithm/README.md)
+- [Data structure & Algorithm](Algorithm/README.md)
 
 - [Coding Test](CodingTest/README.md)
 

@@ -192,6 +192,12 @@ const result = [...new Set(color)];
 
 ---
 
+## 참고
+
+[MDN - Array.prototype.reduce()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+
+---
+
 [👆](#배열의-요소를-가지고-하나의-결과값을-만들어-반환하기reduce)
 
 📅 2022-08-18
