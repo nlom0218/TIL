@@ -74,7 +74,9 @@
 
 - [Node Package Module(NPM)](NPM/README.md)
 
-- [Data structure & Algorithm](Algorithm/README.md)
+- [Data structure & Algorithm](DataStructureAlgorithm/README.md)
+
+  - [자료구조와 알고리즘을 공부해야 하는 이유](DataStructureAlgorithm/ResonStudy.md)
 
 - [Coding Test](CodingTest/README.md)
 
