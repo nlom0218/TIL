@@ -46,7 +46,9 @@
 - [Typescript](Typescript/README.md)
 
   - [Typescript란?](Typescript/Typescript.md)
-  - [React App에 Typescript 적용하기](Typescript/SettingTypescript.md)
+  - [Typescript 설정 파일](Typescript/TypescriptConfig.md)
+  - [React에서의 Typescript](Typescript/TypescriptInReact/README.md)
+    - [React App에 Typescript 적용하기](Typescript/TypescriptInReact/ApplyTypescriptInReact.md)
 
 - [React](REACT/README.md)
 
