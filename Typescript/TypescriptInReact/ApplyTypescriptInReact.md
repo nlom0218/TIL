@@ -14,7 +14,7 @@ React App에 typescript를 적용하기 위한 방법은 크게 두 가지가 �
 CRA(create-react-app)에 대한 내용은 React의 [Create React app](/REACT/CreateReactApp.md) 챕터에
 자세하게 설명되어 있으니 참고하면 된다.
 
-CRA으로 typescript을 설정하는 방법은 하나의 명령어로 가능하다.(아래 명령어 참고)
+CRA으로 typescript을 설정하는 방법은 한 줄의 명령어로 가능하다.(아래 명령어 참고)
 
 > $ npx create-react-app my-app --template typescript
 
@@ -64,7 +64,7 @@ React 프로젝트를 진행하는 도중에 typescript를 적용하고 싶으�
 
 ![apply_typescript_react_2](/image/Typescript/ApplyTypescriptInReact/apply_typescript_react_2.png)
 
-이는 `tsc` 명령어를 찾을 수 없다는 뜻인데 이는 typescript를 글로벌로 설치하면 해결 가능하다.(아래 명령어 참고)
+이는 `tsc` 명령어를 찾을 수 없다는 뜻인데 typescript를 글로벌로 설치하면 해결 가능하다.(아래 명령어 참고)
 
 > sudo npm i typescript -g
 

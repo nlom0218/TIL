@@ -126,6 +126,7 @@
       - [로또의 최고 순위와 최저 순위](CodingTest/Programmers/Level1/programmers_lottos_lanks.md)
       - [숫자 문자열과 영단어](CodingTest/Programmers/Level1/programmers_numeric_strings_en_words.md)
       - [성격 유형 검사하기](CodingTest/Programmers/Level1/programmers_test_personality_type.md)
+      - [모의고사](CodingTest/Programmers/Level1/programmers_mock_exam.md)
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
