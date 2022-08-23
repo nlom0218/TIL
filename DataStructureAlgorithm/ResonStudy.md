@@ -56,6 +56,6 @@
 
 ---
 
-[👆](#자료구조와-알고리즘을-공부해야-하는-이유)
+[👆](https://kim-hong-dong.gitbook.io/til/datastructurealgorithm/resonstudy#1.)
 
 📅 2022-08-21
