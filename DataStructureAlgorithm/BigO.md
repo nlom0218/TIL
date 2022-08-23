@@ -164,3 +164,7 @@ for (let i = 0; i < n; i++) {
 [빅오 표기법 (O, big-O)](https://codermun-log.tistory.com/235)  
 [[Javacript] 빅오 표기법 정리 및 예제](https://itprogramming119.tistory.com/entry/Javascript-%EB%B9%85%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95-%EC%A0%95%EB%A6%AC-%EB%B0%8F-%EC%97%B0%EC%8A%B5-%EB%AC%B8%EC%A0%9C)  
 [[JS] 자바스크립트 배열 시간 복잡도](https://parkparkpark.tistory.com/m/101)
+
+---
+
+📅 2022-08-21
