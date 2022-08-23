@@ -5,14 +5,31 @@
 `React.ReactNode` 또는 `React.PropsWithChildren<T>`를 사용하자.
 
 ```typescript
+import React from "react";
+
 interface IProps {
-  children: React.ReactChild;
+  children: React.ReactNode;
 }
+
+const Box = ({ children }: IProps) => {
+  return (
+    <div>
+      <div>Box 부분입니다.</div>
+      {children}
+    </div>
+  );
+};
+
+export default Box;
 ```
 
 또는
 
 ```typescript
+interface IProps {
+  anyProps: any;
+}
+
 const Box = ({ children }: React.PropsWithChildren<IProps>) => {
   return (
     <div>
