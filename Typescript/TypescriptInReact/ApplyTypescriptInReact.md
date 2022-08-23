@@ -296,6 +296,4 @@ const Comment = ({ username, content }: IComment) => {
 
 ---
 
-[👆](#react-children-with-typescript)
-
 📅 2022-08-21

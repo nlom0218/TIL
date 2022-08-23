@@ -82,6 +82,4 @@ const user1_contents = contents.filter((item) => item.userId === 1);
 
 ---
 
-[👆](#조건을-만족하는-요소로만-구성된-배열-만들기filter)
-
 📅 2022-08-18

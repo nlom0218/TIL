@@ -237,6 +237,4 @@ let maxCount = lottos.filter((v) => !v).length + minCount;
 
 ---
 
-[👆](#로또의-최고-순위와-최저-순위)
-
 📅 2022-08-19

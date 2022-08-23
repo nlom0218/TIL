@@ -121,6 +121,4 @@ add(true, 4);
 
 ---
 
-[👆](Typescript.md#typescript란)
-
 📅 2022-07-25

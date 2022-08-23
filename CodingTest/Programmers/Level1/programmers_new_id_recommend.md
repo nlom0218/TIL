@@ -391,6 +391,4 @@ return len > 2 ? answer : answer + answer.charAt(len - 1).repeat(3 - len);
 
 ---
 
-[👆](programmers_new_id_recommend.md#신규-아이디-추천)
-
 📅 2022-08-10

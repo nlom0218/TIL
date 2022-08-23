@@ -423,6 +423,4 @@ export default Box;
 
 ---
 
-[👆](#react-children-with-typescript)
-
 📅 2022-08-23

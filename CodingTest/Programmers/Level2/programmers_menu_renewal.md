@@ -478,6 +478,4 @@ function solution(orders, course) {
 
 ---
 
-[👆](#메뉴-리뉴얼)
-
 📅 2022-08-09

@@ -174,6 +174,4 @@ push access를 가진 유저들이 브랜치를 지울 수 있도록 한다. 푸
 
 ---
 
-[👆](#branch-protection-rule-적용하기)
-
 📅 2022-08-03

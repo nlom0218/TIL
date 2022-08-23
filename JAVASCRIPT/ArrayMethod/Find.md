@@ -88,6 +88,6 @@ const even = nums.findLast((item) => item % 2 === 0);
 
 [MDN - Array.prototype.find()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-[👆](#원하는-요소-찾기find)
+---
 
 📅 2022-08-20

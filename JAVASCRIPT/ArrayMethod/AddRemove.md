@@ -398,6 +398,4 @@ const newColor = color1.concat("gray", color2, "yellow");
 
 ---
 
-[👆](#배열의-요소-추가-삭제push-pop-unshift-splice-slice)
-
 📅 2022-08-14

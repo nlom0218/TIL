@@ -112,6 +112,4 @@ const index3 = number.findIndex((item) => item > 100);
 
 ---
 
-[👆](#원하는-인덱스-찾기indexof-lastindexof-findindex)
-
 📅 2022-08-16

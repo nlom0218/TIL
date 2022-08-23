@@ -4,7 +4,7 @@
 
 조건부 렌더링은 값의 결과가 `true`인지 `false`인지 또는 특정한 값인지 따라 다른 결과물을 렌더링 하는 것을 의미한다.
 
-***
+---
 
 ## 2. if문을 통한 조건부 렌더링
 
@@ -49,11 +49,11 @@ export default Hello;
 
 아래는 `isLogin`의 값에 따라 달라지는 렌더링의 결과 사진인다.
 
-![ConditionalRendering Result1](../image/React/ConditionalRendering/conditional\_rendering\_result1.png)
+![ConditionalRendering Result1](../image/React/ConditionalRendering/conditional_rendering_result1.png)
 
-![ConditionalRendering Result2](../image/React/ConditionalRendering/conditional\_rendering\_result2.png)
+![ConditionalRendering Result2](../image/React/ConditionalRendering/conditional_rendering_result2.png)
 
-***
+---
 
 ## 3. 삼항 연산자를 통한 조건부 렌더링
 
@@ -65,9 +65,9 @@ export default Hello;
 
 > 기본구문: condition ? exprIfTrue : exprIfFalse
 
-* condition: 조건문으로 들어갈 표현식
-* exprIfTrue: 참일 때 실행할 식
-* exprIfFalse: 거짓일 때 실행할 식
+- condition: 조건문으로 들어갈 표현식
+- exprIfTrue: 참일 때 실행할 식
+- exprIfFalse: 거짓일 때 실행할 식
 
 만약 **조건문이 참일 경우만** 나타내기 위해서는 어떻게 해야 할까? 해당 경우는 아래와 같이 작성한다.
 
@@ -77,7 +77,7 @@ export default Hello;
 
 > condition1 ? value1 : condition2 ? value2 : value3;
 
-***
+---
 
 ### 3-2. 조건부 렌더링
 
@@ -96,7 +96,7 @@ export default Hello;
 
 렌더링 결과는 위와 같다.
 
-***
+---
 
 ## 4. Conclusion
 
@@ -119,15 +119,13 @@ export default Hello;
 >
 > `loading`은 DB의 데이터를 불러오고 있는 중인지, 불러왔는지를 알려주는 값이고 이에 따라 `<Loading />`컴포넌트를 렌더링 할지 아니면 아래의 JSX를 렌더링 할지를 결정하는 역할을 한다. 물론 위의 코드도 삼항 연산자로 충분히 바꾸어 사용할 수 있다. 하지만 개인적으로는 코드가 길어지면 위와 같은 코드가 가독성이 좋아보인다:)
 
-***
+---
 
 ## 참고
 
 [6. 조건부 렌더링](https://react.vlpt.us/basic/06-conditional-rendering.html)\
-[삼항 조건 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional\_Operator)
+[삼항 조건 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-***
-
-[👆](ConditionalRendering.md#conditional-rendering)
+---
 
 📅 2022-08-07

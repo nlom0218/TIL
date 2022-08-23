@@ -223,6 +223,4 @@ return set.size > max ? max : set.size;
 
 ---
 
-[👆](#폰켓몬)
-
 📅 2022-08-11

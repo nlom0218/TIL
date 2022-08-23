@@ -229,6 +229,4 @@ function solution(progresses, speeds) {
 
 ---
 
-[👆](#기능개발)
-
 📅 2022-08-17

@@ -4,15 +4,15 @@
 
 ES6부터 도입된 자바스크립트의 객체인 맵(Map)과 셋(Set)은 기존의 자료구조인 객체와 배열과 비슷하지만 차이점이 분명 존재합니다. 이번 챕터에서는 객체와 배열과 다른 맵과 셋의 특징을 알아보자.
 
-***
+---
 
 ## 2. Object vs Map
 
-* Object의 키는 String이며, Map은 문자열이 아닌 값도 키로 설정할 수 있다.
-* Map은 크기를 간단한 방법으로 가져올 수 있다.
-* Map은 추가된 순서대로 반복한다.
+- Object의 키는 String이며, Map은 문자열이 아닌 값도 키로 설정할 수 있다.
+- Map은 크기를 간단한 방법으로 가져올 수 있다.
+- Map은 추가된 순서대로 반복한다.
 
-***
+---
 
 ## 3. 맵(Map) 객체 생성
 
@@ -26,9 +26,9 @@ ES6부터 도입된 자바스크립트의 객체인 맵(Map)과 셋(Set)은 기�
 let map = new Map();
 ```
 
-![map\_obj\_create](../image/JS/MapSet/map\_object\_create1.png)
+![map_obj_create](../image/JS/MapSet/map_object_create1.png)
 
-***
+---
 
 ### 3-2. \[키, 값] 형태의 중첩 배열을 전달하여 Map 객체 생성
 
@@ -43,6 +43,7 @@ let map = new Map();
     ```
 
     <img src="../image/JS/MapSet/map_object_create2.png" alt="map_obj_create 2" data-size="original">
+
 2.  만약, 중복되는 키가 존재할 경우 마지막 값이 적용된다.
 
     ```javascript
@@ -55,6 +56,7 @@ let map = new Map();
     ```
 
     <img src="../image/JS/MapSet/map_object_create3.png" alt="map_object_create 2" data-size="original">
+
 3.  \[키, 값]에서 값은 객체가 될 수 있다.
 
     ```javascript
@@ -66,6 +68,7 @@ let map = new Map();
     ```
 
     <img src="../image/JS/MapSet/map_object_create4.png" alt="map_object_create 4" data-size="original">
+
 4.  \[키, 값]에서 키도 객체가 될 수 있지만 고유한 값이 될 수 없다.
 
     ```javascript
@@ -79,7 +82,7 @@ let map = new Map();
 
     <img src="../image/JS/MapSet/map_object_create5.png" alt="map_object_create 5" data-size="original">
 
-***
+---
 
 ### 3-3. Map.set(key, value): key를 이용해 value를 저장
 
@@ -93,6 +96,7 @@ let map = new Map();
     ```
 
     <img src="../image/JS/MapSet/map_object_create6.png" alt="map_object_create 6" data-size="original">
+
 2.  체이닝 방법
 
     `map.set`을 호출할 때마다 맵 자신이 반환된다. 이를 이용하여 `map.set`을 체이닝(chaining)할 수 있다.
@@ -104,7 +108,7 @@ let map = new Map();
 
     <img src="../image/JS/MapSet/map_object_create7.png" alt="map_object_create 7" data-size="original">
 
-***
+---
 
 ### 3-4. Object.entries(obj): 평범한 객체를 가지고 맵(Map) 만들기
 
@@ -126,7 +130,7 @@ const obj = {
 const entries = Object.entries(obj);
 ```
 
-![map\_object\_create 8](../image/JS/MapSet/map\_object\_create8.png)
+![map_object_create 8](../image/JS/MapSet/map_object_create8.png)
 
 `entreis`은 각 요소가 \[키, 값] 쌍인 배열이다. 그러므로 `new Map()`에 전달하여 새로운 맵을 만들 수 있다.
 
@@ -134,9 +138,9 @@ const entries = Object.entries(obj);
 const map = new Map(entries);
 ```
 
-![map\_object\_create 9](../image/JS/MapSet/map\_object\_create9.png)
+![map_object_create 9](../image/JS/MapSet/map_object_create9.png)
 
-***
+---
 
 ## 4. Map의 주요 메서드와 프로퍼티
 
@@ -152,11 +156,11 @@ console.log(map.get("name"));
 console.log(map.get("gender"));
 ```
 
-![map\_get](../image/JS/MapSet/map\_get.png)
+![map_get](../image/JS/MapSet/map_get.png)
 
 > `map`을 사용할 땐 `map`전용 메서드 `set`, `get` 등을 사용하자. 기존 객체에서 사용했던 방법은 `map`을 일반 객체처럼 취급하게 되어 여러 제약이 생긴다.
 
-***
+---
 
 ### 4-2. Map.has(key)
 
@@ -176,9 +180,9 @@ console.log(map.has("C"));
 console.log(map.has("F"));
 ```
 
-![map\_has](../image/JS/MapSet/map\_has.png)
+![map_has](../image/JS/MapSet/map_has.png)
 
-***
+---
 
 ### 4-3. Map.delete(key)
 
@@ -198,9 +202,9 @@ map.delete("C");
 console.log(map.has("C"));
 ```
 
-![map\_delete](../image/JS/MapSet/map\_delete.png)
+![map_delete](../image/JS/MapSet/map_delete.png)
 
-***
+---
 
 ### 4-4. Map.clear()
 
@@ -219,9 +223,9 @@ map.clear();
 console.log(map);
 ```
 
-![map\_clear](../image/JS/MapSet/map\_clear.png)
+![map_clear](../image/JS/MapSet/map_clear.png)
 
-***
+---
 
 ### 4-5. Map.size
 
@@ -239,9 +243,9 @@ let map = new Map([
 console.log(map.size);
 ```
 
-![map\_size](../image/JS/MapSet/map\_size.png)
+![map_size](../image/JS/MapSet/map_size.png)
 
-***
+---
 
 ### 4-6. Map.keys()
 
@@ -259,9 +263,9 @@ let map = new Map([
 console.log(map.keys());
 ```
 
-![map\_keys](../image/JS/MapSet/map\_keys.png)
+![map_keys](../image/JS/MapSet/map_keys.png)
 
-***
+---
 
 ### 4-7. Map.values()
 
@@ -279,9 +283,9 @@ let map = new Map([
 console.log(map.values());
 ```
 
-![map\_values](../image/JS/MapSet/map\_values.png)
+![map_values](../image/JS/MapSet/map_values.png)
 
-***
+---
 
 ### 4-8. Map.entries()
 
@@ -299,7 +303,7 @@ let map = new Map([
 console.log(map.entries());
 ```
 
-![map\_entries](../image/JS/MapSet/map\_entries.png)
+![map_entries](../image/JS/MapSet/map_entries.png)
 
 아래는 `for...of`반복문을 사용하여 \[키, 값] 쌍을 대상으로 순회하는 코드이다.
 
@@ -314,7 +318,7 @@ for ([key, value] of map) {
 
 두 반복문의 결과는 같다.
 
-![map\_entries 2](../image/JS/MapSet/map\_entries2.png)
+![map_entries 2](../image/JS/MapSet/map_entries2.png)
 
 > 맵은 배열과 유사하게 내장 메서드 `forEach`도 지원한다.
 >
@@ -334,7 +338,7 @@ for ([key, value] of map) {
 >
 > <img src="../image/JS/MapSet/map_forEach.png" alt="map_forEach" data-size="original">
 
-***
+---
 
 ### 4-9. Object.fromEntries
 
@@ -358,7 +362,7 @@ const obj = Object.fromEntries(entries);
 console.log(obj);
 ```
 
-![map\_fromEntries](../image/JS/MapSet/map\_fromEntries.png)
+![map_fromEntries](../image/JS/MapSet/map_fromEntries.png)
 
 하지만 굳이 `map.entries()`를 하지않고 `Object.fromEntries()` 메서드의 인자로 맵(Map)을 전달해도 된다.
 
@@ -377,22 +381,20 @@ let map = new Map([
 const obj = Object.fromEntries(map);
 ```
 
-***
+---
 
 ## 5. Conclusion
 
 > 옛날 `모던 자바스크립트 Deep Dive`책을 보며 공부했던 적이 있다. 그 책에 나왔던 내용 중 하나가 바로 오늘 공부한 맵(Map)에 대해 봤던 기억이 있다. 당시에는 정말 대\~\~충 보고 넘겼기 때문에 오늘 공부하면서도 많이 생소하게 느꼈다. 또한 이터러블와 같은 개념도 오랜만에 보는 것이기에 머리속이 복잡해졌다. `모던 자바스크립트 Deep Dive`책을 다시 보면서 자바스크립트의 기본기를 탄탄히 다질 수 있도록 하자. 처음부터 다시 보며 하나하나 내 것으로 만들어 보자! 아마 그 땐 알던 내용보다는 자바스크립트가 작동하는 원리, 생소한 개념을 먼저 정리하며 공부하지 않을까 싶다.\
 > 맵에 대한 느낌은 반복가능한 객체이므로 `Array.forEach()`메서드를 사용할 수 있다는 점이 신기하였다. 당연히 `for...of`구문도 사용하니 코테를 풀고 공부할 때 맵을 잘 활동하도록 해야겠다.
 
-***
+---
 
 ## 참고
 
 [맵과 셋](https://ko.javascript.info/map-set#ref-3157)\
 [\[JavaScript\]Map 객체](https://developer-talk.tistory.com/170)
 
-***
-
-[👆](Map.md#map)
+---
 
 📅 2022-08-08

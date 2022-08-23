@@ -56,6 +56,4 @@
 
 ---
 
-[👆](https://kim-hong-dong.gitbook.io/til/datastructurealgorithm/resonstudy#1.)
-
 📅 2022-08-21

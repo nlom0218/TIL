@@ -4,7 +4,7 @@
 
 ES6의 `Set`는 `Map`와 비슷하지만 `Set`는 `Map`와는 다르게 `key`값만이 존재한다. 앞으로 유용하게 사용할 수 있는 `Set`에 대해 살펴보자.
 
-***
+---
 
 ## 2. Set 객체의 특징
 
@@ -12,13 +12,13 @@ ES6의 `Set`는 `Map`와 비슷하지만 `Set`는 `Map`와는 다르게 `key`값
 
 `Set`의 특징을 정리하자면 아래와 같다.
 
-* 동일한 값을 중복하여 포함할 수 없다.
-* 요소 순서에 의미가 없다.
-* 인덱스로 요소에 접근할 수 없다.
+- 동일한 값을 중복하여 포함할 수 없다.
+- 요소 순서에 의미가 없다.
+- 인덱스로 요소에 접근할 수 없다.
 
 이러한 `Set`은 수학적 집합을 구현하기 위한 자료구조이다. 그래서 `Set`를 통해 교집합, 합집합, 차집합, 여집합 등을 구현할 수 있다.
 
-***
+---
 
 ## 3. Set 객체의 생성
 
@@ -26,26 +26,27 @@ ES6의 `Set`는 `Map`와 비슷하지만 `Set`는 `Map`와는 다르게 `key`값
 const set = new Set();
 ```
 
-![set\_object\_create](../image/JS/MapSet/set\_object\_create1.png)
+![set_object_create](../image/JS/MapSet/set_object_create1.png)
 
 기본 생성 방법은 위와 같다. `Set` 객체는 `set 생성자 함수`로 생성하며 인수를 전달하지 않으면 빈 `Set` 객체가 생성된다.
 
 인수로는 **이터러블**를 받을 수 있다.
 
-*   배열을 인수로 받은 경우
+- 배열을 인수로 받은 경우
 
-    ```javascript
-    const set = new Set([1, 2, 3, 3, 4, 4, 5]);
-    ```
+  ```javascript
+  const set = new Set([1, 2, 3, 3, 4, 4, 5]);
+  ```
 
-    <img src="../image/JS/MapSet/set_object_create2.png" alt="set_object_create2" data-size="original">
-*   문자열을 인수로 받은 경우
+  <img src="../image/JS/MapSet/set_object_create2.png" alt="set_object_create2" data-size="original">
 
-    ```javascript
-    const set = new Set("Hello world");
-    ```
+- 문자열을 인수로 받은 경우
 
-    <img src="../image/JS/MapSet/set_object_create3.png" alt="set_object_create3" data-size="original">
+  ```javascript
+  const set = new Set("Hello world");
+  ```
+
+  <img src="../image/JS/MapSet/set_object_create3.png" alt="set_object_create3" data-size="original">
 
 생성된 `Set` 객체를 보면 중복된 값이 없는 것을 볼 수 있다. 이렇게 `Set` 객체를 사용하여 배열 및 문자열 등에서 중복된 요소를 제거할 수 있다. 이를 이용하여 중복된 요소를 제거한 배열을 만들 수 있다.
 
@@ -53,9 +54,9 @@ const set = new Set();
 const arr = [...new Set([1, 2, 3, 3, 4, 4, 5])];
 ```
 
-![배열의 중복된 요소 제거](../image/JS/MapSet/set\_object\_create4.png)
+![배열의 중복된 요소 제거](../image/JS/MapSet/set_object_create4.png)
 
-***
+---
 
 ## 4. Set의 주요 메서드와 프로퍼티
 
@@ -68,7 +69,7 @@ const set = new Set();
 set.add(1).add(2).add(2).add(3).add(4).add(4);
 ```
 
-![set\_add1](../image/JS/MapSet/set\_add1.png)
+![set_add1](../image/JS/MapSet/set_add1.png)
 
 `Set`객체는 객체나 배열, 원시값 같이 자바스크립트의 모든 값을 요소로 저장할 수 있다.
 
@@ -81,11 +82,11 @@ const set = new Set();
 set.add(js).add(react).add(next).add(react).add(next).add({ name: "html" });
 ```
 
-![set\_add2](../image/JS/MapSet/set\_add2.png)
+![set_add2](../image/JS/MapSet/set_add2.png)
 
 중복된 요소가 없는 것을 확인할 수 있다.
 
-***
+---
 
 ### 4-2. Set.delete(value)
 
@@ -103,9 +104,9 @@ set.delete(js);
 set.delete(3);
 ```
 
-![set\_delete](../image/JS/MapSet/set\_delete.png)
+![set_delete](../image/JS/MapSet/set_delete.png)
 
-***
+---
 
 ### 4-3. Set.has(value)
 
@@ -119,9 +120,9 @@ set.has(" ");
 set.has("w");
 ```
 
-![set\_has](../image/JS/MapSet/set\_has.png)
+![set_has](../image/JS/MapSet/set_has.png)
 
-***
+---
 
 ### 4-4. Set.clear()
 
@@ -132,9 +133,9 @@ const set = new Set([1, 2, 3, 4]);
 set.clear();
 ```
 
-![set\_clear](../image/JS/MapSet/set\_clear.png)
+![set_clear](../image/JS/MapSet/set_clear.png)
 
-***
+---
 
 ### 4-5. Set.size
 
@@ -148,9 +149,9 @@ arraySet.size;
 stringSet.size;
 ```
 
-![set\_size](../image/JS/MapSet/set\_size.png)
+![set_size](../image/JS/MapSet/set_size.png)
 
-***
+---
 
 ## 5. Set 객체 요소의 순회
 
@@ -165,15 +166,15 @@ set.forEach((v, _, set) => {
 });
 ```
 
-![set\_forEach](../image/JS/MapSet/set\_forEach.png)
+![set_forEach](../image/JS/MapSet/set_forEach.png)
 
-***
+---
 
 ## 6. Set 객체를 통한 집합 연산
 
 `Set` 객체를 통해 교집합, 차집합, 합집합, 부분 집합과 상위 집합을 구현할 수 있다.
 
-***
+---
 
 ### 6-1. 교집합
 
@@ -184,9 +185,9 @@ const setB = new Set([1, 4, 5, 6, 7]);
 new Set([...setA].filter((a) => setB.has(a)));
 ```
 
-![set\_intersection(교집합)](../image/JS/MapSet/set\_intersection.png)
+![set_intersection(교집합)](../image/JS/MapSet/set_intersection.png)
 
-***
+---
 
 ### 6-2. 차집합
 
@@ -198,9 +199,9 @@ new Set([...setA].filter((a) => !setB.has(a)));
 new Set([...setB].filter((b) => !setA.has(b)));
 ```
 
-![set\_relative(차집합)](../image/JS/MapSet/set\_relative.png)
+![set_relative(차집합)](../image/JS/MapSet/set_relative.png)
 
-***
+---
 
 ### 6-3. 합집합
 
@@ -211,9 +212,9 @@ const setB = new Set([1, 4, 5, 6, 7]);
 new Set([...setA, ...setB]);
 ```
 
-![set\_union(합집합)](../image/JS/MapSet/set\_union.png)
+![set_union(합집합)](../image/JS/MapSet/set_union.png)
 
-***
+---
 
 ### 6-4. 부분 집합과 상위 집합
 
@@ -226,28 +227,26 @@ const isSuperSet = (setA, setB) => {
 };
 ```
 
-![set\_isSuperSet](../image/JS/MapSet/set\_isSuperSet.png)
+![set_isSuperSet](../image/JS/MapSet/set_isSuperSet.png)
 
 `isSuperSet()`함수는 첫 번째 파라미터가 두 번째 파라미터에 상위집합인지 알려주는 함수이다. 해당 값이 `true`라면 첫 번째 파라미터는 상위집합 두 번째 파라미터는 부분 집합이 된다.
 
-***
+---
 
 ## 7. Conclusion
 
 > 중학교, 고등학교 때 배웠던 합집합, 교집합 등등을 다시 다루게 되니 신선했다. 또한 이를 코드로 구현할 수 있다는 것이 놀라웠다. 지금까지 다양한 집합을 다룰 기회가 없었지만 코딩 테이트를 공부하다보면 많이 사용하게 될 듯 하다. 맵(Map)과 셋(Set) 옛날에는 그저 어려운 개념이었는데 지금은 어느정도 익숙해진 듯 하다.
 
-***
+---
 
 ## 참고
 
 [맵과 셋](https://ko.javascript.info/map-set)\
 [JavaScript - Set](https://velog.io/@vvee1253/JavaScript-Set)\
 [\[JavaScript\] 37. Set 과 Map](https://velog.io/@dolarge/Java-Script-Set-%EA%B3%BC-Map)\
-[Set-mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global\_Objects/Set)\
+[Set-mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)\
 [Map 과 Set](https://hyeooona825.tistory.com/25)
 
-***
-
-[👆](Set.md#set)
+---
 
 📅 2022-08-12

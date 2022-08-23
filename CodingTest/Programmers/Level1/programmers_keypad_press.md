@@ -497,6 +497,4 @@ const getDistance = (locatedNumber, target) => {
 
 ---
 
-[👆](#카카오-인터-키패드-누르기)
-
 📅 2022-08-06
