@@ -293,3 +293,9 @@ const Comment = ({ username, content }: IComment) => {
 
 [기존 React App에 Typescript 적용하기](https://memostack.tistory.com/281#1.%20%EA%B8%B0%EC%A1%B4%20React%20App%EC%97%90%20Typescript%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)  
 [[에러 해결] styled-components Could not find declaration file](https://garniel23.tistory.com/m/entry/%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-styled-components-Could-not-find-declaration-file)
+
+---
+
+[👆](#react-children-with-typescript)
+
+📅 2022-08-21

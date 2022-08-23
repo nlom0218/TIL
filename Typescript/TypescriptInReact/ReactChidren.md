@@ -420,3 +420,9 @@ export default Box;
 [React Children 과 친해지기](https://fe-developers.kakaoent.com/2021/211022-react-children-tip/)  
 [React children with typescript. 리액트 children 컴포넌트 타이핑](https://itchallenger.tistory.com/394)  
 [타입스크립트 : React.FC는 그만! children 타이핑 올바르게 하기](https://itchallenger.tistory.com/641)
+
+---
+
+[👆](#react-children-with-typescript)
+
+📅 2022-08-23
