@@ -67,6 +67,7 @@
   - [React에서의 Typescript](Typescript/TypescriptInReact/README.md)
     - [React App에 Typescript 적용하기](Typescript/TypescriptInReact/ApplyTypescriptInReact.md)
     - [React children with TypeScript](Typescript/TypescriptInReact/ReactChidren.md)
+    - [Styled Components with TypeScript](Typescript/TypescriptInReact/StyledComponents.md)
 
   ***
 
