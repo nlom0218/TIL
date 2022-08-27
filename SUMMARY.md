@@ -82,6 +82,9 @@
 
   - [자료구조와 알고리즘을 공부해야 하는 이유](DataStructureAlgorithm/ResonStudy.md)
   - [빅오 표기법](DataStructureAlgorithm/BigO.md)
+  - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
+    - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
+  - [Algorithm(알고리즘)](DataStructureAlgorithm/Algorithm/README.md)
 
 - [Coding Test](CodingTest/README.md)
 
