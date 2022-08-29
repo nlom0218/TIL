@@ -52,7 +52,7 @@
     - [조건을 만족하는 요소로만 구성된 배열 만들기(filter)](JAVASCRIPT/ArrayMethod/Filter.md)
     - [배열의 요소를 가지고 하나의 결과값을 만들어 반환하기(reduce)](JAVASCRIPT/ArrayMethod/Reduce.md)
     - [원하는 요소 찾기(find)](JAVASCRIPT/ArrayMethod/Find.md)
-    - [중첩된 배열 구조 평탄화하기(flat, flatMap)](JAVASCRIPT/ArrayMethod/FlatArray.md) 💻
+    - [중첩된 배열 구조 평탄화하기(flat, flatMap)](JAVASCRIPT/ArrayMethod/FlatArray.md)
     - [배열의 순서를 반전시키고 문자로 바꾸기(reverse, join)](JAVASCRIPT/ArrayMethod/ReverseJoin.md)
     - [배열에 특정 요소가 있는지 확인하기(includes)](JAVASCRIPT/ArrayMethod/Includes.md)
     - [배열에 정적인 값으로 채우기(fill)](JAVASCRIPT/ArrayMethod/Fill.md) 💻
