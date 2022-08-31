@@ -76,6 +76,7 @@ arr.fill("hello!", 2, 4);
 
 ## 참고
 
+도서 - 모던 자바스크립트 Deep Dive: 자바스크립트의 기본 개념과 동작 원리  
 [MDN - Array.prototype.fill()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
 
 ---
