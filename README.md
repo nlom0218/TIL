@@ -107,6 +107,7 @@
   - Data structure(자료구조)
     - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
     - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
+    - [큐(Queue)](DataStructureAlgorithm/DataStructure/Queue.md)
   - Algorithm(알고리즘)
 
 ---
