@@ -84,6 +84,7 @@
   - [빅오 표기법](DataStructureAlgorithm/BigO.md)
   - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
     - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
+    - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
   - [Algorithm(알고리즘)](DataStructureAlgorithm/Algorithm/README.md)
 
 - [Coding Test](CodingTest/README.md)
