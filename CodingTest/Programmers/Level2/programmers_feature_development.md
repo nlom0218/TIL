@@ -222,11 +222,74 @@ function solution(progresses, speeds) {
 
 ---
 
-## 5. Conclusion
+## 5. 큐를 이용한 문제 풀이(2022-09-03 추가)
+
+```javascript
+function solution(progresses, speeds) {
+  const incomplete = progresses.map((item) => 100 - item);
+
+  const need_days = [];
+  incomplete.forEach((item, index) => {
+    need_days.push(Math.ceil(item / speeds[index]));
+  });
+
+  const answer = [];
+  let index = 0;
+  let max = need_days[0];
+
+  for (let i = 0; i < need_days.length; i++) {
+    if (need_days[i] <= max) {
+      answer[index] = (answer[index] | 0) + 1;
+    } else {
+      max = need_days[i];
+      index++;
+      answer[index] = 1;
+    }
+  }
+  return answer;
+}
+```
+
+큐의 개념을 이용하여 문제를 다시 풀어봤다. `incomplete` 배열, `need_days` 배열,
+`answer` 배열, `max`의 값은 기존과 동일하지만 `index`라는 변수를 선언하였다.
+
+- `need_days` 배열의 길이 만큼 반복문을 실행한다.
+- 만약 `need_days`의 값이 `max`과 같거나 작다면 앞의 기능과 함께 업데이트가 가능하다.
+- 그래서 기존에 존재하는 값(`answer[index]`)에 1를 더한다. 만약 존재하지 않으면 0에 1를 더한다.
+- 이런 식으로 함께 업데이트가 가능한 기능 수를 `answer` 배열의 값으로 저장한다.
+- 하지만...
+- 만약 `need_days`의 값이 `max`보다 크다면 앞의 기능과 함께 업데이트가 불가능한다.
+- 그래서 `index`의 값을 1증가시킨 후 `answer[index]`의 값을 1로 정한다.
+- 이런 식으로 `need_days` 배열의 길이만큼 반복을 한다.
+- 마지막으론 `answer`를 반환한다.
+
+배열에서 앞의 요소를 가져오기 위해서 `Array.shift()` 메서드를 사용 한다면 시간 복잡도는 O(n)이다.
+하지만 위의 풀이에서는 직접적으로 배열의 첫 번째 요소를 가져오고 삭제하는 것이 아니라
+단순히 배열의 요소만 검색해서 값을 가져오는 것(탐색)이기 때문에 시간 복잡도는 O(1)이다.
+
+---
+
+### 결과
+
+![programmers_feature_development_result3](/image/CodingTest/programmers_feature_development/programmers_feature_development_result2.png)
+
+---
+
+> 사실 이 풀이가 자료구조 큐를 사용한 것은 아니다. 하지만 큐를 공부하면서
+> 배열과 큐의 시간 복잡도에 대해 새로운 사실을 알게되었고 이를 활용한 풀이이다.
+> 코드를 추가 작성하여 `need_days` 배열을 큐로 바꾸어 풀 수 있지만 오히려 그렇게
+> 되면 가독성이 떨어지기 때문에 보기 좋은 코드는 아닐 것 같다.
+> 앞으로 배열의 첫 번째 요소부터 값을 필요로 한다면 위의 풀이와 같은 과정을
+> 풀지 않을까 싶다.
+
+---
+
+## 6. Conclusion
 
 > 문제를 푸는 것과 푼 문제의 과정을 설명하는 것은 다른 차원의 문제로 보인다. 내가 푼 과정을 그대로 설명하는 것 뿐인데도 막상 설명을 적으려 하면 막히는 부분이 생긴다. 누군가에게 설명할 땐 더욱 힘들것 같다. 아마 내가 적을 풀이들은 다른 누군가가 봐도 이해를 못할 가능성이 충분히 있다. 그 만큼 아직 내가 알고 있는 것에 대한 깊이가 얇기 때문이라고 생각한다. 그래도 코드만 딱 적는 것이 아니라 나만의 언어로 풀어서 설명해보는 연습을 통해 코드 작성 실력과 설명 능력을 향샹시키자.  
 > 문제 자체는 다른 Level2보다는 쉬웠던 편이었다. 개념 하나를 놓쳐서 생각보다 시간이 많이 소요되긴 하였지만 어렵지 않게 정답을 구할 수 있었다. 큐/스택을 더 잘 다룰 수 있는 방법에 대해 공부를 하는 좋은 문제였다. 그리고! 다른 사람 풀이에서 배열의 요소과 인덱스를 직접 바꾸는 방법도 알 수 있어 좋았다. 해당 방법은 알고 있었지만 문제에서 이렇게 쓰인다니 신기할 따름이다. 끝-
 
 ---
 
-📅 2022-08-17
+📅 2022-08-17  
+📅 2022-09-03 - 5. 큐를 이용한 문제 풀이(2022-09-03 추가)
