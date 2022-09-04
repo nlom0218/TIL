@@ -134,6 +134,7 @@
       - [성격 유형 검사하기](CodingTest/Programmers/Level1/programmers_test_personality_type.md)
       - [모의고사](CodingTest/Programmers/Level1/programmers_mock_exam.md)
       - [체육복](CodingTest/Programmers/Level1/programmers_gym_suit.md)
+      - [실패율](CodingTest/Programmers/Level1/programmers_failure_rate.md)
 
     - Level 2
       - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
