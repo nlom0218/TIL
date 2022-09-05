@@ -97,6 +97,7 @@ JAVA 또는 파이썬 같은 경우 내장 라이브러리에 큐를 제공하�
 
 - [두 큐 합 같게 만들기](/CodingTest/Programmers/Level2/programmers_make_the_sum_of_two_queues_equal.md)
 - [기능개발](/CodingTest/Programmers/Level2/programmers_feature_development.md)
+- [프린터](/CodingTest/Programmers/Level2/programmers_printer.md)
 
 ---
 
@@ -119,9 +120,9 @@ FIFO(First in, First out) 원칙으로 만들어진 자료구조로 자바스크
 
 ---
 
-## 3. 자바스크립트로 큐 구현하기
+## 3. 연결 리스트로 큐 구현하기
 
-연결 리스트를 통해 큐를 자바스크립트로 구현한다.
+연결 리스트를 통해 큐를 구현한다.
 
 ---
 

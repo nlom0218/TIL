@@ -107,6 +107,7 @@
   - Data structure(자료구조)
     - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
     - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
+    - [스택(stack)](DataStructureAlgorithm/DataStructure/Stack.md)
     - [큐(Queue)](DataStructureAlgorithm/DataStructure/Queue.md)
   - Algorithm(알고리즘)
 
@@ -144,6 +145,7 @@
       - [문자열 압축](CodingTest/Programmers/Level2/programmers_string_compression.md)
       - [올바른 괄호](CodingTest/Programmers/Level2/programmers_correct_parenthesis.md)
       - [괄호 변환](CodingTest/Programmers/Level2/programmers_parenthesis_conversion.md)
+      - [프린터](CodingTest/Programmers/Level2/programmers_printer.md)
 
 ---
 
