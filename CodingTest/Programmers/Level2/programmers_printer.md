@@ -301,3 +301,126 @@ function solution(priorities, location) {
   return count;
 }
 ```
+
+### 1) 큐를 생성하고 priorities 배열의 요소를 차례대로 큐의 원소로 저장하기
+
+```javascript
+const queue = new Queue();
+for (let i = 0; i < priorities.length; i++) {
+  queue.enqueue([priorities[i], i]);
+}
+```
+
+새로운 큐를 생성하고 `priorities` 배열의 요소를 차례대로 큐의 원소로 저장한다.
+이때 저장되는 원소의 데이터는 `[중요도, 처음 인덱스]`의 형태를 가진다.
+
+---
+
+### 2) priorities 배열을 올림차순을 정렬하기
+
+```javascript
+priorities.sort((a, b) => b - a);
+```
+
+`priorities` 배열을 올림차순으로 정렬한다. 이렇게 되면 중요도가 큰 순서대로 정렬이 된다.
+
+---
+
+### 3) 인쇄를 한 문서의 수를 세는 count 변수 선언하기
+
+```javascript
+let count = 0;
+```
+
+`count` 변수는 두 가지의 역할을 한다.
+
+- 인쇄되는 문서의 수를 나타낸다.(또한 반복문에서 해당 문서가 인쇄되는 순서를 뜻한다.)
+- `priorities` 배열의 값을 가져온다.
+
+---
+
+### 4) 큐에 원소가 없을 때까지 반복문 실행하기
+
+```javascript
+while (queue.size > 0) {}
+```
+
+반복문을 통해 큐에 저장된 데이터를 제거한다. 그러다가 큐에 원소가 없어지면 반복문을 종료한다.
+하지만 특정 조건이 만족이 되면 반복문이 종료가 된다. 조건이 만족되지 않으면 끝까지 반복문을 실행하는 것이고...
+
+---
+
+### 5) 큐의 맨 앞 원소 가져오기
+
+```javascript
+const cur = queue.peek();
+```
+
+인쇄 요청이 먼저 들어온 문서부터 처리를 해야하기 때문에 `peek()` 메서드를 통해 큐의 맨 앞의 원소를 가져온다.
+
+---
+
+### 6) 큐의 맨 앞 원소의 중요도가 가장 큰 중요도가 아니라면 해당 원소를 큐의 마지막 원소로 저장하기
+
+```javascript
+if (cur[0] < priorities[count]) {
+  queue.enqueue(queue.dequeue());
+}
+```
+
+만약 현재 처리하는 문서의 중요도가 `priorities[count]`의 값보다 작으면 큐의 맨 앞의 원소를 제거하고
+다시 큐의 마지막 원소로 저장한다. 이를 인쇄 순서가 미루어졌다는 뜻이다.
+
+---
+
+### 7) 큐의 맨 앞 원소가 중요도가 가장 크다면 큐에서 해당 원소를 제거하기
+
+```javascript
+const value = queue.dequeue();
+```
+
+만약 현재 처리하는 문서의 중요도가 `priorities[count]`의 값과 같다면 해당 문서는 바로 인쇄를 해야하는
+문서이다. 그렇기 때문에 큐의 맨 앞 원소를 제거하고 제거한 값을 `value` 변수에 할당한다.
+
+---
+
+### 8) 인쇄가 되었으므로 count 값을 1증가시키기
+
+```javascript
+count += 1;
+```
+
+`7)` 과정에 인쇄가 되었으므로 해당 문서가 인쇄되는 순서를 의미하는 `count`의 값을 하나 올린다.
+
+또한 `count` 값을 하나 증가시켰으므로 `priorities[count]`의 값도 다음 값으로 바뀌게 된다. 이는 그 다음으로
+중요한 문서를 찾는다고 생각을 할 수 있다. 왜냐! 이전 중요도에 해당하는 문서는 인쇄가 되었기 때문이다.
+
+---
+
+### 9) 만약 내가 처리해야 할 요소가 인쇄가 되었으면 count를 리턴하기
+
+```javascript
+if (location === value[1]) {
+  return count;
+}
+```
+
+만약 현재 인쇄하는 문서가 내가 요청한 문서와 같다면 해당 문서가 인쇄하는 순서를 값으로 가지고 있는 `count`를
+반환하며 반복문을 종료한다.
+
+---
+
+### 10) 여기까지 왔으면 내가 요청한 문서는 가장 마지막에 인쇄가 된다.
+
+```javascript
+return count;
+```
+
+내가 요처한 반복문이 중요도가 가장 낮고 그 중에서도 가장 마지막에 인쇄가 되는 문서라면 반복문이 모두 실행되고
+나서 `count`를 반환하면 된다.
+
+---
+
+### 결과
+
+![programmers_printer_result2](/image/CodingTest/programmers_printer/programmers_printer_result2.png)
