@@ -509,6 +509,14 @@ if (list.item < priorities[j]) {
 
 ---
 
+### 결과
+
+`나의 풀이`의 실행 속도보다 빨라진 실행 속도를 확인할 수 있다.
+
+![programmers_printer_result3](/image/CodingTest/programmers_printer/programmers_printer_result3.png)
+
+---
+
 ## 6. Conclusion
 
 > 큐를 이용하면 쉽게 풀리는 문제이다. `나의 풀이`에서는 굳이 큐를 만들어 사용하지 않았지만 큐의 시간 복잡도를
