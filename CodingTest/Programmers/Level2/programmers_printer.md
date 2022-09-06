@@ -270,7 +270,7 @@ function solution(priorities, location) {
     queue.enqueue([priorities[i], i]);
   }
 
-  // 2) priorities 배열을 올림차순을 정렬하기
+  // 2) priorities 배열을 내림차순을 정렬하기
   priorities.sort((a, b) => b - a);
 
   // 3) 인쇄를 한 문서의 수를 세는 count 변수 선언하기
@@ -319,13 +319,13 @@ for (let i = 0; i < priorities.length; i++) {
 
 ---
 
-### 2) priorities 배열을 올림차순을 정렬하기
+### 2) priorities 배열을 내림차순을 정렬하기
 
 ```javascript
 priorities.sort((a, b) => b - a);
 ```
 
-`priorities` 배열을 올림차순으로 정렬한다. 이렇게 되면 중요도가 큰 순서대로 정렬이 된다.
+`priorities` 배열을 내림차순으로 정렬한다. 이렇게 되면 중요도가 큰 순서대로 정렬이 된다.
 
 ---
 
@@ -430,4 +430,93 @@ return count;
 
 ---
 
-📅 2022-09-06
+## 5. 나의 풀이 Refactoring
+
+`3. 나의 풀이`에서 아래 부분을 리팩토링하여 실행속도를 올리고자 한다.
+
+```javascript
+const max = Math.max(...priorities.slice(index).map((item) => item.item));
+```
+
+위의 코드는 매 반복문을 실행할 때 마다 실행되기 때문에 그닥 효율적인 성능을 기대할 수가 없다. 해당 방법이 아니라
+`4. 큐를 이용한 풀이`에서 사용한 `priorities` 배열을 내림차순으로 정렬하는 방법을 사용하도록 한다.
+
+전체적인 코드는 아래와 같다.
+
+```javascript
+function solution(priorities, location) {
+  // 1) 수정한 priorities 배열을 할당한 새로운 객체 만들기
+  const convert_priorities = [...priorities].map((item, index) => {
+    return { index, item };
+  });
+  let print = [];
+  let index = 0;
+  // 2) priorities 배열을 내림차순으로 정렬하기
+  priorities.sort((a, b) => b - a);
+  let j = 0;
+  while (print.findIndex((item) => item.index === location) === -1) {
+    const list = convert_priorities[index];
+    // 3) 현재 처리해야 할 문서의 중요도와 남아 있는 문서들 중 가장 높은 중요도 비교하기
+    if (list.item < priorities[j]) {
+      convert_priorities.push(list);
+    } else {
+      print.push(list);
+      j++;
+    }
+    index++;
+  }
+  return print.length;
+}
+```
+
+---
+
+### 1) 수정한 priorities 배열을 할당한 새로운 객체 만들기
+
+```javascript
+const convert_priorities = [...priorities].map((item, index) => {
+  return { index, item };
+});
+```
+
+`priorities` 배열은 다시 사용되기 때문에 변경하지 말아야 한다. 이를 위해 구조분해 할당을 사용하여 얕은 복사를 하고
+새롭게 생성된 배열을 `convert_priorities` 배열에 할당한다.
+
+---
+
+### 2) priorities 배열을 내림차순으로 정렬하기
+
+```javascript
+priorities.sort((a, b) => b - a);
+let j = 0;
+```
+
+`priorities` 배열을 중요도가 높은 순으로 즉, 내림차순으로 정렬한다. 그리고 `j` 변수는 `priorities` 변수에
+접근하기 위한 인덱스 값을 나타낸다.
+
+---
+
+### 3) 현재 처리해야 할 문서의 중요도와 남아 있는 문서들 중 가장 높은 중요도 비교하기
+
+```javascript
+if (list.item < priorities[j]) {
+}
+```
+
+현재 처리해야 할 문서의 중요도와 남아 있는 문서들 중 가장 높은 중요도를 비교한다. 만약 이 둘이 같다면
+해당 문서는 `print` 배열로 이동하게 되고 `j`의 값을 1증가시킨다. `j`의 값을 1증가시킨다는 것은
+다음으로 큰 중요도를 다음 반복문에서 부터 현재 처리해야할 문서의 중요도와 비교하겠다는 의미이다.
+
+---
+
+## 6. Conclusion
+
+> 큐를 이용하면 쉽게 풀리는 문제이다. `나의 풀이`에서는 굳이 큐를 만들어 사용하지 않았지만 큐의 시간 복잡도를
+> 활용하여 문제를 풀었다. 만약 `Array.shift()` 메서드를 사용하여 앞의 요소를 차례대로 제거를 하였으면 시간 복잡도는
+> O(n)를 가지게 되지만 `나의 풀이`에서는 배열에 접근만 하기 때문에 시간 복잡도는 O(1)를 가지게 된다. 물론
+> 시간이 그리 오래 걸리지 않으면 `Array.shift()` 메서드를 사용하는 것이 훨씬 편리했을 것이다.
+
+---
+
+📅 2022-09-06  
+📅 2022-09-07 - 5. 나의 풀이 Refactoring 추가
