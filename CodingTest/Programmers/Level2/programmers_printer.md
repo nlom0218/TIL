@@ -424,3 +424,7 @@ return count;
 ### 결과
 
 ![programmers_printer_result2](/image/CodingTest/programmers_printer/programmers_printer_result2.png)
+
+---
+
+📅 2022-09-06
