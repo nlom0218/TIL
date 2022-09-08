@@ -88,6 +88,7 @@
     - [스택(Stack)](DataStructureAlgorithm/DataStructure/Stack.md)
     - [큐(Queue)](DataStructureAlgorithm/DataStructure/Queue.md)
     - [해시 테이블(Hash Table)](DataStructureAlgorithm/DataStructure/HashTable.md)
+    - [그래프(Graph)](DataStructureAlgorithm/DataStructure/Graph.md)
   - [Algorithm(알고리즘)](DataStructureAlgorithm/Algorithm/README.md)
 
 - [Coding Test](CodingTest/README.md)
