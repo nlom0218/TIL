@@ -299,11 +299,11 @@ function solution(genres, plays) {
 let { songs, total } = map.get(genres[index]) || { songs: [], total: 0 };
 ```
 
-내가 만들 `map` 맵 객체의 `value`는 `object`로 `songs`과 `total`를 프로퍼티로 가지고 있다.
+내가 만들 `map` 맵 객체의 `value`는 `object`로 `songs`과 `total`를 프로퍼티 키로 가지고 있다.
 그래서 만약 아직 만들어지지 않은 맵 객체라면 기본값으로 `{ songs: [], total: 0 }`의 형태를
 변수에 객체를 할당한다.
 
-또한 구조분해 할당을 통해 객체내의 프로퍼티를 꺼내어 변수로 사용한다.
+또한 구조분해 할당을 통해 객체내의 프로퍼티 키를 꺼내어 변수로 사용한다.
 
 ---
 
@@ -398,7 +398,7 @@ return all_data
 1. Array.sort()
    - 장르에 속한 모든 노래의 재생 횟수의 합을 기준으로 내림차순 정렬을한다.
 2. Array.flatMap()
-   - `value`의 `songs` 프로퍼티의 값은 배열이며 이 배열은 배열을 요소로 가지고 있다.
+   - `value`의 `songs`의 값은 배열이며 이 배열은 배열을 요소로 가지고 있다.
    - 즉, `songs` 배열만 `Array.map()` 메서드를 사용하여 꺼내면 아래와 같을 것이다.
    ```javascript
    [
@@ -411,3 +411,128 @@ return all_data
 3. Array.map()
    - 2번 과정을 통해 [노래의 고유 번호, 노래의 재생 횟수]의 형태를 가지는 배열을 요소로 가지게 된다.
    - 우리가 필요한 것은 노래의 고유 번호이기 때문에 0번째 인덱스의 값만 꺼내어 새로운 배열을 만든다.
+
+---
+
+### 결과
+
+![programmers_best_album_result2](/image/CodingTest/programmers_best_album/programmers_best_album_result2.png)
+
+---
+
+## 5. Refactoring2
+
+아래의 풀이는 `코딩테스트 광탈 방지 A to Z : JavaScript Ch07-3` 강의를 수강한 후
+강의 내용을 참고하여 리팩토링한 것이다.
+
+```javascript
+function solution(genres, plays) {
+  // 1) 노래의 정보가 담겨있는 배열 만들기
+  const songs = plays.map((item, index) => {
+    return { id: index, play: item };
+  });
+
+  const map = new Map();
+
+  // 2) songs 배열의 요소를 반복문을 통해 map 맵 객체에 저장하기
+  songs.forEach(({ id, play }, index) => {
+    const data = map.get(genres[index]) || { total: 0, songs: [] };
+    map.set(genres[index], {
+      total: data.total + play,
+      songs: [...data.songs, { id, play }]
+        .sort((a, b) => b.play - a.play)
+        .slice(0, 2),
+    });
+  });
+
+  // 3) 노래의 고유 번호를 요소로 가지는 배열로 바꾸어 반환하기
+  return [...map.entries()]
+    .sort((a, b) => b[1].total - a[1].total)
+    .flatMap((item) => item[1].songs)
+    .map((item) => item.id);
+}
+```
+
+---
+
+### 1) 노래의 정보가 담겨있는 배열 만들기
+
+```javascript
+const songs = plays.map((item, index) => {
+  return { id: index, play: item };
+});
+```
+
+`plays` 배열을 바탕으로 새로운 배열인 `songs`을 만든다. `songs` 배열의 요소는
+객체이며 이 객체는 `id` 프로퍼티 키와 `play` 프로퍼티 키를 가지고 있다.
+
+---
+
+### 2) songs 배열의 요소를 반복문을 통해 map 맵 객체에 저장하기
+
+```javascript
+songs.forEach(({ id, play }, index) => {
+  const data = map.get(genres[index]) || { total: 0, songs: [] };
+  map.set(genres[index], {
+    total: data.total + play,
+    songs: [...data.songs, { id, play }]
+      .sort((a, b) => b.play - a.play)
+      .slice(0, 2),
+  });
+});
+```
+
+`4) Refactoring1`에 비슷한 과정이 있다.
+
+- 특정 장르를 키로 가지고 있는 값을 `data`에 할당한다.
+- 만약 `data`가 없다면 `data`는 `{ total: 0, songs: [] }`이 된다.
+- `total`은 계속해서 이전 `total`에 현재 재생 횟수를 더하며 갱신된다.
+- `songs`은 이전의 `songs`에 새로운 요소를 더한다.
+- 재생 횟수를 기준으로 내림차순 정렬을 한다.
+- 0번 인덱스 부터 1번 인덱스까지만 잘라낸다.
+
+---
+
+### 3) 노래의 고유 번호를 요소로 가지는 배열로 바꾸어 반환하기
+
+```javascript
+return [...map.entries()]
+  .sort((a, b) => b[1].total - a[1].total)
+  .flatMap((item) => item[1].songs)
+  .map((item) => item.id);
+```
+
+위의 코드에서 `Map.entries()` 메서드에 대해서 살펴보고 마무리를 한다. 나머지 과정은
+위에서 했던 과정과 동일한다.
+
+`Map.entries()` 메서드는 요소의 [키, 값]을 한 쌍으로 하는 이터러블 객체를 반환한다.
+즉, `스프레드(spread) 문법`을 사용할 수 있다.
+
+정리하자면
+
+1. 기존 `Map` 객체를 `Map.entries()` 메서드를 사용하여 이터러블 객체로 만들었고
+2. 이어서 `스프레드(spread) 문법`을 사용하여 배열로 만들었다.
+
+여기서 드는 의문점은 `Map` 객체는 그 자체가 이터러블 하기 때문에 `스프레드(spread) 문법`을 사용할 수 있는데
+`Map.entries()` 메서드를 사용한 이유가 궁금하였다. 질문을 올렸으니 답변이 달리면 다시 정리를
+하도록 하자.
+
+---
+
+## 결과
+
+![programmers_best_album_result3](/image/CodingTest/programmers_best_album/programmers_best_album_result3.png)
+
+---
+
+## 6. Conclusion
+
+> Level3인 첫 문제였다. 그래서 처음에는 어렵지 않을까 걱정을 했었다. 하지만 생각보다 어렵지 않게 풀 수 있었다.
+> 연습 문제여서 그런 듯 하다. 기업 기출 문제는 이보다 더 어려울 것이라고 예상이된다.  
+> 배열 관련한 메서드를 사용하면서 반환하는 값에 대한 생각이 부족하여 버벅이는 부분이 있었다. 예를들어 `Array.push()` 메서드는
+> 배열의 길이를 반환한다. 그렇기 때문에 메서드 체이닝으로 다른 배열 메서드를 사용하게 되면 오류가 발생한다.
+> 이러한 점을 잘 생각하여 코드를 작성을 하도록 하자.
+
+---
+
+📅 2022-09-08
