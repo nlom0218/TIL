@@ -128,7 +128,7 @@ const most_map = new Map();
 맵 객체를 두 개 생성한다.
 
 - map: 키는 장르이며 값은 `[노래의 고유번호, 재생 횟수]`의 데이터이다. 이때 노래는 키의 장르에 속해있다.
-- most_map: 키는 장르이며 값은 해당 장르에 해당하는 노래들의 전체 재생 횟수이다.
+- most_map: 키는 장르이며 값은 해당 장르에 속한 노래들의 재생 횟수를 모두 더한 값이다.
 
 ---
 
@@ -256,26 +256,158 @@ most_arr.forEach(([key, value]) => {
 function solution(genres, plays) {
   const map = new Map();
   genres.forEach((item, index) => {
+    // 1) 맵 객체에 해당 키를 가지고 있는 값을 구조분해 할당하여 가져오기
     let { songs, total } = map.get(genres[index]) || { songs: [], total: 0 };
+
+    // 2) songs 배열에 새로운 요소 추가하기
     songs.push([index, plays[index]]);
+
+    // 3) songs 배열을 조건에 맞게 정렬하기
     songs.sort((a, b) => {
       if (a[1] === b[1]) {
         return a[0] - b[0];
       }
       return b[1] - a[1];
     });
+
+    // 4) 장르에 속한 노래들의 총 재생횟수 구하기
     total += plays[index];
+
+    // 5) 맵 객체에 저장하기
     map.set(item, { songs: songs.slice(0, 2), total });
   });
 
+  // 6) 맵 객체를 배열로 바꾸기
   const all_data = [];
   for ([_, value] of map) {
     all_data.push(value);
   }
 
+  // 7) 노래의 고유 번호를 요소로 가지는 배열로 바꾸어 반환하기
   return all_data
     .sort((a, b) => b.total - a.total)
     .flatMap((item) => item.songs)
     .map((item) => item[0]);
 }
 ```
+
+---
+
+### 1) 맵 객체에 해당 키를 가지고 있는 값을 구조분해 할당하여 가져오기
+
+```javascript
+let { songs, total } = map.get(genres[index]) || { songs: [], total: 0 };
+```
+
+내가 만들 `map` 맵 객체의 `value`는 `object`로 `songs`과 `total`를 프로퍼티로 가지고 있다.
+그래서 만약 아직 만들어지지 않은 맵 객체라면 기본값으로 `{ songs: [], total: 0 }`의 형태를
+변수에 객체를 할당한다.
+
+또한 구조분해 할당을 통해 객체내의 프로퍼티를 꺼내어 변수로 사용한다.
+
+---
+
+### 2) songs 배열에 새로운 요소 추가하기
+
+```javascript
+songs.push([index, plays[index]]);
+```
+
+`songs`은 배열이므로 `Array.push()` 메서드를 사용하여 새로운 요소를 추가한다.
+요소 또한 배열이며 첫 번째 요소로는 노래의 고유 번호, 두 번째 요소로는 노래의 재생 횟수를 가진다.
+
+- 노래의 고유 번호를 저장하는 이유는 정답으로 반환해야 하는 값이기 때문이다.
+- 노래의 재생 횟수를 저장하는 이유는 가장 많이 재생된 노래 두 곡을 뽑아야 하기 때문이다.
+
+---
+
+### 3) songs 배열을 조건에 맞게 정렬하기
+
+```javascript
+songs.sort((a, b) => {
+  if (a[1] === b[1]) {
+    return a[0] - b[0];
+  }
+  return b[1] - a[1];
+});
+```
+
+`songs` 배열을 정렬한다. 정렬 기준은 아래와 같다.
+
+1. 노래의 재생 횟수가 많은 순서대로(내림차순)
+2. 재생 횟수가 같다면 고유 번호가 빠른 순으로(올림차순)
+
+---
+
+### 4) 장르에 속한 노래들의 총 재생횟수 구하기
+
+```javascript
+total += plays[index];
+```
+
+특정 장르에 속한 노래들의 재생 횟수들의 총합을 누적해서 더한다.
+
+---
+
+### 5) 맵 객체에 저장하기
+
+```javascript
+map.set(item, { songs: songs.slice(0, 2), total });
+```
+
+- key: 장르이름
+- value: 객체
+  - songs: 장르에 속한 노래 배열
+  - total: 장르에 속한 노래들의 재생 횟수의 합
+
+위의 형태로 이루어진 데이터를 `map` 맵 객체에 저장한다.
+
+여기서 항상 `songs` 배열의 길이는 2를 유지한다. 가장 많은 재생 횟수를 가진
+두 개의 노래가 필요하기 때문이다.
+
+이를 위해 `Array.slice()` 메서드를 사용한다.
+
+- 첫 번째 인수가 0이므로 처음부터 자르기를 시작한다.
+- 두 번째 인수가 2이므로 인덱스가 1인 요소까지 자른다.
+- 만약 길이가 1이라면 하나의 요소만 반환된다.
+
+---
+
+### 6) 맵 객체를 배열로 바꾸기
+
+```javascript
+const all_data = [];
+for ([_, value] of map) {
+  all_data.push(value);
+}
+```
+
+`map` 맵 객체에 반복문을 실행하여 `value`을 요소로 가지는 `all_data` 배열을 만든다.
+
+---
+
+### 7) 노래의 고유 번호를 요소로 가지는 배열로 바꾸어 반환하기
+
+```javascript
+return all_data
+  .sort((a, b) => b.total - a.total)
+  .flatMap((item) => item.songs)
+  .map((item) => item[0]);
+```
+
+1. Array.sort()
+   - 장르에 속한 모든 노래의 재생 횟수의 합을 기준으로 내림차순 정렬을한다.
+2. Array.flatMap()
+   - `value`의 `songs` 프로퍼티의 값은 배열이며 이 배열은 배열을 요소로 가지고 있다.
+   - 즉, `songs` 배열만 `Array.map()` 메서드를 사용하여 꺼내면 아래와 같을 것이다.
+   ```javascript
+   [
+     [array, array],
+     [array, array],
+     [array, array],
+   ];
+   ```
+   - 중첩된 배열을 평탄화 해야하기 때문에 `Array.flatMap()` 메서드를 사용한다.
+3. Array.map()
+   - 2번 과정을 통해 [노래의 고유 번호, 노래의 재생 횟수]의 형태를 가지는 배열을 요소로 가지게 된다.
+   - 우리가 필요한 것은 노래의 고유 번호이기 때문에 0번째 인덱스의 값만 꺼내어 새로운 배열을 만든다.
