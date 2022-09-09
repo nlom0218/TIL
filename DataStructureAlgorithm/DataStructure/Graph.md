@@ -73,6 +73,78 @@ class Graph {
 
 ---
 
+### 0-2. 인접 행렬로 방향 그래프 구현하기
+
+```javascript
+class Graph2 {
+  constructor(size) {
+    this.matrix = [];
+    for (let i = 0; i < size; i++) {
+      this.matrix.push(new Array(size).fill(0));
+    }
+    this.length = this.matrix.length;
+    this.last_vertex = this.matrix.length - 1;
+  }
+
+  //정점의 존재여부 확인하기
+  contains(vertex) {
+    return vertex < this.length && vertex >= 0;
+  }
+
+  // 간선 연결하기
+  connect(from, to) {
+    if (
+      !from === 0
+        ? false
+        : !from || to === 0
+        ? false
+        : !to || !this.contains(from) || !this.contains(to) || from === to
+    )
+      return;
+    this.matrix[from][to] = 1;
+  }
+
+  // 간선 삭제하기
+  disconnect(from, to) {
+    if (
+      !from === 0
+        ? false
+        : !from || to === 0
+        ? false
+        : !to || !this.contains(from) || !this.contains(to) || from === to
+    )
+      return;
+    this.matrix[from][to] = 0;
+  }
+
+  // 간선 존재여부 확인하기
+  hasEdge(from, to) {
+    return this.matrix[from][to] === 1;
+  }
+
+  // 진입 차수 구하기
+  in_degree_num(vertex) {
+    let count = 0;
+    this.matrix.forEach((item) => {
+      if (item[vertex] === 1) count++;
+    });
+    return count;
+  }
+
+  // 진출 차수 구하기
+  out_degree_num(vertex) {
+    return this.matrix[vertex].filter((item) => item === 1).length;
+  }
+
+  // 전체 차수 구하기
+  degree_num(vertex) {
+    return this.in_degree_num(vertex) + this.out_degree_num(vertex);
+  }
+}
+```
+
+---
+
 ## 1. 개요
 
 비선형 구조의 자료 구조의 첫 정리는 그래프 자료 구조로 시작한다. 선형 구조의 자료 구조보다 생김새는 복잡하여
@@ -429,11 +501,11 @@ class Graph {
   // ...
   connect(from, to) {
     if (
-      !from ||
-      !to ||
-      !this.contains(from) ||
-      !this.contains(to) ||
-      from === to
+      !from === 0
+        ? false
+        : !from || to === 0
+        ? false
+        : !to || !this.contains(from) || !this.contains(to) || from === to
     )
       return;
     this.matrix[from][to] = 1;
@@ -442,7 +514,10 @@ class Graph {
 ```
 
 간선을 연결하기 위해서는 연결할 두 정점이 필요하고 두 정점 모두 존재해야 한다. 또한 연결할 두 정점이
-서로 같지 않아야 한다.
+서로 같지 않아야 한다. 단 정점이 `0`인 경우 `!0`은 `true`를 반환하기 때문에
+이를 위해 삼항연산자를 작성해줘야 한다.
+
+정점이 연결 된 경우 해당 위치의 요소를 1로 바꾼다.
 
 > 물론 자기 자신을 간선으로 연결할 수 있지만 여기서는 제외하여 생각한다.
 
@@ -455,11 +530,11 @@ class Graph {
   // ...
   disconnect(from, to) {
     if (
-      !from ||
-      !to ||
-      !this.contains(from) ||
-      !this.contains(to) ||
-      from === to
+      !from === 0
+        ? false
+        : !from || to === 0
+        ? false
+        : !to || !this.contains(from) || !this.contains(to) || from === to
     )
       return;
     this.matrix[from][to] = 0;
@@ -467,10 +542,71 @@ class Graph {
 }
 ```
 
+정점이 연결이 끊긴 경우 해당 위치의 요소를 0로 바꾼다.
+
+---
+
+### 6-5. 간선 존재여부 확인하기
+
+```javascript
+class Graph {
+  // ...
+  hasEdge(from, to) {
+    return this.matrix[from][to] === 1;
+  }
+}
+```
+
+---
+
+### 6-6. 차수 구하기
+
+```javascript
+class Graph {
+  // ...
+
+  // 진입 차수 구하기
+  in_degree_num(vertex) {
+    let count = 0;
+    this.matrix.forEach((item) => {
+      if (item[vertex] === 1) count++;
+    });
+    return count;
+  }
+
+  // 진출 차수 구하기
+  out_degree_num(vertex) {
+    return this.matrix[vertex].filter((item) => item === 1).length;
+  }
+
+  // 차수 구하기
+  degree_num(vertex) {
+    return this.in_degree_num(vertex) + this.out_degree_num(vertex);
+  }
+}
+```
+
+진입 차수는 외부에서 정점으로 향하는 간선의 수 이고 진출 차수는 정점에서 외부로 향하는 간선의 수이다.
+
+진입 차수는 이중 배열에서 세로의 요소, 진출 차수는 이중 배열에서 가로의 요소를
+확인하여 구하면 된다.
+
+---
+
+## 7. Conclusion
+
+> 그래프 자료 구조에 대해 정리를 하였다. 개념을 공부할 땐 어떤 자료 구조인지
+> 정확히 이해가 되지 않았다. 하지만 직접 코드를 작성하면서 그래프를 만들어 보니
+> 확실히 어떤 상황에서 유용하게 사용할 수 있는지 짐작이 되었다. 지금까지 자료구는
+> 원시타입, 배열, 객체만 이용했었는데 이렇게 직접 자료 구조를 만드니 정말 재밌다는
+> 생각이 든다. 또한 왜 자바스크립트에서는 다양한 자료 구조를 지원하지 않는지
+> 궁금하다.
+
 ---
 
 ## 참고
 
 [[자료구조] 그래프(Graph)란](https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html)  
 [[자료구조] 그래프(Graph)의 개념 설명](https://leejinseop.tistory.com/43)  
-[[JavaScript] 자료구조 (3-2): 그래프(Graph)와 인접 리스트](https://velog.io/@porupit0122/JavaScript-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-3-2-%EA%B7%B8%EB%9E%98%ED%94%84Graph%EC%99%80-%EC%9D%B8%EC%A0%91-%EB%A6%AC%EC%8A%A4%ED%8A%B8)
+[[JavaScript] 자료구조 (3-2): 그래프(Graph)와 인접 리스트](https://velog.io/@porupit0122/JavaScript-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-3-2-%EA%B7%B8%EB%9E%98%ED%94%84Graph%EC%99%80-%EC%9D%B8%EC%A0%91-%EB%A6%AC%EC%8A%A4%ED%8A%B8)  
+[Javascript Graph 자료구조 인접행렬(Adjacency Matrix) 구현](https://about-tech.tistory.com/entry/Algorithm-Javascript-Graph-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%9D%B8%EC%A0%91%ED%96%89%EB%A0%ACAdjacency-Matrix-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
