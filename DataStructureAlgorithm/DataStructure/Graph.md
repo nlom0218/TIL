@@ -1,5 +1,78 @@
 # 그래프(Graph)
 
+## 0. 요약
+
+### 0-1. 인접 리스트로 무방향 그래프 구현하기
+
+```javascript
+class Graph {
+  constructor() {
+    this.vertices = new Map();
+  }
+
+  // 정점 추가하기
+  add(vertex) {
+    if (!this.vertices.get(vertex)) {
+      this.vertices.set(vertex, []);
+    }
+  }
+
+  // 정점 삭제하기
+  remove(vertex) {
+    if (this.vertices.get(vertex)) {
+      const v = this.vertices.get(vertex);
+      v.forEach((item) => {
+        this.vertices.set(
+          item,
+          this.vertices.get(item).filter((item) => item !== vertex)
+        );
+      });
+      this.vertices.delete(vertex);
+      return v;
+    }
+  }
+
+  // 정점의 존재여부 확인하기
+  contains(vertex) {
+    return this.vertices.has(vertex);
+  }
+
+  // 간선 연결하기
+  connect(from, to) {
+    if (this.contains(from) && this.contains(to)) {
+      if (this.vertices.get(from).includes(to)) return;
+      this.vertices.set(from, [...this.vertices.get(from), to]);
+      this.vertices.set(to, [...this.vertices.get(to), from]);
+    }
+  }
+
+  // 간선 삭제하기
+  disconnect(from, to) {
+    if (this.contains(from) && this.contains(to)) {
+      this.vertices.set(
+        from,
+        this.vertices.get(from).filter((item) => item !== to)
+      );
+      this.vertices.set(
+        to,
+        this.vertices.get(to).filter((item) => item !== from)
+      );
+    }
+  }
+
+  // 간선 존재여부 확인하기
+  hasEdge(from, to) {
+    if (this.contains(from) && this.contains(to)) {
+      const edges = this.vertices.get(from);
+      return edges.includes(to);
+    }
+    return false;
+  }
+}
+```
+
+---
+
 ## 1. 개요
 
 비선형 구조의 자료 구조의 첫 정리는 그래프 자료 구조로 시작한다. 선형 구조의 자료 구조보다 생김새는 복잡하여
@@ -195,7 +268,35 @@ class Graph {
 
 ---
 
-### 5-3. 정점의 존재여부 확인하기
+### 5-3. 정점 삭제하기
+
+```javascript
+class Graph {
+  // ...
+  remove(vertex) {
+    if (!this.vertices.get(vertex)) {
+      const v = this.vertices.get(vertex);
+      v.forEach((item) => {
+        this.vertices.set(
+          v,
+          this.vertices.get(v).filter((item) => item !== vertex)
+        );
+      });
+      this.vertices.delete(vertex);
+      return v;
+    }
+  }
+}
+```
+
+인자로 넘겨받은 정점이 존재하면 해당 정점을 삭제함은 물론, 다른 모든 정점들의 리스트를 순회하며 넘겨받은 정점과
+이어져 있는 간선을 제거해야 한다.
+
+넘겨받은 정점과 연결되어 있는 정점은 `넘겨받은 정점의 리스트(v)`를 보면 쉽게 찾을 수 있다.
+
+---
+
+### 5-4. 정점의 존재여부 확인하기
 
 ```javascript
 class Graph {
@@ -210,13 +311,14 @@ class Graph {
 
 ---
 
-### 5-4. 간선 연결하기
+### 5-5. 간선 연결하기
 
 ```javascript
 class Graph {
   // ...
   connect(from, to) {
     if (this.contains(from) && this.contains(to)) {
+      if (this.vertices.get(from).includes(to)) return;
       this.vertices.set(from, [...this.vertices.get(from), to]);
       this.vertices.set(to, [...this.vertices.get(to), from]);
     }
@@ -227,6 +329,143 @@ class Graph {
 간선을 연결하기 위해서는 연결할 정점이 모두 존재해야 한다.
 
 두 개의 정점의 존재가 모두 확인되면 각각의 인접 리스트에 서로의 정점을 추가한다.
+만약 두 정점이 이미 연결이 되어 간선이 있다면 함수를 종료하여 중복된 간선을 만들지 않도록 한다.
+
+---
+
+### 5-6. 간선 삭제하기
+
+```javascript
+class Graph {
+  // ...
+  disconnect(from, to) {
+    if (this.contains(from) && this.contains(to)) {
+      this.vertices.set(
+        from,
+        this.vertices.get(from).filter((item) => item !== to)
+      );
+      this.vertices.set(
+        to,
+        this.vertices.get(to).filter((item) => item !== from)
+      );
+    }
+  }
+}
+```
+
+두 정점을 연결하는 간선을 삭제하기 위해서는 두 정점이 모두 존재해야 한다.
+
+두 정점이 모두 존재하면 `from` 정점과 `to` 정점의 리스트에서 서로의 정점을 제거한다. 이를 위해 `Array.filter()` 메서드를
+사용하였다.
+
+---
+
+### 5-7. 간선 존재여부 확인하기
+
+```javascript
+class Graph {
+  // ...
+  hasEdge(from, to) {
+    if (this.contains(from) && this.contains(to)) {
+      const edges = this.vertices.get(from);
+      return edges.includes(to);
+    }
+    return false;
+  }
+}
+```
+
+두 정점이 모두 존재하지 않으면 `false`를 리턴한다.
+
+두 정점이 모두 존재하면 `from` 정점의 리스트에 `to` 정점이 포함되어있는지 `Array.includes()` 메서드를
+사용하여 확인하여 메서드의 반환 값을 리턴한다.
+
+---
+
+## 6. 인접 행렬로 방향 그래프 구현하기
+
+### 6-1. 그래프의 기본 구조
+
+```javascript
+class Graph {
+  constructor(size) {
+    this.matrix = [];
+    for (let i = 0; i < size; i++) {
+      this.matrix.push(new Array(size).fill(0));
+    }
+    this.length = this.matrix.length;
+    this.last_vertex = this.matrix.length - 1;
+  }
+}
+```
+
+인자로 받은 `size` 만큼의 이중 배열이 생성된다.
+
+생성되는 정점의 수는 `matrix.length`이다. 하지만 여기서 주의 해야할 점은 배열의 인덱스는 `0`부터
+세기 때문에 간선을 연결할 때 `matrix.length`의 값은 인자로 전달해서는 안된다. 즉 받을 수 있는 인자 값의
+최댓값은 `matrix.length - 1`이다.
+
+---
+
+### 6-2. 정점의 존재여부 확인하기
+
+```javascript
+class Graph {
+  // ...
+  contains(vertex) {
+    return vertex < this.length && vertex >= 0;
+  }
+}
+```
+
+인자로 받은 정점이 `0` 이상 `matrix`의 길이보다 보다 작으면 정점이 존재한다.
+
+---
+
+### 6-3. 간선 연결하기
+
+```javascript
+class Graph {
+  // ...
+  connect(from, to) {
+    if (
+      !from ||
+      !to ||
+      !this.contains(from) ||
+      !this.contains(to) ||
+      from === to
+    )
+      return;
+    this.matrix[from][to] = 1;
+  }
+}
+```
+
+간선을 연결하기 위해서는 연결할 두 정점이 필요하고 두 정점 모두 존재해야 한다. 또한 연결할 두 정점이
+서로 같지 않아야 한다.
+
+> 물론 자기 자신을 간선으로 연결할 수 있지만 여기서는 제외하여 생각한다.
+
+---
+
+### 6-4. 간선 삭제하기
+
+```javascript
+class Graph {
+  // ...
+  disconnect(from, to) {
+    if (
+      !from ||
+      !to ||
+      !this.contains(from) ||
+      !this.contains(to) ||
+      from === to
+    )
+      return;
+    this.matrix[from][to] = 0;
+  }
+}
+```
 
 ---
 
