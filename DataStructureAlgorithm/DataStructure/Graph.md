@@ -76,7 +76,7 @@ class Graph {
 ### 0-2. 인접 행렬로 방향 그래프 구현하기
 
 ```javascript
-class Graph2 {
+class Graph {
   constructor(size) {
     this.matrix = [];
     for (let i = 0; i < size; i++) {
