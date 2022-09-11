@@ -124,7 +124,7 @@ else is_blank = false;
 
 ---
 
-## 4. Conclusion
+## 4. Refactoring
 
 매개 변수로 받은 문자열 `s`를 배열로 바꾸지 않고 풀이를 작성해보았다.
 

@@ -169,3 +169,152 @@ separate_files.forEach(([HEAD, NUMBER, index]) => {
 0번째 요소인 `NUMBER`의 값을 기준으로 올림차순 정렬을 한다.
 
 ---
+
+### 3) 맵 객체의 key와 value를 바탕으로 배열을 만든 후 HEAD를 기준으로 정렬하기
+
+```javascript
+const new_files = [];
+for ([key, value] of map) {
+  new_files.push([key, ...value.map((item) => item[1])]);
+}
+new_files.sort((a, b) => (a[0] > b[0] ? 1 : -1));
+```
+
+`for...of` 문을 사용하여 맵 객체를 순회한다. 각각의 `key`와 `value`를 배열의 형태로 `new_files`에
+저장을 한다. 이때 `value`의 두 번째 요소인 `index`만 필요하기 때문에 `Array.map()`을 사용하여
+`index`만 가져오고 `spread operator`을 사용하여 요소만 가져온다.
+
+반복문이 끝난 후 `new_files`의 첫 번째 요소인 `HEAD`을 기준으로 정렬한다.(사전순)
+
+---
+
+### 4) 파일의 인덱스만 추출하여 새로운 배열 만들기
+
+```javascript
+const files_index = new_files.flatMap((item) => item.slice(1));
+```
+
+`new_files` 배열은 중첩 배열이므로 `Array.flatMap()` 메서드를 사용하여 `index`값만 가지는 새로운 배열 `files_index`를 선언한다.
+
+---
+
+### 5) 인덱스에 해당하는 파일을 가져와 answer 배열에 저장한 후 반환하기
+
+```javascript
+const answer = [];
+files_index.forEach((item) => {
+  answer.push(files[item]);
+});
+
+return answer;
+```
+
+`index`에 해당하는 파일을 `files` 배열에서 찾아 `answer` 배열에 넣는다.
+
+---
+
+### 결과
+
+![programmers_sort_file_names_result1](/image/CodingTest/programmers_sort_file_names/programmers_sort_file_names_result1.png)
+
+---
+
+## 4. Refactoring
+
+문제 풀이의 `2) HEAD가 같은 파일끼리 묶은 후 NUMBER를 기준으로 정렬하기` 과정에서 맵 객체가 새롭게
+만들어질 때 마다 `Array.sort()` 메서드가 계속 실행된다. 하지만 정렬은 맵 객체가 모두 다 만들어 진 후
+해도 괜찮다. 오히려 매번 실시하는 것 보다 한 번 실시 되는 것이 더 효율적이다.
+
+그래서 `NUMBER`에 따른 정렬을 ` 3) 맵 객체의 key와 value를 바탕으로 배열을 만든 후 HEAD를 기준으로 정렬하기` 과정에
+추가하였다.
+
+또한 정규식에서 `g`를 삭제하여 정규식에 일치하는 첫 문자열이 있으면 더 이상 검사를 종료하게 하였다.
+
+마지막으로 맵 객체에 값은 배열이며 이 배열의 요소 또한 배열이다. 이를 객체로 바꾸었다.
+
+그래서 리팩토링을 마친 코드는 아래와 같다.
+
+```javascript
+function solution(files) {
+  const separate_files = files.map((item, index) => {
+    const NUMBER = item.match(/\d{1,5}/)[0];
+    const HEAD = item.split(NUMBER)[0].toLowerCase();
+    return [HEAD, Number(NUMBER), index];
+  });
+
+  const map = new Map();
+  separate_files.forEach(([HEAD, NUMBER, index]) => {
+    const value = map.get(HEAD) || [];
+    map.set(HEAD, [...value, { number: NUMBER, index }]);
+  });
+
+  const new_files = [];
+  for ([key, value] of map) {
+    value.sort((a, b) => (a.number === b.number ? 1 : a.number - b.number));
+    new_files.push([key, ...value.map((item) => item.index)]);
+  }
+  new_files.sort((a, b) => (a[0] > b[0] ? 1 : -1));
+
+  const files_index = new_files.flatMap((item) => item.slice(1));
+  const answer = [];
+  files_index.forEach((item) => {
+    answer.push(files[item]);
+  });
+
+  return answer;
+}
+```
+
+---
+
+### 결과
+
+![programmers_sort_file_names_result2](/image/CodingTest/programmers_sort_file_names/programmers_sort_file_names_result2.png)
+
+---
+
+## 5. 다름 사람 풀이
+
+정규식과 조건문으로 푼 문제가 인상적이여서 해당 풀이를 가져왔다.
+
+```javascript
+function solution(files) {
+  const re = /^([a-zA-Z-\. ]+)([0-9]+)(.*)$/;
+  let dict = [];
+  files.forEach((entry, idx) => {
+    let [fn, head, num] = entry.match(re);
+    dict.push({ fn, head: head.toLowerCase(), num: parseInt(num), idx });
+  });
+
+  return dict
+    .sort((a, b) => {
+      if (a.head > b.head) return 1;
+      if (a.head < b.head) return -1;
+      if (a.num > b.num) return 1;
+      if (a.num < b.num) return -1;
+      return a.idx - b.idx;
+    })
+    .map((e) => e.fn);
+}
+```
+
+`HEAD`, `NUMBER`, `index` 순으로 정렬을 한 조건문이 인상깊다.
+
+---
+
+### 결과
+
+![programmers_sort_file_names_result3](/image/CodingTest/programmers_sort_file_names/programmers_sort_file_names_result3.png)
+
+---
+
+## 6. Conclusion
+
+> 문제의 난이도는 크게 어렵지 않았다. 하지만 정렬을 할 때 사용되는 `Array.sort()` 메서드에서 숫자와
+> 문자를 비교할 때의 차이에 대해 정확히 모르고 있었기 때문에 해당 부분에서 시간을 조금 소비하였다. 해당 차이에
+> 대해 잘 숙지하고 있었다면 풀이 시간은 20~30분 정도 짧아졌을 것이라 생각이 되어 아쉽다. 그리고 생각보다 정규식이
+> 필요한 문제가 많이 보인다. 내가 원하는 정규식을 잘 사용할 수 있도록 공부를 해봐야겠다.
+
+---
+
+📅 2022-09-11
