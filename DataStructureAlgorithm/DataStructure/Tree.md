@@ -246,7 +246,7 @@ class Tree {
 
 ## 5. 연결 리스트로 이진 탐색 트리 구현하기
 
-### 5-1. 인진 탐색 트리의 기본 구조
+### 5-1. 연결 리스트와 이진 탐색 트리의 기본 구조
 
 ```javascript
 class Node {
@@ -440,7 +440,8 @@ class Tree {
 ## 출처
 
 [[자료구조] 트리(Tree)란](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)  
-[[자료구조] 트리 (Tree)](https://velog.io/@kimdukbae/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-Tree)
+[[자료구조] 트리 (Tree)](https://velog.io/@kimdukbae/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%8A%B8%EB%A6%AC-Tree)  
+[Javascript를 이용한 tree 구현](https://velog.io/@kimkevin90/Javascript%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-tree-%EA%B5%AC%ED%98%84)
 
 ---
 
