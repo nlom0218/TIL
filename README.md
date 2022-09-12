@@ -111,6 +111,7 @@
     - [큐(Queue)](DataStructureAlgorithm/DataStructure/Queue.md)
     - [해시 테이블(Hash Table)](DataStructureAlgorithm/DataStructure/HashTable.md)
     - [그래프(Graph)](DataStructureAlgorithm/DataStructure/Graph.md)
+    - [트리(Tree)](DataStructureAlgorithm/DataStructure/Tree.md)
   - Algorithm(알고리즘)
 
 ---
