@@ -91,6 +91,7 @@
     - [그래프(Graph)](DataStructureAlgorithm/DataStructure/Graph.md)
     - [트리(Tree)](DataStructureAlgorithm/DataStructure/Tree.md)
     - [힙(Heap)](DataStructureAlgorithm/DataStructure/Heap.md)
+    - [트라이(Trie)](DataStructureAlgorithm/DataStructure/Trie.md)
   - [Algorithm(알고리즘)](DataStructureAlgorithm/Algorithm/README.md)
 
 - [Coding Test](CodingTest/README.md)
@@ -132,8 +133,12 @@
       - [파일명 정렬](CodingTest/Programmers/Level2/programmers_sort_file_names.md)
 
     - [Level 3](CodingTest/Programmers/Level3/README.md)
+
       - [베스트 앨범](CodingTest/Programmers/Level3/programmers_best_album.md)
       - [이중우선순위큐](CodingTest/Programmers/Level3/programmers_double_priority_queue.md)
+
+    - [Level 4](CodingTest/Programmers/Level4/READEM.md)
+      - [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md)
 
 - [Git & Github](GitGithub/README.md)
   - [Git vs Github](GitGithub/GitGithub.md)
