@@ -102,3 +102,122 @@ function solution(dartResult) {
   return map.get(0) + map.get(1) + map.get(2);
 }
 ```
+
+---
+
+### 1) 점수 부분 가져오기
+
+```javascript
+const score = dartResult.match(/[0-9]{1,2}/g);
+```
+
+`dartResult` 문자열을 검사하여 정규식에 일치하는 문자열을 가져온다.
+
+- [0-9]: 0이상 9이하의 숫자를 포함한 문자열과 매칭
+- {1,2}: 1개 이상 2개 이하
+- [0-9]{1,2}: 1개 이상 2개 이상의 숫자(0~9)를 포함한 문자열과 매칭
+
+---
+
+### 2) 점수 부분을 제외한 부분 가져오기
+
+```javascript
+const option = dartResult
+  .replace(/[0-9]{1,2}/g, ",")
+  .split(",")
+  .slice(1);
+```
+
+`String.replace()` 메서드를 사용하여 숫자부분은 ","으로 바꾼 후 "," 기준으로 배열을 만든다. 이때 첫 번째 요소는
+비어있기 때문에 첫 번째 인덱스 이후의 요소만 배열에 저장한다.
+
+---
+
+### 3) [점수, 보너스, 옵션] 형태의 요소를 가지는 배열 만들기
+
+```javascript
+const result = score.map((item, index) => [item, ...option[index]]);
+```
+
+`result` 배열에 각 [라운드의 점수, 보너스, 옵션] 을 요소로 저장한다.
+
+---
+
+### 4) 맵 객체를 사용하여 점수 관리하기
+
+```javascript
+const map = new Map();
+```
+
+맵 객체를 사용하여 각 라운드의 점수를 관리할 것이다. 맵 객체를 사용하는 까닭은 중복된 키가 저장되지 않기 때문이다.
+이때 라운드가 키, 점수가 값이 된다.
+
+---
+
+### 5) 보너스의 종류에 따라 초기 점수 설정하기
+
+```javascript
+const bonus1 = option1 === "S" ? 1 : option1 === "D" ? 2 : 3;
+map.set(index, Number(score) ** bonus1);
+```
+
+두 번째 인자인 `option1`은 영역에 따라 점수에 1제곱, 2제곱, 3제곱을 할지 정한다.
+
+`option1`의 값에 따라 스타상, 아차상이 계산되지 않는 점수를 구한 후 맵 객체에 저장한다.
+
+---
+
+### 6) 옵션이 "*"라면 해당 점수와 이전 점수에 *2 하기
+
+```javascript
+if (option2 === "*") {
+  map.set(index, map.get(index) * 2);
+  map.set(index - 1, map.get(index - 1) * 2);
+}
+```
+
+`option2`를 통해 스타상인지 아차상인지 알 수 있다.(없을 수도 있다.)
+
+만약 `option2`가 "*"이라면 스타상이므로 현재의 점수와 이전 점수에 각각 *2를 한 점수를 맵 객체에 저장한다.
+
+---
+
+### 7) 옵션이 "#"이라면 해당 점수에 \*-1 하기
+
+```javascript
+if (option2 === "#") {
+  map.set(index, map.get(index) * -1);
+}
+```
+
+만약 `option2`가 "#"이라면 아차상이므로 현재의 점수에만 \*-1를 한 점수를 맵 객체에 저장한다.
+
+---
+
+### 8) 첫 번째, 두 번째, 세 번째 점수를 더한 값을 반환하기
+
+```javascript
+return map.get(0) + map.get(1) + map.get(2);
+```
+
+반복문을 통해 점수를 구할 수도 있었지만 일단 많은 라운드가 없기 때문에 위와 같이 코드를 작성하였고
+반복문을 작성하게 되면 키가 `-1`인 경우가 있을 수 있으므로 코드가 더 복잡해 질 수 있다고 생각하였다.
+
+`-1`키가 생성되는 이유는 라운드 1(키가 0일 때)에서 스타상을 받을 수 있기 때문이다.
+
+---
+
+### 결과
+
+![programmers_dart_game_result1](/image/CodingTest/programmers_dart_game/programmers_dart_game_result1.png)
+
+---
+
+## 4. Conclusion
+
+> 이번 문제를 풀면서 많이 어렵지는 않았지만 문자열을 조건에 따라 나누는 것에 대해 버벅임이 있었다. 정규식에
+> 대한 공부한 필요한 듯 하다. 계속 미루지 말고 조만간 주말에 시간을 내서 정리를 하자.
+
+---
+
+📅 2022-09-13
