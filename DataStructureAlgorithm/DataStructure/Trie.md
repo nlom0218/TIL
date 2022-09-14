@@ -1,5 +1,66 @@
 # 트라이(Trie)
 
+## 0. 요약
+
+트라이 구현하기
+
+```javascript
+class Node {
+  constructor(value = "", end = false) {
+    this.value = value;
+    this.end = end;
+    this.child = new Map();
+    this.includesWords = [];
+  }
+}
+
+class Trie {
+  constructor() {
+    this.root = new Node();
+  }
+
+  // 문자열 삽입하기
+  insert(string) {
+    let cur_node = this.root;
+
+    for (const char of string) {
+      if (!cur_node.child.has(char)) {
+        cur_node.child.set(char, new Node(cur_node.value + char));
+      }
+      cur_node = cur_node.child.get(char);
+      cur_node.includesWords.push(string);
+    }
+    cur_node.end = true;
+  }
+
+  // 문자열 검색하기
+  search(string) {
+    let cur_node = this.root;
+
+    for (const char of string) {
+      if (cur_node.child.has(char)) {
+        cur_node = cur_node.child.get(char);
+      } else return null;
+    }
+    return cur_node.includesWords[0] === string ? cur_node : null;
+  }
+
+  // 특정 단어만 검색되어지는 최소 입력 횟수 구하기
+  min_len(string) {
+    let cur_node = this.root;
+    let len = 0;
+    for (const char of string) {
+      cur_node = cur_node.child.get(char);
+      len++;
+      if (cur_node.includesWords.length === 1) return len;
+    }
+    return len;
+  }
+}
+```
+
+---
+
 ## 1. 개요
 
 트리 자료구조의 하나인 트라이 자료구조에 대해 살펴본다.
@@ -52,7 +113,7 @@ class Trie {
 - value: 현재 경로까지의 누적값
 - end: 해당 노드에서 끝나는 문자열이 있는 여부
 - child: 자식
-- includesWords: 해당 노드의 `value`를 포함 문자열의 배열, 해당 배열은 자동완성 및 특정 단어만 검색되어지는
+- includesWords: 해당 노드의 `value`를 포함한 문자열의 배열, `includesWords`은 자동완성 및 특정 단어만 검색되어지는
   최소 입력 횟수를 구할 때 용이하게 사용할 수 있다.
 
 그리고 트라이의 구조는 `root`로 이루어져 있고 `root`는 빈 문자열로 시작한다.
@@ -165,6 +226,14 @@ class Trie {
 `includesWords`의 길이가 1이라면 그 때가 바로 최소 입력 회수가 되는 것이고 만약 반복문이 끝날 때 까지
 `includesWords`의 길이가 1이 아니라면 `string`의 길이를 반환하면 된다. 이러한 이유는 `go`와 `gone`이
 삽입되어 있을 때 `go`는 끝까지 입력을 해야한다. 계속해서 `gone`도 함께 검색 될 테니까 말이다.
+
+---
+
+## 4. Conclusion
+
+> 너무 멋진 자료구조이다. 자바스크립트에 내장된 함수가 없는게 너무 아쉬울 따름이다. 그래서 직접 구현하면서
+> 어떻게 하면 트라이 자료구조를 만들 수 있을까 생각을 많이 하였고 특히 `min_len` 함수를 만들 때
+> 고민을 많이 했었다. 자주자주 보면서 생각의 흐름을 잘 정리하고 언제든지 필요할 때 사용할 수 있도록 하자.
 
 ---
 
