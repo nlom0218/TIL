@@ -65,6 +65,10 @@ class Trie {
 
 트리 자료구조의 하나인 트라이 자료구조에 대해 살펴본다.
 
+참고할 만한 코딩 테스트 문제
+
+- [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md)
+
 ---
 
 ## 2. 트라이란?

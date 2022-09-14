@@ -113,7 +113,7 @@
     - [그래프(Graph)](DataStructureAlgorithm/DataStructure/Graph.md)
     - [트리(Tree)](DataStructureAlgorithm/DataStructure/Tree.md)
     - [힙(Heap)](DataStructureAlgorithm/DataStructure/Heap.md)
-    - [트라이(Trie)](DataStructureAlgorithm/DataStructure/Trie.md) 💻
+    - [트라이(Trie)](DataStructureAlgorithm/DataStructure/Trie.md)
   - Algorithm(알고리즘)
 
 ---
@@ -163,7 +163,7 @@
 
     - Level 4
 
-      - [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md) 💻
+      - [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md)
 
 ---
 

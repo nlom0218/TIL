@@ -77,6 +77,10 @@ class Heap {
 
 완전 이진 트리의 일종인 힙에 대해 정리한다.
 
+참고할 만한 코딩 테스트 문제
+
+- [이중우선순위큐](CodingTest/Programmers/Level3/programmers_double_priority_queue.md)
+
 ---
 
 ## 2. 우선순위 큐란?
