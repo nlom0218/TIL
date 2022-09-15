@@ -287,3 +287,107 @@ return min_len.reduce((acc, cur) => acc + cur);
 ### 결과
 
 ![programmers_auto_complete_result1](/image/CodingTest/programmers_auto_complete/programmers_auto_complete_result1.png)
+
+---
+
+### 4. Refactoring
+
+트라이 자료 구조의 구현을 조금 더 간단하게 작성하였다.
+
+```javascript
+class Node {
+  constructor(value = "", end = false) {
+    this.value = value;
+    this.end = end;
+    this.child = new Map();
+    this.includesWords = [];
+  }
+}
+
+class Trie {
+  constructor() {
+    this.root = new Node();
+  }
+  insert(string) {
+    let cur_node = this.root;
+
+    for (const char of string) {
+      if (!cur_node.child.has(char)) {
+        cur_node.child.set(char, new Node(cur_node.value + char));
+      }
+      cur_node = cur_node.child.get(char);
+      cur_node.includesWords.push(string);
+    }
+    cur_node.end = true;
+  }
+  min_len(string) {
+    let cur_node = this.root;
+    let len = 0;
+    for (const char of string) {
+      cur_node = cur_node.child.get(char);
+      len++;
+      if (cur_node.includesWords.length === 1) return len;
+    }
+    return len;
+  }
+}
+
+function solution(words) {
+  const trie = new Trie();
+  words.forEach((item) => trie.insert(item));
+  return words.map((item) => trie.min_len(item)).reduce((a, b) => a + b);
+}
+```
+
+위 `Trie Class`는 [트라이 자료구조 파트 바로가기](DataStructureAlgorithm/DataStructure/Trie.md)에서
+자세히 살펴볼 수 있다.
+
+---
+
+### 결과
+
+![programmers_auto_complete_result2](/image/CodingTest/programmers_auto_complete/programmers_auto_complete_result2.png)
+
+---
+
+## 5.
+
+```javascript
+function makeTrie(words) {
+  const root = {}; // 먼저 루트 노드를 설정할 변수를 만든다.
+  for (const word of words) {
+    // Trie를 구성하기 위한 루프를 돌린다.
+    let current = root; // 루프부터 시작
+    for (const letter of word) {
+      // 단어의 글자를 하나씩 춫출한 후
+      if (!current[letter]) current[letter] = [0, {}]; // 값을 넣는다. 리스트의 첫 번째 값은 학습된 단어가 몇 개인지를 카운팅하고 두 번째 값은 트리 구조로 이용할 노드 값으로 사용한다.
+      current[letter][0] = 1 + (current[letter][0] || 0); // 카운팅을 위해 1 더해준다.
+      current = current[letter][1]; // current는 letter에 해당되는 노드로 이동한다.
+    }
+  }
+
+  return root; // 반환
+}
+
+function solution(words) {
+  let answer = 0;
+  const trie = makeTrie(words); // Trie 자료구조를 만들어준다.
+
+  for (const word of words) {
+    // 입력받은 수 만큼 루프
+    let count = 0; // 카운팅을 위한 변수
+    let current = trie; // 루트부터 시작
+    for (const [index, letter] of [...word].entries()) {
+      count += 1;
+      if (current[letter][0] <= 1) {
+        // 단어가 하나 이하로 남을 경우 종료
+        break;
+      }
+      current = current[letter][1]; // 다음 노드로 이동
+    }
+    answer += count; // 카운팅을 더해준다
+  }
+
+  return answer; // 반환
+}
+```
