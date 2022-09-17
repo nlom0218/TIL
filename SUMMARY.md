@@ -133,6 +133,8 @@
       - [파일명 정렬](CodingTest/Programmers/Level2/programmers_sort_file_names.md)
       - [다리를 지나는 트럭](CodingTest/Programmers/Level2/programmers_truck_crossing_the_bridge.md)
       - [위장](CodingTest/Programmers/Level2/programmers_camouflage.md)
+      - [주차 요금 계산](CodingTest/Programmers/Level2/programmers_parking_fee_calculation.md)
+      - [멀리 뛰기](CodingTest/Programmers/Level2/programmers_%20run_far.md)
 
     - [Level 3](CodingTest/Programmers/Level3/README.md)
 
