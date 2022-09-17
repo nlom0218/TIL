@@ -155,7 +155,7 @@
       - [프린터](CodingTest/Programmers/Level2/programmers_printer.md)
       - [JadenCase 문자열 만들기](CodingTest/Programmers/Level2/programmers_creating_jadencase_strings.md)
       - [파일명 정렬](CodingTest/Programmers/Level2/programmers_sort_file_names.md)
-      - [다리를 지나는 트럭](CodingTest/Programmers/Level2/programmers_truck_crossing_the_bridge.md) 💻
+      - [다리를 지나는 트럭](CodingTest/Programmers/Level2/programmers_truck_crossing_the_bridge.md)
       - [위장](CodingTest/Programmers/Level2/programmers_camouflage.md) 💻
 
     - Level 3
