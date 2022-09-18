@@ -2,6 +2,14 @@
 
 - [HELLO🖐](README.md)
 
+- [Computer Science](CS/READE.MD)
+
+  - [Design Pattern](CS/DesignPattern/READE.MD)
+    - [디자인 패턴이란?](CS/DesignPattern/WhatIs.md)
+    - [싱글톤 패턴](CS/DesignPattern/Singleton.md)
+    - [팩토리 패턴](CS/DesignPattern/Factory.md)
+    - [전략 패턴](CS/DesignPattern/Strategy.md)
+
 - [ETC](ETC/README.md)
 
   - [Markdown](ETC/Markdown.md)
