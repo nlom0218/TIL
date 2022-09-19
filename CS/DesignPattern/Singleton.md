@@ -1,10 +1,6 @@
 # 싱글톤 패턴(Singleton Pattern)
 
-## 1. 개요
-
----
-
-## 2. 싱글톤 패턴이란?
+## 1. 싱글톤 패턴이란?
 
 전역 변수를 사용하지 않고 **인스턴스(객체)를 하나만 생성** 하도록 하며, 생성된
 인스턴스(객체)를 **어디서든지 참조**할 수 있도록 하는 패턴
@@ -21,7 +17,7 @@
 
 ---
 
-## 3. 싱글톤 패턴을 사용하는 이유(장점)
+## 2. 싱글톤 패턴을 사용하는 이유(장점)
 
 1.  **메모리 낭비 방지**  
     최초 한 번의 new 연산자를 통해서 고정된 메모리 영역을 사용하기 때문에
@@ -34,7 +30,7 @@
 
 ---
 
-## 4. 싱글톤 패턴의 문제점
+## 3. 싱글톤 패턴의 문제점
 
 1. **개방-폐쇠 원칙의 위배**  
    싱글톤 인스턴스가 혼자 너무 많은 일을 하거나, 많은 데이터를 공유시키면
@@ -58,6 +54,36 @@
    TDD(Test Driven Development)를 할 때 단위 테스트를 주로 하게 되는데, 단위 테스트는 테스트가
    서로 독립적이어야 하며 테스트를 어떤 순서대로 실행할 수 있어야 한다. 하지만 싱글톤 패턴은 미리 생성된 하나의
    인스턴스를 기반으로 구현하는 패턴이므로 각 테스트마다 독립적인 인스턴스를 만들기가 어렵다.
+
+4. **모듈 간의 결합을 강하게 만들 수 있다.**
+
+---
+
+## 4. 의존성 주입을 통한 모듈간의 결합을 느슨하게 만들기
+
+싱글톤 패턴의 문제점 중 `모듈 간의 결합을 강하게 만들 수 있다.`는 의존성 주입(DI, Dependency Injection)을
+통해 모듈 간의 결합을 조금 더 느슨하게 만들어 해결할 수 있다.
+
+![DI](https://velog.velcdn.com/images/choieunin/post/763a4d9f-2bed-4bd2-adeb-d8c0f31d26ed/image.png)
+
+1. 의존성이란? 종속성이라고도 하며 A가 B에 의존성이 있다는 것은 B의 변경 사항에 대해 A 또한 변해야 된다는 것을 의미
+
+2. 의존성 주입 원칙(DIP, Dependency Inversion Principle)
+
+   - 상위 모듈은 하위 모듈에서 어떠한 것도 가져오지 않아야 한다.
+   - 상위 모듈, 하위 모듈 모두 추상화에 의존해야 하며, 이때 추상화는 세부 사항에 의존하지 말아야 한다.
+     > 추상화란? 객체의 공통적인 속성과 기능을 추출하여 정의하는 것. 현실세계의 사물을 객체로 보고 필요한
+     > 공통특성만 다루어 현실의 복잡성을 제거하고 목적에 집중할 수 있도록 함.
+
+3. 의존성 주입의 장점
+
+   - 쉬운 테스팅과 수월한 마이그레이션
+   - 일관된 애플리케이션 의존성 방향
+   - 명확한 모듈 간의 관계
+
+4. 의존성 주입의 단점
+   - 모듈들이 분리되어 클래스 수가 늘어나 복잡성이 증가됨
+   - 약간의 런타임 패널티가 생김
 
 ---
 
@@ -108,6 +134,11 @@ const a = new Singleton()
 ```
 
 인스턴스가 처음 생성될 땐 `Singleton.instance`값이 없기 때문에 `undefined`가 콘솔에 출력된다.
+
+```javascript
+// ...
+const b = new Singleton();
+```
 
 하지만 두 번째 `Singleton` 인스턴스를 생성할 때 부턴 `Singleton.instance`가 존재한다. 아래는
 `Singleton.instance`의 값이다.
@@ -234,14 +265,20 @@ export default dbConnect;
 
 ---
 
-## 7. 의존성 주입을 통한 모듈간의 결합을 느슨하게 만들기
-
----
-
 ## 참고
 
+면접을 위한 CS 전공지식 노트(주홍철 지음)  
 [[Design Pattern] 싱글턴 패턴이란](https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html)  
 [싱글톤 패턴(Singleton pattern)](https://gyoogle.dev/blog/design-pattern/Singleton%20Pattern.html)  
 [자바스크립트로 구현한 싱글톤 패턴](https://webruden.tistory.com/171)  
 [싱글톤(Singleton) 패턴이란?](https://tecoble.techcourse.co.kr/post/2020-11-07-singleton/)  
-[싱글톤 패턴이 필요한 이유와 실제 서비스에 적용까지](https://injae-kim.github.io/dev/2020/08/06/singleton-pattern-usage.html)
+[싱글톤 패턴이 필요한 이유와 실제 서비스에 적용까지](https://injae-kim.github.io/dev/2020/08/06/singleton-pattern-usage.html)  
+[[디자인패턴] 싱글톤](https://jinnify.tistory.com/77)
+도움이 많이 되었던 유튜브 🎬
+
+- 개발자가 알아야할 디자인패턴 | ep1. Singleton Pattern | 자바스크립트 싱글톤 패턴
+  [![개발자가 알아야할 디자인패턴 | ep1. Singleton Pattern | 자바스크립트 싱글톤 패턴](https://img.youtube.com/vi/M4q3sY81gR8/0.jpg)](https://youtu.be/M4q3sY81gR8)
+
+---
+
+📅 2022-09-19
