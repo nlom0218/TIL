@@ -274,6 +274,7 @@ export default dbConnect;
 [싱글톤(Singleton) 패턴이란?](https://tecoble.techcourse.co.kr/post/2020-11-07-singleton/)  
 [싱글톤 패턴이 필요한 이유와 실제 서비스에 적용까지](https://injae-kim.github.io/dev/2020/08/06/singleton-pattern-usage.html)  
 [[디자인패턴] 싱글톤](https://jinnify.tistory.com/77)
+
 도움이 많이 되었던 유튜브 🎬
 
 - 개발자가 알아야할 디자인패턴 | ep1. Singleton Pattern | 자바스크립트 싱글톤 패턴
