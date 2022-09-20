@@ -17,9 +17,9 @@
 
   - Design Pattern
     - [디자인 패턴이란?](CS/DesignPattern/WhatIs.md) 💻
-    - [싱글톤 패턴](CS/DesignPattern/Singleton.md) 💻
-    - [팩토리 패턴](CS/DesignPattern/Factory.md) 💻
-    - [전략 패턴](CS/DesignPattern/Strategy.md) 💻
+    - [싱글톤 패턴](CS/DesignPattern/Singleton.md)
+    - [팩토리 패턴](CS/DesignPattern/Factory.md)
+    - [전략 패턴](CS/DesignPattern/Strategy.md)
 
 - ETC
 
