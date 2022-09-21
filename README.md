@@ -123,6 +123,7 @@
     - [힙(Heap)](DataStructureAlgorithm/DataStructure/Heap.md)
     - [트라이(Trie)](DataStructureAlgorithm/DataStructure/Trie.md)
   - Algorithm(알고리즘)
+    - [이진 탐색(Binary Search)](DataStructureAlgorithm/Algorithm/BinarySearch.md)
 
 ---
 
