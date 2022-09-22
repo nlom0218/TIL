@@ -7,8 +7,10 @@
 
 ![Binary Search Algorithm](https://velog.velcdn.com/images%2Fdevjade%2Fpost%2F8f61bd71-f637-4641-9521-17dd99cd5223%2Fimage.png)
 
-이진 탐색 알고리즘의 장점으론 시간 복잡도가 O(log n)의 시간이 걸린다는 것이다.
+이진 탐색 알고리즘의 장점으론 O(log n)의 시간 복잡도가 걸린다는 것이다.
 이런 이진 탐색 알고리즘은 배열과 이진 탐색 트리로 구현할 수 있다.
+
+> 선형 탐색 알고리즘은 순서대로 하나씩 찾는 탐색 알고리즘으로 O(n) 시간 복잡도가 걸린다.
 
 ---
 
@@ -116,7 +118,7 @@ const binarySerach = (start, end, mid, target) => {
 3. `arr[mid]`가 `target` 보다 작을 때: `target`이 `mid` 보다 오른쪽에 있으므로 `start`값을 `mid`의 바로 오른쪽으로 바꾼다.
 4. `arr[mid]`가 `target` 보다 클 때: `targe`이 `mid` 보다 왼쪽에 있으므로 `end`값을 `mid`의 바로 왼쪽으로 바꾼다.
 
-재귀 함수로 통한 구현도 직접 콘솔로 찍어 확인해보자. 테스트 과정 콘솔을 추가한 전체적인 코드는 아래와 같다.
+재귀 함수로 통한 구현도 직접 콘솔로 찍어 확인해보자. 테스트 과정과 콘솔을 추가한 전체적인 코드는 아래와 같다.
 
 ```javascript
 let i = 1;
@@ -144,6 +146,25 @@ binarySerach(0, arr.length - 1, parseInt((arr.length - 1) / 2), 168798);
 단 17번만 호출된다. 만약 0번 인덱스 부터 찾았다면 무려 168798번을 반복해야 한다.
 
 ![BinarySearch2](/image/DataStructureAlgorithm/Algorithm/BinarySearch/binarySearch2.png)
+
+---
+
+## 3. 이진 탐색 트리로 이진 탐색 알고리즘 구현하기
+
+사실 이진 탐색 트리에 노드를 넣는 과정은 O(n)의 시간 복잡도를 가진다. 그렇기 때문에 이진 탐색 트리를 만드는 과정까지 생각한다면
+그리 좋은 방법은 아니겠지만 이진 탐색 트리를 활용하여 탐색을 한다면 이점은 확실하기 때문에 많이 사용되는 듯 하다.
+
+이진 탐색 트리에 대해서 따로 정리해둔 파트가 있기 때문에 해당 파트의 링크로 대신한다.
+
+[트리(Tree)](DataStructureAlgorithm/DataStructure/Tree.md)
+
+---
+
+## 4. Conclusion
+
+> 이진 탐색 알고리즘을 직접 배열로 만들어 실행보니 확실히 탐색시간이 줄어든 것이 보였다. 하지만
+> 이를 이용한 문제를 풀 땐 아직 적용이 어려워 잘 사용하지는 못하나 개념 자체는 이해가 되었기 때문에
+> 여러 문제를 풀면서 익숙해져야 겠다.
 
 ---
 
