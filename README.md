@@ -169,6 +169,7 @@
       - [주차 요금 계산](CodingTest/Programmers/Level2/programmers_parking_fee_calculation.md)
       - [멀리 뛰기](CodingTest/Programmers/Level2/programmers_run_far.md)
       - [영어 끝말잇기](CodingTest/Programmers/Level2/programmers_ending_in_english.md)
+      - [캐시](CodingTest/Programmers/Level2/programmers_cache.md)
 
     - Level 3
 
