@@ -156,7 +156,12 @@
       - [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md)
 
 - [Git & Github](GitGithub/README.md)
+
   - [Git vs Github](GitGithub/GitGithub.md)
   - [Git](GitGithub/Git/README.md)
   - [Github](GitGithub/Github/README.md)
     - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
+
+- [Diary](Diary/README.md)
+
+  - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)

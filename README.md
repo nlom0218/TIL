@@ -183,10 +183,15 @@
 ---
 
 - Git & Github
+
   - [Git vs Github](GitGithub/GitGithub.md)
   - Git
   - Github
     - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
+
+- Diary
+
+  - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
 
 ---
 
