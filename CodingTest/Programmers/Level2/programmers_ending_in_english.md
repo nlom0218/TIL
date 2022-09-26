@@ -193,7 +193,7 @@ fail++;
 
 ---
 
-### 5. 아무도 실패하지 않았따면 [0, 0]를 반환하기
+### 5) 아무도 실패하지 않았따면 [0, 0]를 반환하기
 
 ```javascript
 if (round.length === words.length) return [0, 0];
@@ -316,6 +316,15 @@ if (words.indexOf(words[i]) !== i) {
 3번 인덱스와 8번 인덱스가 같은 값이고 해당 값이 매개변수로 주어진다면
 `array.indexOf()` 메서드는 `3`를 반환한다. 즉, 순서가 빠른
 인덱스를 반환한다.
+
+---
+
+### 결과
+
+뭔가.. 더 가독성이 좋아졌다고 생각해서 실행속도도 크게 차이나지 않을 것이라
+생각했는데 리팩토링한 풀이가 더 오래 걸린다.
+
+![programmers_ending_in_english_result2](/image/CodingTest/programmers_ending_in_english/programmers_ending_in_english_result2.png)
 
 ---
 
