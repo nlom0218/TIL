@@ -156,7 +156,7 @@ binarySerach(0, arr.length - 1, parseInt((arr.length - 1) / 2), 168798);
 
 이진 탐색 트리에 대해서 따로 정리해둔 파트가 있기 때문에 해당 파트의 링크로 대신한다.
 
-[트리(Tree)](DataStructureAlgorithm/DataStructure/Tree.md)
+[트리(Tree)](/DataStructureAlgorithm/DataStructure/Tree.md)
 
 ---
 
