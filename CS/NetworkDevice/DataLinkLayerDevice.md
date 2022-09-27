@@ -57,7 +57,8 @@
 ## 참고
 
 [[네트워크 OSI] 2계층 데이터링크 계층 Data Link Laye가 뭔지 궁금해?! 쉽게 설명해줄게~!](https://jhnyang.tistory.com/403?category=947031)  
-[[아주 쉽게 설명] L2, L3, L4 스위치를 한 방에 설명](https://doctorson0309.tistory.com/575)
+[[아주 쉽게 설명] L2, L3, L4 스위치를 한 방에 설명](https://doctorson0309.tistory.com/575)  
+[브리지(bridge)](https://sites.google.com/site/kuresitmemo/network/bridge)
 
 ---
 
