@@ -9,6 +9,9 @@
     - [싱글톤 패턴](CS/DesignPattern/Singleton.md)
     - [팩토리 패턴](CS/DesignPattern/Factory.md)
     - [전략 패턴](CS/DesignPattern/Strategy.md)
+  - [Network Device](CS/NetworkDevice/README.MD)
+    - [데이터 링크 계층 처리 기기](CS/NetworkDevice/DataLinkLayer.md)
+    - [물리 계층 처리 기기](CS/NetworkDevice/PhysicalLayer.md)
 
 - [ETC](ETC/README.md)
 
