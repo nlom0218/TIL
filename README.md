@@ -21,8 +21,8 @@
     - [팩토리 패턴](CS/DesignPattern/Factory.md)
     - [전략 패턴](CS/DesignPattern/Strategy.md)
   - Network Device
+    - [물리 계층 처리 기기](CS/NetworkDevice/PhysicalLayerDevice.md)
     - [데이터 링크 계층 처리 기기](CS/NetworkDevice/DataLinkLayer.md)
-    - [물리 계층 처리 기기](CS/NetworkDevice/PhysicalLayer.md)
 
 - ETC
 
