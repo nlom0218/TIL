@@ -8,7 +8,7 @@
 
 ![데이터 링크 계층](/image/CS/DataLinkLayerDevice/datalinklayer.png)
 
-데이터 링크 계층에선 일단 연결된 바로 이웃 컴퓨터와의 통신만을 생각하며 **직접 연결된** 서로 다른 2개의 네트워크
+데이터 링크 계층에선 자신과 연결된 바로 이웃한 컴퓨터와의 통신만을 생각하며 **직접 연결된** 서로 다른 2개의 네트워크
 장치간 데이터 전송을 담당한다.
 
 ![데이터 링크 계층2](/image/CS/DataLinkLayerDevice/datalinklayer2.png)
