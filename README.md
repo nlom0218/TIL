@@ -22,7 +22,7 @@
     - [전략 패턴](CS/DesignPattern/Strategy.md)
   - Network Device
     - [물리 계층 처리 기기](CS/NetworkDevice/PhysicalLayerDevice.md)
-    - [데이터 링크 계층 처리 기기](CS/NetworkDevice/DataLinkLayer.md)
+    - [데이터 링크 계층 처리 기기](CS/NetworkDevice/DataLinkLayerDevice.md)
 
 - ETC
 

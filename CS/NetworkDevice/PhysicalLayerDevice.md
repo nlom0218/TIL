@@ -53,7 +53,7 @@
 
 ## 4. 허브(Hub)
 
-![허브](/image/CS/PhysicalLayer/Hub1.png)
+![허브](/image/CS/PhysicalLayerDevice/Hub1.png)
 
 - 다수의 pc와 장치들을 묶어서 LAN을 구성할 때 각각의 PC에 연결된 노들을 한곳으로 모으는 역할을 해주는 장치
 - 중식축에 놓여 여러 컴퓨터들을 연결해 네트워크를 만들어주는 역할
