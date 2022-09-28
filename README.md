@@ -176,7 +176,7 @@
       - [짝지어 제거하기](CodingTest/Programmers/Level2/programmers_remove_by_pair.md)
       - [구명보트](CodingTest/Programmers/Level2/programmers_lifeboat.md)
       - [N개의 최소공배수](CodingTest/Programmers/Level2/programmers_N_least_common_multiples.md)
-      - [예상 대진표](CodingTest/Programmers/Level2/programmers_expected_draw.md) 💻
+      - [예상 대진표](CodingTest/Programmers/Level2/programmers_expected_draw.md)
 
     - Level 3
 
