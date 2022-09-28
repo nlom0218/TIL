@@ -43,16 +43,103 @@
 
 ```javascript
 function solution(people, limit) {
+  // 1) people 배열을 오름차순으로 정렬하기
   people.sort((a, b) => a - b);
+
+  // 2) 구명 보트의 수를 변수로 만들기
   let count = 0;
 
   while (people.length > 0) {
+    // 3) 가장 무거운 사람을 people 배열에서 꺼내오기
     const heavy = people.pop();
+
+    // 4) 가장 무거운 사람과 가장 가벼운 사람의 합이 limit 보다 작으면 맨 앞의 사람(가장 가벼운 사람)을 제거하기
     if (heavy + people[0] <= limit) {
       people.shift();
     }
+
+    // 5) 구명 보트의 수 1올리기
     count++;
   }
   return count;
 }
 ```
+
+---
+
+### 1) people 배열을 오름차순으로 정렬하기
+
+```javascript
+people.sort((a, b) => a - b);
+```
+
+`people` 배열에는 사람의 무게가 요소로 담겨있다. 가장 무거운 사람과 가장 가벼운 사람을 잘 꺼내오기 위해
+오름차순으로 정렬한다.
+
+가장 무거운 사람을 `Array.pop()` 메서드로 꺼내오고 가장 가벼운 사람은 `Array.shift()` 메서드로 꺼내온다.
+
+---
+
+### 2) 구명 보트의 수를 변수로 만들기
+
+```javascript
+let count = 0;
+```
+
+반복문을 통해 `count`는 증가한다. 추가적으로 반복문에서는 항상 무거운 사람이 하나씩 제거가 되고 조건에 따라서
+가장 가벼운 사람도 제거가 될 수 있다.
+
+---
+
+### 3) 가장 무거운 사람을 people 배열에서 꺼내오기
+
+```javascript
+const heavy = people.pop();
+```
+
+`Array.pop()` 메서드를 사용하여 현재 `people` 배열에서 가장 무거운 사람을 꺼내온다. 꺼내온 값을 `heavy` 변수에
+할당한다.
+
+---
+
+### 4) 가장 무거운 사람과 가장 가벼운 사람의 합이 limit 보다 작으면 가장 가벼운 사람을 제거하기
+
+```javascript
+if (heavy + people[0] <= limit) {
+  people.shift();
+}
+```
+
+한 번의 반복문에서 가장 무거운 사람은 무조건 보트에 타게 되고 만약 현재 `people` 배열에서의 가장 가벼운
+사람의 무게를 더해도 보트의 제한 무게보다 같거나 작다면 함께 탈 수 있다. 함께 타게 될 경우 가장 가벼운 사람은
+`Array.shift()` 메서드를 사용하여 제거한다.
+
+---
+
+### 5) 구명 보트의 수 1올리기
+
+```javascript
+count++;
+```
+
+다음 순회로 가기 전 `count`를 1증가시킨다.
+
+---
+
+### 결과
+
+![programmers_lifeboat_result](/image/CodingTest/programmers_lifeboat/programmers_lifeboat_result1.png)
+
+---
+
+## 4. Conclusion
+
+> Level2같지 않는 어렵지 않았던 문제였다. 다만 보트에 탈 수 있는 사람의 수가 최대 2로 제한이 된다는 조건을
+> 파악하지 못해 두 번의 코드 작성이 있었다. 꼼꼼히 읽지 않고 얼른 코드를 작성하고 싶어 자주하는 실수를 또 하게되었다.  
+> 그리고 해당 문제는 `그리디` 알고리즘으로 풀 수 있다고 한다. 내가 작성한 풀이가 `그리디` 알고리즘인지
+> 파악을 할 수 없다. 정확한 개념을 모르기 때문인다. 사실 이전에 다른 풀이에서도 `그리디` 알고리즘을 사용했었을 수도 있다.
+> 개념 공부가 더 필요하다고 느낀 문제였다.
+
+---
+
+📅 2022-09-28
