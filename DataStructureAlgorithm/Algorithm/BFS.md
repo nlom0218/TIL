@@ -47,23 +47,122 @@ const graph = {
 };
 
 const BFS = (graph, startNode) => {
-  const visited = [];
+  // 1) 탐을 마친 노드들과 탐색을 해야 할 노드들을 저장하기
+  let visited = [];
   let needVisit = [];
 
+  // 2) 첫 시작으론 매개변수로 받은 노드르 정하기
   needVisit.push(startNode);
 
   while (needVisit.length !== 0) {
+    // 3) 매 반복문 마다 needVisit 배열의 맨 앞 요소를 꺼내 탐색하기
     const node = needVisit.shift();
+
+    // 4) 이미 반문한 모드가 아니라면
     if (!visited.includes(node)) {
+      // 5) 노드를 visited 배열의 마지막 요소로 추가하기
       visited.push(node);
+      // 6) 노드와 연결된 노드들을 needVisit 배열에 추가하기
       needVisit = [...needVisit, ...graph[node]];
     }
   }
 };
 ```
 
+`BFS` 함수는 `graph`와 탐색을 시작할 노드인 `startNode`를 매개변수로 받는다.
+
+---
+
+### 1) 탐을 마친 노드들과 탐색을 해야 할 노드들을 저장하기
+
+```javascript
+let visited = [];
+let needVisit = [];
+```
+
+너비 우선 탐색 알고리즘은 큐 자료구조를 사용한다. 위의 변수 중 `needVisit` 배열이
+바로 큐 자료구조를 띄고있다. 단 여기서는 선입선출의 개념만 가져오고 있다. 정확히 구현하기
+위해서는 시간 복잡도를 O(1)로 맞추어야 한다.
+
+`needVisit` 배열은 앞으로 내가 탐색을 해야 할 노드들이 들어있는 배열이며 `visited` 배열은
+탐색을 마친 노드들이 들어있다.
+
+---
+
+### 2) 첫 시작으론 매개변수로 받은 노드르 정하기
+
+```javascript
+needVisit.push(startNode);
+```
+
+처음으로 탐색을 할 노드는 당연히 매개변수로 받은 노드이다. 그렇기 때문에 `needVisit` 배열에
+`startNode`를 추가한다. 이때 `needVisit` 배열엔 `startNode` 만 들어있다.
+
+---
+
+### 3) 매 반복문 마다 needVisit 배열의 맨 앞 요소를 꺼내 탐색하기
+
+```javascript
+const node = needVisit.shift();
+```
+
+반복문이 실행 될 때 마다 `needVisit` 배열의 `0`번째 요소를 가져온다.
+해당 요소가 이번 차례에 탐색을 진행할 노드이다.
+
+---
+
+### 4) 이미 반문한 모드가 아니라면
+
+```javascript
+if (!visited.includes(node)) {
+}
+```
+
+이미 `visited` 배열에 탐색할 노드가 있다면 탐색이 중복되므로 이와 같은 경우엔
+탐색을 진행하지 않고 다음 반복문으로 넘어간다. 하지만 `visited` 배열에 노드가
+없다면 탐색할 노드이기 때문에 `if`문이 실행된다.
+
+---
+
+### 5) 노드를 visited 배열의 마지막 요소로 추가하기
+
+```javascript
+visited.push(node);
+```
+
+`if`문에서 탐색할 노드를 탐색을 마친 배열인 `visited` 배열에 추가한다.
+이로써 다음번엔 다시 탐색을 하지 않아도 된다.
+
+---
+
+### 6) 노드와 연결된 노드들을 needVisit 배열에 추가하기
+
+```javascript
+needVisit = [...needVisit, ...graph[node]];
+```
+
+탐색을 헤야 할 노드들이 들어있는 `needVisit` 배열에 현재 탐색하고 노드와
+연결된 노드들을 추가한다. 이때 배열의 마지막에 추가해야 한다. 이 말은 즉,
+앞의 노드들을 탐색을 먼저 끝내야 현재 탐색하고 있는 노드와 연결된 노드들을
+탐색할 수 있다는 것이다.
+
+---
+
+## 5. Conclusion
+
+> 아직 BFS(너비 우선 탐색)를 언제 활용을 해야할 지 감이 잘 잡히지 않는다. 뿐 만 아니라
+> BFS로 문제를 풀어야 한다는 것을 알았어도 문제의 조건에 맞게 그래프를 구현하고
+> 그 그래프를 이용해서 너비 우선 탐색을 구현하는 것은 상상이 잘 되지 않는다. 아직 문제를 깊이
+> 풀어보지 않아서 그런 것 같다. 많은 문제가 역시나 답인 것 같다. 프로그래머스에서 기초를 얼른 다지고
+> 리트코드에서 더 많은, 다양한 문제를 풀어보고 싶다.
+
 ---
 
 ## 참고
 
-[[알고리즘] 너비 우선 탐색(BFS)이란](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)
+[[알고리즘] 너비 우선 탐색(BFS)이란](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)  
+[자바스크립트로 구현하는 너비우선탐색(BFS) 깊이우선탐색(DFS)](https://ryusm.tistory.com/48)
+
+---
+
+📅 2022-09-30
