@@ -1,4 +1,4 @@
-# useForm register 자식 컴포너트에 전달하기
+# useForm register를 자식 컴포너트에 전달하기
 
 ## 1. 개요
 
@@ -69,7 +69,7 @@ const Children = ({ register }: IProps) => {
 - 부모 컴포넌트에서 `register`를 보낼 때 첫번째 매개변수를 지정해줘야 한다.
 - 자식 컴포넌트에서 `register`를 받을 땐 `UseFormRegisterReturn`이라는
   타입을 정해줘야 한다.
-- 자식 컴포넌트에서 `register`를 사용할 땐 구조분해 할당으로 받아 객체로 바꾸어
+- 자식 컴포넌트에서 `register`를 사용할 땐 구조분해 할당을 통해 객체로 바꾸어
   사용해야 한다.
 
 ---

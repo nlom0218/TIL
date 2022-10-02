@@ -79,7 +79,7 @@
     - [React App에 Typescript 적용하기](Typescript/TypescriptInReact/ApplyTypescriptInReact.md)
     - [React children with TypeScript](Typescript/TypescriptInReact/ReactChidren.md)
     - [Styled Components with TypeScript](Typescript/TypescriptInReact/StyledComponents.md)
-    - [useForm register 자식 컴포너트에 전달하기](Typescript/TypescriptInReact/UseFormRegister.md)
+    - [useForm register를 자식 컴포너트에 전달하기](Typescript/TypescriptInReact/UseFormRegister.md)
 
   ***
 
