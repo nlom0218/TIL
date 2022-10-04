@@ -192,3 +192,16 @@ url 주소 옆 자물쇠 모양의 아이콘을 볼 수 있다.
 [MDN - HTTPS](https://developer.mozilla.org/ko/docs/Glossary/https)  
 [MDN - Secure Sockets Layer (SSL)](https://developer.mozilla.org/ko/docs/Glossary/SSL)  
 [TLS(Transport Layer Security)는 무엇입니까?](https://www.cloudflare.com/ko-kr/learning/ssl/transport-layer-security-tls/)
+
+도움이 많이 되었던 유튜브 🎬
+
+- HTTPS가 뭐고 왜 쓰나요? (Feat. 대칭키 vs. 비대칭키)  
+  [![HTTPS가 뭐고 왜 쓰나요? (Feat. 대칭키 vs. 비대칭키)](https://img.youtube.com/vi/H6lpFRpyl14/0.jpg)](https://youtu.be/H6lpFRpyl14)
+- [10분 테코톡] 🍭 다니의 HTTPS  
+  [![[10분 테코톡] 🍭 다니의 HTTPS](https://img.youtube.com/vi/wPdH7lJ8jf0/0.jpg)](https://youtu.be/wPdH7lJ8jf0)
+- 암호학1 - 4.1. 양방향 암호화 - 비대칭키(공개키 방식) - 기밀성을 위해서 사용하기  
+  [![암호학1 - 4.1. 양방향 암호화 - 비대칭키(공개키 방식) - 기밀성을 위해서 사용하기](https://img.youtube.com/vi/MR4sCU82tgo/0.jpg)](https://youtu.be/MR4sCU82tgo)
+
+---
+
+📅 2022-10-04
