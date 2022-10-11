@@ -75,6 +75,7 @@
     - [배열 정렬하기(sort)](JAVASCRIPT/ArrayMethod/Sort.md)
   - DOM
     - [요소 노드 취득하기](JAVASCRIPT/DOM/GetElementNode.md)
+    - [HTMLCollection과 NodeList](JAVASCRIPT/DOM/HTMLCollection%26NodeList.md)
 
   ***
 
