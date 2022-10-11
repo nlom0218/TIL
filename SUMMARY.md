@@ -58,6 +58,8 @@
     - [배열에 특정 요소가 있는지 확인하기(includes)](JAVASCRIPT/ArrayMethod/Includes.md)
     - [배열에 정적인 값으로 채우기(fill)](JAVASCRIPT/ArrayMethod/Fill.md)
     - [배열 정렬하기(sort)](JAVASCRIPT/ArrayMethod/Sort.md)
+  - [DOM](JAVASCRIPT/DOM/README.md)
+    - [요소 노드 취득하기](JAVASCRIPT/DOM/GetElementNode.md)
 
 - [Typescript](Typescript/README.md)
 
