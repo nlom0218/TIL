@@ -76,6 +76,7 @@
   - DOM
     - [요소 노드 취득하기](JAVASCRIPT/DOM/GetElementNode.md)
     - [HTMLCollection과 NodeList](JAVASCRIPT/DOM/HTMLCollection%26NodeList.md)
+    - [요소 노드와 텍스트 조작](JAVASCRIPT/DOM/TextOperation.md)
 
   ***
 
