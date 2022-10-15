@@ -78,6 +78,7 @@
     - [HTMLCollection과 NodeList](JAVASCRIPT/DOM/HTMLCollection%26NodeList.md)
     - [요소 노드와 텍스트 조작](JAVASCRIPT/DOM/TextOperation.md)
     - [innerHTML](JAVASCRIPT/DOM/InnerHTML.md)
+    - [insertAdjacentHTML](JAVASCRIPT/DOM/InsertAdjacentHTML.md)
 
   ***
 
