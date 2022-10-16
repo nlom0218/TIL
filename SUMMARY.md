@@ -65,6 +65,7 @@
     - [innerHTML](JAVASCRIPT/DOM/InnerHTML.md)
     - [insertAdjacentHTML](JAVASCRIPT/DOM/InsertAdjacentHTML.md)
     - [노드 생성과 추가 및 삭제](JAVASCRIPT/DOM/CreateAddDeleteNode.md)
+    - [클래스 조작](JAVASCRIPT/DOM/ClassManipulation.md)
 
 - [Typescript](Typescript/README.md)
 
