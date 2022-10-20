@@ -68,6 +68,7 @@
     - [클래스 조작](JAVASCRIPT/DOM/ClassManipulation.md)
   - [투두리스트 만들기(with MVC pattern)](JAVASCRIPT/TodolistMVC/README.md)
     - [투두 등록하기](JAVASCRIPT/TodolistMVC/RegisterTodo.md)
+    - [투두 완료 및 삭제하기](JAVASCRIPT/TodolistMVC/ToggleDeleteTodo.md)
 
 - [Typescript](Typescript/README.md)
 

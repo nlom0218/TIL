@@ -192,6 +192,8 @@ export default class View {
 
 ### 5-3. Model
 
+파일 위치: src/models/todos.js
+
 ```javascript
 import { $ } from "../utils/dom.js";
 
@@ -217,6 +219,8 @@ export default class Todos {
 
 ### 5-4. Controller
 
+파일 위치: src/controllers/controller.js
+
 ```javascript
 import Todos from "../models/todos.js";
 import { $ } from "../utils/dom.js";
@@ -224,14 +228,14 @@ import View from "../views/view.js";
 
 export default class Controller {
   constructor() {
-    this.todos = new Todos();
+    this.todosModel = new Todos();
     this.view = new View();
     this.eventHandler();
   }
 
   addTodo = () => {
-    const newTodos = this.todos.addTodo();
-    View.todoRender(newTodos);
+    this.todosModel.addTodo();
+    View.todoRender(this.todosModel.todos);
   };
 
   eventHandler = () => {
