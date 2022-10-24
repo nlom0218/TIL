@@ -17,6 +17,8 @@
   - [Process & Thread](CS/ProcessThread/README.MD)
     - [프로세스와 컴파일 과정](CS/ProcessThread/ProcessCompilation.md)
     - [프로세스의 상태](CS/ProcessThread/ProcessState.md)
+  - [DataBase](CS/DataBasePart/README.md)
+    - [조인의 원리](CS/DataBasePart/PrincipleOfJoin.md)
 
 - [ETC](ETC/README.md)
 
