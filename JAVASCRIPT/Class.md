@@ -19,7 +19,7 @@
 2. prototype methods
    - push()
    - pop()
-   - forEach()
+   - forEach()x
    - map()
    - 등등
 

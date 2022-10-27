@@ -87,6 +87,8 @@
   - [투두리스트 만들기(with MVC pattern)](JAVASCRIPT/TodolistMVC/README.md)
     - [투두 등록하기](JAVASCRIPT/TodolistMVC/RegisterTodo.md)
     - [투두 완료 및 삭제하기](JAVASCRIPT/TodolistMVC/ToggleDeleteTodo.md)
+  - 클린코드를 위한 코딩컨벤션
+    - [매직 넘버 상수화하여 관리하기](JAVASCRIPT/CodingConvention/MagicNumber.md)
 
   ***
 
