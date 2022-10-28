@@ -9,3 +9,4 @@
 ## 2. 목차
 
 - [매직 넘버 상수화하여 관리하기](./MagicNumber.md)
+- [함수 내에서 반환은 적으면 적을수록 좋다](./ReturnInFunction.md)

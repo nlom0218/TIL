@@ -69,3 +69,7 @@ function playGame(a, b) {
 [[Code Review] NEXT_STEP 코드 리뷰 1주차 정리 및 회고](https://velog.io/@miot2j/Code-Review-NEXTSTEP-%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0-1%EC%A3%BC%EC%B0%A8-%EC%A0%95%EB%A6%AC-%EB%B0%8F-%ED%9B%84%EA%B8%B0)  
 [1. 의미가 불분명한 매직 넘버를 상수로 선언하라.](https://javabom.tistory.com/28)  
 [[ES2015] const로 상수 선언하기](https://www.daleseo.com/js-es2015-const/)
+
+---
+
+📅 2022-10-27
