@@ -191,6 +191,7 @@
 
   - [Git vs Github](GitGithub/GitGithub.md)
   - [Git](GitGithub/Git/README.md)
+    - [규칙적인 깃 커밋 메세지 작성하기](GitGithub/Git/CommitMessage.md)
   - [Github](GitGithub/Github/README.md)
     - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
 
