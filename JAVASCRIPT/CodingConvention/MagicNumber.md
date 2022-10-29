@@ -15,8 +15,12 @@
 ```javascript
 function playGame(a, b) {
   window.alert("Hello world");
-  if (a > b) return 1;
-  else return 0;
+
+  let result;
+  if (a > b) result = 1;
+  else result = 0;
+
+  return result;
 }
 ```
 
@@ -35,8 +39,12 @@ const WELCOME_MESSAGE = "Hello world";
 
 function playGame(a, b) {
   window.alert(WELCOM_MESSAGE);
-  if (a > b) return WIN;
-  else return LOSE;
+
+  let result;
+  if (a > b) result = WIN;
+  else result = LOSE;
+
+  return result;
 }
 ```
 
