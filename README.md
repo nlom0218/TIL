@@ -205,6 +205,7 @@
       - [N개의 최소공배수](CodingTest/Programmers/Level2/programmers_N_least_common_multiples.md)
       - [예상 대진표](CodingTest/Programmers/Level2/programmers_expected_draw.md)
       - [튜플](CodingTest/Programmers/Level2/programmers_tuple.md)
+      - [k진수에서 소수 개수 구하기](CodingTest/Programmers/Level2/programmers_find_decimals.md)
 
     - Level 3
 
