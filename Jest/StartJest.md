@@ -138,6 +138,8 @@ test("숫자 더하기 테스트", () => {
 
 Jest로 테스트 코드를 작성하다보면 자동 완성이 되지 않아 불편한 점이 생긴다. 아래의 메서드를 모듈에서 받아와 사용하면 이를 해결할 수 있다.
 
+![Globals Environment](/image/Jest/StartJest/globalEnvironment.png)
+
 ```javascript
 const { describe, expect, test } = require("@jest/globals");
 
