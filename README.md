@@ -136,6 +136,7 @@
 
 - [Jest](Jest/README.md)
   - [자바스크립트의 테스트코드, Jest란 무엇인가?](Jest/WhatIsJest.md)
+  - [Jest 시작하기(설치 및 실행하기)](Jest/StartJest.md)
 
 ---
 

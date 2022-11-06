@@ -18,5 +18,6 @@
   "homepage": "https://github.com/nlom0218/TIL#readme",
   "dependencies": {
     "gitbook-plugin-edit-link": "^2.0.2"
-  }
+  },
+  "devDependencies": {}
 }
