@@ -118,6 +118,7 @@
   - [자바스크립트의 테스트코드, Jest란 무엇인가?](Jest/WhatIsJest.md)
   - [Jest 시작하기(설치 및 실행하기)](Jest/StartJest.md)
   - [자주 사용하는 Globals Methods](Jest/PopularGlobalsAPI.md)
+  - [기본적인 Expect API 사용하기](Jest/ExpectBasic.md)
 
 - [Data structure & Algorithm](DataStructureAlgorithm/README.md)
 
