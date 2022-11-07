@@ -52,7 +52,7 @@ describe("HD 테스트", () => {
 });
 ```
 
-![.toBe](/image/Jest/ExpectBasic/toBe1.png)
+![toBe](/image/Jest/ExpectBasic/toBe1.png)
 
 `.toBe()` 메서드는 소수점이 있는 숫자와 함께 사용해서는 안된다. 자바스크립트에서 `0.2 + 0.1`은 `0.3`이 아니다. 이런 상황에서는 `toBeCloseTo()`를 사용해야 한다.
 
@@ -180,7 +180,37 @@ ex) `expect.not.stringContaining(string)`
 
 ---
 
-## 7. 그 외의 메서드
+## 7. .toHaveLength(number)
+
+`.toHaveLength(number)`는 배열, 문자열의 길이를 테스트하기 위해 사용한다. 주의해야 할 점은 숫자의 길이는 테스트를 할 수 없다. 숫자는 문자열로 바꾼 뒤 테스트를 진행하자.
+
+```javascript
+const string = "hello";
+const arr = [1, 2, 3];
+
+test("toHaveLength", () => {
+  expect(string).toHaveLength(5);
+  expect(arr).toHaveLength(3);
+});
+```
+
+![toHaveLength](/image/Jest/ExpectBasic/toHaveLength1.png)
+
+숫자의 길이를 테스트하면 아래와 같이 오류가 나타난다.
+
+```javascript
+const number = 1234;
+
+test("toHaveLength", () => {
+  expect(number).toHaveLength(4);
+});
+```
+
+![toHaveLength error](/image/Jest/ExpectBasic/toHaveLength2.png)
+
+---
+
+## 8. 그 외의 메서드
 
 `Expect API`에는 위에서 살펴본 메서드 뿐 아니라 다양한 메서드가 있다. 그 중 몇가지를 추가적으로 간단히 살펴보며 마무리한다.
 
@@ -192,7 +222,7 @@ ex) `expect.not.stringContaining(string)`
 
 ---
 
-## 8. Conclusion
+## 9. Conclusion
 
 > `Jest`에 대한 어느정도의 지식은 학습을 하였다. 이제 직접 프로젝트에 테스트 코드를 작성하여 실전에서 사용해보도록 하자. 물론 `Mock Functions`이 남아있긴 하지만 기초적인 테스트 코드는 충분히 작성할 수 있을 듯 하다. 실전에서 사용하면서 필요한 내용을 추가적으로 학습하여 정리하도록 하자.
 
