@@ -191,4 +191,9 @@ const visitorTotal = "any";
 [Airbnb JavaScript 스타일 가이드()](https://github.com/parksb/javascript-style-guide#%EB%AA%85%EB%AA%85%EA%B7%9C%EC%B9%99-naming-conventions)  
 [토스 - 코딩 컨벤션 명명 규칙](https://ui.toast.com/fe-guide/ko_CODING-CONVENTION#%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99)  
 [네이밍 컨벤션과 변수이름 짓기](https://velog.io/@humonnom/%EB%84%A4%EC%9D%B4%EB%B0%8D-%EC%BB%A8%EB%B2%A4%EC%85%98%EA%B3%BC-%EB%B3%80%EC%88%98%EC%9D%B4%EB%A6%84-%EC%A7%93%EA%B8%B0)  
-[자바스크립트 함수 명명의 중요성 (특히 이름 짓기)](https://readyt0g0.tistory.com/entry/%ED%95%A8%EC%88%98-%EB%AA%85%EB%AA%85%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1-%ED%8A%B9%ED%9E%88-%EC%9D%B4%EB%A6%84-%EC%A7%93%EA%B8%B0)
+[자바스크립트 함수 명명의 중요성 (특히 이름 짓기)](https://readyt0g0.tistory.com/entry/%ED%95%A8%EC%88%98-%EB%AA%85%EB%AA%85%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1-%ED%8A%B9%ED%9E%88-%EC%9D%B4%EB%A6%84-%EC%A7%93%EA%B8%B0)  
+[2. 변수명과 함수명 짓기](https://dkje.github.io/2020/08/03/CleanCodeSeries2-copy/)
+
+---
+
+📅 2022-11-08
