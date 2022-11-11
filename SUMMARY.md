@@ -77,6 +77,7 @@
     - [매직 넘버는 상수화하여 관리하자](JAVASCRIPT/CodingConvention/MagicNumber.md)
     - [함수 내에서 반환은 적으면 적을수록 좋다](JAVASCRIPT/CodingConvention/ReturnInFunction.md)
     - [의미 있는 이름 짓기(명명법)](JAVASCRIPT/CodingConvention/%08Naming.md)
+    - [문자열 다루기](JAVASCRIPT/CodingConvention/String.md)
 
 - [Typescript](Typescript/README.md)
 

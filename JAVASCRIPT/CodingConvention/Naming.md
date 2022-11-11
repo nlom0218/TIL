@@ -23,10 +23,10 @@
 
 ```javascript
 // bad
-const a = "any";
+const a = 'any';
 
 // good
-const animal = "any";
+const animal = 'any';
 ```
 
 ---
@@ -83,7 +83,7 @@ let boolean;
 `스네이크 표기법(snake case)`란 단어를 밑줄문자로 구분하는 표기법이다.
 
 ```javascript
-const API_ADDRESS = "www.ex.com";
+const API_ADDRESS = 'www.ex.com';
 ```
 
 ---
@@ -112,11 +112,11 @@ function getUserNameFromSession() {}
 
 ```javascript
 // bad
-const animals = ["dog", "cat", "lion"];
+const animals = ['dog', 'cat', 'lion'];
 
 // good
-const animalList = ["dog", "cat", "lion"];
-const animalArray = ["dog", "cat", "lion"];
+const animalList = ['dog', 'cat', 'lion'];
+const animalArray = ['dog', 'cat', 'lion'];
 ```
 
 ---
@@ -127,10 +127,10 @@ const animalArray = ["dog", "cat", "lion"];
 
 ```javascript
 // bad
-const totalVisitor = "any";
+const totalVisitor = 'any';
 
 // good
-const visitorTotal = "any";
+const visitorTotal = 'any';
 ```
 
 위는 하나의 예시이다. 상황에 따라 중요한 단어가 달라질 수 있다.
@@ -188,7 +188,7 @@ const visitorTotal = "any";
 
 ## 참고
 
-[Airbnb JavaScript 스타일 가이드()](https://github.com/parksb/javascript-style-guide#%EB%AA%85%EB%AA%85%EA%B7%9C%EC%B9%99-naming-conventions)  
+[Airbnb JavaScript 스타일 가이드 - 명명규칙 (Naming Conventions)](https://github.com/parksb/javascript-style-guide#%EB%AA%85%EB%AA%85%EA%B7%9C%EC%B9%99-naming-conventions)  
 [토스 - 코딩 컨벤션 명명 규칙](https://ui.toast.com/fe-guide/ko_CODING-CONVENTION#%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99)  
 [네이밍 컨벤션과 변수이름 짓기](https://velog.io/@humonnom/%EB%84%A4%EC%9D%B4%EB%B0%8D-%EC%BB%A8%EB%B2%A4%EC%85%98%EA%B3%BC-%EB%B3%80%EC%88%98%EC%9D%B4%EB%A6%84-%EC%A7%93%EA%B8%B0)  
 [자바스크립트 함수 명명의 중요성 (특히 이름 짓기)](https://readyt0g0.tistory.com/entry/%ED%95%A8%EC%88%98-%EB%AA%85%EB%AA%85%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1-%ED%8A%B9%ED%9E%88-%EC%9D%B4%EB%A6%84-%EC%A7%93%EA%B8%B0)  
