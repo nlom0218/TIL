@@ -24,7 +24,7 @@ const name = 'Kim Hong Dong';
      ![setting으로 이동2](/image/JS/CodingConvention/String/setting2.png)
 2. quote 검색
 3. Extensions의 하위 항목인 Prettier 선택
-4. Prettier: Single Quote 설정 변경  
+4. Prettier: Single Quote을 아래의 사진과 같이 체크하기  
    ![Single Quote 체크](/image/JS/CodingConvention/String/setting3.png)
 
 ---
