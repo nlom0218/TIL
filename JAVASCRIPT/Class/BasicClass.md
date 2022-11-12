@@ -12,7 +12,7 @@
 
 ---
 
-## 2. 클래스 선언하기
+## 3. 클래스 선언하기
 
 `class 키워드`를 사용하여 클래스를 선언한다. 클래스의 이름은 `파스칼 케이스`를 사용하는 것이 일반적이나 파스칼 케이스를 사용하지 않아도 에러는 발생하지 않는다.
 
@@ -24,7 +24,7 @@ class Rectangle {}
 
 ---
 
-## 3. 인스턴스 생성하기
+## 4. 인스턴스 생성하기
 
 어떤 클래스로 부터 만들어진 객체를 인스턴스라고 한다. 인스턴스를 생성하기 위해서는 `new 연산자`와 함께 클래스를 호출해야 한다.
 
@@ -38,7 +38,7 @@ const rectangle = new Rectangle();
 
 ---
 
-## 4. constructor
+## 5. constructor
 
 `constructor`는 클래스의 특수한 메서드이며 아래의 역할을 수행한다.
 
@@ -63,7 +63,7 @@ const rectangle = new Rectangle(10, 20);
 
 ---
 
-## 5. Class field declarations proposal
+## 6. Class field declarations proposal
 
 ```javascript
 class Rectangle {
@@ -110,7 +110,7 @@ const rectangleWidth = rectangle.#width;
 
 ---
 
-## 6. 메서드
+## 7. 메서드
 
 클래스 내부에 메서드를 정의하여 인스턴스를 통해 호출할 수 있다.
 
@@ -140,7 +140,7 @@ rectangle.getArea(); // 200
 
 ---
 
-## 7. 정적 메서드
+## 8. 정적 메서드
 
 클래스의 정적 메서드를 정의할 땐 `static` 키워드를 사용한다. 정적 메서드는 일반 메서드와 달리 인스턴스를 통해 호출하지 않고 `클래스 이름`으로 호출한다. 이것은 정적 메소드는 `this`를 사용할 수 없다는 것을 의미한다.
 
@@ -178,7 +178,7 @@ Rectangle.isRectangle({ width: 10 }); // false
 
 ---
 
-## 8. Conclusion
+## 9. Conclusion
 
 > 클래스를 다루게 된 것은 비교적 최근이다. 이번 여름, 자료 구조를 공부할 때 연결리스트, 그래프 등의 구현을 위해 사용했었다. 그래서 아직 클래스에 대한 개념이 부족하다.  
 > 이번 챕터에서는 처음부터 너무 깊게 파고 들지 말고 처음엔 간단하게 사용할 수 있는 방법 위주로 정리를 하였다. 이후엔 상속, this, super 등에 대한 내용을 정리하고자 한다.
