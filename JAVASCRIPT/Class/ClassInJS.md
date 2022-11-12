@@ -87,6 +87,8 @@ Rectangle.isRectangle(rect);
 
 ---
 
+작성중...
+
 ## 참고
 
 도서 - 코어 자바스크립트
