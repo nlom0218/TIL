@@ -12,3 +12,4 @@
 - [함수 내에서 반환은 적으면 적을수록 좋다](./ReturnInFunction.md)
 - [의미 있는 이름 짓기(명명법)](JAVASCRIPT/CodingConvention/%08Naming.md)
 - [문자열 다루기](JAVASCRIPT/CodingConvention/String.md)
+- [형변환하기](JAVASCRIPT/CodingConvention/TypeCasting.md)
