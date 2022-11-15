@@ -231,6 +231,7 @@
   - [Git vs Github](GitGithub/GitGithub.md)
   - Git
     - [규칙적인 깃 커밋 메세지 작성하기](GitGithub/Git/CommitMessage.md)
+    - [git commit, git push 취소하기](GitGithub/Git/ResetCommitPush.md)
   - Github
     - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
 
