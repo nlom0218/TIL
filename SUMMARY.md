@@ -124,6 +124,7 @@
   - [Jest 시작하기(설치 및 실행하기)](Jest/StartJest.md)
   - [자주 사용하는 Globals Methods](Jest/PopularGlobalsAPI.md)
   - [기본적인 Expect API 사용하기](Jest/ExpectBasic.md)
+  - [모의 함수(Mock Functions) 사용하기](Jest/MockFnBasic.md)
 
 - [Data structure & Algorithm](DataStructureAlgorithm/README.md)
 
