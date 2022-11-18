@@ -13,8 +13,8 @@
 예제를 살펴보기 전, `value`는 예상되는 값을 넣으면 된다. 즉 내가 테스트하고자 하는 반환값을 넣으면 된다.
 
 ```javascript
-test("여러번 반복하기", () => {
-  expect("안녕".repeat(2)).toBe("안녕안녕");
+test('여러번 반복하기', () => {
+  expect('안녕'.repeat(2)).toBe('안녕안녕');
 });
 ```
 
@@ -26,8 +26,8 @@ test("여러번 반복하기", () => {
 또 다른 예제를 살펴보자. 아래의 예제에서 `bestFood()`의 리턴값은 `곱창`이다. 이를 테스트를 하는 코드이다.
 
 ```javascript
-test("내가 제일 좋아하는 음식 테스트", () => {
-  expect(bestFood()).toBe("곱창");
+test('내가 제일 좋아하는 음식 테스트', () => {
+  expect(bestFood()).toBe('곱창');
 });
 ```
 
@@ -37,16 +37,16 @@ test("내가 제일 좋아하는 음식 테스트", () => {
 
 ```javascript
 const HD = {
-  name: "hongdong",
+  name: 'hongdong',
   age: 29,
 };
 
-describe("HD 테스트", () => {
-  test("이름 테스트", () => {
-    expect(HD.name).toBe("hongdong");
+describe('HD 테스트', () => {
+  test('이름 테스트', () => {
+    expect(HD.name).toBe('hongdong');
   });
 
-  test("나이 테스트", () => {
+  test('나이 테스트', () => {
     expect(HD.age).toBe(29);
   });
 });
@@ -57,12 +57,12 @@ describe("HD 테스트", () => {
 `.toBe()` 메서드는 소수점이 있는 숫자와 함께 사용해서는 안된다. 자바스크립트에서 `0.2 + 0.1`은 `0.3`이 아니다. 이런 상황에서는 `toBeCloseTo()`를 사용해야 한다.
 
 ```javascript
-describe("소수점 테스트", () => {
-  test("toBe", () => {
+describe('소수점 테스트', () => {
+  test('toBe', () => {
     expect(0.1 + 0.2).toBe(0.3);
   });
 
-  test("toBeCloseTo", () => {
+  test('toBeCloseTo', () => {
     expect(0.1 + 0.2).toBeCloseTo(0.3);
   });
 });
@@ -82,22 +82,22 @@ describe("소수점 테스트", () => {
 예를 들어 아래의 두 객체가 있다.
 
 ```javascript
-const food1 = { name: "pizza" };
-const food2 = { name: "pizza" };
+const food1 = { name: 'pizza' };
+const food2 = { name: 'pizza' };
 ```
 
 `food1`과 `food2`의 값은 값다 하지만 서로 다른 객체이기 때문에 `.toBe(value)`로 비교하면 오류가 발생한다. 하지만 `.toEqual(value)`로 비교하면 테스트가 정상적으로 작동된다.
 
 ```javascript
-const food1 = { name: "pizza" };
-const food2 = { name: "pizza" };
+const food1 = { name: 'pizza' };
+const food2 = { name: 'pizza' };
 
-describe("toBe와 toEqual 비교 테스트", () => {
-  test("toBe", () => {
+describe('toBe와 toEqual 비교 테스트', () => {
+  test('toBe', () => {
     expect(food1).toBe(food2);
   });
 
-  test("toEqual", () => {
+  test('toEqual', () => {
     expect(food1).toEqual(food2);
   });
 });
@@ -112,7 +112,7 @@ describe("toBe와 toEqual 비교 테스트", () => {
 `.not`을 사용하며 반대의 테스트를 진행할 수 있다. 위의 `.toBe(value)` 테스트를 아래와 같이 바꾸어 보자.
 
 ```javascript
-test("toBe", () => {
+test('toBe', () => {
   expect(food1).not.toBe(food2);
 });
 ```
@@ -134,7 +134,7 @@ test("toBe", () => {
 ```javascript
 const arr = [1, 2, 3];
 
-test("arrayContaining", () => {
+test('arrayContaining', () => {
   const expected = [1, 2];
   expect(arr).toEqual(expect.not.arrayContaining(expected));
 });
@@ -147,12 +147,12 @@ test("arrayContaining", () => {
 ### 6-2. expect.objectContaining(object)
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
-const food = { name: "pizza", price: "20000" };
+const food = { name: 'pizza', price: '20000' };
 
-test("objectContaining", () => {
-  const expected = { name: "pizza" };
+test('objectContaining', () => {
+  const expected = { name: 'pizza' };
   expect(food).toEqual(expect.objectContaining(expected));
 });
 ```
@@ -164,10 +164,10 @@ test("objectContaining", () => {
 ### 6-3. expect.stringContaining(string)
 
 ```javascript
-const name = "kimhongdong";
+const name = 'kimhongdong';
 
-test("stringContaining", () => {
-  const expected = "hong";
+test('stringContaining', () => {
+  const expected = 'hong';
   expect(name).toEqual(expect.stringContaining(expected));
 });
 ```
@@ -185,10 +185,10 @@ ex) `expect.not.stringContaining(string)`
 `.toHaveLength(number)`는 배열, 문자열의 길이를 테스트하기 위해 사용한다. 주의해야 할 점은 숫자의 길이는 테스트를 할 수 없다. 숫자는 문자열로 바꾼 뒤 테스트를 진행하자.
 
 ```javascript
-const string = "hello";
+const string = 'hello';
 const arr = [1, 2, 3];
 
-test("toHaveLength", () => {
+test('toHaveLength', () => {
   expect(string).toHaveLength(5);
   expect(arr).toHaveLength(3);
 });
@@ -201,7 +201,7 @@ test("toHaveLength", () => {
 ```javascript
 const number = 1234;
 
-test("toHaveLength", () => {
+test('toHaveLength', () => {
   expect(number).toHaveLength(4);
 });
 ```
@@ -232,3 +232,7 @@ test("toHaveLength", () => {
 
 [Jest toBe(), toEqual() 차이](https://til.skylightqp.kr/f43419fa-53d5-42f4-90f4-32293618a5a6)  
 [[JEST] JEST의 기초](https://velog.io/@rlaghwns1995/JEST-JEST%EC%9D%98-%EA%B8%B0%EC%B4%88)
+
+---
+
+📅 2022-11-07
