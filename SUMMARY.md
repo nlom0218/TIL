@@ -125,7 +125,7 @@
   - [자주 사용하는 Globals Methods](Jest/PopularGlobalsAPI.md)
   - [기본적인 Expect API 사용하기](Jest/ExpectBasic.md)
   - [모의 함수(Mock Functions) 사용하기](Jest/MockFnBasic.md)
-  - [함수의 호출 테스트하기 width jest.spyOn()](Jest/FnCalledTest.md)
+  - [함수의 호출 테스트하기 with jest.spyOn()](Jest/FnCalledTest.md)
 
 - [Data structure & Algorithm](DataStructureAlgorithm/README.md)
 

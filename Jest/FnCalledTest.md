@@ -1,4 +1,4 @@
-# 함수의 호출 테스트하기 width jest.spyOn()
+# 함수의 호출 테스트하기 with jest.spyOn()
 
 ## 1. 개요
 
