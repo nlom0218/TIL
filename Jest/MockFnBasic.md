@@ -90,6 +90,14 @@ mockFn(); // 0
 `mockFn`가 어떤 동작을 하는지 정해주는 메서드이다. 동작하는 `mockFn`를 만드는 것이라고 보면 된다.
 
 ```javascript
+const mockFn = jest.fn();
+
+mockFn.mockImplementation((a, b) => a + b);
+```
+
+위 코드는 아래와 같이 짧게 줄여 사용할 수 있다.
+
+```javascript
 const mockFn = jest.fn((a, b) => a + b);
 
 mockFn(1, 2); // 3
