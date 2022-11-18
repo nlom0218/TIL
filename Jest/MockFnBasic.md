@@ -175,7 +175,8 @@ jest.fn().mockImplementation(() => Promise.reject(value));
 ## 참고
 
 [[JEST] 📚 모킹 Mocking 정리 - jest.fn / jest.mock /jest.spyOn](https://inpa.tistory.com/entry/JEST-%F0%9F%93%9A-%EB%AA%A8%ED%82%B9-mocking-jestfn-jestspyOn)  
-[[Jest] jest.fn(), jest.spyOn() 함수 모킹](https://www.daleseo.com/jest-fn-spy-on/)
+[[Jest] jest.fn(), jest.spyOn() 함수 모킹](https://www.daleseo.com/jest-fn-spy-on/)  
+[Jest공식홈페이지 - Mock Functions](https://jestjs.io/docs/mock-function-api)
 
 ---
 

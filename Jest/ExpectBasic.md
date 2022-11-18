@@ -231,7 +231,8 @@ test('toHaveLength', () => {
 ## 참고
 
 [Jest toBe(), toEqual() 차이](https://til.skylightqp.kr/f43419fa-53d5-42f4-90f4-32293618a5a6)  
-[[JEST] JEST의 기초](https://velog.io/@rlaghwns1995/JEST-JEST%EC%9D%98-%EA%B8%B0%EC%B4%88)
+[[JEST] JEST의 기초](https://velog.io/@rlaghwns1995/JEST-JEST%EC%9D%98-%EA%B8%B0%EC%B4%88)  
+[Jest공식홈페이지 - Expect](https://jestjs.io/docs/expect)
 
 ---
 
