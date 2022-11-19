@@ -217,5 +217,6 @@
   - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
   - [우아한테크코스 5기 지원 과정](Diary/Woowacourse/README.md)
     - [서류 지원](Diary/Woowacourse/Apply.md)
-    - [프리코스 1주차 - 온보딩](Diary/Woowacourse/Precourse1.md)
-    - [프리코스 2주차 - 숫자 야구 게임](Diary/Woowacourse/Precourse2.md)
+    - [프리코스 1주 차 - 온보딩](Diary/Woowacourse/Precourse1.md)
+    - [프리코스 2주 차 - 숫자 야구 게임](Diary/Woowacourse/Precourse2.md)
+    - [프리코스 3주 차 - 로또 게임](Diary/Woowacourse/Precourse3.md)
