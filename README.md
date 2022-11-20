@@ -87,6 +87,7 @@
   - Class
     - [자바스크립트에서의 클래스](JAVASCRIPT/Class/ClassInJS.md)
     - [클래스의 기본](JAVASCRIPT/Class/BasicClass.md)
+    - [클래스 사용에 대한 고찰](JAVASCRIPT/Class/ConsiderationsUsingClass.md)
   - [투두리스트 만들기(with MVC pattern)](JAVASCRIPT/TodolistMVC/README.md)
     - [투두 등록하기](JAVASCRIPT/TodolistMVC/RegisterTodo.md)
     - [투두 완료 및 삭제하기](JAVASCRIPT/TodolistMVC/ToggleDeleteTodo.md)
