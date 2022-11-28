@@ -246,6 +246,7 @@
     - [프리코스 1주 차 - 온보딩](Diary/Woowacourse/Precourse1.md)
     - [프리코스 2주 차 - 숫자 야구 게임](Diary/Woowacourse/Precourse2.md)
     - [프리코스 3주 차 - 로또 게임](Diary/Woowacourse/Precourse3.md)
+    - [프리코스 4주 차 - 다리 건너기 게임](Diary/Woowacourse/Precourse4.md)
 
 ---
 
