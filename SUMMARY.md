@@ -213,6 +213,11 @@
   - [Github](GitGithub/Github/README.md)
     - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
 
+- Reading
+
+  - [객체지향의 사실과 오해](Reading/TheEssenceOfObjectOrientaion/README.md)
+    - [01 협력하는 객체들의 공동체](Reading/TheEssenceOfObjectOrientaion/Chpater1.md)
+
 - [Diary](Diary/README.md)
 
   - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
