@@ -217,6 +217,7 @@
 
   - [객체지향의 사실과 오해](Reading/TheEssenceOfObjectOrientaion/README.md)
     - [Chapter1 협력하는 객체들의 공동체](Reading/TheEssenceOfObjectOrientaion/Chpater1.md)
+    - [Chapter2 이상한 나라의 객체](Reading/TheEssenceOfObjectOrientaion/Chpater2.md)
 
 - [Diary](Diary/README.md)
 
