@@ -244,6 +244,7 @@
     - [Chapter1 협력하는 객체들의 공동체](Reading/TheEssenceOfObjectOrientaion/Chpater1.md)
     - [Chapter2 이상한 나라의 객체](Reading/TheEssenceOfObjectOrientaion/Chpater2.md)
     - [Chapter3 타입과 추상화](Reading/TheEssenceOfObjectOrientaion/Chapter3.md)
+    - [Chapter4 역할, 책임, 협력](Reading/TheEssenceOfObjectOrientaion/Chapter4.md)
 
 - Diary
 
