@@ -245,6 +245,9 @@
     - [Chapter2 이상한 나라의 객체](Reading/TheEssenceOfObjectOrientaion/Chpater2.md)
     - [Chapter3 타입과 추상화](Reading/TheEssenceOfObjectOrientaion/Chapter3.md)
     - [Chapter4 역할, 책임, 협력](Reading/TheEssenceOfObjectOrientaion/Chapter4.md)
+    - [Chapter5 책임과 메시지](Reading/TheEssenceOfObjectOrientaion/Chapter5.md)
+    - [Chapter6 객체 지도](Reading/TheEssenceOfObjectOrientaion/Chapter6.md)
+    - [Chpater7 함께 모으기](Reading/TheEssenceOfObjectOrientaion/Chapter7.md)
 
 - Diary
 
@@ -255,6 +258,7 @@
     - [프리코스 2주 차 - 숫자 야구 게임](Diary/Woowacourse/Precourse2.md)
     - [프리코스 3주 차 - 로또 게임](Diary/Woowacourse/Precourse3.md)
     - [프리코스 4주 차 - 다리 건너기 게임](Diary/Woowacourse/Precourse4.md)
+    - [프리코스 최종 코딩 테스트 - 점심 메뉴 추천](Diary/Woowacourse/FinalTest.md)
 
 ---
 
