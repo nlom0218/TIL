@@ -252,13 +252,13 @@
 - Diary
 
   - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
-  - [우아한테크코스 5기 지원 과정](Diary/Woowacourse/README.md)
-    - [서류 지원](Diary/Woowacourse/Apply.md)
-    - [프리코스 1주 차 - 온보딩](Diary/Woowacourse/Precourse1.md)
-    - [프리코스 2주 차 - 숫자 야구 게임](Diary/Woowacourse/Precourse2.md)
-    - [프리코스 3주 차 - 로또 게임](Diary/Woowacourse/Precourse3.md)
-    - [프리코스 4주 차 - 다리 건너기 게임](Diary/Woowacourse/Precourse4.md)
-    - [프리코스 최종 코딩 테스트 - 점심 메뉴 추천](Diary/Woowacourse/FinalTest.md)
+  - [우아한테크코스 5기 지원 과정](Diary/Woowaprecourse/README.md)
+    - [서류 지원](Diary/Woowaprecourse/Apply.md)
+    - [프리코스 1주 차 - 온보딩](Diary/Woowaprecourse/Precourse1.md)
+    - [프리코스 2주 차 - 숫자 야구 게임](Diary/Woowaprecourse/Precourse2.md)
+    - [프리코스 3주 차 - 로또 게임](Diary/Woowaprecourse/Precourse3.md)
+    - [프리코스 4주 차 - 다리 건너기 게임](Diary/Woowaprecourse/Precourse4.md)
+    - [프리코스 최종 코딩 테스트 - 점심 메뉴 추천](Diary/Woowaprecourse/FinalTest.md)
 
 ---
 

@@ -36,13 +36,13 @@
 
 ### 3-1. 프로그래밍 요구 사항
 
-![프로그래밍 요구 사항](/image/Diary/Woowacourse/1weekRequirements1.png)
+![프로그래밍 요구 사항](/image/Diary/Woowaprecourse/1weekRequirements1.png)
 
 ---
 
 ### 3-2. 과제 진행 요구 사항
 
-![과제 진행 요구 사항](/image/Diary/Woowacourse/1weekRequirements2.png)
+![과제 진행 요구 사항](/image/Diary/Woowaprecourse/1weekRequirements2.png)
 
 ---
 
@@ -58,10 +58,10 @@
 
 [온보딩 미션 기능 목록](https://github.com/nlom0218/javascript-onboarding/blob/nlom0218/docs/README.md)
 
-![기능 목록1](/image/Diary/Woowacourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D1.png)
-![기능 목록2](/image/Diary/Woowacourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D2.png)
-![기능 목록3](/image/Diary/Woowacourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D3.png)
-![기능 목록4](/image/Diary/Woowacourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D4.png)
+![기능 목록1](/image/Diary/Woowaprecourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D1.png)
+![기능 목록2](/image/Diary/Woowaprecourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D2.png)
+![기능 목록3](/image/Diary/Woowaprecourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D3.png)
+![기능 목록4](/image/Diary/Woowaprecourse/1week%EA%B8%B0%EB%8A%A5%EB%AA%A9%EB%A1%9D4.png)
 
 ---
 
@@ -79,10 +79,10 @@ PR만 보냈다면 제출하지 않은 것이므로 이를 주의해야 한다.
 이번 온보딩 미션을 통해 가장 크게 깨달은 것 중 하나가 바로 규칙적인 깃 커밋 메시지의 필요성이다. 동료들과 협업하기 위해 과거의 코드를 분석하기 위해 규칙적인 깃 커밋 메시지는 필수이다. 이 또한 프리코스를 통해 습관화 하고자 한다.
 
 아래는 이전에 작성한 무질서한 깃 커밋 메시지이다.  
-![무질서한 커밋 메시지](/image/Diary/Woowacourse/badCommitMsg.png)
+![무질서한 커밋 메시지](/image/Diary/Woowaprecourse/badCommitMsg.png)
 
 이번엔 온보딩 미션에 작성한 깃 커밋 메시지이다.  
-![규칙적인 커밋 메시지](/image/Diary/Woowacourse/goodCommitMsg.png)
+![규칙적인 커밋 메시지](/image/Diary/Woowaprecourse/goodCommitMsg.png)
 
 추가적으로 학습한 내용은 아래의 링크를 통해 확인할 수 있다.
 
