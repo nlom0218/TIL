@@ -259,6 +259,7 @@
     - [프리코스 3주 차 - 로또 게임](Diary/Woowaprecourse/Precourse3.md)
     - [프리코스 4주 차 - 다리 건너기 게임](Diary/Woowaprecourse/Precourse4.md)
     - [프리코스 최종 코딩 테스트 - 점심 메뉴 추천](Diary/Woowaprecourse/FinalTest.md)
+    - [우테코 최종 합격 후기](Diary/Woowaprecourse/Pass.md)
 
 ---
 
