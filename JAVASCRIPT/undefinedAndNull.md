@@ -78,4 +78,11 @@ name = null;
 
 ---
 
+## 참고
+
+도서 - 모던 자바스크립트 Deep Dive  
+[null과 undefined](https://helloworldjavascript.net/pages/160-null-undefined.html)
+
+---
+
 📅 2023-01-03
