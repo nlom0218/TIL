@@ -172,6 +172,8 @@
       - [체육복](CodingTest/Programmers/Level1/programmers_gym_suit.md)
       - [실패율](CodingTest/Programmers/Level1/programmers_failure_rate.md)
       - [다트 게임](CodingTest/Programmers/Level1/programmers_dart_game.md)
+      - [가장 가까운 글자](CodingTest/Programmers/Level1/programmers_nearset_identical_letter.md)
+      - [과일 장수](CodingTest/Programmers/Level1/programmers_fruiterer.md)
 
     - [Level 2](CodingTest/Programmers/Level2/README.md)
 
