@@ -134,6 +134,7 @@
 
   - [자료구조와 알고리즘을 공부해야 하는 이유](DataStructureAlgorithm/ResonStudy.md)
   - [빅오 표기법](DataStructureAlgorithm/BigO.md)
+  - [문제 해결 접근법](DataStructureAlgorithm/Approach.md)
   - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
     - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
     - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
