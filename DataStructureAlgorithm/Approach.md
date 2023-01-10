@@ -53,7 +53,7 @@
 
 예제를 생각하는 것은 문제를 잘 이해하는 데 도움이 된다. 또한 다양한 예제를 알고 있다면 구현한 작업을 확인할 수 있을 뿐 아니라 예제를 적용하면서 더 많은 정보를 습득할 수 있다.
 
-구체적인 예제를 살펴보다는 단계를 아래의 예제를 통해 알아보자.
+구체적인 예제의 단계를 아래의 예제를 통해 알아보자.
 
 예제: 문자열을 받고 각 문자의 수를 반환하는 함수를 작성하라.
 
@@ -97,6 +97,25 @@ charCount(null); // 문자열이 아닌 다른 값을 입력받은 경우는 어
 ---
 
 ## 4. 3단계 - 세부 분석(Break It Down)
+
+`Explicitly write out the steps you need to take.`
+
+문제를 해결하기 위한 단계들을 명확하게 작성을 해야 한다. 세세하고 모든 라인마다 작성하지 않아도 된다. 단순히 해결책의 기본적인 구성 요소만 작성하면 된다.
+
+이는 실제로 코드를 입력하기 전 코드에 대해 한 번 생각해 볼 수 있도록 도와주고 이해되지 않는 부분들을 파악하게 하거나 이해할 수 있게 해준다.
+
+예제: 문자열을 받고 각 문자의 수를 반환하는 함수를 작성하라.
+
+```javascript
+function charCount(string) {
+  // make object to return at end
+  // loop over string, for each character...
+  // // if the char is number/letter AND a key in object, add one to count
+  // // if the char is number/letter AND not in object, add it to object and set value to 1
+  // // if char is something else (space, period, etc.) don't do anyting
+  // retrun object at end
+}
+```
 
 ---
 
