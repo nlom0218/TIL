@@ -121,6 +121,23 @@ function charCount(string) {
 
 ## 5. 4단계 - 해결 또는 단순화(Solve/Simplify)
 
+1. Find the core difficulty in what you're trying to do
+   - 어려운 것을 발견하게 되면
+2. Temporarily ignore that difficulty
+   - 그 부분을 무시하라
+3. Write a simplified solution
+   - 간단한 해결책을 작성하라
+   - 보통 이 단계에서 어떻게 작동하는지 이해하게 된다.
+4. Then incorporate that difficulty back in
+
+예제: 문자열을 받고 각 문자의 수를 반환하는 함수를 작성하라.
+
+예제 문제에서 반복문을 만드는 것을 어려워 한다면 문자열의 앞 몇 문자만 하드 코딩을 통해 해결책을 작성하라. 그렇게 된다면 반복문이 어떻게 동작하는지 이해할 수 있다.
+
+혹은 공백, 문자/숫자가 아닌 다른 문자열, 대문자/소문자에 대해 다루는 것에 익숙하지 않다면 일단 그것들을 무시하고 코드를 작성하라. 그 후 구글링, 또는 면접관의 힌트를 통해 문제를 해결할 수 있도록 하는 것이 좋다.
+
+즉, 어려운 것을 계속 붙잡고 있어봐야 시간만 소요될 뿐 정답에 근접할 순 없다. 그렇기 때문에 내가 당장 할 수 있는 것 부터 생각을 하자.
+
 ---
 
 ## 6. 5단계 - 되돌아 보기와 리팩터(Look Back and Refactor)
