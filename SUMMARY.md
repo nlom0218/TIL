@@ -175,6 +175,7 @@
       - [다트 게임](CodingTest/Programmers/Level1/programmers_dart_game.md)
       - [가장 가까운 글자](CodingTest/Programmers/Level1/programmers_nearset_identical_letter.md)
       - [과일 장수](CodingTest/Programmers/Level1/programmers_fruiterer.md)
+      - [숫자 짝꿍](CodingTest/Programmers/Level1/programmers_number_partner.md)
 
     - [Level 2](CodingTest/Programmers/Level2/README.md)
 
