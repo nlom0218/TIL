@@ -62,8 +62,8 @@
 `Start with Simple Examples`
 
 ```javascript
-charCount('aaaa'); // { a: 4 }
-charCount('hello'); // { h: 1, e: 1, l: 2, o: 1 }
+charCount("aaaa"); // { a: 4 }
+charCount("hello"); // { h: 1, e: 1, l: 2, o: 1 }
 ```
 
 ### 3-2. 복잡한 예제
@@ -71,8 +71,8 @@ charCount('hello'); // { h: 1, e: 1, l: 2, o: 1 }
 `Progress to More Complex Examples`
 
 ```javascript
-charCount('hello my name is hd!'); // 문자가 아닌 기호, 공백 등은 어떻게 해야 할까? 또는 숫자가 있다면 포함해야 할까?
-charCount('Hello hi'); // 대문자와 소문자를 어떻게 해야할까?
+charCount("hello my name is hd!"); // 문자가 아닌 기호, 공백 등은 어떻게 해야 할까? 또는 숫자가 있다면 포함해야 할까?
+charCount("Hello hi"); // 대문자와 소문자를 어떻게 해야할까?
 ```
 
 ### 3-3. 빈 입력값이 있는 예제
@@ -80,7 +80,7 @@ charCount('Hello hi'); // 대문자와 소문자를 어떻게 해야할까?
 `Explore Examples with Empty Inputs`
 
 ```javascript
-charCount(''); // 빈 문자열인 경우 무엇을 반환해야 하는가?
+charCount(""); // 빈 문자열인 경우 무엇을 반환해야 하는가?
 ```
 
 ### 3-4. 유효하지 않는 값이 있는 예제
@@ -141,3 +141,25 @@ function charCount(string) {
 ---
 
 ## 6. 5단계 - 되돌아 보기와 리팩터(Look Back and Refactor)
+
+시간을 내어 코드를 살펴보고, 되돌아보고, 성찰하게 된다면 좋은 기회를 얻을 수 있다. 문제를 풀었다면 컴퓨터를 끄고 노는 것이 아니라 다시 한 번 코드를 살펴보는 습관을 가지도록 하자. 이러한 습관을 기르기 위해 아래의 질문을 스스로에게 던져보자.
+
+- Can you check the result?
+- Can you derive the result differently?
+- Can you understand it at a glance? - 얼마나 직관적인가?
+- Can you use the result or method for some other problem? - 직감을 발달시켜 다른 문제를 해결할 수 있는 직관력을 향상시켜 준다. 이전 다른 문제와의 유사점이 있는지?
+- Can you improve the performance of your solution? - 성능을 향상시킬 수 있는 방법이 있는가?
+- Can you think of other ways to refactor?
+- How have other people solved this problem?
+
+코드를 분석하고 성찰하고 되돌아보는 것이 그저 작동하도록 코드를 작성하고 하루를 마감하는 것보다 가치 있다.
+
+---
+
+## 참고
+
+Udemy - JavaScript 알고리즘 & 자료구조 마스터클래스
+
+---
+
+📅 2023-01-12
