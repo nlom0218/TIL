@@ -62,8 +62,8 @@
 `Start with Simple Examples`
 
 ```javascript
-charCount("aaaa"); // { a: 4 }
-charCount("hello"); // { h: 1, e: 1, l: 2, o: 1 }
+charCount('aaaa'); // { a: 4 }
+charCount('hello'); // { h: 1, e: 1, l: 2, o: 1 }
 ```
 
 ### 3-2. 복잡한 예제
@@ -71,8 +71,8 @@ charCount("hello"); // { h: 1, e: 1, l: 2, o: 1 }
 `Progress to More Complex Examples`
 
 ```javascript
-charCount("hello my name is hd!"); // 문자가 아닌 기호, 공백 등은 어떻게 해야 할까? 또는 숫자가 있다면 포함해야 할까?
-charCount("Hello hi"); // 대문자와 소문자를 어떻게 해야할까?
+charCount('hello my name is hd!'); // 문자가 아닌 기호, 공백 등은 어떻게 해야 할까? 또는 숫자가 있다면 포함해야 할까?
+charCount('Hello hi'); // 대문자와 소문자를 어떻게 해야할까?
 ```
 
 ### 3-3. 빈 입력값이 있는 예제
@@ -80,7 +80,7 @@ charCount("Hello hi"); // 대문자와 소문자를 어떻게 해야할까?
 `Explore Examples with Empty Inputs`
 
 ```javascript
-charCount(""); // 빈 문자열인 경우 무엇을 반환해야 하는가?
+charCount(''); // 빈 문자열인 경우 무엇을 반환해야 하는가?
 ```
 
 ### 3-4. 유효하지 않는 값이 있는 예제
@@ -158,7 +158,7 @@ function charCount(string) {
 
 ## 참고
 
-Udemy - JavaScript 알고리즘 & 자료구조 마스터클래스
+Udemy - JavaScript 알고리즘 & 자료구조 마스터클래스 / 섹션 4: 문제 해결 접근법
 
 ---
 
