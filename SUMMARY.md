@@ -2,7 +2,7 @@
 
 - [HELLO🖐](README.md)
 
-### 💾 Computer Science
+### 💻 Computer Science
 
 - [Design Pattern](CS/DesignPattern/READE.MD)
   - [디자인 패턴이란?](CS/DesignPattern/WhatIs.md)
