@@ -103,15 +103,17 @@ function same(arr1, arr2) {
 
 > Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
 
-> Examples:  
-> validAnagram('', '') // true  
-> validAnagram('aaz', 'zza') // false  
-> validAnagram('anagram', 'nagaram') // true  
-> validAnagram("rat","car") // false) // false  
-> validAnagram('awesome', 'awesom') // false  
-> validAnagram('amanaplanacanalpanama', 'acanalmanplanpamana') // false  
-> validAnagram('qwerty', 'qeywrt') // true  
-> validAnagram('texttwisttime', 'timetwisttext') // true
+```javascript
+// Examples:
+validAnagram('', ''); // true
+validAnagram('aaz', 'zza'); // false
+validAnagram('anagram', 'nagaram'); // true
+validAnagram('rat', 'car'); // false) // false
+validAnagram('awesome', 'awesom'); // false
+validAnagram('amanaplanacanalpanama', 'acanalmanplanpamana'); // false
+validAnagram('qwerty', 'qeywrt'); // true
+validAnagram('texttwisttime', 'timetwisttext'); // true
+```
 
 > Note: You may assume the string contains only lowercase alphabets.  
 > Time Complexity - O(n)
@@ -141,7 +143,7 @@ function validAnagram(string1, string2) {
 }
 ```
 
-위에서 살펴본 예시 문제와 풀이 과정이 거의 같다고 봐도 무방하다. 때문에 `O(n^2)`의 시간 복잡도를 가지고 있다.
+위에서 살펴본 예시 문제와 풀이 과정이 거의 같다고 봐도 무방하다. 때문에 `O(n)`의 시간 복잡도를 가지고 있다.
 
 아래는 강사님의 풀이이다. 비교하여 내가 공부할 점을 찾아보자.
 
@@ -201,6 +203,146 @@ function validAnagram(first, second) {
    해당 조건문은 `lookup` 객체에 `letter` 키의 값이 존재하지 않거나 `0`일 때 실행된다. 즉, 값이 존재하지 않을 때만 생각을 하는 것이 아니라 더 나가아 `0`일 때도 생각하면 더 유연한 코드가 완성된다.
 
 3. 불필요한 객체는 만들지 말자. 내 코드와 강사님의 코드를 비교하면 누가봐도 강사님의 코드가 더욱 깔끔하다는 것을 알 수 있다. 그 이유는 무엇일까? 굳이 필요없는 객체를 만들었기 때문이다. 최소한의 데이터 정리를 생각해보자.
+
+---
+
+## 3. Multiple Pointers(다중 포인터 패턴)
+
+다중 포인터는 배열이나 문자열 같은 선형 구조에서 각자 다른 원소를 가리키는 2개의 포인터를 조작해가면서 원하는 것을 얻어내는 개념이다. 즉, 2개의 포인터가 값이나 조건을 충족시키는 한 쌍을 찾아간다고 생각하면 된다.
+
+### 3-1. 다중 포인터 패턴 예제
+
+예제를 통해 다중 포인터 패턴을 알아보자. 아래와 같은 문제가 있다.
+
+> Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+
+오름차순으로 정렬된 배열에서 서로의 합이 0이되는 짝을 찾는 문제이다.
+
+```javascript
+sumZero([-3, -2, -1, 0, 1, 2, 3]); // [3, -3]
+sumZero([-2, 0, 1, 3]); // undefined
+sumZero([1, 2, 3]); // undefined
+```
+
+먼저 다중 포인터 패턴을 적용하지 않고 이중 for문을 사용한 풀이이다.
+
+```javascript
+function sumZero(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === 0) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+}
+```
+
+이와 같은 풀이는 배열의 길이가 짧다면 큰 문제가 되지 않겠지만 조금만 길어져도 실행속도가 눈에 띄게 늘어나는 단점을 가지고 있다. 즉, `O(n^2)`의 시간 복잡도를 가지고 있다.
+
+그 다음으로 다중 포인터 패턴을 적용한 풀이를 살펴보자.
+
+```javascript
+function sumZero(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) return [arr[left], arr[right]];
+    if (sum > 0) right -= 1;
+    if (sum < 0) left += 1;
+  }
+}
+```
+
+`left`와 `right` 변수를 선언하여 각각 배열의 가장 왼쪽, 오른쪽을 가리키고 있다. 이를 이용하여 배열의 요소에 접근을 하고 두 요소의 합에 따라 `left` 또는 `right`의 값이 변하면서 합이 0이 되는 쌍을 찾고 있다. 이는 `O(n)` 시간 복잡도를 가진다.
+
+주의해야 할 점은 만약 `while`의 조건이 `left <= right`이었다면 `[0, 0]`이라는 답이 나올 수 있다는 것이다. 그렇기 때문에 `left`와 `right`은 같은 요소를 가르킬 수 없도록 잘 설정을 해둬야 한다.
+
+### 3-2. 다중 포인터 패턴 연습
+
+> Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+```javascript
+countUniqueValues([1, 1, 1, 1, 1, 2]); // 2
+countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]); // 7
+countUniqueValues([]); // 0
+countUniqueValues([-2, -1, -1, 0, 1]); // 4
+```
+
+> Time Complexity - O(n)  
+> Space Complexity - O(n)  
+> Bonus  
+> You must do this with constant or O(1) space and O(n) time.
+
+일단 가장 먼저 생각나는 것은 `Set` 객체를 활용한 풀이이다.
+
+```javascript
+function countUniqueValues(array) {
+  return new Set(array).size;
+}
+```
+
+매우... 간단하다! 하지만 다중 포인터 패턴을 연습하고 있으니 다중 포인터 패턴을 활용하여 다시 문제를 풀어보자.
+
+```javascript
+function countUniqueValues(array) {
+  if (array.length === 0) return 0;
+
+  let i = 0;
+  array.forEach((item) => {
+    if (array[i] === item) return;
+    i += 1;
+    array[i] = item;
+  });
+
+  return i + 1;
+}
+```
+
+먼저 `array`의 길이가 0일 경우엔 `0`를 반환을 한다.
+
+이후 `i`라는 포인터를 하나 가지고 `forEach()` 메서드를 사용하여 `array` 배열을 순회한다. 이때 또 다른 포인터에 대한 선언은 하지 않았지만 순회를 하면서 `array`의 요소를 하나하나 확인하기 때문에 포인터가 있다고 생각하면 좋을 것이다. 순회를 하면서 `array[i]`의 값과 현재 순회 중인 값이 다르다면 `i`의 값을 하나 올리고 이어서 `array[i]`의 값은 현재 순회 중인 값으로 바꾼다.
+
+아래의 배열이 있다고 생각해보자.
+
+- [1, 1, 2, 3, 3, 4, 5, 5]
+
+첫 번째 순회부터 살펴보자.
+
+| 순서 | `i`의 값 | 배열                     |
+| ---- | -------- | ------------------------ |
+| 1    | 0        | [1, 1, 2, 3, 3, 4, 5, 5] |
+| 2    | 0        | [1, 1, 2, 3, 3, 4, 5, 5] |
+| 3    | 1        | [1, 2, 2, 3, 3, 4, 5, 5] |
+| 4    | 2        | [1, 2, 3, 3, 3, 4, 5, 5] |
+| 5    | 2        | [1, 2, 3, 3, 3, 4, 5, 5] |
+| 6    | 3        | [1, 2, 3, 4, 3, 4, 5, 5] |
+| 7    | 4        | [1, 2, 3, 4, 5, 4, 5, 5] |
+| 8    | 4        | [1, 2, 3, 4, 5, 4, 5, 5] |
+
+위와 같은 과정을 거쳐 `i`의 값과 배열이 바뀐다. 최종적으로 구하고자 하는 값은 고유한 숫자의 개수 이므로 `i`에 1을 더한 값을 반환하면 된다.
+
+이번엔 강사님의 코드를 살펴보자.
+
+```javascript
+function countUniqueValues(arr) {
+  if (arr.length === 0) return 0;
+  var i = 0;
+  for (var j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+  return i + 1;
+}
+```
+
+전체적인 흐름은 같다. 하지만 디테일한 부분에 차이가 있다. 이를 위주로 살피고 넘어가자.
+
+1. `var` 변수 사용 - 난 하지 않는다. 변수는 `let`, 상수는 `const`를 사용하여 변수를 선언한다.
+2. `for문`을 통한 반복문 - 난 `for문`도 사용하지만 보통 배열 메서드를 자주 사용한다.
 
 ---
 
