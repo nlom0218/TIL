@@ -1,17 +1,17 @@
 # Summary​
 
-- [🖐 반가워요](README.md)
-- [🏖️ 이곳은요](PLACE.md)
-- [👨‍💻 저는요](ME.md)
+### 🚀 Intro
 
-### 💻 Computer Science
+- [🙋 반가워요](README.md)
+- [🏖️ 이곳은요](PLACE.md)
+
+### 🖥️ Computer Science
 
 - [Design Pattern](CS/DesignPattern/READE.MD)
   - [디자인 패턴이란?](CS/DesignPattern/WhatIs.md)
   - [싱글톤 패턴](CS/DesignPattern/Singleton.md)
   - [팩토리 패턴](CS/DesignPattern/Factory.md)
   - [전략 패턴](CS/DesignPattern/Strategy.md)
-- [Network Device](CS/NetworkDevice/README.MD)
   - [물리 계층 처리 기기](CS/NetworkDevice/PhysicalLayerDevice.md)
   - [데이터 링크 계층 처리 기기](CS/NetworkDevice/DataLinkLayerDevice.md)
 - [HTTP](CS/HTTP/README.MD)
