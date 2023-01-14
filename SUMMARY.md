@@ -2,7 +2,7 @@
 
 ### 🚀 Intro
 
-- [🙋 반가워요](README.md)
+- [👨‍💻 반가워요](README.md)
 - [🏖️ 이곳은요](PLACE.md)
 
 ### 🖥️ Computer Science
