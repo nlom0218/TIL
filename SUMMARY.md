@@ -1,6 +1,8 @@
 # Summary​
 
-- [HELLO🖐](README.md)
+- [🖐 반가워요](README.md)
+- [🏖️ 이곳은요](PLACE.md)
+- [👨‍💻 저는요](ME.md)
 
 ### 💻 Computer Science
 
