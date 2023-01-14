@@ -73,6 +73,7 @@
   - [insertAdjacentHTML](JAVASCRIPT/DOM/InsertAdjacentHTML.md)
   - [노드 생성과 추가 및 삭제](JAVASCRIPT/DOM/CreateAddDeleteNode.md)
   - [클래스 조작](JAVASCRIPT/DOM/ClassManipulation.md)
+  - [이벤트 전파](JAVASCRIPT/DOM/EventPropagation.md)
 - [Class](JAVASCRIPT/Class/README.md)
   - [자바스크립트에서의 클래스](JAVASCRIPT/Class/ClassInJS.md)
   - [클래스의 기본](JAVASCRIPT/Class/BasicClass.md)
@@ -182,6 +183,7 @@
     - [가장 가까운 글자](CodingTest/Programmers/Level1/programmers_nearset_identical_letter.md)
     - [과일 장수](CodingTest/Programmers/Level1/programmers_fruiterer.md)
     - [숫자 짝꿍](CodingTest/Programmers/Level1/programmers_number_partner.md)
+    - [햄버거 만들기](CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
 
   - [Level 2](CodingTest/Programmers/Level2/README.md)
 
