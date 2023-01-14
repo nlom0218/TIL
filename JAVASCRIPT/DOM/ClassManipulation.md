@@ -32,7 +32,7 @@ class 어트리뷰트에 대응하는 DOM 프로퍼티는 class가 아니라 `cl
   <body>
     <div class="box red"></div>
     <script>
-      const $box = document.querySelector("div");
+      const $box = document.querySelector('div');
       console.log($box.className);
     </script>
   </body>
@@ -44,9 +44,9 @@ class 어트리뷰트에 대응하는 DOM 프로퍼티는 class가 아니라 `cl
 즉, 위의 예시에서 `red` 클래스를 `blue` 클래스로 바꾸기 위해선 아래와 같은 작업이 필요하다.
 
 ```javascript
-$box.className = $box.className.replace("red", "blue");
+$box.className = $box.className.replace('red', 'blue');
 // 또는
-$box.className = "box blue";
+$box.className = 'box blue';
 ```
 
 ---
@@ -75,7 +75,7 @@ $box.className = "box blue";
   <body>
     <div class="box red"></div>
     <script>
-      const $box = document.querySelector("div");
+      const $box = document.querySelector('div');
       console.log($box.classList);
     </script>
   </body>
@@ -93,8 +93,8 @@ $box.className = "box blue";
 `add()` 메서드는 인수로 전달한 1개 이상의 문자열을 class 어트리뷰트 값으로 추가한다.
 
 ```javascript
-$box.classList.add("blue"); // class = "box red blue"
-$box.classList.add("foo", "bar"); // class = "box red blue foo bar"
+$box.classList.add('blue'); // class = "box red blue"
+$box.classList.add('foo', 'bar'); // class = "box red blue foo bar"
 ```
 
 ---
@@ -104,8 +104,8 @@ $box.classList.add("foo", "bar"); // class = "box red blue foo bar"
 `remove()` 메서드는 인수로 전달한 1개 이상의 문자열과 일치하는 class 어트리뷰트에서 삭제한다. 인수로 전달한 문자열과 일치하는 클래스가 class 어트리뷰트에 없으면 에러 없이 무시된다.
 
 ```javascript
-$box.classList.remove("foo"); // class = "box red blue bar"
-$box.classList.remove("bar", "blue"); // class = "box red"
+$box.classList.remove('foo'); // class = "box red blue bar"
+$box.classList.remove('bar', 'blue'); // class = "box red"
 ```
 
 ---
@@ -133,8 +133,8 @@ $box.classList[1];
 `contains()` 메서드는 인수로 전달한 문자열과 일치하는 클래스가 class 어트리뷰트에 포함되어 있는지 확인한다.
 
 ```javascript
-$box.classList.contains("red"); // ture
-$box.classList.contains("blue"); // false
+$box.classList.contains('red'); // ture
+$box.classList.contains('blue'); // false
 ```
 
 ---
@@ -144,7 +144,7 @@ $box.classList.contains("blue"); // false
 `replace()` 메서드는 class 어트리뷰트에서 첫 번째 인수로 전달한 문자열을 두 번째 인수로 전달한 문자열로 변경한다.
 
 ```javascript
-$box.classList.replace("red", "blue"); // class = "box blue"
+$box.classList.replace('red', 'blue'); // class = "box blue"
 ```
 
 ---
@@ -154,7 +154,7 @@ $box.classList.replace("red", "blue"); // class = "box blue"
 `toggle()` 메서드는 class 어트리뷰트에 인수로 전달한 문자열과 일치하는 클래스가 존재하면 제거하고, 존재하지 않으면 추가한다.
 
 ```javascript
-$box.classList.toggle("border");
+$box.classList.toggle('border');
 ```
 
 두 번째 인수로 불리언 값으로 평가되는 조건식을 전달할 수 있다.
@@ -170,7 +170,7 @@ $box.classList.toggle("border");
 
 ---
 
-## 5. 참고
+## 참고
 
 도서 - 모던 자바스크립트 Deep Dive: 자바스크립트의 기본 개념과 동작 원리
 
