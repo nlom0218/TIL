@@ -361,7 +361,7 @@ This pattern involves creating a window which can either be an array of number f
 
 규모가 큰 데이터셋에서 데이터의 하위 집합을 추적하는 문제에 있어 유용한 패턴이다.
 
-### 3-1. 기준점 간 이동 배열 패턴 예제
+### 4-1. 기준점 간 이동 배열 패턴 예제
 
 예제를 통해 기준점 간 이동 배열 패턴을 알아보자. 아래와 같은 문제가 있다.
 
@@ -426,6 +426,78 @@ tempSum = tempSum - arr[i - num] + arr[i];
 ```
 
 `- arr[i - num]`으로 기존에 열려있던 window를 하나 닫고 `+ arr[i]`으로 새로운 window를 하나 연다. 이렇게 차곡차곡 하나씩 열고 닫으면서 `tempSum`값이 변하게 되고 이는 바로 아래에서 `maxSum`과 비교하여 `maxSum`를 업데이트 할지 말지를 정한다. 바로 이것이 기준점 간 이동 배열 패턴의 기본 개념이라고 할 수 있다.
+
+---
+
+## 5. Divide and Conquer(분할과 정복 패턴)
+
+This pattern involves dividing a data set into smaller chunks and the repeating a process with a subset of data. This pattern can tremendously decrease time complexity.
+
+분할과 정복 패턴은 일단 배열이 정렬이 되어있어야 한다. 이후 큰 데이터 덩어리를 작은 조각으로 나누면서 조건에 맞는 요소를 찾을 때 까지 반복한다.
+
+### 5.1 분할과 정복 패턴 예제
+
+아래의 문제를 통해 분할과 정복 패턴이 적용되지 않은 풀이와 적용된 풀이를 비교하자.
+
+> Given a sorted array of integers, write a function called search, that accecpts value and returns the index where the value passed to the function is located. If the value is not found, return -1
+
+```javascript
+serach([1, 2, 3, 4, 5, 6], 4); // 3
+search([1, 2, 3, 4, 5, 6], 6); // 5
+serach([1, 2, 3, 4, 5, 6], 11); // -1
+```
+
+가장 먼저 떠오르는 것은 `indexOf()` 메서드이다. 하지만 공부를 하고 있으니 직접 for문을 통해 문제를 해결해보자.
+
+먼저 분할과 정복 패턴을 적용하지 않은 풀이이다.
+
+```javascript
+function search(arr, val) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) return i;
+  }
+  return -1;
+}
+```
+
+하나의 for문을 통해 문제를 해결할 수 있다. 운이 좋으면 짧은 시간에 답을 구할 수 있고 운이 좋지 않으면 마지막 요소까지 확인을 해야 한다. 이는 어쨌든 `O(n)`의 시간 복잡도를 가진다.
+
+이번에는 분할과 정복 패턴을 적용한 풀이이다. 위의 풀이보다 코드가 길지만 장점이 존재한다.
+
+```javascript
+function search(array, val) {
+  let min = 0;
+  let max = array.length - 1;
+  while (min <= max) {
+    let middle = Math.floor((min + max) / 2);
+    // 중간의 요소가 val보다 작으면 min를 중간으로 위치시킨다.
+    if (array[middle] < val) {
+      min = middle + 1;
+    }
+
+    // 중간의 요소가 val보다 크다면 max를 중간으로 위치시킨다.
+    if (array[middle] > val) {
+      max = middle - 1;
+    }
+
+    // 중간의 요소가 val이라면 middle를 반환한다.
+    if (array[middle] === val) return middle;
+  }
+
+  return -1;
+}
+```
+
+조건문도 많고 코드도 길다. 하지만 잘 살펴보면 처음부터 끝까지 모두 비교하는 것이 아니라, 중간 지점으로 시작하여 반으로 계속 줄어드는 것을 볼 수 있다. 이렇게 되면 `O(logN)`의 시간 복잡도를 가지기 때문에 훨씬 빠른 실행속도를 기대할 수 있다.
+
+- 분할: 배열을 반으로 자른다.
+- 정복: 중간의 요소를 비교하여 어디 부분을 다시 자를지 정한다.
+
+---
+
+## 6. Conclusion
+
+> 패턴이 존재한다는 것이 신기하다. 그리고 위에서 정리한 패턴은 내가 지금까지 문제를 풀면서 직접 적용했던 패턴들도 있고, 다른 사람들의 풀이에서 보았던 패턴들도 있었다. 살펴본 4개의 패턴은 일단은 크게 어렵지 않다. 물론 문제가 어렵지 않았기 때문이라고 생각한다. 실제로 문제를 풀면서 위의 패턴이 생각이 날까? 그것이 의문이다. 여러 패턴을 달달 외우는 것은 좋다고 생각하지 않는다. 많은 문제를 풀어보면서 경험치를 쌓는 것이 더욱 중요하다고 생각하기에 이번에 공부한 내용을 암기하려고 억지로 노력하지 말자. 달달 외우려다 보면 지칠거 같으니... 그래도 한 번 정리했으니 나중에 문제를 풀면서 패턴이 생각이 나면 뿌듯할 듯 하다.
 
 ---
 
