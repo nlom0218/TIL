@@ -85,7 +85,6 @@
   - [투두 등록하기](JAVASCRIPT/TodolistMVC/RegisterTodo.md)
   - [투두 완료 및 삭제하기](JAVASCRIPT/TodolistMVC/ToggleDeleteTodo.md)
 - [클린코드를 위한 코딩컨벤션](JAVASCRIPT/CodingConvention/README.md)
-
   - [매직 넘버는 상수화하여 관리하자](JAVASCRIPT/CodingConvention/MagicNumber.md)
   - [함수 내에서 반환은 적으면 적을수록 좋다](JAVASCRIPT/CodingConvention/ReturnInFunction.md)
   - [의미 있는 이름 짓기(명명법)](JAVASCRIPT/CodingConvention/%08Naming.md)
@@ -118,7 +117,6 @@
 - [CSS](REACT/CSS/README.md)
   - [Styled Components](REACT/CSS/StyledComponents.md)
 - [Hooks](REACT/Hooks/README.md)
-
   - [useState()](REACT/Hooks/UseState.md)
   - [useEffect()](REACT/Hooks/UseEffect.md)
   - [useRef()](REACT/Hooks/UseRef.md)
@@ -126,7 +124,6 @@
   - [useCallback()](REACT/Hooks/UseCallback.md)
   - [useReducer()](REACT/Hooks/UseReducer.md)
   - [useContext()](REACT/Hooks/UseContext.md)
-
 - [Node Package Module(NPM)](NPM/README.md)
 
 ### 🧭 Jest
@@ -155,16 +152,13 @@
   - [힙(Heap)](DataStructureAlgorithm/DataStructure/Heap.md)
   - [트라이(Trie)](DataStructureAlgorithm/DataStructure/Trie.md)
 - [Algorithm(알고리즘)](DataStructureAlgorithm/Algorithm/README.md)
-
   - [이진 탐색(Binary Search)](DataStructureAlgorithm/Algorithm/BinarySearch.md)
   - [너비 우선 탐색(BFS)](DataStructureAlgorithm/Algorithm/BFS.md)
 
 ### 🐚 Coding Test
 
 - [Programmers](CodingTest/Programmers/README.md)
-
   - [Level 1](CodingTest/Programmers/Level1/README.md)
-
     - [크레인 인형뽑기 게임](CodingTest/Programmers/Level1/programmers_crane-puppet-game.md)
     - [소수 만들기](CodingTest/Programmers/Level1/programmers_make-prime-number.md)
     - [최소직사각형](CodingTest/Programmers/Level1/programmers_minimum_rectangle.md)
@@ -187,9 +181,7 @@
     - [과일 장수](CodingTest/Programmers/Level1/programmers_fruiterer.md)
     - [숫자 짝꿍](CodingTest/Programmers/Level1/programmers_number_partner.md)
     - [햄버거 만들기](CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
-
   - [Level 2](CodingTest/Programmers/Level2/README.md)
-
     - [메뉴 리뉴얼](CodingTest/Programmers/Level2/programmers_menu_renewal.md)
     - [뉴스 클러스터링](CodingTest/Programmers/Level2/programmers_news_clustering.md)
     - [기능개발](CodingTest/Programmers/Level2/programmers_feature_development.md)
@@ -212,12 +204,9 @@
     - [예상 대진표](CodingTest/Programmers/Level2/programmers_expected_draw.md)
     - [튜플](CodingTest/Programmers/Level2/programmers_tuple.md)
     - [k진수에서 소수 개수 구하기](CodingTest/Programmers/Level2/programmers_find_decimals.md)
-
   - [Level 3](CodingTest/Programmers/Level3/README.md)
-
     - [베스트 앨범](CodingTest/Programmers/Level3/programmers_best_album.md)
     - [이중우선순위큐](CodingTest/Programmers/Level3/programmers_double_priority_queue.md)
-
   - [Level 4](CodingTest/Programmers/Level4/READEM.md)
     - [자동완성](CodingTest/Programmers/Level4/programmers_auto_complete.md)
 
@@ -228,13 +217,11 @@
   - [규칙적인 깃 커밋 메세지 작성하기](GitGithub/Git/CommitMessage.md)
   - [git commit, git push 취소하기](GitGithub/Git/ResetCommitPush.md)
 - [Github](GitGithub/Github/README.md)
-
   - [Branch Protection Rule 적용하기](GitGithub/Github/ProtectionBranch.md)
 
 ### 📚 Reading
 
 - [객체지향의 사실과 오해](Reading/TheEssenceOfObjectOrientaion/README.md)
-
   - [Chapter1 협력하는 객체들의 공동체](Reading/TheEssenceOfObjectOrientaion/Chapter1.md)
   - [Chapter2 이상한 나라의 객체](Reading/TheEssenceOfObjectOrientaion/Chapter2.md)
   - [Chapter3 타입과 추상화](Reading/TheEssenceOfObjectOrientaion/Chapter3.md)
@@ -246,7 +233,8 @@
 ### ✏️ Diary
 
 - [일주일 회고](Diary/Retrospective/README.md)
-  - [23년 1월 2일 ~ 23년 1월 8일](Diary/Retrospective/Retrospective1.md)
+  - [#1 23년 1월 2일 ~ 23년 1월 8일](Diary/Retrospective/Retrospective1.md)
+  - [#2 23년 1월 9일 ~ 23년 1월 15일](Diary/Retrospective/Retrospective1.md)
 - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
 - [우아한테크코스 5기 지원 과정](Diary/Woowaprecourse/README.md)
   - [서류 지원](Diary/Woowaprecourse/Apply.md)
