@@ -346,6 +346,89 @@ function countUniqueValues(arr) {
 
 ---
 
+## 4. Sliding Window(기준점 간 이동 배열 패턴)
+
+This pattern involves creating a window which can either be an array of number form one position tto another. Depending on a certain condition, the window either increases or closes(and a new window is created)
+
+쉽게 생각하자면 문자열이나 배열에서 연속된 요소들을 비교하고자 할 때 유용한 패턴이다. 가장 간단한 예시를 생각해보자. 길이가 100인 배열이 있다. 첫 번째 요소부터 순서대로 n개의 요소를 비교할텐데(더하든 빼든 다른 특정한 작업을 하든 상관없다.) 비교하는 순서는 아래와 같다.
+
+- 0번 ~ 4번
+- 1번 ~ 5번 -> 0번의 창문을 닫고 5번의 창문을 연다.
+- 2번 ~ 6번 -> 1번의 창문을 닫고 6번의 창문을 연다.
+- ...
+
+위와 같이 데이터를 비교하게 되는 것이 기준점 간 이동 배열 패턴의 기본이라고 할 수 있다.
+
+규모가 큰 데이터셋에서 데이터의 하위 집합을 추적하는 문제에 있어 유용한 패턴이다.
+
+### 3-1. 기준점 간 이동 배열 패턴 예제
+
+예제를 통해 기준점 간 이동 배열 패턴을 알아보자. 아래와 같은 문제가 있다.
+
+> Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function sholud calculate the maximun sum of n consecutive(연속적인) elements in the array.
+
+```javascript
+maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10
+maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4); // 17
+maxSubarraySum([4, 2, 1, 6], 1); // 6
+maxSubarraySum([4, 2, 1, 6, 2], 4); // 13
+maxSubarraySum([], 4); // null
+```
+
+먼저 이중 for문을 이용한 풀이이다. 당연히 시간 복잡도는 `O(n^2)`이므로 효율적인 풀이는 아니다.
+
+```javascript
+function maxSubarraySum(arr, num) {
+  // 배열의 길이가 num보다 작으면 null를 반환한다.
+  if (num > arr.length) {
+    return null;
+  }
+  // 더한 값이 음수가 될 수 있으므로 -Infinity로 시작한다.
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i++) {
+    temp = 0;
+    // i번째 요소부터 num개의 요소를 더한다.
+    for (let j = 0; j < num; j++) {
+      temp += arr[i + j];
+    }
+    // 더한 값이 기존 max보다 크면 max에 할당한다.
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+```
+
+다음으론 기준점 간 이동 배열 패턴을 적용한 풀이이다.
+
+```javascript
+function maxSubarraySum(arr, num) {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+```
+
+`maxSum`과 `tempSum`를 미리 선언을 한 뒤 `maxSum`은 처음 값으로 0번째 부터 n번째의 요소의 합을 할당한다. 이후 반복문이 등장한다. 여기가 바로 기준점 간 이동 배열 패턴을 적용한 핵심 포인트가 된다. 아래의 코드를 보자.
+
+```javascript
+tempSum = tempSum - arr[i - num] + arr[i];
+```
+
+`- arr[i - num]`으로 기존에 열려있던 window를 하나 닫고 `+ arr[i]`으로 새로운 window를 하나 연다. 이렇게 차곡차곡 하나씩 열고 닫으면서 `tempSum`값이 변하게 되고 이는 바로 아래에서 `maxSum`과 비교하여 `maxSum`를 업데이트 할지 말지를 정한다. 바로 이것이 기준점 간 이동 배열 패턴의 기본 개념이라고 할 수 있다.
+
+---
+
 ## 참고
 
 Udemy - JavaScript 알고리즘 & 자료구조 마스터클래스 / 섹션 5: 문제 해결 패턴
