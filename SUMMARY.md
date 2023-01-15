@@ -76,6 +76,7 @@
   - [노드 생성과 추가 및 삭제](JAVASCRIPT/DOM/CreateAddDeleteNode.md)
   - [클래스 조작](JAVASCRIPT/DOM/ClassManipulation.md)
   - [이벤트 전파](JAVASCRIPT/DOM/EventPropagation.md)
+  - [이벤트 위임](JAVASCRIPT/DOM/EventDelegation.md)
 - [Class](JAVASCRIPT/Class/README.md)
   - [자바스크립트에서의 클래스](JAVASCRIPT/Class/ClassInJS.md)
   - [클래스의 기본](JAVASCRIPT/Class/BasicClass.md)
