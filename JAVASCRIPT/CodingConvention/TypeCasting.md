@@ -38,6 +38,8 @@ const totalScore = String(score);
 
 문자열에서 숫자로 형변화가 필요한 경우 `Number()` 메서드를 사용한다. `parseInt()` 메서드를 사용하는 경우 기수를 인자로 넘겨 사용한다.
 
+`parseInt()`인 경우 숫자가 `0x` 또는 `0X` 문자로 시작하는 경우엔 16진수로 취급된다.
+
 ```javascript
 const value = '3';
 
