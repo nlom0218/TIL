@@ -143,6 +143,7 @@
 - [빅오 표기법](DataStructureAlgorithm/BigO.md)
 - [문제 해결 접근법](DataStructureAlgorithm/Approach.md)
 - [문제 해결 패턴](DataStructureAlgorithm/SolvingPattern.md)
+- [재귀(Recursion)](DataStructureAlgorithm/Recursion.md)
 - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
   - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
   - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
