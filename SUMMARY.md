@@ -137,6 +137,10 @@
 - [모의 함수(Mock Functions) 사용하기](Jest/MockFnBasic.md)
 - [함수의 호출 테스트하기 with jest.spyOn()](Jest/FnCalledTest.md)
 
+### ⛳️ 정규 표현식(Reg Exp)
+
+- [정규 표현식이란?](RegExp/WhatisRegExp.md)
+
 ### 🧚 Data structure & Algorithm
 
 - [자료구조와 알고리즘을 공부해야 하는 이유](DataStructureAlgorithm/ResonStudy.md)
