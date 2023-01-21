@@ -207,6 +207,7 @@
     - [예상 대진표](CodingTest/Programmers/Level2/programmers_expected_draw.md)
     - [튜플](CodingTest/Programmers/Level2/programmers_tuple.md)
     - [k진수에서 소수 개수 구하기](CodingTest/Programmers/Level2/programmers_find_decimals.md)
+    - [n^2 배열 자르기](CodingTest/Programmers/Level2/programmers_crop_array.md)
   - [Level 3](CodingTest/Programmers/Level3/README.md)
     - [베스트 앨범](CodingTest/Programmers/Level3/programmers_best_album.md)
     - [이중우선순위큐](CodingTest/Programmers/Level3/programmers_double_priority_queue.md)
