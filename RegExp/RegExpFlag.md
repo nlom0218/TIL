@@ -251,6 +251,12 @@ regExp.exec(string); // ['hongdong', index: 18, input: 'Hello, my name is hongdo
 
 ---
 
+## 8. Conclusion
+
+> 플래그에 대해 살펴보았다. 예전에는 중구난방으로 무엇을 뜻하는지 모른채 사용을 했지만 정리를 하고 나니 언제 사용해야 할지 감이 조금씩 잡힌다. `y` 플래그는 이해하기가 너무 어려웠다.ㅠㅠ 부족한 내용, 틀린 내용이 있다면 이후에 수정하여 채워나가자.
+
+---
+
 ## 참고
 
 [패턴과 플래그](https://ko.javascript.info/regexp-introduction)  
