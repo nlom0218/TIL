@@ -36,10 +36,10 @@
 
 또한 패턴은 크게 4가지로 분류할 수 있다.
 
-- Group and ranges
-- Quantifiers
-- Boundary-type
-- Character classes
+- 특정 문자 숫자 매칭 패턴
+- 검색 기준 패턴
+- 갯수 반복 패턴
+- 그룹 패턴
 
 위의 4가지 패턴에 대해서는 차례차례 정리하고자 한다.
 
