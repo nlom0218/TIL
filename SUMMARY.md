@@ -141,8 +141,8 @@
 
 - [정규 표현식이란?](RegExp/WhatisRegExp.md)
 - [정규식 플래그](RegExp/RegExpFlag.md)
+- [검색 기준 패턴](RegExp/SearchCriteria.md)
 - [특정 문자 숫자 매칭 패턴](RegExp/CharacterClasses.md)
-- [검색 기준 패턴](RegExp/Boundary-type.md)
 - [갯수 반복 패턴](RegExp/Quantilfiers.md)
 - [그룹 패턴](RegExp/GroupAndRanges.md)
 
