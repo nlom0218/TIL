@@ -153,7 +153,7 @@
 - [문제 해결 접근법](DataStructureAlgorithm/Approach.md)
 - [문제 해결 패턴](DataStructureAlgorithm/SolvingPattern.md)
 - [재귀(Recursion)](DataStructureAlgorithm/Recursion.md)
-- [검색 알고리즘](DataStructureAlgorithm/SearchAlgorithm/README.md)
+- [검색 알고리즘](DataStructureAlgorithm/SearchAlgorithm.md)
 - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
   - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
   - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
