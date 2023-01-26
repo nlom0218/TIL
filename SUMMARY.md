@@ -154,6 +154,8 @@
 - [문제 해결 패턴](DataStructureAlgorithm/SolvingPattern.md)
 - [재귀(Recursion)](DataStructureAlgorithm/Recursion.md)
 - [검색 알고리즘](DataStructureAlgorithm/SearchAlgorithm.md)
+- [정렬 알고리즘](DataStructureAlgorithm/SortingAlgorithm/README.md)
+  - [버블 정렬(Bubble Sort)](DataStructureAlgorithm/SortingAlgorithm/BubbleSort.md)
 - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
   - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
   - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
