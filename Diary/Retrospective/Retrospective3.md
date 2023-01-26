@@ -20,8 +20,8 @@ Level 2로 넘어가서 푼 문제는 `n^2 배열 자르기` 문제였다. 해�
 
 아래는 내가 이번주에 푼 문제와 이를 정리한 TIL이다.
 
-- [햄버거 만들기](CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
-- [n^2 배열 자르기](CodingTest/Programmers/Level2/programmers_crop_array.md)
+- [햄버거 만들기](/CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
+- [n^2 배열 자르기](/CodingTest/Programmers/Level2/programmers_crop_array.md)
 
 ### 2-2. 알고리즘 강의
 
@@ -42,7 +42,7 @@ Level 2로 넘어가서 푼 문제는 `n^2 배열 자르기` 문제였다. 해�
 
 아래는 강의를 들으며 정리한 재귀에 대한 내용을 정리한 TIL이다.
 
-- [재귀(Recursion)](DataStructureAlgorithm/Recursion.md)
+- [재귀(Recursion)](/DataStructureAlgorithm/Recursion.md)
 
 ### 2-3. 노마드 코더 - 바닐라 JS로 크롬 웹 만들기
 
@@ -65,10 +65,10 @@ Level 2로 넘어가서 푼 문제는 `n^2 배열 자르기` 문제였다. 해�
 
 아래는 이번에 공부한 내용을 정리한 TIL이다.
 
-- [이터러블](JAVASCRIPT/Iterable.md)
-- [객체의 프로퍼티 존재 확인과 열거](JAVASCRIPT/ObjectProperty.md)
-- [정규 표현식이란?](RegExp/WhatisRegExp.md)
-- [정규식 플래그](RegExp/RegExpFlag.md)
+- [이터러블](/JAVASCRIPT/Iterable.md)
+- [객체의 프로퍼티 존재 확인과 열거](/JAVASCRIPT/ObjectProperty.md)
+- [정규 표현식이란?](/RegExp/WhatisRegExp.md)
+- [정규식 플래그](/RegExp/RegExpFlag.md)
 
 ---
 

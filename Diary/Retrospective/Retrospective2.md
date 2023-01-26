@@ -24,8 +24,8 @@ TickTick은 무엇이냐? 일정을 관리해주는 어플이다. 무료 1년에
 
 아래는 이번 주에 강의를 들으며 정리한 TIL이다.
 
-- [문제 해결 접근법](DataStructureAlgorithm/Approach.md)
-- [문제 해결 패턴](DataStructureAlgorithm/SolvingPattern.md)
+- [문제 해결 접근법](/DataStructureAlgorithm/Approach.md)
+- [문제 해결 패턴](/DataStructureAlgorithm/SolvingPattern.md)
 
 ### 2-3. 코딩 테스트
 
@@ -35,8 +35,8 @@ TickTick은 무엇이냐? 일정을 관리해주는 어플이다. 무료 1년에
 
 아래는 이번 주에 풀고 TIL에 정리한 문제들이다.
 
-- [숫자 짝꿍](CodingTest/Programmers/Level1/programmers_number_partner.md)
-- [햄버거 만들기](CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
+- [숫자 짝꿍](/CodingTest/Programmers/Level1/programmers_number_partner.md)
+- [햄버거 만들기](/CodingTest/Programmers/Level1/programmers_makeing_hamburger.md)
 
 ### 2-3. 자바스크립트 공부
 
@@ -49,8 +49,8 @@ TickTick은 무엇이냐? 일정을 관리해주는 어플이다. 무료 1년에
 아래의 이번 주에 공부한 내용이 담긴 TIL이다.
 
 - [브라우저의 랜더링 과정](/ETC/BrowerRendering.md)
-- [이벤트 전파](JAVASCRIPT/DOM/EventPropagation.md)
-- [이벤트 위임](JAVASCRIPT/DOM/EventDelegation.md)
+- [이벤트 전파](/JAVASCRIPT/DOM/EventPropagation.md)
+- [이벤트 위임](/JAVASCRIPT/DOM/EventDelegation.md)
 
 ---
 

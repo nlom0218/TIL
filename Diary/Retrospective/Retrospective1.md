@@ -22,8 +22,8 @@
 
 아래는 이번에 정리한 코딩 테스트 문제이다.
 
-[가장 가까운 글자](CodingTest/Programmers/Level1/programmers_nearset_identical_letter.md)  
-[과일 장수](CodingTest/Programmers/Level1/programmers_fruiterer.md)
+[가장 가까운 글자](/CodingTest/Programmers/Level1/programmers_nearset_identical_letter.md)  
+[과일 장수](/CodingTest/Programmers/Level1/programmers_fruiterer.md)
 
 ---
 
@@ -43,8 +43,8 @@
 
 이번주에는 아래 목록에 대한 내용을 정리하였다.
 
-- [undefined & null](JAVASCRIPT/undefinedAndNull.md)
-- [얕은 복사와 깊은 복사](JAVASCRIPT/Copy.md)
+- [undefined & null](/JAVASCRIPT/undefinedAndNull.md)
+- [얕은 복사와 깊은 복사](/JAVASCRIPT/Copy.md)
 
 이렇게 매주 자바스크립트를 공부하면서 정리가 필요한 내용은 블로그래에 정리하려고 한다. 위의 내용은 알고는 있었지만 누군가에게 설명을 하기 위해서는 부족한 개념이었다. 실제로 얕은 복사와 깊은 복사는 용어만 알고 있었지 어떤 개념인지는 정확히 알지 못했다. 부끄러운 점이다. 모르는 것이 있으면 바로 공부를 해야 한다. 그렇지 않고 나중으로 미루기만 하면 해야 할 공부는 산더미처럼 쌓이기만 할 것이다. 부지런히 공부하고 정리하자.
 
