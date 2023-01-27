@@ -145,6 +145,8 @@
 - [특정 문자 숫자 매칭 패턴](RegExp/CharacterClasses.md)
 - [갯수 반복 패턴](RegExp/NumberRepetition.md)
 - [그룹 패턴](RegExp/GroupAndRanges.md)
+- [정규 표현식의 메서드](RegExp/RegExpMethod.md)
+- [정규 표현식과 함께 사용하는 String의 메서드](RegExp/StringMethodWithRegExp.md)
 
 ### 🧚 Data structure & Algorithm
 
