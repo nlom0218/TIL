@@ -226,6 +226,7 @@
     - [n^2 배열 자르기](CodingTest/Programmers/Level2/programmers_crop_array.md)
     - [[3차] 압축](CodingTest/Programmers/Level2/programmers_compression.md)
     - [[3차] n진수 게임](CodingTest/Programmers/Level2/programmers_base_n_game.md)
+    - [스킬트리](CodingTest/Programmers/Level2/programmers_skill_trees.md)
   - [Level 3](CodingTest/Programmers/Level3/README.md)
     - [베스트 앨범](CodingTest/Programmers/Level3/programmers_best_album.md)
     - [이중우선순위큐](CodingTest/Programmers/Level3/programmers_double_priority_queue.md)
