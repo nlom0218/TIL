@@ -37,19 +37,13 @@ TickTick 어플을 참고로 하여 디자인을 하였는데 나름 결과가 �
 
 이번주 정리한 TIL이다.
 
-| 주제          | TIL 제목                                    | TIL 바로가기                                                              |
-| ------------- | ------------------------------------------- | ------------------------------------------------------------------------- |
-| 코딩 테스트   | [3차] n진수 게임                            | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_base_n_game.md) |
-| 코딩 테스트   | [스킬트리                                   | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_skill_trees.md) |
-| 알고리즘 강의 | 합병 정렬(Merge Sort)                       | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/MergeSort.md)     |
-| 알고리즘 강의 | 퀵 정렬(Quick Sort)                         | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/QuickSort.md)     |
-| 알고리즘 강의 | 기수 정렬(Radix sort)                       | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/RadixSort.md)     |
-| 정규 표현식   | 검색 기준 패턴                              | [TIL 바로가기](RegExp/SearchCriteria.md)                                  |
-| 정규 표현식   | 특정 문자 숫자 매칭 패턴                    | [TIL 바로가기](RegExp/CharacterClasses.md)                                |
-| 정규 표현식   | 갯수 반복 패턴                              | [TIL 바로가기](RegExp/NumberRepetition.md)                                |
-| 정규 표현식   | 그룹 패턴                                   | [TIL 바로가기](RegExp/GroupAndRanges.md)                                  |
-| 정규 표현식   | 정규 표현식의 메서드                        | [TIL 바로가기](RegExp/RegExpMethod.md)                                    |
-| 정규 표현식   | 정규 표현식과 함께 사용하는 String의 메서드 | [TIL 바로가기](RegExp/StringMethodWithRegExp.md)                          |
+| 주제          | TIL 제목              | TIL 바로가기                                                              |
+| ------------- | --------------------- | ------------------------------------------------------------------------- |
+| 코딩 테스트   | [3차] n진수 게임      | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_base_n_game.md) |
+| 코딩 테스트   | [스킬트리             | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_skill_trees.md) |
+| 알고리즘 강의 | 합병 정렬(Merge Sort) | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/MergeSort.md)     |
+| 알고리즘 강의 | 퀵 정렬(Quick Sort)   | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/QuickSort.md)     |
+| 알고리즘 강의 | 기수 정렬(Radix sort) | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/RadixSort.md)     |
 
 ---
 
