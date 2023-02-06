@@ -162,6 +162,7 @@
   - [삽입 정렬(Insertion Sort)](DataStructureAlgorithm/SortingAlgorithm/InsertionSort.md)
   - [합병 정렬(Merge Sort)](DataStructureAlgorithm/SortingAlgorithm/MergeSort.md)
   - [퀵 정렬(Quick Sort)](DataStructureAlgorithm/SortingAlgorithm/QuickSort.md)
+  - [기수 정렬(Radix sort)](DataStructureAlgorithm/SortingAlgorithm/RadixSort.md)
 - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
   - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
   - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
