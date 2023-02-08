@@ -17,15 +17,15 @@ Test 단위를 묶는 가장 단위로 테스트시 `describe()` 함수에 설�
 서로 연관된 테스트를 함께 묶는 그룹을 만드는 함수이다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const calculation = require("../src/calculation");
+const { describe, expect, test } = require('@jest/globals');
+const calculation = require('../src/calculation');
 
-describe("사칙 연산 테스트", () => {
-  test("덧셈 테스트", () => {
+describe('사칙 연산 테스트', () => {
+  test('덧셈 테스트', () => {
     expect(calculation.sum(1, 2)).toBe(3);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(3, 1)).toBe(2);
   });
 });
@@ -51,14 +51,14 @@ describe("사칙 연산 테스트", () => {
 - `fn`: 함수, `table`의 각 행의 매개변수를 함수 인수로 받는 함수이다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const sum = require("../src/sum");
+const { describe, expect, test } = require('@jest/globals');
+const sum = require('../src/sum');
 
 describe.each([
   [1, 2, 3],
   [2, 3, 5],
   [4, 5, 9],
-])(".sum(%i, %i)", (a, b, expected) => {
+])('.sum(%i, %i)', (a, b, expected) => {
   test(`${expected} 값을 반환한다.`, () => {
     expect(sum(a, b)).toBe(expected);
   });
@@ -82,25 +82,25 @@ describe.each([
 특정 `describe block`만 테스트하기 위해 사용된다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const calculation = require("../src/calculation");
+const { describe, expect, test } = require('@jest/globals');
+const calculation = require('../src/calculation');
 
-describe("사칙 연산 테스트", () => {
-  test("덧셈 테스트", () => {
+describe('사칙 연산 테스트', () => {
+  test('덧셈 테스트', () => {
     expect(calculation.sum(1, 2)).toBe(3);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(3, 1)).toBe(2);
   });
 });
 
-describe.only("백의 자리 사칙 연산 테스트", () => {
-  test("덧셈 테스트", () => {
+describe.only('백의 자리 사칙 연산 테스트', () => {
+  test('덧셈 테스트', () => {
     expect(calculation.sum(100, 200)).toBe(300);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(300, 100)).toBe(200);
   });
 });
@@ -127,25 +127,25 @@ describe.only("백의 자리 사칙 연산 테스트", () => {
 `only`와 반대 성격을 가진 `skip`은 건너뛰고 싶은 `describe`가 있을 때 사용한다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const calculation = require("../src/calculation");
+const { describe, expect, test } = require('@jest/globals');
+const calculation = require('../src/calculation');
 
-describe("사칙 연산 테스트", () => {
-  test("덧셈 테스트", () => {
+describe('사칙 연산 테스트', () => {
+  test('덧셈 테스트', () => {
     expect(calculation.sum(1, 2)).toBe(3);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(3, 1)).toBe(2);
   });
 });
 
-describe.skip("백의 자리 사칙 연산 테스트", () => {
-  test("덧셈 테스트", () => {
+describe.skip('백의 자리 사칙 연산 테스트', () => {
+  test('덧셈 테스트', () => {
     expect(calculation.sum(100, 200)).toBe(300);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(300, 100)).toBe(200);
   });
 });
@@ -172,10 +172,10 @@ describe.skip("백의 자리 사칙 연산 테스트", () => {
 Jest를 사용하면서 가장 많이 사용되는 함수일 것이다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
-test("join 메서드 테스트", () => {
-  expect(["안", "녕"].join("")).toBe("안녕");
+test('join 메서드 테스트', () => {
+  expect(['안', '녕'].join('')).toBe('안녕');
 });
 ```
 
@@ -199,15 +199,15 @@ test("join 메서드 테스트", () => {
 - `fn`: 함수, `table`의 각 행의 매개변수를 함수 인수로 받는 함수이다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
 test.each([
-  [["강", "아", "지"], "강아지"],
-  [["호", "랑", "이"], "호랑이"],
-  [["고", "양", "이"], "고양이"],
-  [["거", "북", "이"], "거북이"],
-])(".join(%p) => %s", (arr, expected) => {
-  expect(arr.join("")).toBe(expected);
+  [['강', '아', '지'], '강아지'],
+  [['호', '랑', '이'], '호랑이'],
+  [['고', '양', '이'], '고양이'],
+  [['거', '북', '이'], '거북이'],
+])('.join(%p) => %s', (arr, expected) => {
+  expect(arr.join('')).toBe(expected);
 });
 ```
 
@@ -220,15 +220,15 @@ test.each([
 `test.only()` 함수는 특정 테스트만 실행하고 싶을 때 사용한다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const calculation = require("../src/calculation");
+const { describe, expect, test } = require('@jest/globals');
+const calculation = require('../src/calculation');
 
-describe("사칙 연산 테스트", () => {
-  test.only("덧셈 테스트", () => {
+describe('사칙 연산 테스트', () => {
+  test.only('덧셈 테스트', () => {
     expect(calculation.sum(1, 2)).toBe(3);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(3, 1)).toBe(2);
   });
 });
@@ -243,19 +243,19 @@ describe("사칙 연산 테스트", () => {
 `test.each()` 함수에 `only`을 적용한 것이다. 테스트 실행 과정으 `test.only(name, fn)`와 동일하다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
 test.only.each([
-  [["강", "아", "지"], "강아지"],
-  [["호", "랑", "이"], "호랑이"],
-  [["고", "양", "이"], "고양이"],
-  [["거", "북", "이"], "거북이"],
-])(".join(%p) => %s", (arr, expected) => {
-  expect(arr.join("")).toBe(expected);
+  [['강', '아', '지'], '강아지'],
+  [['호', '랑', '이'], '호랑이'],
+  [['고', '양', '이'], '고양이'],
+  [['거', '북', '이'], '거북이'],
+])('.join(%p) => %s', (arr, expected) => {
+  expect(arr.join('')).toBe(expected);
 });
 
-test("여러번 반복하기", () => {
-  expect("안녕".repeat(2)).toBe("안녕안녕");
+test('여러번 반복하기', () => {
+  expect('안녕'.repeat(2)).toBe('안녕안녕');
 });
 ```
 
@@ -268,15 +268,15 @@ test("여러번 반복하기", () => {
 `test.skip()` 메서드는 특정 테스트를 스킵하고 싶을 때 사용하는 함수이다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
-const calculation = require("../src/calculation");
+const { describe, expect, test } = require('@jest/globals');
+const calculation = require('../src/calculation');
 
-describe("사칙 연산 테스트", () => {
-  test.skip("덧셈 테스트", () => {
+describe('사칙 연산 테스트', () => {
+  test.skip('덧셈 테스트', () => {
     expect(calculation.sum(1, 2)).toBe(3);
   });
 
-  test("뺄셈 테스트", () => {
+  test('뺄셈 테스트', () => {
     expect(calculation.minus(3, 1)).toBe(2);
   });
 });
@@ -291,23 +291,66 @@ describe("사칙 연산 테스트", () => {
 `test.each()` 함수에 `skip`을 적용한 것이다. 테스트 실행 과정으 `test.skip(name, fn)`와 동일하다.
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
 test.skip.each([
-  [["강", "아", "지"], "강아지"],
-  [["호", "랑", "이"], "호랑이"],
-  [["고", "양", "이"], "고양이"],
-  [["거", "북", "이"], "거북이"],
-])(".join(%p) => %s", (arr, expected) => {
-  expect(arr.join("")).toBe(expected);
+  [['강', '아', '지'], '강아지'],
+  [['호', '랑', '이'], '호랑이'],
+  [['고', '양', '이'], '고양이'],
+  [['거', '북', '이'], '거북이'],
+])('.join(%p) => %s', (arr, expected) => {
+  expect(arr.join('')).toBe(expected);
 });
 
-test("여러번 반복하기", () => {
-  expect("안녕".repeat(2)).toBe("안녕안녕");
+test('여러번 반복하기', () => {
+  expect('안녕'.repeat(2)).toBe('안녕안녕');
 });
 ```
 
 ![test.skip.each(table)(name, fn)](/image/Jest/PopularGlobalsAPI/test6.png)
+
+---
+
+### 3-7. 테스트 케이스의 세 개의 섹션
+
+📅 2023-02-08 추가
+
+테스트 케이스를 작성하기 위해 지침이 되는 세 개의 섹션이 있다. 이를 반드시 지켜야 하는 것은 아니지만 섹션의 순서에 따라 테스트 코드를 작성하게 되면 복잡한 테스트 코드인 경우 이를 구분하여 코드를 작성하는 데 큰 도움이 될 것이다.
+
+초심자의 입장에선 섹션을 나누어 테스트 코드를 고민하고 생각하게 된다면 더욱 훌륭한 테스트 코드를 작성할 수 있을 것이다.
+
+세 개의 섹션은 아래와 같다.
+
+- 준비: 테스트할 동작을 호출하기 위해 필요한 사전 준비 작업
+- 실행: 테스트 대상 동작 호출
+- 단언: 호출 결과가 기대한 결과와 동일한 지 확인
+
+각각의 섹션을 부르는 용어도 존재한다. 바로 `given/when/then`이여 이는 테스트 철학에 따라 `arrange/act/assertion`이라고 부르기도 한다. 용어는 다르지만 의미하는 바는 동일하다.
+
+```javascript
+test('만나서 처음 인사할 때 자기 이름 말하기', () => {
+  // given
+  const person = new Person('noah', 30);
+
+  // when
+  const greeting = person.sayGreeting();
+
+  // then
+  expect(greeting).toEqual(expect.stringContaining('My name is noah'));
+});
+```
+
+```javascript
+test('1 + 2 = 3', () => {
+  // when
+  const result = sum(1, 2);
+
+  // given
+  expect(result).toBe(3);
+});
+```
+
+반드시 세 개의 섹션을 기준으로 테스트 코드를 작성하지 않아도 되니 너무 틀에 맞춰서 작성하진 말자. 가이드의 역할로만 생각하자.
 
 ---
 
@@ -326,4 +369,5 @@ test("여러번 반복하기", () => {
 
 ---
 
-📅 2022-11-06
+📅 2022-11-06  
+📅 2023-02-08
