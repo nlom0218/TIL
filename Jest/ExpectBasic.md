@@ -136,7 +136,7 @@ const arr = [1, 2, 3];
 
 test('arrayContaining', () => {
   const expected = [1, 2];
-  expect(arr).toEqual(expect.not.arrayContaining(expected));
+  expect(arr).toEqual(expect.arrayContaining(expected));
 });
 ```
 

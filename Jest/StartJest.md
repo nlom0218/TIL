@@ -81,9 +81,9 @@ module.exports = sum;
 
 ```javascript
 // sum.test.js
-const sum = require("./sum");
+const sum = require('./sum');
 
-test("숫자 더하기 테스트", () => {
+test('숫자 더하기 테스트', () => {
   expect(sum(1, 2)).toBe(3);
 });
 ```
@@ -98,7 +98,7 @@ test("숫자 더하기 테스트", () => {
 
 ### 6-1. tests 폴더 안에서 관리하기
 
-첫 번째는 `tests` 폴더 안에서 관리하는 방법이다. 이런 바업은 테스트 파일만 한 곳으로 모아서 관리하기 때문에 전체적인 테스트 파일에 접근하기 유용하다.
+첫 번째는 `tests` 폴더 안에서 관리하는 방법이다. 이런 방법은 테스트 파일만 한 곳으로 모아서 관리하기 때문에 전체적인 테스트 파일에 접근하기 유용하다.
 
 디렉토리 구조 예시
 
@@ -141,11 +141,11 @@ Jest로 테스트 코드를 작성하다보면 자동 완성이 되지 않아 �
 ![Globals Environment](/image/Jest/StartJest/globalEnvironment.png)
 
 ```javascript
-const { describe, expect, test } = require("@jest/globals");
+const { describe, expect, test } = require('@jest/globals');
 
 // 또는
 
-import { expect, jest, test } from "@jest/globals";
+import { expect, jest, test } from '@jest/globals';
 ```
 
 ![auto-complete](/image/Jest/StartJest/autoComplete.png)
