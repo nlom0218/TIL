@@ -1,4 +1,4 @@
-# 기본적인 Expect API 사용하기
+# 기본적인 Expect API 및 Matcher 함수 사용하기
 
 ## 1. 개요
 
@@ -222,7 +222,103 @@ test('toHaveLength', () => {
 
 ---
 
-## 9. Conclusion
+## 9. Using Matchers
+
+📅 2023-02-08 추가
+
+데이터 타입에 따른 다양한 `matcher` 함수에 대해 더 알아보자.
+
+### 9-1. Truthiness
+
+| matcher 함수      | 의미                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| `toBeNull()`      | `null` 값만 일치                                                                     |
+| `toBeUndefined()` | `undefined` 값만 일치                                                                |
+| `toBeDefined()`   | `toBeUndefined()`의 반대 즉, 정의되어 있으면 일치(null도 값이 있다는 것을 잊지말자.) |
+| `toBeTruthy()`    | `if`문이 `true`로 취급하는 모든 항목과 일치                                          |
+| `toBeFalsy()`     | `if`문이 `false`로 취급하는 모든 항목과 일치                                         |
+
+```javascript
+test('null', () => {
+  const n = null;
+  expect(n).toBeNull(); // n은 null값이기 때문
+  expect(n).toBeDefined(); // n은 정의되었기 때문
+  expect(n).not.toBeUndefined(); // n은 undefined가 아니기 때문
+  expect(n).not.toBeTruthy(); // n은 if문이 false로 취급하기 때문
+  expect(n).toBeFalsy(); // n은 if문이 false로 취급하기 때문
+});
+
+test('zero', () => {
+  const z = 0;
+  expect(z).not.toBeNull(); // n은 null이 아닌 0이기 때문
+  expect(z).toBeDefined(); // n은 정의되었기 때문
+  expect(z).not.toBeUndefined(); // n은 undefined가 아니기 때문
+  expect(z).not.toBeTruthy(); // n은 if문이 false로 취급하기 때문
+  expect(z).toBeFalsy(); // n은 if문이 false로 취급하기 때문
+});
+```
+
+### 9-2. Numbers
+
+| matcher 함수               | 의미                     |
+| -------------------------- | ------------------------ |
+| `toBeGreaterThan()`        | `received` > `expected`  |
+| `toBeGreaterThanOrEqual()` | `received` >= `expected` |
+| `toBeLessThan()`           | `received` < `expected`  |
+| `toBeLessThanOrEqual()`    | `received` <= `expected` |
+
+```javascript
+test('two plus two', () => {
+  const value = 2 + 2;
+  expect(value).toBeGreaterThan(3); // recived인 4가 expected인 3보다 크기 때문
+  expect(value).toBeGreaterThanOrEqual(3.5); // recived인 4가 expected인 3.5보다 크거나 같기 때문
+  expect(value).toBeLessThan(5); // recived인 4가 expected인 5보다 작기 때문
+  expect(value).toBeLessThanOrEqual(4.5); // recived인 4가 expected인 4.5보다 작거나 크기 때문
+});
+```
+
+### 9-3. String
+
+문자열과 관련된 `matcher` 함수 중 `toMatch()`는 정규 표현식을 인자로 받아 검사를 진행할 수 있다.
+
+> 정규 표현식을 사용할 수 있다니! 근래에 공부한 보람이 있다!
+
+```javascript
+test('there is no I in team', () => {
+  expect('team').not.toMatch(/I/); // team에 I가 없기 때문
+});
+
+test('there is no I in team', () => {
+  expect('team').toMatch(/A/i); // team에 소문자 A가 있기 때문
+});
+
+test('but there is a "stop" in Christoph', () => {
+  expect('Christoph').toMatch(/stop/); // Christoph에 stop이 있기 때문
+});
+```
+
+### 9-4. Arrays and iterables
+
+`toContain()` `matcher` 함수를 사용하여 배열 또는 이터러블에 특정 요소가 포함되어 있는지 검사할 수 있다. 포함과 관련된 `matcher` 함수는 `6. 포함하는지 테스트하기`를 참고하면 더 좋다:)
+
+```javascript
+const shoppingList = [
+  'diapers',
+  'kleenex',
+  'trash bags',
+  'paper towels',
+  'milk',
+];
+
+test('the shopping list has milk on it', () => {
+  expect(shoppingList).toContain('milk'); // shoppintList 배열에 milk 요소가 있기 때문
+  expect(new Set(shoppingList)).toContain('milk'); // set 객체를 만들었는데 set 객체도 이터러블이기 때문에 toContain를 사용할 수 있다.
+});
+```
+
+---
+
+## 10. Conclusion
 
 > `Jest`에 대한 어느정도의 지식은 학습을 하였다. 이제 직접 프로젝트에 테스트 코드를 작성하여 실전에서 사용해보도록 하자. 물론 `Mock Functions`이 남아있긴 하지만 기초적인 테스트 코드는 충분히 작성할 수 있을 듯 하다. 실전에서 사용하면서 필요한 내용을 추가적으로 학습하여 정리하도록 하자.
 
@@ -236,4 +332,5 @@ test('toHaveLength', () => {
 
 ---
 
-📅 2022-11-07
+📅 2022-11-07  
+📅 2023-02-08
