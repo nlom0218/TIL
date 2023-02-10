@@ -128,7 +128,7 @@ console.log(age);
 
 ---
 
-### 6. require / exports vs import / export
+## 6. require / exports vs import / export
 
 `require / exports` 키워드와 `import / export` 키워드는 동시에 사용할 수 없다. 그렇다면 어떤 방식이 더 선호될까? 일반적으로 `import / export` 키워드가 더 선호된다.
 
@@ -136,6 +136,12 @@ console.log(age);
 
 - 필요한 모듈 부분 만 선택하고 로드 할 수 있다.
 - 성능이 우수하며 메모리를 절약한다.
+
+---
+
+## 7. Conclusion
+
+> 리액트로 여러 프로젝트를 진행하다 보니 import, export에만 익숙해졌었는데 우테코 프리코스를 통해 require, exports을 사용하게 되었다. 하지만 현재 다시 import, export을 미션에 적용하고자 이 두개의 차이에 대해 알아보았다. 모듈(파일)을 단순히 받아온다는 공통점을 넘어 차이점도 분명 존재하고 성능이 뛰어나기 때문에 선호하는 모듈 시스템이 있으니 이를 잘 구별하자.
 
 ---
 
