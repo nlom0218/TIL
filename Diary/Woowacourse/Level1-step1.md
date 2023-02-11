@@ -2,9 +2,9 @@
 
 ## 개요
 
-|       미션        |          기간           | Repository                                                                     | PR & Review                                                                 |
-| :---------------: | :---------------------: | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| 자동차 경주 1단계 | `23-02-07` - `23-02-09` | [Repo](https://github.com/nlom0218/javascript-racingcar-1/tree/nlom0218-step1) | [PR & Review](https://github.com/woowacourse/javascript-racingcar/pull/178) |
+|       미션        |          기간           | Repository                                                           | PR & Review                                                                 |
+| :---------------: | :---------------------: | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| 자동차 경주 1단계 | `23-02-07` - `23-02-09` | [Repo](https://github.com/nlom0218/javascript-racingcar-1/tree/main) | [PR & Review](https://github.com/woowacourse/javascript-racingcar/pull/178) |
 
 ---
 
