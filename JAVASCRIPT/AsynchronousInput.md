@@ -325,7 +325,8 @@ init();
 [벨로퍼트와 함께하는 - 01. Promise](https://learnjs.vlpt.us/async/01-promise.html)
 [벨로퍼트와 함께하는 - 02. async/await](https://learnjs.vlpt.us/async/02-async-await.html)
 [MDN - Promise.prototype.then()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
-[MDN - Promise.prototype.catch()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+[MDN - Promise.prototype.catch()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)  
+[async와 await](https://ko.javascript.info/async-await)
 
 ---
 
