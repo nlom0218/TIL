@@ -268,6 +268,7 @@
     - [#3 23년 1월 16일 ~ 23년 1월 22일](Diary/Retrospective/2301/Retrospective3.md)
     - [#4 23년 1월 23일 ~ 23년 1월 29일](Diary/Retrospective/2301/Retrospective4.md)
     - [#5 23년 1월 30일 ~ 23년 2월 5일](Diary/Retrospective/2301/Retrospective5.md)
+    - [#6 23년 2월 6일 ~ 23년 2월 12일]()
 - [우아한테크코스 5기 지원 과정](Diary/Woowaprecourse/README.md)
   - [서류 지원](Diary/Woowaprecourse/Apply.md)
   - [프리코스 1주 차 - 온보딩](Diary/Woowaprecourse/Precourse1.md)
