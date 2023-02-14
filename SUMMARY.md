@@ -279,4 +279,5 @@
   - [우테코 최종 합격 후기](Diary/Woowaprecourse/Pass.md)
 - [우아한테크코스 5기 회고록](Diary/Woowacourse/README.md)
   - [레벨1 자동차 경주 - step1](Diary/Woowacourse/Level1-step1.md)
+  - [레벨1 자동차 경주 - step2](Diary/Woowacourse/Level1-step2.md)
 - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
