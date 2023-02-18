@@ -27,7 +27,7 @@ class LinkedList {
   }
 
   // 연결 리스트 맨 뒤에 원소 추가하기
-  insertLast(data) {
+  push(data) {
     const node = new Node(data);
     if (this.size === 0) {
       this.head = node;
@@ -47,7 +47,7 @@ class LinkedList {
       return this.insertFirst(data);
     }
     if (index === this.size) {
-      return this.insertLast(data);
+      return this.push(data);
     }
     const node = new Node(data);
     let cur = this.head;
@@ -158,8 +158,6 @@ class LinkedList {
 
 연결 리스트 중 단일 연결 리스트를 자바스크립트를 사용하여 구현해본다.
 
----
-
 ### 3-1. 노드와 연결 리스트의 기본 구조
 
 ```javascript
@@ -187,8 +185,6 @@ class LinkedList {
 연결 리스트의 기본 구조로 맨 앞 노드인 `head`, 맨 뒤 노드인 `rear` 그리고 연결 리스트의
 원소의 개수인 `size`로 구성된다.
 
----
-
 ### 3-2. 연결 리스트에 원소 추가하기
 
 1. 연결 리스트 맨 앞에 원소를 추가하는 함수
@@ -212,22 +208,20 @@ class LinkedList {
    - 연결 리스트의 `head`에 새로운 `Node`가 들어간다.
    - 연결 리스트의 `size`를 하나 증가시킨다.
 
-   ***
-
 2. 연결 리스트 맨 뒤에 원소를 추가하는 함수
 
    ```javascript
    class LinkedList {
      // ...
-     insertLast(data) {
+     push(data) {
        const node = new Node(data);
-       if (this.size === 0) {
-         this.head = node;
-       } else {
-         this.rear.next = node;
-       }
+       if (this.size === 0) this.head = node;
+       else this.rear.next = node;
+
        this.rear = node;
        this.size++;
+
+       return this;
      }
    }
    ```
@@ -237,8 +231,7 @@ class LinkedList {
    - 연결 리스트의 `size`가 0이 아니라면 현재 연결 리스트의 `rear`의 뒤 노드의 값을 새롭게 생성한 `Node`로 지정한다.
    - 연결 리스트의 `rear`에 새로운 `Node`가 들어간다.
    - 연결 리스트의 `size`를 하나 증가시킨다.
-
-   ***
+   - 연결 리스트를 반환한다.
 
 3. 연결 리스트 중간에 원소를 추가하는 함수
 
@@ -253,7 +246,7 @@ class LinkedList {
          return this.insertFirst(data);
        }
        if (index === this.size) {
-         return this.insertLast(data);
+         return this.push(data);
        }
        const node = new Node(data);
        let cur = this.head;
@@ -282,8 +275,6 @@ class LinkedList {
    - `count`가 `index`보다 커질 때 까지 반복문을 돌린다.
    - 반복문 안에서 `cur`은 `next`가 되고 `next`는 `next`의 앞 원소가 된다.
    - 새롭게 생성한 노드가 `cur`과 `next` 사이에 들어간다.
-
----
 
 ### 3-3. 연결 리스트의 원소 가져오기
 
@@ -315,49 +306,90 @@ class LinkedList {
 - `while`문에서는 `cur`를 앞 원소로 바꾸고 `count`를 1증가시킨다.
 - `cur`를 반환한다.
 
----
-
 ### 3-4. 연결 리스트의 원소 삭제하기
 
-```javascript
-class LinkedList {
-  // ...
-  removeAt(index) {
-    if (index < 0 || index >= this.size) {
-      return;
-    }
-    let cur = this.head;
-    let prev;
-    let count = 0;
+1.  연결 리스트의 마지막 원소 삭제하기
 
-    if (index === 0) {
-      this.head = cur.next;
-    } else {
-      while (count < index) {
-        count++;
-        prev = cur;
-        cur = cur.next;
+    ```javascript
+    class LinkedList {
+      // ...
+      pop() {
+        if (!this.head) return undefined;
+
+        let current = this.head;
+        let newRear = current;
+
+        while (current.next) {
+          newRear = current;
+          current = current.next;
+        }
+
+        newRear.next = null;
+        this.rear = newRear;
+        this.size -= 1;
+
+        if (this.size === 0) {
+          this.head = null;
+          this.rear = null;
+        }
+
+        return current;
       }
-      prev.next = cur.next;
     }
-    this.size--;
-    return cur;
-  }
-}
-```
+    ```
 
-- `index`가 0보다 작거나 연결 리스트의 크기보다 크다면 아무것도 리턴하지 않는다.
-- `cur`를 연결 리스트의 맨 앞에 위치한 원소로 지정한다.
-- `prev`를 선언한다.
-- `count`의 기본값을 1로 한다.
-- `index`가 0인 경우 연결 리스트의 `head`를 `cur`의 앞에 위치한 원소로 지정한다.
-- 그 외의 경우 `count`가 `index`보다 작다면 반복문을 실행한다.
-- 반복문에서는 `count`값을 1증가시키고 `prev`를 `cur`로, `cur`를 `cur`의 앞에 위차한 원소를 지정한다.
-- 반복문이 종료되는 시점에는 `cur`값이 삭제되는 원소이다.
-- 그러므로 `prev`의 `next`를 `cur`의 앞에 위차한 원소로 바꾼다.
-- 연결 리스트의 `size`를 1감소시키고 삭제된 원소를 리턴한다.
+    - `head`가 없다면 `undefined`를 반환한다.
+    - 현재 바라보고 있는 노드를 `current` 변수에 할당한다.
+    - 다음 `rear`될 노드를 `newRear` 변수에 할당한다.
+    - `current` 노드의 다음 노드가 있을 때 반복문을 실행한다.
+      - 반복문 내에서 `newRear`은 `current`가 된다.
+      - 반복문 내에서 `current`는 다른 노드가 된다.
+    - 반복문에서 나오게 될 때, `current`는 마지막 노드를 바라보게 된다.
+    - 반복문에서 나오게 될 때, `newRear`는 마지막 노드의 이전 노드를 바라보게 된다.
+    - `newRear`의 다음 노드를 `null`로 할당한 뒤 `this.resr`가 되도록 한다.
+    - `size`를 1줄인다.
+    - 만약 `size`가 0이되었다면 `this.head`, `this.rear`은 모두 `null`이다.
+    - 연결 리스트에서 끊어진 `current` 노드를 반환한다.
 
----
+2.  연결 리스트의 특정 위치의 원소 삭제하기
+
+    ```javascript
+    class LinkedList {
+      // ...
+      removeAt(index) {
+        if (index < 0 || index >= this.size) {
+          return;
+        }
+        let cur = this.head;
+        let prev;
+        let count = 0;
+
+        if (index === 0) {
+          this.head = cur.next;
+        } else {
+          while (count < index) {
+            count++;
+            prev = cur;
+            cur = cur.next;
+          }
+          prev.next = cur.next;
+        }
+        this.size--;
+        return cur;
+      }
+    }
+    ```
+
+    - `index`가 0보다 작거나 연결 리스트의 크기보다 크다면 아무것도 리턴하지 않는다.
+    - `cur`를 연결 리스트의 맨 앞에 위치한 원소로 지정한다.
+    - `prev`를 선언한다.
+    - `count`의 기본값을 1로 한다.
+    - `index`가 0인 경우 연결 리스트의 `head`를 `cur`의 앞에 위치한 원소로 지정한다.
+    - 그 외의 경우 `count`가 `index`보다 작다면 반복문을 실행한다.
+    - 반복문에서는 `count`값을 1증가시키고 `prev`를 `cur`로, `cur`를 `cur`의 앞에 위차한 원소를 지정한다.
+    - 반복문이 종료되는 시점에는 `cur`값이 삭제되는 원소이다.
+    - 그러므로 `prev`의 `next`를 `cur`의 앞에 위차한 원소로 바꾼다.
+    - 연결 리스트의 `size`를 1감소시키고 삭제된 원소를 리턴한다.
 
 ### 3-5. 연결 리스트 초기화하기
 
@@ -374,8 +406,6 @@ class LinkedList {
 
 - `head`와 `rear`를 `null`로 바꾸고 `size`를 0으로 바꾼다.
 - 메모리자체에는 `Node`가 남아있다.
-
----
 
 ### 3-6. 연결 리스트의 모든 원소 출력하기
 
