@@ -51,6 +51,7 @@
 
 ### 🌈 Javascript
 
+- [클로저(closure)](JAVASCRIPT/Closure.md)
 - [자바스크립트 모듈 시스템](JAVASCRIPT/JavascriptModules.md)
 - [undefined & null](JAVASCRIPT/undefinedAndNull.md)
 - [얕은 복사와 깊은 복사](JAVASCRIPT/Copy.md)
