@@ -168,7 +168,7 @@ const person = {
 console.log(Object.entries(person)); // [["name", "hd"], ["fav", {food: "pizza"}]]
 ```
 
-### 3-4. 주의점
+### 3-5. 주의점
 
 📅 2023-02-20 추가
 
