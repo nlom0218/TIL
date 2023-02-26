@@ -192,12 +192,15 @@ class LinkedList {
    ```javascript
    class LinkedList {
      // ...
-     insertFirst(data) {
+     unshift(data) {
        const node = new Node(data);
-       if (this.size === 0) this.rear = node;
+       if (!this.head) this.rear = node;
+
        node.next = this.head;
        this.head = node;
-       this.size++;
+       this.size += 1;
+
+       return this;
      }
    }
    ```
@@ -348,10 +351,36 @@ class LinkedList {
     - 반복문에서 나오게 될 때, `newRear`는 마지막 노드의 이전 노드를 바라보게 된다.
     - `newRear`의 다음 노드를 `null`로 할당한 뒤 `this.resr`가 되도록 한다.
     - `size`를 1줄인다.
-    - 만약 `size`가 0이되었다면 `this.head`, `this.rear`은 모두 `null`이다.
+    - 만약 `size`가 0이 되었다면 `this.head`, `this.rear`은 모두 `null`이다.
     - 연결 리스트에서 끊어진 `current` 노드를 반환한다.
 
-2.  연결 리스트의 특정 위치의 원소 삭제하기
+2.  연결 리스트의 첫번째 원소 삭제하기
+
+    ```javascript
+    class LinkedList {
+      // ...
+      shift() {
+        if (!this.head) return undefined;
+
+        const currentHead = this.head;
+        this.head = currentHead.next;
+        this.size -= 1;
+
+        if (this.size === 0) this.rear = null;
+
+        return currentHead;
+      }
+    }
+    ```
+
+    - `head`가 없으면 `undefined`를 반환한다.
+    - `head`를 변수(currentHead)에 저장을 한다.
+    - `head`를 변수(currentHead)의 다음 노드로 바꾼다.
+    - `size`를 1줄인다.
+    - 만약 `size`가 0이 되었다면 더 이상 연결리스트에는 노드가 없는 것이기 때문에 `rear`을 `null`로 바꾼다.
+    - 제거하려 했던 첫 번째 노드, 즉 currentHead 를 반환한다.
+
+3.  연결 리스트의 특정 위치의 원소 삭제하기
 
     ```javascript
     class LinkedList {
