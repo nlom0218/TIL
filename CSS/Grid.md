@@ -6,22 +6,22 @@
 
 이전에 올린 Flexbox Layout은 한 방향 레이아웃 시스템이라면 Grid Layout은 두 방향 레이아웃 시스템이다. 따라서 Flex보다 더 복잡적인 레이아웃 표현이 가능하다.
 
-***
+---
 
 ## 2. 용어 정리
 
 ![grid layout](../image/CSS/Grid/grid.png)
 
-* 그리드 컨테이너(Grid Container): `display: grid`를 적용하는, Grid의 전체 영역이다. Grid 컨테이너 안의 요소들이 Grid 규칙의 영향을 받아 정렬된다.
-* 그리드 아이템(Grid Item): Grid 컨테이너의 자식 요소들이다. 그리드 아이템들이 Grid 규칙에 의해 배치된다.
-* 그리드 트랙(Grid Track): Grid의 행(Row) 또는 열(Column)
-* 그리드 셀(Grid Cell): Grid의 한 칸을 가르킨다. `<div>`같은 실제 html 요소는 Grid 아이템이고, 이런 Grid 아이템 하나가 들어가는 '가상의 칸(틀)'이 Grid 셀이다.
-* 그리드 라인(Grid Line): Grid 셀을 구분하는 선이다.
-* 그리드 번호(Grid Number): Grid 라인의 각 번호이다.
-* 그리드 갭(Grid Gap): Grid 셀 사이의 간격이다.
-* 그리드 영역(Grid Area): Grid 라인으로 둘러싸인 사각형 영역으로, 그리드 셀의 집합이다.
+- 그리드 컨테이너(Grid Container): `display: grid`를 적용하는, Grid의 전체 영역이다. Grid 컨테이너 안의 요소들이 Grid 규칙의 영향을 받아 정렬된다.
+- 그리드 아이템(Grid Item): Grid 컨테이너의 자식 요소들이다. 그리드 아이템들이 Grid 규칙에 의해 배치된다.
+- 그리드 트랙(Grid Track): Grid의 행(Row) 또는 열(Column)
+- 그리드 셀(Grid Cell): Grid의 한 칸을 가르킨다. `<div>`같은 실제 html 요소는 Grid 아이템이고, 이런 Grid 아이템 하나가 들어가는 '가상의 칸(틀)'이 Grid 셀이다.
+- 그리드 라인(Grid Line): Grid 셀을 구분하는 선이다.
+- 그리드 번호(Grid Number): Grid 라인의 각 번호이다.
+- 그리드 갭(Grid Gap): Grid 셀 사이의 간격이다.
+- 그리드 영역(Grid Area): Grid 라인으로 둘러싸인 사각형 영역으로, 그리드 셀의 집합이다.
 
-***
+---
 
 ## 3. Usage
 
@@ -41,7 +41,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 }
 ```
 
-***
+---
 
 ## 4. 그리드 형태 정의
 
@@ -149,7 +149,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![grid-template-columns](../image/CSS/Grid/gridTemplateColumns.png)
 
-***
+---
 
 ### 4-2. grid-template-rows
 
@@ -213,7 +213,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![grid-template-rows](../image/CSS/Grid/gridTemplateRows.png)
 
-***
+---
 
 ### 4-3. repeat 함수
 
@@ -237,7 +237,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 위의 두 코드는 같은 결과를 나타낸다.
 
-***
+---
 
 ### 4-4. minmax 함수
 
@@ -311,7 +311,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![minmax](../image/CSS/Grid/gridMinmax.png)
 
-***
+---
 
 ### 4-5. auto-fill, auto-fit
 
@@ -375,7 +375,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 > 내가 생각한 결과가 다르다. 위는 fill이기 때문에 예상된 결과이지만 아래는 fit으로 정해도 2번째 열이 모든 너비를 차지하지 않는다. 왤까?
 
-***
+---
 
 ## 5. 간격만들기
 
@@ -479,7 +479,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![gap](../image/CSS/Grid/gridgap.png)
 
-***
+---
 
 ## 6. 그리드 형태를 자동으로 정의
 
@@ -541,7 +541,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![grid-auto-rows](../image/CSS/Grid/gridauto.png)
 
-***
+---
 
 ## 7. grid-column, grid-row
 
@@ -614,7 +614,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![grid-column, grid-row](../image/CSS/Grid/girdcolumnrow.png)
 
-***
+---
 
 ## 8. 세로 방향 정렬
 
@@ -713,7 +713,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![align-items](../image/CSS/Grid/alignItems1.png) ![align-items](../image/CSS/Grid/alignItems2.png)
 
-***
+---
 
 ### 8-2. align-content
 
@@ -838,7 +838,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![align-content](../image/CSS/Grid/alignContent1.png) ![align-content](../image/CSS/Grid/alignContent2.png)
 
-***
+---
 
 ### 8-3. align-self
 
@@ -902,7 +902,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![align-self](../image/CSS/Grid/alignSelf.png)
 
-***
+---
 
 ## 9. 가로 방향 정렬
 
@@ -1000,7 +1000,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![justify-items](../image/CSS/Grid/justifyItems.png)
 
-***
+---
 
 ### 9-2. justify-content
 
@@ -1139,7 +1139,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![justify-content](../image/CSS/Grid/justifyContent1.png) ![justify-content](../image/CSS/Grid/justifyContent2.png)
 
-***
+---
 
 ### 9-3. justify-self
 
@@ -1201,7 +1201,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 ![justify-self](../image/CSS/Grid/justifySelf.png)
 
-***
+---
 
 ## 10. 정렬 shorthand
 
@@ -1213,7 +1213,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 하나의 값만 쓰면 두 프로퍼티 모두에 적용된다.
 
-***
+---
 
 ### 10-2. place-slef
 
@@ -1223,7 +1223,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 하나의 값만 쓰면 두 프로퍼티 모두에 적용된다.
 
-***
+---
 
 ## 11. order
 
@@ -1231,7 +1231,7 @@ Grid 규칙을 적용하고자 하는 요소들의 부모에 `display: grid;`를
 
 숫자값이 들어가면, 작은 숫자일 수록 먼저 배치된다. "시각적" 순서일 뿐 HTML 자체의 구조를 바꾸진 않다.
 
-***
+---
 
 ## 12. z-index
 
@@ -1291,14 +1291,14 @@ Z축 정렬을 할 수 있는 프로퍼티이다. 숫자가 클 수록 위로 �
 
 ![z-index](../image/CSS/Grid/zIndex.png)
 
-***
+---
 
 ## 13. Conclusion
 
 > 내가 자바스크립트의 웹 프레임워크/라이브러리 중 React를 사랑하는 것과 같이 CSS에서는 Grid를 가장 많이 사랑한다. 그 만큼 사용하는 비중이 많고 유용하게 사용하고 있다는 뜻이다. 확실히 Grid를 처음 공부할 땐 하나하나 이해하려고 많은 시간을 보냈는데 지금은 Flex와 함께 서로 비교하며 공부하니 쉽게 이해가 되었다. 다만 주로 사용하지 않는 프로퍼티가 있는데 바로 `justify-content`와 `align-content`이다. 이 두 속성은 Flex에서는 많이 사용했지만 Grid에서는 한 번도 사용하지 않았던 프로퍼티인거 같다. 그래도 어떤 특징을 가지고 있는지 짚고 넘어가자.\
 > 그리고 찝찝한게.. `auto-fill`, `auto-fit`이 내 생각대로, 예상한대로 작동하지 않아서 조금은 씁쓸하다... 해결책을 찾아봐야겠다.😭
 
-***
+---
 
 ## 참고
 
@@ -1306,7 +1306,7 @@ Z축 정렬을 할 수 있는 프로퍼티이다. 숫자가 클 수록 위로 �
 [이번에야말로 CSS Grid를 익혀보자](https://studiomeal.com/archives/533)\
 [Understanding CSS Grid: Grid Lines](https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/)
 
-***
+---
 
 [👆](Grid.md#grid-layout)
 
