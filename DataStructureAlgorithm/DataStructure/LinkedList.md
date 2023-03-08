@@ -241,31 +241,22 @@ class LinkedList {
    ```javascript
    class LinkedList {
      // ...
-     insertAt(data, index) {
-       if (index < 0 || index > this.size) {
-         return;
-       }
-       if (index === 0) {
-         return this.insertFirst(data);
-       }
-       if (index === this.size) {
-         return this.push(data);
-       }
+     insert(index, data) {
+       if (index < 0 || index > this.size) return false;
+
+       if (index === 0) return !!this.unshift(data);
+
+       if (index === this.size) return !!this.push(data);
+
        const node = new Node(data);
-       let cur = this.head;
-       let next = this.head.next;
-       let count = 1;
 
-       while (count < index) {
-         count++;
-         cur = next;
-         next = next.next;
-       }
+       let prev = this.get(index - 1);
+       node.next = prev.next;
+       prev.next = node;
 
-       cur.next = node;
-       node.next = next;
+       this.size += 1;
 
-       this.size++;
+       return true;
      }
    }
    ```
@@ -284,18 +275,16 @@ class LinkedList {
 ```javascript
 class LinkedList {
   // ...
-  getAt(index) {
-    if (index < 0 || index >= this.size) {
-      return;
-    }
-    if (index === this.size - 1) {
-      return this.rear;
-    }
+  get(index) {
+    if (index < 0 || index >= this.size) return null;
+
+    if (index === this.size - 1) return this.rear;
+
     let cur = this.head;
     let count = 0;
     while (count < index) {
       cur = cur.next;
-      count++;
+      count += 1;
     }
     return cur;
   }
@@ -309,7 +298,23 @@ class LinkedList {
 - `while`문에서는 `cur`를 앞 원소로 바꾸고 `count`를 1증가시킨다.
 - `cur`를 반환한다.
 
-### 3-4. 연결 리스트의 원소 삭제하기
+### 3-4. 연결 리스트의 원소 업데이트하기
+
+```javascript
+class LinkedList {
+  // ...
+  set(index, data) {
+    if (!this.get(index)) return false;
+
+    let foundNode = this.get(index);
+    foundNode.data = data;
+
+    return true;
+  }
+}
+```
+
+### 3-5. 연결 리스트의 원소 삭제하기
 
 1.  연결 리스트의 마지막 원소 삭제하기
 
@@ -385,26 +390,19 @@ class LinkedList {
     ```javascript
     class LinkedList {
       // ...
-      removeAt(index) {
-        if (index < 0 || index >= this.size) {
-          return;
-        }
-        let cur = this.head;
-        let prev;
-        let count = 0;
+      remove(index) {
+        if (index < 0 || index >= this.size) return undefined;
 
-        if (index === 0) {
-          this.head = cur.next;
-        } else {
-          while (count < index) {
-            count++;
-            prev = cur;
-            cur = cur.next;
-          }
-          prev.next = cur.next;
-        }
-        this.size--;
-        return cur;
+        if (index === 0) return this.shift();
+        if (index === this.size - 1) return this.pop();
+
+        let prev = this.get(index - 1);
+        let removed = prev.next;
+        prev.next = prev.next.next;
+
+        this.size -= 1;
+
+        return removed;
       }
     }
     ```
@@ -420,7 +418,7 @@ class LinkedList {
     - 그러므로 `prev`의 `next`를 `cur`의 앞에 위차한 원소로 바꾼다.
     - 연결 리스트의 `size`를 1감소시키고 삭제된 원소를 리턴한다.
 
-### 3-5. 연결 리스트 초기화하기
+### 3-6. 연결 리스트 초기화하기
 
 ```javascript
 class LinkedList {
@@ -436,7 +434,7 @@ class LinkedList {
 - `head`와 `rear`를 `null`로 바꾸고 `size`를 0으로 바꾼다.
 - 메모리자체에는 `Node`가 남아있다.
 
-### 3-6. 연결 리스트의 모든 원소 출력하기
+### 3-7. 연결 리스트의 모든 원소 출력하기
 
 ```javascript
 class LinkedList {
@@ -454,6 +452,38 @@ class LinkedList {
 
 - `cur`이 존재하지 않을때까지 `cur`를 콘솔에 출력한다.
 - 반복문에서 `cur`은 계속해서 앞의 원소로 교체된다.
+
+### 3-8. 연결 리스트 역순으로 바꾸기
+
+```javascript
+class LinkedList {
+  // ...
+  reverse() {
+    let head = this.head;
+    let rear = this.rear;
+
+    this.head = rear;
+    this.rear = head;
+
+    let prev = this.rear;
+    let cur = this.rear.next;
+    let count = 0;
+
+    while (count < this.size - 1) {
+      const temp = cur.next;
+      cur.next = prev;
+      cur = temp;
+      prev = cur;
+
+      count += 1;
+    }
+
+    this.rear.next = null;
+
+    return this;
+  }
+}
+```
 
 ---
 
