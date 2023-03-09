@@ -116,6 +116,177 @@ this.$restaurantList.setRestaurants(
 
 ## 🛠️ 리팩터링
 
+### components 폴더 세분화
+
+![components 구조](https://user-images.githubusercontent.com/57981252/223123487-67f3e87d-2e5d-488c-8e2a-a33fe39c34bb.png)
+
+다른 컴포넌트에서 사용할 수 있는 컴포넌트들은 `shared` 폴더로 묶어 관리할 수 있도록 하였다. 여기에 있는 컴포넌트들은 단독으로는 사용할 수 없고 서로 묶기거나 자식 elements를 가질 수 있다. 이렇게 여러 곳에서 재사용할 수 있는 컴포넌들이 있는 곳인 `shared`이다.
+
+반대로 이름을 가진 폴더에 존재하는 컴포넌트들은 실제로 웹에 랜더링 되는 컴포넌트들이다.
+
+추가적으로 `R-`를 제거하여 파일명을 통해 컴포넌트가 하는 역할을 더 쉽게 파악할 수 있도록 리팩터링하였다.
+
+### 초기 데이터의 활용
+
+`r-select` 태그에는 초기값이 필요하다. 그 이유는 옵션 값이 필요하기 때문이다. 이를 `fixtures.ts` 폴더에서 불러와 사용할 수 있도록 하였다.
+
+리팩터링 전 코드 👇
+
+```javascript
+// app.ts
+class App {
+  // ...
+
+  initSelect() {
+    this.$restaurantFilterSelect.setOptions([
+      { value: '전체', label: '전체' },
+      ...Restaurant.CATEGORIES.map((category) => ({
+        value: category,
+        label: category,
+      })),
+    ]);
+
+    this.$restaurantSortSelect.setOptions([
+      { value: 'name', label: '이름순' },
+      { value: 'distance', label: '거리순' },
+    ]);
+  }
+
+  initModalSelect() {
+    this.$restaurantModalCategory.setOptions([
+      { value: '', label: '선택해주세요' },
+      ...Restaurant.CATEGORIES.map((category) => ({
+        value: category,
+        label: category,
+      })),
+    ]);
+
+    this.$restaurantModalDistance.setOptions([
+      { value: '', label: '선택해주세요' },
+      ...Restaurant.DISTANCE_BY_MINUTES.map((distance) => ({
+        value: distance,
+        label: `${distance}분 내`,
+      })),
+    ]);
+  }
+
+  // ...
+}
+```
+
+리팩터링 후 코드 👇
+
+```javascript
+class App {
+  // ...
+
+  // app.ts
+  initSelect() {
+    this.$restaurantFilterSelect.setOptions(DEFAULT_FILTER_OPTIONS);
+    this.$restaurantSortSelect.setOptions(DEFAULT_SORT_OPTIONS);
+  }
+
+  initModalSelect() {
+    this.$restaurantModalCategory.setOptions(DEFAULT_MODAL_CATEGORY_OPTIONS);
+    this.$restaurantModalDistance.setOptions(DEFAULT_MODAL_DISTANCE_OPTIONS);
+  }
+
+  // ...
+}
+
+// fixtures.ts
+export const DEFAULT_FILTER_OPTIONS = [
+  { value: FILTER.value.entire, label: FILTER.label.entire },
+  ...Restaurant.CATEGORIES.map((category) => ({
+    value: category,
+    label: category,
+  })),
+];
+
+export const DEFAULT_SORT_OPTIONS = [
+  { value: SORT.value.name, label: SORT.label.name },
+  { value: SORT.value.distance, label: SORT.label.distance },
+];
+
+export const DEFAULT_MODAL_CATEGORY_OPTIONS = [
+  { value: DEFAULT_OPTION.value, label: DEFAULT_OPTION.label },
+  ...Restaurant.CATEGORIES.map((category) => ({
+    value: category,
+    label: category,
+  })),
+];
+
+export const DEFAULT_MODAL_DISTANCE_OPTIONS = [
+  { value: DEFAULT_OPTION.value, label: DEFAULT_OPTION.label },
+  ...Restaurant.DISTANCE_BY_MINUTES.map((distance) => ({
+    value: distance,
+    label: `${distance}분 내`,
+  })),
+];
+```
+
+### components/index 파일 역할 부여
+
+단순히 파일을 불러오는 것이 아닌 불러운 파일을 객체로 묶고 타입이 필요한 컴포넌트들에 대해서는 타입을 export를 하는 역할을 주었다.
+
+```javascript
+import Restaurant from './restaurant/Restaurant';
+import RestaurantList from './restaurant/RestaurantList';
+import Modal from './modal/Modal';
+import Button from './shared/Button';
+import FormItem from './shared/FormItem';
+import Input from './shared/Input';
+import Select from './shared/Select';
+import Textarea from './shared/Textarea';
+
+export type CustomRestaurantListElement = RestaurantList;
+
+export type CustomSelectElement = Select;
+
+export type CustomModalElement = Modal;
+
+export default {
+  Restaurant,
+  RestaurantList,
+  Modal,
+  Button,
+  FormItem,
+  Input,
+  Select,
+  Textarea,
+};
+```
+
+### 이벤트핸들러 콜백함수 분리
+
+평소에는 열심히 분리하였던 이벤트핸들러의 콜백함수였지만, 이번에는 시간이 부족하여 분리를 하지 못하였다. 이를 리팩터링 때 완료하였다!
+
+### 매직넘버 상수화
+
+매직넘버의 상수화도 마찬가지로 미쳐 완료하지 못했다. 평소에 습관을 만들어야지... 왠만하면 콜백함수도..
+
+### constructor 추가
+
+지금까지 클래스를 다루면서 인스턴스를 생성할 때 별다른 인자가 없으면 `constructor`를 사용하지 않았다. 하지만 클래스를 사용한다 했을 때, 다른 개발자들은 `constructor`를 먼저 찾으면서 구조를 파악할 수 있다는 생각을 하게 되었다. 이로 인해 `constructor`를 추가하게 되었다. 그렇다면 이번에 사용한 웹 컴포넌트들은 어떻게 할까? 모두 클래스인데 모두 부모를 상속받고 있다. 당연히 인자는 없고! 과연..?
+
+### querySelector 실패 시 분리하기
+
+```javascript
+?.querySelector<HTMLSelectElement>('#select')
+      ?.addEventListener('change', (event) => {})
+```
+
+위와 같은 코드가 있다. `$select`는 element일 수도 있고 `null`일 수도 있다. `null`인 경우 이벤트를 등록할 수 없기 때문에 `?`를 붙여야 한다. 하지만 오류로 인해 항상 있다고 생각한 `$select`이 없다면 이벤트는 발생하지 않을 것이고 발생하지 않은 이벤트로 인해 사용자는 물론 오류를 수정하고자 하는 개발자에게도 큰 어려움이 찾아올 것이다. 이때, 확실한 예외 처리를 하는 것이 좋다.
+
+때문에 아래와 같이 리팩터링을 진행하였다. 아직 예외처리는 하지 않았지만 2단계 미션을 통해 예외처리를 완성할 것이다.
+
+```javascript
+const $select = $shadowRoot.querySelector < HTMLSelectElement > '#select';
+if (!$select) return;
+
+$select.addEventListener('change', (event) => {});
+```
+
 ---
 
 📅 2023-03-05
