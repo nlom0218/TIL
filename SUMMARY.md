@@ -171,7 +171,7 @@
   - [기수 정렬(Radix sort)](DataStructureAlgorithm/SortingAlgorithm/RadixSort.md)
 - [Data structure(자료구조)](DataStructureAlgorithm/DataStructure/README.md)
   - [자료구조의 개념과 종류](DataStructureAlgorithm/DataStructure/ConceptType.md)
-  - [연결 리스트(Linked List)](DataStructureAlgorithm/DataStructure/LinkedList.md)
+  - [단일 연결 리스트(Singly Linked List)](DataStructureAlgorithm/DataStructure/SinglyLinkedList.md)
   - [스택(Stack)](DataStructureAlgorithm/DataStructure/Stack.md)
   - [큐(Queue)](DataStructureAlgorithm/DataStructure/Queue.md)
   - [해시 테이블(Hash Table)](DataStructureAlgorithm/DataStructure/HashTable.md)

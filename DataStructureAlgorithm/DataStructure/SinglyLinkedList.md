@@ -1,4 +1,4 @@
-# 연결 리스트(Linked List)
+# 단일 연결 리스트(Singly Linked List)
 
 ## 0. 요약
 
@@ -10,110 +10,135 @@ class Node {
   }
 }
 
-class LinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.rear = null;
     this.size = 0;
   }
 
-  // 연결 리스트 맨 앞에 원소 추가하기
-  insertFirst(data) {
+  // 단일 연결 리스트 맨 앞에 원소 추가하기
+  unshift(data) {
     const node = new Node(data);
-    if (this.size === 0) this.rear = node;
+    if (!this.head) this.rear = node;
+
     node.next = this.head;
     this.head = node;
-    this.size++;
+    this.size += 1;
+
+    return this;
   }
 
-  // 연결 리스트 맨 뒤에 원소 추가하기
+  // 단일 연결 리스트 맨 뒤에 원소 추가하기
   push(data) {
     const node = new Node(data);
-    if (this.size === 0) {
-      this.head = node;
-    } else {
-      this.rear.next = node;
-    }
+    if (this.size === 0) this.head = node;
+    else this.rear.next = node;
+
     this.rear = node;
     this.size++;
+
+    return this;
   }
 
-  // 연결 리스트 중간에 원소 추가하기
-  insertAt(data, index) {
-    if (index < 0 || index > this.size) {
-      return;
-    }
-    if (index === 0) {
-      return this.insertFirst(data);
-    }
-    if (index === this.size) {
-      return this.push(data);
-    }
+  // 단일 연결 리스트 중간에 원소 추가하기
+  insert(index, data) {
+    if (index < 0 || index > this.size) return false;
+
+    if (index === 0) return !!this.unshift(data);
+
+    if (index === this.size) return !!this.push(data);
+
     const node = new Node(data);
-    let cur = this.head;
-    let next = this.head.next;
-    let count = 1;
 
-    while (count < index) {
-      count++;
-      cur = next;
-      next = next.next;
-    }
+    let prev = this.get(index - 1);
+    node.next = prev.next;
+    prev.next = node;
 
-    cur.next = node;
-    node.next = next;
+    this.size += 1;
 
-    this.size++;
+    return true;
   }
 
-  // 연결 리스트의 원소 가져오기
-  getAt(index) {
-    if (index < 0 || index >= this.size) {
-      return;
-    }
-    if (index === this.size - 1) {
-      return this.rear;
-    }
+  // 단일 연결 리스트의 원소 가져오기
+  get(index) {
+    if (index < 0 || index >= this.size) return null;
+
+    if (index === this.size - 1) return this.rear;
+
     let cur = this.head;
     let count = 0;
     while (count < index) {
       cur = cur.next;
-      count++;
+      count += 1;
     }
     return cur;
   }
 
-  // 연결 리스트의 원소 삭제하기
-  removeAt(index) {
-    if (index < 0 || index >= this.size) {
-      return;
-    }
-    let cur = this.head;
-    let prev;
-    let count = 0;
+  // 단일 연결 리스트의 첫번째 원소 삭제하기
+  shift() {
+    if (!this.head) return undefined;
 
-    if (index === 0) {
-      this.head = cur.next;
-    } else {
-      while (count < index) {
-        count++;
-        prev = cur;
-        cur = cur.next;
-      }
-      prev.next = cur.next;
-    }
-    this.size--;
-    return cur;
+    const currentHead = this.head;
+    this.head = currentHead.next;
+    this.size -= 1;
+
+    if (this.size === 0) this.rear = null;
+
+    return currentHead;
   }
 
-  // 연결 리스트 초기화하기
+  // 단일 연결 리스트의 마지막 원소 삭제하기
+  pop() {
+    if (!this.head) return undefined;
+
+    let current = this.head;
+    let newRear = current;
+
+    while (current.next) {
+      newRear = current;
+      current = current.next;
+    }
+
+    newRear.next = null;
+    this.rear = newRear;
+    this.size -= 1;
+
+    if (this.size === 0) {
+      this.head = null;
+      this.rear = null;
+    }
+
+    return current;
+  }
+
+  // 단일 연결 리스트의 중간 원소 삭제하기
+  insert(index, data) {
+    if (index < 0 || index > this.size) return false;
+
+    if (index === 0) return !!this.unshift(data);
+
+    if (index === this.size) return !!this.push(data);
+
+    const node = new Node(data);
+
+    let prev = this.get(index - 1);
+    node.next = prev.next;
+    prev.next = node;
+
+    this.size += 1;
+
+    return true;
+  }
+
+  // 단일 연결 리스트 초기화하기
   clearList() {
     this.head = null;
     this.rear = null;
     this.size = 0;
   }
 
-  // 연결 리스트의 모든 원소 출력하기
+  // 단일 연결 리스트의 모든 원소 출력하기
   printListData() {
     let cur = this.head;
 
@@ -121,6 +146,32 @@ class LinkedList {
       console.log(cur);
       cur = cur.next;
     }
+  }
+
+  // 단일 연결 리스트 역순으로 바꾸기
+  reverse() {
+    let head = this.head;
+    let rear = this.rear;
+
+    this.head = rear;
+    this.rear = head;
+
+    let prev = this.rear;
+    let cur = this.rear.next;
+    let count = 0;
+
+    while (count < this.size - 1) {
+      const temp = cur.next;
+      cur.next = prev;
+      cur = temp;
+      prev = cur;
+
+      count += 1;
+    }
+
+    this.rear.next = null;
+
+    return this;
   }
 }
 ```
@@ -152,11 +203,13 @@ class LinkedList {
    - 일반적인 연결 리스트에 마지막 노드와 처음 노드를 연결시켜 원형으로 만든 구조이다.
      ![원형 연결 리스트의 구조](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Circurlar_linked_list.png/800px-Circurlar_linked_list.png)
 
+현재 챕터에서는 단일 연결 리스트에 다루고 다음 챕터에서 이중 연결 리스트에 대해 다룬다.
+
 ---
 
-## 3. 자바스크립트로 연결 리스트 구현하기
+## 3. 자바스크립트로 단일 연결 리스트 구현하기
 
-연결 리스트 중 단일 연결 리스트를 자바스크립트를 사용하여 구현해본다.
+단일 연결 리스트를 자바스크립트를 사용하여 구현해본다.
 
 ### 3-1. 노드와 연결 리스트의 기본 구조
 
@@ -173,7 +226,7 @@ class Node {
 만약 이중 연결 리스트라면 자신의 앞 노드를 가리키는 `this.prev`가 추가된다.
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.rear = null;
@@ -190,7 +243,7 @@ class LinkedList {
 1. 연결 리스트 맨 앞에 원소를 추가하는 함수
 
    ```javascript
-   class LinkedList {
+   class SinglyLinkedList {
      // ...
      unshift(data) {
        const node = new Node(data);
@@ -214,7 +267,7 @@ class LinkedList {
 2. 연결 리스트 맨 뒤에 원소를 추가하는 함수
 
    ```javascript
-   class LinkedList {
+   class SinglyLinkedList {
      // ...
      push(data) {
        const node = new Node(data);
@@ -239,7 +292,7 @@ class LinkedList {
 3. 연결 리스트 중간에 원소를 추가하는 함수
 
    ```javascript
-   class LinkedList {
+   class SinglyLinkedList {
      // ...
      insert(index, data) {
        if (index < 0 || index > this.size) return false;
@@ -273,7 +326,7 @@ class LinkedList {
 ### 3-3. 연결 리스트의 원소 가져오기
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   // ...
   get(index) {
     if (index < 0 || index >= this.size) return null;
@@ -301,7 +354,7 @@ class LinkedList {
 ### 3-4. 연결 리스트의 원소 업데이트하기
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   // ...
   set(index, data) {
     if (!this.get(index)) return false;
@@ -319,7 +372,7 @@ class LinkedList {
 1.  연결 리스트의 마지막 원소 삭제하기
 
     ```javascript
-    class LinkedList {
+    class SinglyLinkedList {
       // ...
       pop() {
         if (!this.head) return undefined;
@@ -362,7 +415,7 @@ class LinkedList {
 2.  연결 리스트의 첫번째 원소 삭제하기
 
     ```javascript
-    class LinkedList {
+    class SinglyLinkedList {
       // ...
       shift() {
         if (!this.head) return undefined;
@@ -388,7 +441,7 @@ class LinkedList {
 3.  연결 리스트의 특정 위치의 원소 삭제하기
 
     ```javascript
-    class LinkedList {
+    class SinglyLinkedList {
       // ...
       remove(index) {
         if (index < 0 || index >= this.size) return undefined;
@@ -421,7 +474,7 @@ class LinkedList {
 ### 3-6. 연결 리스트 초기화하기
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   // ...
   clearList() {
     this.head = null;
@@ -437,7 +490,7 @@ class LinkedList {
 ### 3-7. 연결 리스트의 모든 원소 출력하기
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   // ...
   printListData() {
     let cur = this.head;
@@ -456,7 +509,7 @@ class LinkedList {
 ### 3-8. 연결 리스트 역순으로 바꾸기
 
 ```javascript
-class LinkedList {
+class SinglyLinkedList {
   // ...
   reverse() {
     let head = this.head;
@@ -487,7 +540,17 @@ class LinkedList {
 
 ---
 
-## 4. Conclusion
+## 4. 시간 복잡도
+
+| Insertion | Removal      | Searching | Access |
+| --------- | ------------ | --------- | ------ |
+| O(1)      | O(1) or O(n) | O(n)      | O(n)   |
+
+단, 중간 삽입은 `O(n)`의 시간 복잡도를 가진다.
+
+---
+
+## 5. Conclusion
 
 > 연결 리스트(Linked List)를 자바스크립트로 구현하는 연습을 하였다. 구현을 하면서 배열의 메서드도 공부했던
 > 과정처럼 만들어지는 것 같았다. `while 문`을 언제까지 실행하는 것을 정하는 것이 조금 까다로웠지만 구현을 하고 나니
