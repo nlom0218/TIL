@@ -291,4 +291,5 @@
     - [레벨1 행운의 로또 - step1](/Diary/Woowacourse/Level1/Level1-lotto-step1.md)
     - [레벨1 행운의 로또 - step2](/Diary/Woowacourse/Level1/Level1-lotto-step2.md)
     - [레벨1 점심 뭐 먹지 - step1](/Diary/Woowacourse/Level1/Level1-lunch-step1.md)
+    - [레벨1 점심 뭐 먹지 - step2](/Diary/Woowacourse/Level1/Level1-lunch-step2.md)
 - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
