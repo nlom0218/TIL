@@ -105,6 +105,7 @@
 - [Typescript 설정 파일](Typescript/TypescriptConfig.md)
 - [Effective Typescript](Typescript/EffectiveTypescript/README.md)
   - [아이템 7 - 타입은 값들의 집합이다.](Typescript/EffectiveTypescript/Item7.md)
+  - [아이템 15- 동적 데이터에 인덱스 시그니처 사용하기](Typescript/EffectiveTypescript/Item15.md)
 - [React에서의 Typescript](Typescript/TypescriptInReact/README.md)
   - [React App에 Typescript 적용하기](Typescript/TypescriptInReact/ApplyTypescriptInReact.md)
   - [React children with TypeScript](Typescript/TypescriptInReact/ReactChidren.md)
