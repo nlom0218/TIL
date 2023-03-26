@@ -4,7 +4,7 @@
 
 |        미션        |          기간           | Repository                                                               | PR & Review                                                          | github page                                                     |
 | :----------------: | :---------------------: | ------------------------------------------------------------------------ | -------------------------------------------------------------------- | --------------------------------------------------------------- |
-| 점심 뭐 먹지 1단계 | `23-02-28` - `23-03-03` | [Repo](https://github.com/nlom0218/javascript-lunch/tree/nlom0218-step1) | [PR Review](https://github.com/woowacourse/javascript-lunch/pull/63) | [🍚 점심 뭐 먹지](https://nlom0218.github.io/javascript-lunch/) |
+| 점심 뭐 먹지 2단계 | `23-03-04` - `23-03-13` | [Repo](https://github.com/nlom0218/javascript-lunch/tree/nlom0218-step1) | [PR Review](https://github.com/woowacourse/javascript-lunch/pull/63) | [🍚 점심 뭐 먹지](https://nlom0218.github.io/javascript-lunch/) |
 
 ---
 
@@ -215,7 +215,7 @@ document.addEventListener(
 );
 document.addEventListener('deleteRestaurant', this.deleteRestaurant);
 document.addEventListener('toggleFavorite', this.toggleRestaurantFavorite);
-document.addEventListener('chagneRestaurantType', this.chagneRestaurantType);
+document.addEventListener('changeRestaurantType', this.changeRestaurantType);
 ```
 
 이벤트의 이름만 보고도 충분히 어떤 이벤트가 발생할 것인지를 예상할 수 있지 않는가? 이런 점이 좋았다. 음식점을 추가, 삭제, 즐겨찾기에 추가, 삭제 등과 같은 도메인 로직에 필요한 정보, 화면 렌더링에 필요한 정보도 전달할 수 있어 해당 책임을 다른 객체에 부여할 수 있었다.
