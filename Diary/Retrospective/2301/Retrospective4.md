@@ -1,10 +1,10 @@
-# #4 23년 1월 23일 ~ 23년 1월 29일
+# #4 23년 1월 23일 \~ 23년 1월 29일
 
 ## 1. 주간 요약
 
-![#4 주간 요약](/image/Diary/Retrospective/retrospective4.png)
+![#4 주간 요약](../../../image/Diary/Retrospective/retrospective4.png)
 
----
+***
 
 ## 2. 개발 공부
 
@@ -30,33 +30,33 @@
 
 이번주 정리한 TIL이다.
 
-| 주제          | TIL 제목                                    | TIL 바로가기                                                              |
-| ------------- | ------------------------------------------- | ------------------------------------------------------------------------- |
-| 코딩 테스트   | [3차] 압축                                  | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_compression.md) |
-| 코딩 테스트   | [3차] n진수 게임                            | [TIL 바로가기](/CodingTest/Programmers/Level2/programmers_base_n_game.md) |
-| 알고리즘 강의 | 버블 정렬(Bubble Sort)                      | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/BubbleSort.md)    |
-| 알고리즘 강의 | 선택 정렬(Selection Sort)                   | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/SelectionSort.md) |
-| 알고리즘 강의 | 삽입 정렬(Insertion Sort)                   | [TIL 바로가기](/DataStructureAlgorithm/SortingAlgorithm/InsertionSort.md) |
-| 정규 표현식   | 검색 기준 패턴                              | [TIL 바로가기](RegExp/SearchCriteria.md)                                  |
-| 정규 표현식   | 특정 문자 숫자 매칭 패턴                    | [TIL 바로가기](RegExp/CharacterClasses.md)                                |
-| 정규 표현식   | 갯수 반복 패턴                              | [TIL 바로가기](RegExp/NumberRepetition.md)                                |
-| 정규 표현식   | 그룹 패턴                                   | [TIL 바로가기](RegExp/GroupAndRanges.md)                                  |
-| 정규 표현식   | 정규 표현식의 메서드                        | [TIL 바로가기](RegExp/RegExpMethod.md)                                    |
-| 정규 표현식   | 정규 표현식과 함께 사용하는 String의 메서드 | [TIL 바로가기](RegExp/StringMethodWithRegExp.md)                          |
+| 주제      | TIL 제목                      | TIL 바로가기                                                                         |
+| ------- | --------------------------- | -------------------------------------------------------------------------------- |
+| 코딩 테스트  | \[3차] 압축                    | [TIL 바로가기](../../../CodingTest/Programmers/Level2/programmers\_compression.md)   |
+| 코딩 테스트  | \[3차] n진수 게임                | [TIL 바로가기](../../../CodingTest/Programmers/Level2/programmers\_base\_n\_game.md) |
+| 알고리즘 강의 | 버블 정렬(Bubble Sort)          | [TIL 바로가기](../../../DataStructureAlgorithm/SortingAlgorithm/BubbleSort.md)       |
+| 알고리즘 강의 | 선택 정렬(Selection Sort)       | [TIL 바로가기](../../../DataStructureAlgorithm/SortingAlgorithm/SelectionSort.md)    |
+| 알고리즘 강의 | 삽입 정렬(Insertion Sort)       | [TIL 바로가기](../../../DataStructureAlgorithm/SortingAlgorithm/InsertionSort.md)    |
+| 정규 표현식  | 검색 기준 패턴                    | [TIL 바로가기](../RegExp/SearchCriteria.md)                                          |
+| 정규 표현식  | 특정 문자 숫자 매칭 패턴              | [TIL 바로가기](../RegExp/CharacterClasses.md)                                        |
+| 정규 표현식  | 갯수 반복 패턴                    | [TIL 바로가기](../RegExp/NumberRepetition.md)                                        |
+| 정규 표현식  | 그룹 패턴                       | [TIL 바로가기](../RegExp/GroupAndRanges.md)                                          |
+| 정규 표현식  | 정규 표현식의 메서드                 | [TIL 바로가기](../RegExp/RegExpMethod.md)                                            |
+| 정규 표현식  | 정규 표현식과 함께 사용하는 String의 메서드 | [TIL 바로가기](../RegExp/StringMethodWithRegExp.md)                                  |
 
----
+***
 
 ## 3. 독서
 
-1월 달 독서 목표가 `객체지향의 사실과 오해` 2회독을 완료하는 것인데 아직 4장을 읽고 있다. 한 번 읽었던 것이라 빨리 읽으면 다른 책을 읽으려 했지만 게으른건지ㅠㅠ 자기 전에 30분~1시간 정도 독서하는 것보다 유튜브를 보는 것이 더 재밌었어 그런건지 잘 지키지 못하고 있다. 남은 시간은 2틀이다. 목표를 달성하자
+1월 달 독서 목표가 `객체지향의 사실과 오해` 2회독을 완료하는 것인데 아직 4장을 읽고 있다. 한 번 읽었던 것이라 빨리 읽으면 다른 책을 읽으려 했지만 게으른건지ㅠㅠ 자기 전에 30분\~1시간 정도 독서하는 것보다 유튜브를 보는 것이 더 재밌었어 그런건지 잘 지키지 못하고 있다. 남은 시간은 2틀이다. 목표를 달성하자
 
----
+***
 
 ## 4. 영어 공부
 
 이번주에도 7일 동안 스픽을 모두 하였다. 부끄럽지만 왕초보 1탄 부터 하고 있어 얼른 끝내고 싶은 마음이 굴뚝같다. 아마 다음주에 왕초보 1탄을 모두 마무리할 수 있지 않을까 한다.
 
----
+***
 
 ## 5. 강릉 여행
 
@@ -64,12 +64,8 @@
 
 여러 사진을 찍었는데, 아쉽게도 먹거리 사진을 찍지 않아서 아쉽다. 먹거리가 나오자마자 바로 먹어버러서 그런가... 대신에 함께 다녀온 사람들과 찍은 사진을 남기며 23년 4주차 회고을 마무리한다.
 
-![바다 사진 - 여자친구와](/image/Diary/Retrospective/travel2.jpeg)
-![바다 사진 - 친구와](/image/Diary/Retrospective/travel1.jpeg)
-![아르떼 사진 - 친구와](/image/Diary/Retrospective/travel3.jpeg)
-![아르떼 사진 - 여자친구와](/image/Diary/Retrospective/travel4.jpeg)
-![아르떼 사진 - 모두와](/image/Diary/Retrospective/travel5.jpeg)
+![바다 사진 - 여자친구와](../../../image/Diary/Retrospective/travel2.jpeg) ![바다 사진 - 친구와](../../../image/Diary/Retrospective/travel1.jpeg) ![아르떼 사진 - 친구와](../../../image/Diary/Retrospective/travel3.jpeg) ![아르떼 사진 - 여자친구와](../../../image/Diary/Retrospective/travel4.jpeg) ![아르떼 사진 - 모두와](../../../image/Diary/Retrospective/travel5.jpeg)
 
----
+***
 
 📅 2023-01-30
