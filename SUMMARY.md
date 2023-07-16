@@ -267,7 +267,7 @@
   - [Chapter4 역할, 책임, 협력](Reading/TheEssenceOfObjectOrientaion/Chapter4.md)
   - [Chapter5 책임과 메시지](Reading/TheEssenceOfObjectOrientaion/Chapter5.md)
   - [Chapter6 객체 지도](Reading/TheEssenceOfObjectOrientaion/Chapter6.md)
-  - [Chpater7 함께 모으기](Reading/TheEssenceOfObjectOrientaion/Chapter7.md)
+  - [Chapter7 함께 모으기](Reading/TheEssenceOfObjectOrientaion/Chapter7.md)
 
 ## ✏️ Diary
 
@@ -291,4 +291,14 @@
     - [레벨1 영화 리뷰 - step2](Diary/Woowacourse/Level1/Level1-movieReview-step2.md)
     - [레벨1 - 인터뷰](Diary/Woowacourse/Level1/Level1-Interview.md)
   - [Level2](Diary/Woowacourse/Level2/README.md)
+    - [레벨2 다시, 점심 뭐 먹지 - step1](Diary/Woowacourse/Level2/Level2-lunch-step1.md)
+    - [레벨2 다시, 점심 뭐 먹지 - step2](Diary/Woowacourse/Level2/Level2-lunch-step2.md)
+    - [레벨2 페이먼츠 - step1](Diary/Woowacourse/Level2/Level2-payment-step1.md)
+    - [레벨2 페이먼츠 - step2](Diary/Woowacourse/Level2/Level2-payment-step2.md)
+    - [레벨2 페이먼츠 - step3](Diary/Woowacourse/Level2/Level2-payment-step3.md)
+    - [레벨2 장바구니 - step1](Diary/Woowacourse/Level2/Level2-shoppingCart-step1.md)
+    - [레벨2 장바구니 - step2](Diary/Woowacourse/Level2/Level2-shoppingCart-step2.md)
+    - [레벨2 장바구니 협업 - step1](Diary/Woowacourse/Level2/Level2-shoppingCartProd-step1.md)
+    - [레벨2 장바구니 협업 - step2](Diary/Woowacourse/Level2/Level2-shoppingCartProd-step2.md)
+    - [레벨2 - 인터뷰](Diary/Woowacourse/Level2/Level2-Interview.md)
 - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
