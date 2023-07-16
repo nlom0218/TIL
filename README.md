@@ -5,3 +5,6 @@
 매일매일 꾸준히  
 내 것으로 만들기  
 천천히 하지만 확실히
+
+몇몇개의 글은 `tistory` 블로그에서도 포스팅되어 있습니다.  
+[tistory 블로그 바로가기](https://noah-dev.tistory.com/)
