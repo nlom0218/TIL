@@ -24,7 +24,7 @@ function App() {
 
 ```javascript
 function App() {
-  return React.createElement("h1", null, "Hello World!");
+  return React.createElement('h1', null, 'Hello World!');
 }
 ```
 
@@ -93,8 +93,8 @@ function App (){
 `<Header />`컴포넌트와 `<div></div>`태그가 하나의 태그로 감싸여있지 않기 때문이다. 이때 주로 리액트의 Fragment라는 것을 사용한다. `<React.Fragment></React.Fragmen>`또는 `<></>`
 
 ```javascript
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
 
 function App() {
   return (
@@ -115,18 +115,18 @@ function App() {
 JSX내부에 자바스크립트 변수를 보여줘야 할 때에는 `{}`으로 감싸서 보여준다.
 
 ```javascript
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
 
 function App() {
-  const name = "HD";
+  const name = 'HD';
   const numArr = [1, 2, 3, 4, 5];
   return (
     <React.Fragment>
       <Hedader />
       <div>Hello {name}!</div>
       <span>{numArr.map((num) => num)}</span>
-      {name === "HD" ? <span>Welcome HD!</span> : null}
+      {name === 'HD' ? <span>Welcome HD!</span> : null}
       <img src={user.avatarUrl}></img>
     </React.Fragment>
   );
@@ -140,8 +140,8 @@ function App() {
 인라인 스타일로 style를 작성하는 경우 객체 형태로 작성해야 하며, `background-color`처럼 `-`로 구분되어 있는 이름들은 `backgroundColor`처럼 camelCase 형태로 네이밍 해줘야 한다.
 
 ```javascript
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
 
 function App() {
   return (
@@ -149,9 +149,9 @@ function App() {
       <Hedader />
       <div
         style={{
-          backgroundColor: "black",
-          color: "white",
-          padding: "10px 20px",
+          backgroundColor: 'black',
+          color: 'white',
+          padding: '10px 20px',
         }}
       >
         Hellow Everyone!
@@ -174,9 +174,9 @@ class를 사용하여 외부 스타일 시트를 사용할 경우 HTML에서는 
 ```
 
 ```javascript
-import React from "react";
-import Header from "./Header";
-import "./App.css";
+import React from 'react';
+import Header from './Header';
+import './App.css';
 
 function App() {
   return (
