@@ -194,11 +194,13 @@ aira(Accessible Rich Internet Application) 태그를 적절히 사용하면 탭�
 
 [https://github.com/nlom0218/a11y-airline/tree/nlom0218](https://github.com/nlom0218/a11y-airline/tree/nlom0218)
 
+![position 어지러운 코드](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkIzYl%2Fbtsr5XhlOH8%2FNJfA0ao4KWjjUT2g8tvqLk%2Fimg.png)
+
 위 `div` 태그 내의 `text`는 단지 보이스 오버를 위한 값이다. 즉, 화면에는 보여지지 않고 `text`가 업데이트될 때마다 보이스 오버를 통해 `text`의 내용을 들을 수 있다. 조금 더 어떤 상황이었는지 설명을 붙이자면, 성인 승객의 수가 증가, 감소할 때마다 클릭이 잘 되었는지 알려주는 역할을 한다. 또한 최소, 최대 인원수가 되었을 때도 알려준다.
 
 동작은 잘 되지만 뭔가 이상하다. 조금더 세련되게 바꾸고 싶은 마음이 들었다. 때문에 다음과 같은 방법도 여러 크루들을 통해 알게 되었다. 다음의 코드에서 `input`태그는 사용자의 동작에 따라 `count`가 계속 바뀐다. 때문에 변할 때마다 `aria-label`를 다시 읽어주기 위해  `aria-live` 속성을 `polite`로 정하였다.
 
-![position 어지러운 코드](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkIzYl%2Fbtsr5XhlOH8%2FNJfA0ao4KWjjUT2g8tvqLk%2Fimg.png)
+![기존에 존재하는 태그 활용](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXOxd0%2Fbtsr3bAHdAM%2FcbZPpQc3Rnb06IGkeuL1AK%2Fimg.png)
 
 aira뿐 아니라 웹 접근성에 대한 좋은 자료가 있어 남긴다. 이를 토대로 언제 한 번 날 잡고 공부해보자.
 
