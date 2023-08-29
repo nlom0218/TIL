@@ -40,6 +40,7 @@
   - [Level3](Diary/Woowacourse/Level3/README.md)
     - [레벨3 - 1~2주차 회고](Diary/Woowacourse//Level3/weeks-1-2.md)
     - [레벨3 - 3~4주차 회고](Diary/Woowacourse//Level3/weeks-3-4.md)
+    - [레벨3 - 5~6주차 회고](Diary/Woowacourse//Level3/weeks-5-6.md)
 - [나의 첫 코딩 테스트(feat 라인, 카카오)](Diary/FirstCodingTest.md)
 
 ## 🖥️ Computer Science
